@@ -1,5 +1,4 @@
 #+LATEX_HEADER: % Обеспечиваем работу с математикой
-#+LATEX_HEADER: \usepackage[cal=boondoxo]{mathalfa}  %% красивые каллиграфические буквы
 #+LATEX_HEADER: \usepackage{amsthm}
 #+LATEX_HEADER: \usepackage{amstext}
 #+LATEX_HEADER: \usepackage{amsmath}

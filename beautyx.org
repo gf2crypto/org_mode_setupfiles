@@ -1,3 +1,4 @@
+#+LATEX_HEADER: \usepackage[cal=stix2-plain,frak=euler,scr=mathpi]{mathalfa}
 #+SETUPFILE: ./math.org
 #+SETUPFILE: ./base.org
 #+SETUPFILE: ./font_xcharter.org
