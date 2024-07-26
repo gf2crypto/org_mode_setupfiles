@@ -2,6 +2,7 @@
 #+LATEX_HEADER: \usepackage[english, russian]{babel}
 #+LATEX_HEADER: \uselanguage{Russian}
 #+LATEX_HEADER: \languagepath{Russian}
+#+LATEX_HEADER: \usepackage[style=american]{csquotes}
 #+LATEX_HEADER: \usepackage{xcolor}
 #+LATEX_HEADER: \usepackage{hyphenat}
 #+LATEX_HEADER: % Крутой пакет для рисования
