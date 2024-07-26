@@ -1,0 +1,11 @@
+#+LATEX_HEADER: \setbeamertemplate{theorems}[numbered]  % using theorem numbering
+#+LATEX_HEADER: \setbeamertemplate{caption}[numbered]   % numbering captions of tables
+#+LATEX_HEADER:                                 % and figures
+#+LATEX_HEADER: \newtheorem{proposition}{\translate{Proposition}}
+#+LATEX_HEADER: \newtheorem*{proposition*}{\translate{Proposition}}
+#+LATEX_HEADER: \newtheorem*{theorem*}{\translate{Theorem}}
+#+LATEX_HEADER: \newtheorem*{lemma*}{\translate{Lemma}}
+#+LATEX_HEADER: \newtheorem*{corollary*}{\translate{Corollary}}
+#+LATEX_HEADER: \theoremstyle{definition}
+#+LATEX_HEADER: \newtheorem{remark}{\translate{Remark}}
+#+LATEX_HEADER: \newtheorem*{example*}{\translate{Example}}

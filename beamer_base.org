@@ -1,0 +1,36 @@
+#+LATEX_HEADER: \usepackage[T1, T2A]{fontenc}
+#+LATEX_HEADER: \usepackage[english, russian]{babel}
+#+LATEX_HEADER: \uselanguage{Russian}
+#+LATEX_HEADER: \languagepath{Russian}
+#+LATEX_HEADER: \usepackage{xcolor}
+#+LATEX_HEADER: \usepackage{hyphenat}
+#+LATEX_HEADER: % Крутой пакет для рисования
+#+LATEX_HEADER: \usepackage{tikz}
+#+LATEX_HEADER: % Подключаем пакет работы с графикой
+#+LATEX_HEADER: \usepackage{graphicx}
+#+LATEX_HEADER: % Пусть к папке с рисунками по умолчанию
+#+LATEX_HEADER: \graphicspath{{images/}}
+#+LATEX_HEADER: % Можно указывать имя файлов без расширений
+#+LATEX_HEADER: % LaTeX будет последовательно подставлять перечисленные
+#+LATEX_HEADER: % пока файл не будет найден
+#+LATEX_HEADER: \DeclareGraphicsExtensions{.pdf,.png,.jpg,.jpeg}
+#+LATEX_HEADER: %Хорошие таблицы
+#+LATEX_HEADER: \usepackage{booktabs}
+#+LATEX_HEADER: %%% Extended tabular and array blocks
+#+LATEX_HEADER: \usepackage{blkarray}
+#+LATEX_HEADER: %Окружение для написания алгоритмов в псевдокоде
+#+LATEX_HEADER: \usepackage[%
+#+LATEX_HEADER: ruled,
+#+LATEX_HEADER: vlined,
+#+LATEX_HEADER: algosection,
+#+LATEX_HEADER: linesnumbered,
+#+LATEX_HEADER: titlenumbered
+#+LATEX_HEADER: ]{algorithm2e}
+#+LATEX_HEADER: %%% Исправляем номер алгоритма при использовании оверлеев.
+#+LATEX_HEADER: \resetcounteronoverlays{algocf}
+#+LATEX_HEADER: %Русификация окружения алгоритмов
+#+LATEX_HEADER: \SetKwComment{Comment}{/* }{ */}
+#+LATEX_HEADER: \SetKwInput{KwData}{Вход}
+#+LATEX_HEADER: \SetKwInput{KwOutput}{Выход}
+#+LATEX_HEADER: \SetAlgorithmName{Алгоритм}{алгоритм}{Список алгоритмов}
+#+SETUPFILE: ./math.org
