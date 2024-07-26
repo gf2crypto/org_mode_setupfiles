@@ -1,0 +1,4 @@
+#+SETUPFILE: ./math.org
+#+SETUPFILE: ./base.org
+#+SETUPFILE: ./font_times.org
+#+SETUPFILE: ./letters_commands.org

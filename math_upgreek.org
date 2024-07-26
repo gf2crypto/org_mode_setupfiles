@@ -1,0 +1,33 @@
+#+LATEX_HEADER: \usepackage{upgreek}
+
+#+LATEX_HEADER: % Русская традиция начертания греческих букв
+#+LATEX_HEADER: \renewcommand{\epsilon}{\ensuremath{\upvarepsilon}}
+#+LATEX_HEADER: \renewcommand{\phi}{\ensuremath{\upvarphi}}
+#+LATEX_HEADER: \renewcommand{\kappa}{\ensuremath{\varkappa}}
+#+LATEX_HEADER: \renewcommand{\alpha}{\ensuremath{\upalpha}}
+#+LATEX_HEADER: \renewcommand{\beta}{\ensuremath{\upbeta}}
+#+LATEX_HEADER: \renewcommand{\gamma}{\ensuremath{\upgamma}}
+#+LATEX_HEADER: \renewcommand{\delta}{\ensuremath{\updelta}}
+#+LATEX_HEADER: \renewcommand{\varepsilon}{\ensuremath{\upvarepsilon}}
+#+LATEX_HEADER: \renewcommand{\zeta}{\ensuremath{\upzeta}}
+#+LATEX_HEADER: \renewcommand{\eta}{\ensuremath{\upeta}}
+#+LATEX_HEADER: \renewcommand{\theta}{\ensuremath{\uptheta}}
+#+LATEX_HEADER: \renewcommand{\vartheta}{\ensuremath{\upvartheta}}
+#+LATEX_HEADER: \renewcommand{\iota}{\ensuremath{\upiota}}
+#+LATEX_HEADER: \renewcommand{\kappa}{\ensuremath{\upkappa}}
+#+LATEX_HEADER: \renewcommand{\lambda}{\ensuremath{\uplambda}}
+#+LATEX_HEADER: \renewcommand{\mu}{\ensuremath{\upmu}}
+#+LATEX_HEADER: \renewcommand{\nu}{\ensuremath{\upnu}}
+#+LATEX_HEADER: \renewcommand{\xi}{\ensuremath{\upxi}}
+#+LATEX_HEADER: \renewcommand{\pi}{\ensuremath{\uppi}}
+#+LATEX_HEADER: \renewcommand{\varpi}{\ensuremath{\upvarpi}}
+#+LATEX_HEADER: \renewcommand{\rho}{\ensuremath{\uprho}}
+#+LATEX_HEADER: \renewcommand{\varrho}{\ensuremath{\upvarrho}}
+#+LATEX_HEADER: \renewcommand{\sigma}{\ensuremath{\upsigma}}
+#+LATEX_HEADER: \renewcommand{\varsigma}{\ensuremath{\upvarsigma}}
+#+LATEX_HEADER: \renewcommand{\tau}{\ensuremath{\uptau}}
+#+LATEX_HEADER: \renewcommand{\upsilon}{\ensuremath{\upupsilon}}
+#+LATEX_HEADER: \renewcommand{\varphi}{\ensuremath{\upvarphi}}
+#+LATEX_HEADER: \renewcommand{\chi}{\ensuremath{\upchi}}
+#+LATEX_HEADER: \renewcommand{\psi}{\ensuremath{\uppsi}}
+#+LATEX_HEADER: \renewcommand{\omega}{\ensuremath{\upomega}}

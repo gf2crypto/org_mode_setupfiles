@@ -1,0 +1,63 @@
+#+LATEX_HEADER: \newcommand*{\sign}[3][]{  % insert signature
+#+LATEX_HEADER:   \par\noindent
+#+LATEX_HEADER:   \underline{\textsc{#1}}
+#+LATEX_HEADER:   \par
+#+LATEX_HEADER:   \medskip
+#+LATEX_HEADER:   \noindent
+#+LATEX_HEADER:   \begin{minipage}[b][][b]{0.5\textwidth}
+#+LATEX_HEADER:     \begin{flushleft}
+#+LATEX_HEADER:       \begin{spacing}{1}
+#+LATEX_HEADER:         #2
+#+LATEX_HEADER:       \end{spacing}
+#+LATEX_HEADER:     \end{flushleft}
+#+LATEX_HEADER:   \end{minipage}
+#+LATEX_HEADER:   \begin{minipage}[b][][b]{0.48\textwidth}
+#+LATEX_HEADER:     \begin{flushright}
+#+LATEX_HEADER:       \begin{spacing}{1}
+#+LATEX_HEADER:         #3
+#+LATEX_HEADER:       \end{spacing}
+#+LATEX_HEADER:     \end{flushright}
+#+LATEX_HEADER:   \end{minipage}
+#+LATEX_HEADER: }
+#+LATEX_HEADER: %%%% \sign[Согласовано]{Декан ВМК МГУ имени М.В.Ломосонова}{И.А.Соколов}
+
+#+LATEX_HEADER: \newcommand*{\letterHeader}[2][]{
+#+LATEX_HEADER:   \begin{minipage}{0.4\textwidth}
+#+LATEX_HEADER:     \begin{flushleft}
+#+LATEX_HEADER:       \begin{spacing}{1}
+#+LATEX_HEADER:         \Large
+#+LATEX_HEADER:         #1
+#+LATEX_HEADER:       \end{spacing}
+#+LATEX_HEADER:     \end{flushleft}
+#+LATEX_HEADER:   \end{minipage}
+#+LATEX_HEADER:   \begin{minipage}{0.6\textwidth} % the field `to whom`
+#+LATEX_HEADER:     % for example: Rector of Lomonosov Moscow University academician
+#+LATEX_HEADER:     % V. A. Sadovnichii
+#+LATEX_HEADER:     \begin{flushleft}
+#+LATEX_HEADER:       \begin{spacing}{1}
+#+LATEX_HEADER:         \Large
+#+LATEX_HEADER:         #2
+#+LATEX_HEADER:       \end{spacing}
+#+LATEX_HEADER:     \end{flushleft}
+#+LATEX_HEADER:   \end{minipage}
+#+LATEX_HEADER: }
+
+#+LATEX_HEADER: %%% \header{Ректору МГУ имени М.В.Ломоносова\\ академику В.А.Садовничему}
+
+#+LATEX_HEADER: \newcommand*{\letterTitle}[1]{% Insert caption of the later
+#+LATEX_HEADER:   % For example: Dear Victor Antonovich!
+#+LATEX_HEADER:   \begin{center}
+#+LATEX_HEADER:     \begin{spacing}{1}
+#+LATEX_HEADER:       \Large
+#+LATEX_HEADER:       \textsc{#1}
+#+LATEX_HEADER:     \end{spacing}
+#+LATEX_HEADER:   \end{center}
+#+LATEX_HEADER: }
+
+#+LATEX_HEADER: \newcommand*{\letterDate}[1][\today]{% Insert date
+#+LATEX_HEADER:   \begin{flushright}
+#+LATEX_HEADER:     \begin{spacing}{1}
+#+LATEX_HEADER:       #1
+#+LATEX_HEADER:     \end{spacing}
+#+LATEX_HEADER:   \end{flushright}
+#+LATEX_HEADER: }

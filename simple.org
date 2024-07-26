@@ -1,0 +1,2 @@
+#+SETUPFILE: ./math.org
+#+SETUPFILE: ./base.org

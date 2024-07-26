@@ -1,0 +1,136 @@
+#+LATEX_HEADER: \usepackage{thmtools}
+#+LATEX_HEADER: \usepackage[framemethod=TikZ]{mdframed}
+#+LATEX_HEADER: \mdfsetup{skipabove=1em, skipbelow=1em}
+
+#+LATEX_HEADER: %%%% Определения
+#+LATEX_HEADER: \declaretheoremstyle[
+#+LATEX_HEADER: headfont=\bfseries\sffamily\color{green!70!black},
+#+LATEX_HEADER: bodyfont=\normalfont, mdframed={ linewidth=2pt, rightline=false,
+#+LATEX_HEADER: topline=false, bottomline=false, linecolor=green,
+#+LATEX_HEADER: backgroundcolor=green!10,}]{thmgreenbox}
+
+#+LATEX_HEADER: \theoremstyle{definition}
+
+#+LATEX_HEADER: \declaretheorem[style=thmgreenbox, numberwithin=section,
+#+LATEX_HEADER: name=Определение]{definition}
+#+LATEX_HEADER: \declaretheorem[style=thmgreenbox, numbered=no,
+#+LATEX_HEADER: name=Определение]{definition*}
+
+#+LATEX_HEADER: %%% Пример
+#+LATEX_HEADER: \declaretheoremstyle[
+#+LATEX_HEADER: headfont=\bfseries\sffamily\color{blue!70!black},
+#+LATEX_HEADER: bodyfont=\normalfont, mdframed={ linewidth=2pt, rightline=false,
+#+LATEX_HEADER: topline=false, bottomline=false, linecolor=NavyBlue,
+#+LATEX_HEADER: backgroundcolor=blue!5, } ]{thmbluebox}
+
+#+LATEX_HEADER: \declaretheorem[style=thmbluebox, numberwithin=section,
+#+LATEX_HEADER: name=Пример]{example}
+#+LATEX_HEADER: \declaretheorem[style=thmbluebox, numbered=no,
+#+LATEX_HEADER: name=Пример]{example*}
+
+#+LATEX_HEADER: %%%%% Замечание
+
+#+LATEX_HEADER: \declaretheoremstyle[
+#+LATEX_HEADER: headfont=\bfseries\sffamily\color{skyblue!70!black},
+#+LATEX_HEADER: bodyfont=\normalfont, mdframed={ linewidth=2pt, rightline=false,
+#+LATEX_HEADER: topline=false, bottomline=false, linecolor=skyblue }
+#+LATEX_HEADER: ]{thmblueline}
+
+#+LATEX_HEADER: \declaretheorem[style=thmblueline, numberwithin=section,
+#+LATEX_HEADER: name=Замечание]{remark}
+
+#+LATEX_HEADER: \declaretheorem[style=thmblueline, numbered=no,
+#+LATEX_HEADER: name=Замечание]{remark*}
+
+#+LATEX_HEADER: %% Задача
+#+LATEX_HEADER: \declaretheoremstyle[
+#+LATEX_HEADER: headfont=\bfseries\sffamily\color{violet!70!black},
+#+LATEX_HEADER: bodyfont=\normalfont, mdframed={ linewidth=2pt, rightline=false,
+#+LATEX_HEADER: topline=false, bottomline=false, linecolor=violet,
+#+LATEX_HEADER: backgroundcolor=violet!10,}]{thmvioletbox}
+
+#+LATEX_HEADER: \declaretheorem[style=thmvioletbox, numberwithin=section,
+#+LATEX_HEADER: name=Задача]{task}
+#+LATEX_HEADER: \declaretheorem[style=thmvioletbox, numbered=no, name=Задача]{task*}
+#+LATEX_HEADER: %% Упражнение
+#+LATEX_HEADER: \declaretheorem[style=thmvioletbox, numberwithin=section,
+#+LATEX_HEADER: name=Упражнение]{exercise}
+#+LATEX_HEADER: \declaretheorem[style=thmvioletbox, numbered=no,
+#+LATEX_HEADER: name=Упражнение]{exercise*}
+#+LATEX_HEADER: %% Проблема
+#+LATEX_HEADER: \declaretheoremstyle[
+#+LATEX_HEADER: headfont=\bfseries\sffamily\color{yellow!70!black},
+#+LATEX_HEADER: bodyfont=\normalfont, mdframed={ linewidth=2pt, rightline=false,
+#+LATEX_HEADER: topline=false, bottomline=false, linecolor=yellow,
+#+LATEX_HEADER: backgroundcolor=yellow!10,}]{thmyellowbox}
+
+#+LATEX_HEADER: \declaretheorem[style=thmyellowbox, numberwithin=section,
+#+LATEX_HEADER: name=Проблема]{problem}
+#+LATEX_HEADER: \declaretheorem[style=thmyellowbox, numbered=no, name=Проблема]{problem*}
+#+LATEX_HEADER: %% Вопрос
+#+LATEX_HEADER: \declaretheoremstyle[
+#+LATEX_HEADER: headfont=\bfseries\sffamily\color{skyblue!70!black},
+#+LATEX_HEADER: bodyfont=\normalfont, mdframed={ linewidth=2pt, rightline=false,
+#+LATEX_HEADER: topline=false, bottomline=false, linecolor=skyblue,
+#+LATEX_HEADER: backgroundcolor=skyblue!10,}]{thmblueskybox}
+
+#+LATEX_HEADER: \declaretheorem[style=thmblueskybox, numberwithin=section,
+#+LATEX_HEADER: name=Вопрос]{question}
+#+LATEX_HEADER: \declaretheorem[style=thmblueskybox, numbered=no, name=Вопрос]{question*}
+
+#+LATEX_HEADER: %%%%% Утверждения
+
+#+LATEX_HEADER: %% Для теоремы
+#+LATEX_HEADER: \declaretheoremstyle[
+#+LATEX_HEADER: headfont=\bfseries\sffamily\color{red!70!black},
+#+LATEX_HEADER: bodyfont=\normalfont, mdframed={ linewidth=2pt, rightline=false,
+#+LATEX_HEADER: topline=false, bottomline=false, linecolor=red,
+#+LATEX_HEADER: backgroundcolor=red!15, } ]{thmredbox20}
+
+#+LATEX_HEADER: %% Для утверждений
+#+LATEX_HEADER: \declaretheoremstyle[
+#+LATEX_HEADER: headfont=\bfseries\sffamily\color{violet!70!black},
+#+LATEX_HEADER: bodyfont=\normalfont, mdframed={ linewidth=2pt, rightline=false,
+#+LATEX_HEADER: topline=false, bottomline=false, linecolor=violet,
+#+LATEX_HEADER: backgroundcolor=red!10, } ]{thmredbox10}
+
+#+LATEX_HEADER: %% Для леммы
+#+LATEX_HEADER: \declaretheoremstyle[
+#+LATEX_HEADER: headfont=\bfseries\sffamily\color{red!70!black},
+#+LATEX_HEADER: bodyfont=\normalfont, mdframed={ linewidth=2pt, rightline=false,
+#+LATEX_HEADER: topline=false, bottomline=false, linecolor=red } ]{thmredline}
+
+#+LATEX_HEADER: \theoremstyle{plain}
+
+#+LATEX_HEADER: %%%% С нумерацией
+
+#+LATEX_HEADER: \declaretheorem[style=thmredbox10, numberwithin=section,
+#+LATEX_HEADER: name=Утверждение]{proposition}
+
+#+LATEX_HEADER: \declaretheorem[style=thmredbox10, numberwithin=section,
+#+LATEX_HEADER: name=Утверждение]{assertion}
+
+#+LATEX_HEADER: \declaretheorem[style=thmredbox20, numberwithin=section,
+#+LATEX_HEADER: name=Теорема]{theorem}
+
+#+LATEX_HEADER: \declaretheorem[style=thmredline, numberwithin=section,
+#+LATEX_HEADER: name=Лемма]{lemma}
+
+#+LATEX_HEADER: \declaretheorem[style=thmredbox10, numberwithin=section,
+#+LATEX_HEADER: name=Следствие]{corollary}
+
+#+LATEX_HEADER: %%%% Без нумерации
+
+#+LATEX_HEADER: \declaretheorem[style=thmredbox10, numbered=no,
+#+LATEX_HEADER: name=Утверждение]{proposition*}
+
+#+LATEX_HEADER: \declaretheorem[style=thmredbox10, numbered=no,
+#+LATEX_HEADER: name=Утверждение]{assertion*}
+
+#+LATEX_HEADER: \declaretheorem[style=thmredbox20, numbered=no,
+#+LATEX_HEADER: name=Теорема]{theorem*}
+
+#+LATEX_HEADER: \declaretheorem[style=thmredline, numbered=no, name=Лемма]{lemma*}
+
+#+LATEX_HEADER: \declaretheorem[style=thmredbox10, numbered=no,
+#+LATEX_HEADER: name=Следствие]{corollary*}

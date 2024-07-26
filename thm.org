@@ -1,0 +1,52 @@
+#+LATEX_HEADER: \usepackage{thmtools}
+
+#+LATEX_HEADER: %% Определения
+#+LATEX_HEADER:   \declaretheorem[style=definition, numberwithin=section,
+#+LATEX_HEADER:   name=Определение]{definition}
+#+LATEX_HEADER:   \declaretheorem[style=definition, numbered=no,
+#+LATEX_HEADER:   name=Определение]{definition*}
+#+LATEX_HEADER:   %% Замечание
+#+LATEX_HEADER:   \declaretheorem[style=remark, numberwithin=section,
+#+LATEX_HEADER:   name=Замечание]{remark}
+#+LATEX_HEADER:   \declaretheorem[style=remark, numbered=no, name=Замечание]{remark*}
+#+LATEX_HEADER:   %% Пример
+#+LATEX_HEADER:   \declaretheorem[style=definition, numberwithin=section,
+#+LATEX_HEADER:   name=Пример]{example}
+#+LATEX_HEADER:   \declaretheorem[style=definition, numbered=no,
+#+LATEX_HEADER:   name=Пример]{example*}
+#+LATEX_HEADER:   %% Задача
+#+LATEX_HEADER:   \declaretheorem[style=remark, numberwithin=section,
+#+LATEX_HEADER:   name=Задача]{task}
+#+LATEX_HEADER:   \declaretheorem[style=remark, numbered=no, name=Задача]{task*}
+#+LATEX_HEADER:   %% Упражнение
+#+LATEX_HEADER:   \declaretheorem[style=remark, numberwithin=section,
+#+LATEX_HEADER:   name=Упражнение]{exercise}
+#+LATEX_HEADER:   \declaretheorem[style=remark, numbered=no,
+#+LATEX_HEADER:   name=Упражнение]{exercise*}
+#+LATEX_HEADER:   %% Проблема
+#+LATEX_HEADER:   \declaretheorem[style=remark, numberwithin=section,
+#+LATEX_HEADER:   name=Проблема]{problem}
+#+LATEX_HEADER:   \declaretheorem[style=remark, numbered=no, name=Проблема]{problem*}
+#+LATEX_HEADER:   %% Вопрос
+#+LATEX_HEADER:   \declaretheorem[style=remark, numberwithin=section,
+#+LATEX_HEADER:   name=Вопрос]{question}
+#+LATEX_HEADER:   \declaretheorem[style=remark, numbered=no, name=Вопрос]{question*}
+#+LATEX_HEADER:   %% Теорема
+#+LATEX_HEADER:   \declaretheorem[style=plain, numberwithin=section,
+#+LATEX_HEADER:   name=Теорема]{theorem}
+#+LATEX_HEADER:   \declaretheorem[style=plain, numbered=no, name=Теорема]{theorem*}
+#+LATEX_HEADER:   %% Утверждение
+#+LATEX_HEADER:   \declaretheorem[style=plain, numberwithin=section,
+#+LATEX_HEADER:   name=Утверждение]{proposition}
+#+LATEX_HEADER:   \declaretheorem[style=plain, numbered=no,
+#+LATEX_HEADER:   name=Утверждение]{proposition*}
+#+LATEX_HEADER:   \declaretheorem[style=plain, numberwithin=section,
+#+LATEX_HEADER:   name=Утверждение]{assertion}
+#+LATEX_HEADER:   \declaretheorem[style=plain, numbered=no, name=Утверждение]{assertion*}
+#+LATEX_HEADER:   %% Лемма
+#+LATEX_HEADER:   \declaretheorem[style=plain, numberwithin=section,
+#+LATEX_HEADER:   name=Лемма]{lemma}
+#+LATEX_HEADER:   \declaretheorem[style=plain, numbered=no, name=Лемма]{lemma*}
+#+LATEX_HEADER:   %% Следствие
+#+LATEX_HEADER:   \declaretheorem[style=plain, numberwithin=section, name=Следствие]{corollary}
+#+LATEX_HEADER:   \declaretheorem[style=plain, numbered=no, name=Следствие]{corollary*}
