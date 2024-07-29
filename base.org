@@ -1,6 +1,7 @@
+#+LATEX_HEADER: \usepackage[T1, T2A]{fontenc}
+#+LATEX_HEADER: \usepackage[english,american,russian]{babel}
 #+LATEX_HEADER: % Дополнительные символы
 #+LATEX_HEADER: \usepackage{textcomp}
-
 #+LATEX_HEADER: %% Настраиваем дизайн текста (отступы, интервалы и пр.)&&&&&&
 #+LATEX_HEADER: %Отступ в первом абзаце раздела
 #+LATEX_HEADER: \usepackage{indentfirst}
