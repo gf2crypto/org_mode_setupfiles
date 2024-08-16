@@ -35,7 +35,8 @@
 #+LATEX_HEADER: \newcommand{\GF}[1]{\mathbb{F}_{#1}} %% \GF{q}=F_q
 #+LATEX_HEADER: % \newcommand{\GF}[1]{\mathrm{GF}(#1)} %% \GF{q}=GF(q)
 #+LATEX_HEADER: \newcommand{\progname}[1]{\ensuremath{\mathsf{#1}}} % \progname{Enc}_{k}(m)
-
+#+LATEX_HEADER: %   Duplicate the symbol after the '\HM' command on the next line
+#+LATEX_HEADER: \newcommand*{\HM}[1]{#1\nobreak\discretionary{}{\hbox{\(\mathsurround=0pt #1\)}}{}}
 #+LATEX_HEADER: %% Математические операторы, которые я часто использую
 #+LATEX_HEADER: \DeclareMathOperator{\supp}{supp}
 #+LATEX_HEADER: \DeclareMathOperator{\wt}{wt}
