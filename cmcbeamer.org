@@ -142,10 +142,11 @@
 #+LATEX_HEADER: }
 
 #+LATEX_HEADER: \AtBeginSection[]{%
-#+LATEX_HEADER:    \begin{frame}<beamer>%
-#+LATEX_HEADER:       \frametitle{\translate{Outline}}%
-#+LATEX_HEADER:       \tableofcontents
-#+LATEX_HEADER:     \end{frame}%
+#+LATEX_HEADER: \begin{transitionframe}
+#+LATEX_HEADER:       \begin{center} {\Huge
+#+LATEX_HEADER:           \textcolor{black}{[\insertsectionnumber/\textcolor{red}{\total{section}}]\secname}}
+#+LATEX_HEADER:   \end{center}
+#+LATEX_HEADER: \end{transitionframe}
 #+LATEX_HEADER: }
 
 #+SETUPFILE: ./beamer_base.org
