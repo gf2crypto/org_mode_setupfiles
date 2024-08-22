@@ -1,4 +1,4 @@
-#+LATEX_CLASS_OPTIONS: pdf, unicode, aspectratio=169, xcolor={dvipsnames, hyperref, table}
+#+LATEX_CLASS_OPTIONS: [pdf, unicode, aspectratio=169, xcolor={dvipsnames, hyperref, table}]
 #+LATEX_HEADER: %%% Theme
 #+LATEX_HEADER: \mode<presentation> {
 #+LATEX_HEADER: \usetheme{boxes}
