@@ -4,6 +4,7 @@
 #+LATEX_HEADER: \usepackage{amsmath}
 #+LATEX_HEADER: \usepackage{amssymb}
 #+LATEX_HEADER: \usepackage{amsfonts}
+#+LATEX_HEADER: \usepackage{mathtools}
 #+LATEX_HEADER: %Красивые дроби
 #+LATEX_HEADER: \usepackage{xfrac}
 
