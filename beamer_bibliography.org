@@ -1,0 +1,6 @@
+#+LATEX_HEADER: \newtranslation[to=Russian]{Bibliography}{Список литературы}
+#+LATEX_HEADER: \AtEndDocument{%
+#+LATEX_HEADER: \begin{frame}[noframenumbering,plain,allowframebreaks]{\translate{Bibliography}}
+#+LATEX_HEADER:   \bibliographystyle{plain}
+#+LATEX_HEADER:   \bibliography{/Users/surehand/Documents/library/library}
+#+LATEX_HEADER:\end{frame}}
