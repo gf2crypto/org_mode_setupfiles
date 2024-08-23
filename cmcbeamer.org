@@ -1,152 +1,152 @@
-#+LATEX_HEADER: %%% Theme
-#+LATEX_HEADER: \mode<presentation> {
-#+LATEX_HEADER: \usetheme{boxes}
-#+LATEX_HEADER: \usecolortheme{lily}}
-#+LATEX_HEADER: %% DISABLE navigation symbols
-#+LATEX_HEADER: \setbeamertemplate{navigation symbols}{}
+#+LATEX_HEADER_EXTRA: %%% Theme
+#+LATEX_HEADER_EXTRA: \mode<presentation> {
+#+LATEX_HEADER_EXTRA: \usetheme{boxes}
+#+LATEX_HEADER_EXTRA: \usecolortheme{lily}}
+#+LATEX_HEADER_EXTRA: %% DISABLE navigation symbols
+#+LATEX_HEADER_EXTRA: \setbeamertemplate{navigation symbols}{}
 #+LATEX_HEADER: %% Настройка шрифтов %
 #+LATEX_HEADER: \usepackage[default]{lato}
 #+LATEX_HEADER: \usepackage[cal=euler,frak=euler, scr=mathpi]{mathalfa}
-#+LATEX_HEADER: \usepackage{totcount}
-#+LATEX_HEADER: \regtotcounter{section}
-#+LATEX_HEADER: \usepackage{hyperref}
-#+LATEX_HEADER: \hypersetup{
-#+LATEX_HEADER:     colorlinks=true,
-#+LATEX_HEADER:     linkcolor=structure.fg,
-#+LATEX_HEADER:     filecolor=structure.fg,
-#+LATEX_HEADER:     runcolor=structure.fg,
-#+LATEX_HEADER:     urlcolor=structure.fg,
-#+LATEX_HEADER:     citecolor=structure.fg,
-#+LATEX_HEADER:     pdfpagemode=FullScreen,
-#+LATEX_HEADER: }
-#+LATEX_HEADER: \urlstyle{same}
-#+LATEX_HEADER: \definecolor{blue}{RGB}{34,185,255}
-#+LATEX_HEADER: \definecolor{red}{RGB}{255,34,75}
-#+LATEX_HEADER: \definecolor{yellow}{RGB}{255,214,34}
-#+LATEX_HEADER: \definecolor{green}{RGB}{34,255,104}
-#+LATEX_HEADER: \definecolor{purple}{RGB}{255,34,185}
-#+LATEX_HEADER: \definecolor{orange}{RGB}{255,104,34}
-#+LATEX_HEADER: \definecolor{background}{RGB}{255,253,218}
+#+LATEX_HEADER_EXTRA: \usepackage{totcount}
+#+LATEX_HEADER_EXTRA: \regtotcounter{section}
+#+LATEX_HEADER_EXTRA: \usepackage{hyperref}
+#+LATEX_HEADER_EXTRA: \hypersetup{
+#+LATEX_HEADER_EXTRA:     colorlinks=true,
+#+LATEX_HEADER_EXTRA:     linkcolor=structure.fg,
+#+LATEX_HEADER_EXTRA:     filecolor=structure.fg,
+#+LATEX_HEADER_EXTRA:     runcolor=structure.fg,
+#+LATEX_HEADER_EXTRA:     urlcolor=structure.fg,
+#+LATEX_HEADER_EXTRA:     citecolor=structure.fg,
+#+LATEX_HEADER_EXTRA:     pdfpagemode=FullScreen,
+#+LATEX_HEADER_EXTRA: }
+#+LATEX_HEADER_EXTRA: \urlstyle{same}
+#+LATEX_HEADER_EXTRA: \definecolor{blue}{RGB}{34,185,255}
+#+LATEX_HEADER_EXTRA: \definecolor{red}{RGB}{255,34,75}
+#+LATEX_HEADER_EXTRA: \definecolor{yellow}{RGB}{255,214,34}
+#+LATEX_HEADER_EXTRA: \definecolor{green}{RGB}{34,255,104}
+#+LATEX_HEADER_EXTRA: \definecolor{purple}{RGB}{255,34,185}
+#+LATEX_HEADER_EXTRA: \definecolor{orange}{RGB}{255,104,34}
+#+LATEX_HEADER_EXTRA: \definecolor{background}{RGB}{255,253,218}
 
-#+LATEX_HEADER: \setbeamercolor{structure}{fg=red}
+#+LATEX_HEADER_EXTRA: \setbeamercolor{structure}{fg=red}
 
-#+LATEX_HEADER: \BeforeBeginEnvironment{definition}{
-#+LATEX_HEADER:   \setbeamercolor{block title}{fg=white, bg=orange!70!black}
-#+LATEX_HEADER:   \setbeamercolor{block body}{fg=black, bg=orange!5!white}
-#+LATEX_HEADER: }
+#+LATEX_HEADER_EXTRA: \BeforeBeginEnvironment{definition}{
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{block title}{fg=white, bg=orange!70!black}
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{block body}{fg=black, bg=orange!5!white}
+#+LATEX_HEADER_EXTRA: }
 
-#+LATEX_HEADER: \BeforeBeginEnvironment{theorem}{
-#+LATEX_HEADER:   \setbeamercolor{block title}{fg=white, bg=red!70!black}
-#+LATEX_HEADER:   \setbeamercolor{block body}{fg=black, bg=red!5!white}
-#+LATEX_HEADER: }
-#+LATEX_HEADER: \BeforeBeginEnvironment{theorem*}{
-#+LATEX_HEADER:   \setbeamercolor{block title}{fg=white, bg=red!70!black}
-#+LATEX_HEADER:   \setbeamercolor{block body}{fg=black, bg=red!5!white}
-#+LATEX_HEADER: }
+#+LATEX_HEADER_EXTRA: \BeforeBeginEnvironment{theorem}{
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{block title}{fg=white, bg=red!70!black}
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{block body}{fg=black, bg=red!5!white}
+#+LATEX_HEADER_EXTRA: }
+#+LATEX_HEADER_EXTRA: \BeforeBeginEnvironment{theorem*}{
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{block title}{fg=white, bg=red!70!black}
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{block body}{fg=black, bg=red!5!white}
+#+LATEX_HEADER_EXTRA: }
 
-#+LATEX_HEADER: \BeforeBeginEnvironment{lemma}{
-#+LATEX_HEADER:   \setbeamercolor{block title}{fg=white, bg=red!70!black}
-#+LATEX_HEADER:   \setbeamercolor{block body}{fg=black, bg=red!5!white}
-#+LATEX_HEADER: }
-#+LATEX_HEADER: \BeforeBeginEnvironment{lemma*}{
-#+LATEX_HEADER:   \setbeamercolor{block title}{fg=white, bg=red!70!black}
-#+LATEX_HEADER:   \setbeamercolor{block body}{fg=black, bg=red!5!white}
-#+LATEX_HEADER: }
+#+LATEX_HEADER_EXTRA: \BeforeBeginEnvironment{lemma}{
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{block title}{fg=white, bg=red!70!black}
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{block body}{fg=black, bg=red!5!white}
+#+LATEX_HEADER_EXTRA: }
+#+LATEX_HEADER_EXTRA: \BeforeBeginEnvironment{lemma*}{
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{block title}{fg=white, bg=red!70!black}
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{block body}{fg=black, bg=red!5!white}
+#+LATEX_HEADER_EXTRA: }
 
-#+LATEX_HEADER: \BeforeBeginEnvironment{corollary}{
-#+LATEX_HEADER:   \setbeamercolor{block title}{fg=white, bg=red!70!black}
-#+LATEX_HEADER:   \setbeamercolor{block body}{fg=black, bg=red!5!white}
-#+LATEX_HEADER: }
-#+LATEX_HEADER: \BeforeBeginEnvironment{corollary*}{
-#+LATEX_HEADER:   \setbeamercolor{block title}{fg=white, bg=red!70!black}
-#+LATEX_HEADER:   \setbeamercolor{block body}{fg=black, bg=red!5!white}
-#+LATEX_HEADER: }
+#+LATEX_HEADER_EXTRA: \BeforeBeginEnvironment{corollary}{
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{block title}{fg=white, bg=red!70!black}
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{block body}{fg=black, bg=red!5!white}
+#+LATEX_HEADER_EXTRA: }
+#+LATEX_HEADER_EXTRA: \BeforeBeginEnvironment{corollary*}{
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{block title}{fg=white, bg=red!70!black}
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{block body}{fg=black, bg=red!5!white}
+#+LATEX_HEADER_EXTRA: }
 
-#+LATEX_HEADER: \BeforeBeginEnvironment{proposition}{
-#+LATEX_HEADER:     \setbeamercolor{block title}{fg=white, bg=red!70!black}
-#+LATEX_HEADER:   \setbeamercolor{block body}{fg=black, bg=red!5!white}
-#+LATEX_HEADER: }
+#+LATEX_HEADER_EXTRA: \BeforeBeginEnvironment{proposition}{
+#+LATEX_HEADER_EXTRA:     \setbeamercolor{block title}{fg=white, bg=red!70!black}
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{block body}{fg=black, bg=red!5!white}
+#+LATEX_HEADER_EXTRA: }
 
-#+LATEX_HEADER: \BeforeBeginEnvironment{proposition*}{
-#+LATEX_HEADER:   \setbeamercolor{block title}{fg=white, bg=red!70!black}
-#+LATEX_HEADER:   \setbeamercolor{block body}{fg=black, bg=red!5!white}
-#+LATEX_HEADER: }
+#+LATEX_HEADER_EXTRA: \BeforeBeginEnvironment{proposition*}{
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{block title}{fg=white, bg=red!70!black}
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{block body}{fg=black, bg=red!5!white}
+#+LATEX_HEADER_EXTRA: }
 
-#+LATEX_HEADER: \BeforeBeginEnvironment{proof}{
-#+LATEX_HEADER:   \setbeamercolor{block title}{fg=structure.fg, bg=red!5!white}
-#+LATEX_HEADER:   \setbeamercolor{block body}{fg=black, bg=red!5!white}
-#+LATEX_HEADER: }
+#+LATEX_HEADER_EXTRA: \BeforeBeginEnvironment{proof}{
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{block title}{fg=structure.fg, bg=red!5!white}
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{block body}{fg=black, bg=red!5!white}
+#+LATEX_HEADER_EXTRA: }
 
-#+LATEX_HEADER: \BeforeBeginEnvironment{remark}{
-#+LATEX_HEADER:   \setbeamercolor{block title}{fg=white, bg=purple!70!black}
-#+LATEX_HEADER:   \setbeamercolor{block body}{fg=black, bg=purple!5!white}
-#+LATEX_HEADER: }
+#+LATEX_HEADER_EXTRA: \BeforeBeginEnvironment{remark}{
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{block title}{fg=white, bg=purple!70!black}
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{block body}{fg=black, bg=purple!5!white}
+#+LATEX_HEADER_EXTRA: }
 
-#+LATEX_HEADER: %%% Example block
-#+LATEX_HEADER: \setbeamercolor{block title example}{fg=white, bg=blue!70!black}
-#+LATEX_HEADER: \setbeamercolor{block body example}{fg=black, bg=blue!5!white}
+#+LATEX_HEADER_EXTRA: %%% Example block
+#+LATEX_HEADER_EXTRA: \setbeamercolor{block title example}{fg=white, bg=blue!70!black}
+#+LATEX_HEADER_EXTRA: \setbeamercolor{block body example}{fg=black, bg=blue!5!white}
 
-#+LATEX_HEADER: \addtobeamertemplate{block example begin}{}{
-#+LATEX_HEADER:   \setbeamercolor{itemize item}{fg=blue!70!black}%
-#+LATEX_HEADER:   \setbeamercolor{itemize subitem}{fg=blue!70!black}%
-#+LATEX_HEADER:   \setbeamercolor{itemize subsubitem}{fg=blue!70!black}%
-#+LATEX_HEADER:   \setbeamercolor{enumerate item}{fg=blue!70!black}%
-#+LATEX_HEADER:   \setbeamercolor{enumerate subitem}{fg=blue!70!black}%
-#+LATEX_HEADER:   \setbeamercolor{enumerate subsubitem}{fg=blue!70!black}%
-#+LATEX_HEADER: }
+#+LATEX_HEADER_EXTRA: \addtobeamertemplate{block example begin}{}{
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{itemize item}{fg=blue!70!black}%
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{itemize subitem}{fg=blue!70!black}%
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{itemize subsubitem}{fg=blue!70!black}%
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{enumerate item}{fg=blue!70!black}%
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{enumerate subitem}{fg=blue!70!black}%
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{enumerate subsubitem}{fg=blue!70!black}%
+#+LATEX_HEADER_EXTRA: }
 
-#+LATEX_HEADER: %%% Example without numbering
-#+LATEX_HEADER: \BeforeBeginEnvironment{example*}{
-#+LATEX_HEADER:   \setbeamercolor{block title}{fg=white, bg=blue!70!black}%
-#+LATEX_HEADER:   \setbeamercolor{block body}{fg=black, bg=blue!5!white}%
-#+LATEX_HEADER:   \setbeamercolor{itemize item}{fg=blue!70!black}%
-#+LATEX_HEADER:   \setbeamercolor{itemize subitem}{fg=blue!70!black}%
-#+LATEX_HEADER:   \setbeamercolor{itemize subsubitem}{fg=blue!70!black}%
-#+LATEX_HEADER:   \setbeamercolor{enumerate item}{fg=blue!70!black}%
-#+LATEX_HEADER:   \setbeamercolor{enumerate subitem}{fg=blue!70!black}%
-#+LATEX_HEADER:   \setbeamercolor{enumerate subsubitem}{fg=blue!70!black}%
-#+LATEX_HEADER: }
+#+LATEX_HEADER_EXTRA: %%% Example without numbering
+#+LATEX_HEADER_EXTRA: \BeforeBeginEnvironment{example*}{
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{block title}{fg=white, bg=blue!70!black}%
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{block body}{fg=black, bg=blue!5!white}%
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{itemize item}{fg=blue!70!black}%
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{itemize subitem}{fg=blue!70!black}%
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{itemize subsubitem}{fg=blue!70!black}%
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{enumerate item}{fg=blue!70!black}%
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{enumerate subitem}{fg=blue!70!black}%
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{enumerate subsubitem}{fg=blue!70!black}%
+#+LATEX_HEADER_EXTRA: }
 
-#+LATEX_HEADER: \newenvironment{transitionframe}{
-#+LATEX_HEADER:   \setbeamercolor{background canvas}{bg=yellow}
-#+LATEX_HEADER:   \begin{frame}}{
-#+LATEX_HEADER:     \end{frame}
-#+LATEX_HEADER: }
-#+LATEX_HEADER: %%%%%%%%%%%%%%%%%%%Содержание%%%%%%%%%%%%%%%%%%%%%%%%%%
-#+LATEX_HEADER: \newtranslation[to=Russian]{Outline}{План}
-#+LATEX_HEADER: \setbeamertemplate{section in toc}[sections numbered]
-#+LATEX_HEADER: \setbeamertemplate{subsection in toc}[subsections numbered]
-#+LATEX_HEADER: \AtBeginDocument{%
-#+LATEX_HEADER: %%%%  Print title page
-#+LATEX_HEADER: {
-#+LATEX_HEADER:   \setbeamercolor{author}{fg=blue!50!black}
-#+LATEX_HEADER:   \setbeamercolor{institute}{fg=blue!50!black}
-#+LATEX_HEADER:   \setbeamercolor{date}{fg=blue!50!black}
-#+LATEX_HEADER:
-#+LATEX_HEADER:   \usebackgroundtemplate{%
-#+LATEX_HEADER:     \begin{tikzpicture}[remember picture,overlay]
-#+LATEX_HEADER:       \node [opacity=0.2, xshift=7cm,yshift=3cm] at (current page.south west){
-#+LATEX_HEADER:         \includegraphics[ width=1.3\textwidth, keepaspectratio
-#+LATEX_HEADER:         ]{msu-cmc-logo.png}};
-#+LATEX_HEADER:     \end{tikzpicture}
-#+LATEX_HEADER:   }
-#+LATEX_HEADER:   \begin{frame}
-#+LATEX_HEADER:     \titlepage%
-#+LATEX_HEADER:   \end{frame}}
-#+LATEX_HEADER: \begin{frame}<beamer>%
+#+LATEX_HEADER_EXTRA: \newenvironment{transitionframe}{
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{background canvas}{bg=yellow}
+#+LATEX_HEADER_EXTRA:   \begin{frame}}{
+#+LATEX_HEADER_EXTRA:     \end{frame}
+#+LATEX_HEADER_EXTRA: }
+#+LATEX_HEADER_EXTRA: %%%%%%%%%%%%%%%%%%%Содержание%%%%%%%%%%%%%%%%%%%%%%%%%%
+#+LATEX_HEADER_EXTRA: \newtranslation[to=Russian]{Outline}{План}
+#+LATEX_HEADER_EXTRA: \setbeamertemplate{section in toc}[sections numbered]
+#+LATEX_HEADER_EXTRA: \setbeamertemplate{subsection in toc}[subsections numbered]
+#+LATEX_HEADER_EXTRA: \AtBeginDocument{%
+#+LATEX_HEADER_EXTRA: %%%%  Print title page
+#+LATEX_HEADER_EXTRA: {
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{author}{fg=blue!50!black}
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{institute}{fg=blue!50!black}
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{date}{fg=blue!50!black}
+#+LATEX_HEADER_EXTRA:
+#+LATEX_HEADER_EXTRA:   \usebackgroundtemplate{%
+#+LATEX_HEADER_EXTRA:     \begin{tikzpicture}[remember picture,overlay]
+#+LATEX_HEADER_EXTRA:       \node [opacity=0.2, xshift=7cm,yshift=3cm] at (current page.south west){
+#+LATEX_HEADER_EXTRA:         \includegraphics[ width=1.3\textwidth, keepaspectratio
+#+LATEX_HEADER_EXTRA:         ]{msu-cmc-logo.png}};
+#+LATEX_HEADER_EXTRA:     \end{tikzpicture}
+#+LATEX_HEADER_EXTRA:   }
+#+LATEX_HEADER_EXTRA:   \begin{frame}
+#+LATEX_HEADER_EXTRA:     \titlepage%
+#+LATEX_HEADER_EXTRA:   \end{frame}}
+#+LATEX_HEADER_EXTRA: \begin{frame}<beamer>%
 
-#+LATEX_HEADER: \frametitle{\translate{Outline}}%
-#+LATEX_HEADER: \tableofcontents
-#+LATEX_HEADER: \end{frame}%
-#+LATEX_HEADER: }
+#+LATEX_HEADER_EXTRA: \frametitle{\translate{Outline}}%
+#+LATEX_HEADER_EXTRA: \tableofcontents
+#+LATEX_HEADER_EXTRA: \end{frame}%
+#+LATEX_HEADER_EXTRA: }
 
-#+LATEX_HEADER: \AtBeginSection[]{%
-#+LATEX_HEADER: \begin{transitionframe}
-#+LATEX_HEADER:       \begin{center} {\Huge
-#+LATEX_HEADER:           \textcolor{black}{[\insertsectionnumber/\textcolor{red}{\total{section}}]\secname}}
-#+LATEX_HEADER:   \end{center}
-#+LATEX_HEADER: \end{transitionframe}
-#+LATEX_HEADER: }
+#+LATEX_HEADER_EXTRA: \AtBeginSection[]{%
+#+LATEX_HEADER_EXTRA: \begin{transitionframe}
+#+LATEX_HEADER_EXTRA:       \begin{center} {\Huge
+#+LATEX_HEADER_EXTRA:           \textcolor{black}{[\insertsectionnumber/\textcolor{red}{\total{section}}]\secname}}
+#+LATEX_HEADER_EXTRA:   \end{center}
+#+LATEX_HEADER_EXTRA: \end{transitionframe}
+#+LATEX_HEADER_EXTRA: }
 
 #+SETUPFILE: ./beamer_base.org
 #+SETUPFILE: ./beamer_thms.org

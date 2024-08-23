@@ -1,1 +1,2 @@
-#+LATEX_HEADER: \renewcommand{\cite}[1]{\footcite{#1}}
+# Требуется biblatex!!!
+#+LATEX_HEADER_EXTRA: \renewcommand{\cite}[1]{\footcite{#1}}
