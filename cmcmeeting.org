@@ -1,0 +1,106 @@
+#+LATEX_CLASS: memoir
+#+LATEX_CLASS_OPTIONS: [a4paper,oneside,onecolumn,14pt]
+
+#+LATEX_HEADER: \usepackage{titlesec}
+#+LATEX_HEADER: \usepackage{titling}
+#+LATEX_HEADER: \usepackage{enumitem}
+#+LATEX_HEADER: \titleformat{\section}{\large\bfseries}{\thesection.}{1em}{\underline}
+#+LATEX_HEADER: \titleformat{\subsection}{\large\bfseries}{\thesubsection.}{1em}{}
+#+LATEX_HEADER: \titleformat{\subsubsection}{\itshape}{\thesubsubsection.}{1em}{}
+#+LATEX_HEADER: \setlength{\droptitle}{-6em}
+#+LATEX_HEADER: \pretitle{
+#+LATEX_HEADER:   \thispagestyle{empty}
+#+LATEX_HEADER:   \begin{center}\SingleSpacing\Large\bfseries}
+#+LATEX_HEADER: \posttitle{\par\end{center}}
+#+LATEX_HEADER: \predate{\begin{flushright}\bfseries}
+#+LATEX_HEADER: \postdate{\par\end{flushright}}
+#+LATEX_HEADER: \postauthor{}
+#+LATEX_HEADER: \preauthor{}
+#+LATEX_HEADER: \setlist[description]{leftmargin=2\parindent,labelindent=\parindent}
+#+LATEX_HEADER: \setlist[itemize]{label=--}
+#+LATEX_HEADER: %%%%%%%%% Geometry of page
+#+LATEX_HEADER: \settrimmedsize{297mm}{210mm}{*}
+#+LATEX_HEADER: \setlength{\trimtop}{0pt}
+#+LATEX_HEADER: \setlength{\trimedge}{\stockwidth}
+#+LATEX_HEADER: \addtolength{\trimedge}{-\paperwidth}
+#+LATEX_HEADER: \settypeblocksize{634pt}{448.13pt}{*}
+#+LATEX_HEADER: \setulmarginsandblock{
+#+LATEX_HEADER:     2cm    % top margin
+#+LATEX_HEADER: }{
+#+LATEX_HEADER:     2cm    % bottom margin
+#+LATEX_HEADER: }{*}
+#+LATEX_HEADER: \setlrmarginsandblock{
+#+LATEX_HEADER:     3cm    % left margin
+#+LATEX_HEADER: }{
+#+LATEX_HEADER:     1.5cm  % right margin
+#+LATEX_HEADER: }{*}
+#+LATEX_HEADER: \setmarginnotes{17pt}{51pt}{\onelineskip}
+#+LATEX_HEADER: \setheadfoot{2\onelineskip}{2\onelineskip}
+#+LATEX_HEADER: \setheaderspaces{*}{\onelineskip}{*}
+#+LATEX_HEADER: \checkandfixthelayout
+#+LATEX_HEADER: %spacing
+#+LATEX_HEADER: \OnehalfSpacing
+#+LATEX_HEADER: % ----------------------Page numbering-----------------------------
+#+LATEX_HEADER:
+#+LATEX_HEADER: \makepagestyle{standard}  % Make standard pagestyle
+#+LATEX_HEADER:
+#+LATEX_HEADER: \makeatletter             % Define standard pagestyle
+#+LATEX_HEADER:
+#+LATEX_HEADER: % -----------------------Header-------------------------------------
+#+LATEX_HEADER: \makeevenhead{standard}{}{\thepage}{}  % place page number in the center of footer
+#+LATEX_HEADER: \makeoddhead{standard}{}{\thepage}{}
+#+LATEX_HEADER:
+#+LATEX_HEADER: % -----------------------Footer-------------------------------------
+#+LATEX_HEADER: \makeevenfoot{standard}{}{}{}
+#+LATEX_HEADER: \makeoddfoot{standard}{}{}{}
+#+LATEX_HEADER: \makeatother
+#+LATEX_HEADER:
+#+LATEX_HEADER: %Hyphenation rules
+#+LATEX_HEADER: %--------------------------------------
+#+LATEX_HEADER: \usepackage{hyphenat}
+#+LATEX_HEADER: \hyphenation{ма-те-ма-ти-ка вос-ста-нав-ли-вать}
+#+LATEX_HEADER: %--------------------------------------
+#+LATEX_HEADER: % Times-совместимый шрифт для математики
+#+LATEX_HEADER: \DeclareSymbolFont{letters}{OML}{ztmcm}{m}{it}
+#+LATEX_HEADER: \DeclareSymbolFontAlphabet{\mathnormal}{letters}
+#+LATEX_HEADER: \usepackage{tempora}
+#+LATEX_HEADER: \usepackage{amsthm}
+#+LATEX_HEADER: \usepackage{amstext}
+#+LATEX_HEADER: \usepackage{amsmath}
+#+LATEX_HEADER: \usepackage{amssymb}
+#+LATEX_HEADER: \usepackage{booktabs}   %  качественные таблицы
+#+LATEX_HEADER: \usepackage{longtable}   %  "длинные" таблицы
+#+LATEX_HEADER: \usepackage{changepage}
+#+LATEX_HEADER: \usepackage{csquotes}
+#+LATEX_HEADER: %===================================================================
+#+LATEX_HEADER: %   Special commands
+#+LATEX_HEADER: %===================================================================
+#+LATEX_HEADER: \newcommand*{\sign}[2]{  % insert signature
+#+LATEX_HEADER:     \noindent
+#+LATEX_HEADER:     \begin{minipage}[b][][b]{0.5\textwidth}
+#+LATEX_HEADER:         \begin{flushleft}
+#+LATEX_HEADER:             \SingleSpacing
+#+LATEX_HEADER:             #1
+#+LATEX_HEADER:         \end{flushleft}
+#+LATEX_HEADER:     \end{minipage}
+#+LATEX_HEADER:     \begin{minipage}[b][][b]{0.48\textwidth}
+#+LATEX_HEADER:         \begin{flushright}
+#+LATEX_HEADER:             \SingleSpacing
+#+LATEX_HEADER:             #2
+#+LATEX_HEADER:         \end{flushright}
+#+LATEX_HEADER:     \end{minipage}
+#+LATEX_HEADER: }
+#+LATEX_HEADER: % How to use:
+#+LATEX_HEADER: %    \sign{Job position}{FirstName SecondName}
+#+LATEX_HEADER:
+#+LATEX_HEADER: %-----------Autonumeration index---------------------------------------
+#+LATEX_HEADER: \newcounter{index}
+#+LATEX_HEADER: \newcommand*{\No}{\noindent\refstepcounter{index}\textnumero~\theindex}
+#+LATEX_HEADER: \newcommand*{\Index}{\refstepcounter{index}\theindex}
+#+LATEX_HEADER: \usepackage{etoolbox}
+#+LATEX_HEADER: \AtBeginDocument{
+#+LATEX_HEADER:     \pagestyle{standard}
+#+LATEX_HEADER:     \maketitle
+#+LATEX_HEADER:     \thispagestyle{empty}
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \usepackage{ulem}
