@@ -1,0 +1,3 @@
+#+LANGUAGE: ru
+#+TAGS: export
+#+OPTIONS: toc:nil title:nil tags:nil
