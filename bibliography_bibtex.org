@@ -1,0 +1,7 @@
+#+LATEX_HEADER: %%% Библиография
+#+LATEX_HEADER: \usepackage{cite}
+#+LATEX_HEADER: %\usepackage{gost}
+#+LATEX_HEADER: \AtEndDocument{%
+#+LATEX_HEADER:   \bibliographystyle{plain}
+#+LATEX_HEADER:   \bibliography{/Users/surehand/Documents/library/library}
+#+LATEX_HEADER: }

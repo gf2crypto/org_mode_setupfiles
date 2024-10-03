@@ -77,15 +77,6 @@
 #+LATEX_HEADER: \SetKwInput{KwOutput}{Выход}
 #+LATEX_HEADER: \SetAlgorithmName{Алгоритм}{алгоритм}{Список алгоритмов}
 
-#+LATEX_HEADER: %%% Библиография
-#+LATEX_HEADER: \usepackage{cite}
-#+LATEX_HEADER: %\usepackage{gost}
-#+LATEX_HEADER: \renewcommand{\refname}{Список литературы}
-#+LATEX_HEADER: \AtEndDocument{%
-#+LATEX_HEADER:   \bibliographystyle{plain}
-#+LATEX_HEADER:   \bibliography{/Users/surehand/Documents/library/library}
-#+LATEX_HEADER: }
-
 #+LATEX_HEADER: %% Ключевые слова
 #+LATEX_HEADER:
 #+LATEX_HEADER: \newcommand{\keywords}[1]{%
