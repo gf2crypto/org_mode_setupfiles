@@ -1,7 +1,5 @@
 #+LATEX_CLASS_OPTIONS: [pdf, unicode, xcolor={dvipsnames, hyperref, table}, aspectratio=169, 12pt]
 #+OPTIONS: H:2 tags:nil
-#+CITE_EXPORT: bibtex
 
 #+SETUPFILE: ./beamer_base.org
 #+SETUPFILE: ./beamer_thms.org
-#+SETUPFILE: ./beamer_bibliography.org

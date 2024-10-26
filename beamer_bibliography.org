@@ -4,3 +4,4 @@
 #+LATEX_HEADER_EXTRA:   \bibliographystyle{plain}
 #+LATEX_HEADER_EXTRA:   \bibliography{/Users/surehand/Documents/library/library}
 #+LATEX_HEADER_EXTRA:\end{frame}}
+#+CITE_EXPORT: bibtex
