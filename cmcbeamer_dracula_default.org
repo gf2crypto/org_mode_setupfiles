@@ -1,0 +1,4 @@
+#+LATEX_CLASS_OPTIONS: [pdf, unicode, xcolor={dvipsnames, hyperref, table}, aspectratio=169, 12pt]
+#+OPTIONS: H:2 toc:nil title:nil tags:nil
+
+#+SETUPFILE: ./cmcbeamer_dracula.org
