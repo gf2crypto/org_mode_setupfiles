@@ -1,5 +1,7 @@
 #+LATEX_CLASS_OPTIONS: [pdf, unicode, xcolor={dvipsnames, hyperref, table}, aspectratio=169, 12pt]
 #+OPTIONS: H:2 tags:nil
-
+#+LATEX_HEADER_EXTRA: \uselanguage{Russian}
+#+LATEX_HEADER_EXTRA: \languagepath{Russian}
+#+LANGUAGE: ru
 #+SETUPFILE: ./beamer_base.org
 #+SETUPFILE: ./beamer_thms.org
