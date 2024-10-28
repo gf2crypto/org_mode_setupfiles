@@ -104,3 +104,7 @@
 #+LATEX_HEADER:     \thispagestyle{empty}
 #+LATEX_HEADER: }
 #+LATEX_HEADER: \usepackage{ulem}
+#+LANGUAGE: ru
+#+OPTIONS: toc:nil
+#+OPTIONS: title:nil
+#+OPTIONS: author:nil
