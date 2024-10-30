@@ -112,9 +112,14 @@
 
 #+LATEX_HEADER_EXTRA:\newenvironment{transitionframe}{
 #+LATEX_HEADER_EXTRA:  \setbeamercolor{background canvas}{bg=blue}
-#+LATEX_HEADER_EXTRA:  \setbeamerfont{normal text}{size=\Huge}
-#+LATEX_HEADER_EXTRA:  \setbeamercolor{normal text}{fg=white}
+#+LATEX_HEADER_EXTRA:  \setbeamerfont{normal text}{size=\LARGE}
+#+LATEX_HEADER_EXTRA:  \usebackgroundtemplate{%
+#+LATEX_HEADER_EXTRA:         \includegraphics[height=\paperheight
+#+LATEX_HEADER_EXTRA:         ]{kryptonite_transition_frame.png};
+#+LATEX_HEADER_EXTRA:   }
+#+LATEX_HEADER_EXTRA: \setbeamertemplate{footline}{}
 #+LATEX_HEADER_EXTRA:  \begin{frame}
+#+LATEX_HEADER_EXTRA:    \setbeamercolor{normal text}{fg=white}
 #+LATEX_HEADER_EXTRA:    \usebeamerfont{normal text}
 #+LATEX_HEADER_EXTRA:    \usebeamercolor[fg]{normal text}
 #+LATEX_HEADER_EXTRA:    }{
@@ -122,9 +127,35 @@
 #+LATEX_HEADER_EXTRA:}
 #+LATEX_HEADER_EXTRA: %%%%%%%%%%%%%%%%%%%Содержание%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+#+LATEX_HEADER_EXTRA: \BeforeBeginEnvironment{frame}{
+#+LATEX_HEADER_EXTRA: \setbeamercolor{normal text}{fg=black}
+#+LATEX_HEADER_EXTRA: \usebeamercolor[fg]{normal text}
+#+LATEX_HEADER_EXTRA: }
+#+LATEX_HEADER_EXTRA:
 #+LATEX_HEADER_EXTRA: \newtranslation[to=Russian]{Outline}{План}
 #+LATEX_HEADER_EXTRA: \setbeamertemplate{section in toc}[sections numbered]
 #+LATEX_HEADER_EXTRA: \setbeamertemplate{subsection in toc}[subsections numbered]
+#+LATEX_HEADER_EXTRA:\setbeamertemplate{frametitle}
+#+LATEX_HEADER_EXTRA:{
+#+LATEX_HEADER_EXTRA:  \setbeamercolor{frametitle}{fg=white}
+#+LATEX_HEADER_EXTRA:  % \nointerlineskip
+#+LATEX_HEADER_EXTRA:  \begin{textblock*}{2\paperwidth}(-30pt,0pt)
+#+LATEX_HEADER_EXTRA:    \includegraphics[width=1.1\paperwidth, height=53pt]{kryptonite_title_frame.png}
+#+LATEX_HEADER_EXTRA:  \end{textblock*}
+#+LATEX_HEADER_EXTRA:
+#+LATEX_HEADER_EXTRA:  \begin{textblock*}{\paperwidth}(-30pt,5pt)
+#+LATEX_HEADER_EXTRA:    \addtolength{\leftskip}{10pt}
+#+LATEX_HEADER_EXTRA:    \addtolength{\rightskip}{10pt}
+#+LATEX_HEADER_EXTRA:    \strut\usebeamercolor[fg]{frametitle}\insertframetitle\strut\par
+#+LATEX_HEADER_EXTRA:  \end{textblock*}
+#+LATEX_HEADER_EXTRA:  \vskip50pt
+#+LATEX_HEADER_EXTRA:}
+#+LATEX_HEADER_EXTRA:\setbeamertemplate{footline}
+#+LATEX_HEADER_EXTRA:{
+#+LATEX_HEADER_EXTRA:  \begin{textblock*}{\paperwidth}(0.88\paperwidth,-20pt)
+#+LATEX_HEADER_EXTRA:    \includegraphics[width=50pt]{kryptonite_logo.png}
+#+LATEX_HEADER_EXTRA:  \end{textblock*}
+#+LATEX_HEADER_EXTRA:}
 #+LATEX_HEADER_EXTRA: \AtBeginDocument{%
 #+LATEX_HEADER_EXTRA: %%%%  Print title page
 #+LATEX_HEADER_EXTRA: {
@@ -157,9 +188,12 @@
 #+LATEX_HEADER_EXTRA:          \usebeamerfont{author}\usebeamerfont{author}\insertauthor\par
 #+LATEX_HEADER_EXTRA:     \end{textblock*}
 #+LATEX_HEADER_EXTRA:}
+#+LATEX_HEADER_EXTRA: {
+#+LATEX_HEADER_EXTRA: \setbeamertemplate{footline}{}
 #+LATEX_HEADER_EXTRA: \begin{frame}
 #+LATEX_HEADER_EXTRA:     \titlepage%
-#+LATEX_HEADER_EXTRA:   \end{frame}}
+#+LATEX_HEADER_EXTRA:   \end{frame}
+#+LATEX_HEADER_EXTRA: }}
 #+LATEX_HEADER_EXTRA: \begin{frame}<beamer>%
 
 #+LATEX_HEADER_EXTRA: \frametitle{\translate{Outline}}%
@@ -169,9 +203,9 @@
 
 #+LATEX_HEADER_EXTRA: \AtBeginSection[]{%
 #+LATEX_HEADER_EXTRA:  \begin{transitionframe}
-#+LATEX_HEADER_EXTRA:    \begin{center}
+#+LATEX_HEADER_EXTRA:     \begin{textblock*}{0.68\paperwidth}(0pt, 0pt)
 #+LATEX_HEADER_EXTRA:      [\insertsectionnumber/\alert{\total{section}}] \secname%
-#+LATEX_HEADER_EXTRA:    \end{center}
+#+LATEX_HEADER_EXTRA:    \end{textblock*}
 #+LATEX_HEADER_EXTRA:  \end{transitionframe}
 #+LATEX_HEADER_EXTRA: }
 
