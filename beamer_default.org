@@ -3,5 +3,3 @@
 #+LATEX_HEADER_EXTRA: \uselanguage{Russian}
 #+LATEX_HEADER_EXTRA: \languagepath{Russian}
 #+LANGUAGE: ru
-#+SETUPFILE: ./beamer_base.org
-#+SETUPFILE: ./beamer_thms.org
