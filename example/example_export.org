@@ -1,4 +1,4 @@
-#+SETUPFILE: ../plain.org
+#+SETUPFILE: ../plaintimes.org
 #+LANGUAGE: ru
 #+OPTIONS: tags:nil
 #+LATEX_HEADER: \usepackage[math, toc]{blindtext}
@@ -45,7 +45,7 @@
 \([n,k,d]\) над конечным полем \(\GF{q}\), который имеет эффективные
 алгоритмы декодирования, \(G\)\nbsp{}--- его порождающая матрица размера \(k\times n\), \(H\)\nbsp{}--- невырожденная \(k\times k\) матрица и \(\Gamma\)\nbsp{}--- /перестановочная матрица/ размера \(n\times n\).
 
-__Секретным ключом__ в данной схеме является тройка \((H,G,\Gamma)\), а **открытым ключом**\nbsp{}--- матрица \(G'=H\cdot G\cdot \Gamma\).
+/Секретным ключом/ в данной схеме является тройка \((H,G,\Gamma)\), а *открытым ключом*\nbsp{}--- матрица \(G'=H\cdot G\cdot \Gamma\).
 
 #+NAME: def:triangle
 #+begin_definition
