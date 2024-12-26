@@ -1,7 +1,8 @@
+#+SETUPFILE: ../plain.org
+#+LANGUAGE: ru
+#+OPTIONS: tags:nil
 #+LATEX_HEADER: \usepackage[math, toc]{blindtext}
-#+LATEX_HEADER: \newcommand{\code}[1]{\mathcal{#1}}
 #+LATEX_HEADER: \newcommand*{\RM}{\code{RM}}
-#+LATEX_HEADER: \newcommand*{\GF}[1]{\mathbb{F}_{#1}}
 #+LATEX_HEADER: \newcommand*{\GL}{\mathsf{GL}}
 
 #+title: Пример оформления окружений и текста
@@ -114,7 +115,7 @@ y_{i_s},\;t\leqslant r\}
 #+begin_proposition*
 Пусть в качестве порождающей матрицы кода \(\code{C}\) в криптосистеме Мак-Элиса взята матрица \(G\).
 Тогда существует взаимно однозначное соответствие между множеством \(
-\mathsf{Aut}(\сode{C})\) и классом эквивалентности \([(H,G,\Gamma)]\) множества секретных ключей криптосистемы Мак-Элиса.
+\mathsf{Aut}(\code{C})\) и классом эквивалентности \([(H,G,\Gamma)]\) множества секретных ключей криптосистемы Мак-Элиса.
 #+end_proposition*
 
 Из этого утверждения немедленно получаем формулу для мощности
@@ -122,12 +123,12 @@ y_{i_s},\;t\leqslant r\}
 эквивалентности секретных ключей.
 
 #+NAME: ex:myexample
-#+begin_example
+#+begin_example0
 Пусть \(\mathcal E\)\nbsp{}--- множество всех открытых ключей криптосистемы Мак--Элиса.
 Тогда справедлива формула
 \[|\mathcal E|=\frac{n!h_k(q)}{|\mathsf{Aut}(\code{C})|},\]
 здесь \(h_k(q)=|\GL_k(\GF{q})|=(q^k-1)(q^k-q)\ldots (q^k-q^{k-1})\)\nbsp{}--- число невырожденных матриц порядка \(k\) над полем \(\GF{q}\).
-#+end_example
+#+end_example0
 
 А вот ссылка на \href{https://ru.wikipedia.org}{википедию}.
 Тоже самое, но в окружении без номера.
@@ -144,15 +145,14 @@ y_{i_s},\;t\leqslant r\}
 Общее число открытых ключей в криптосистеме Мак-Элиса, в которой в
 качестве матрицы \(G\) была выбрана порождающая матрица двоичного
 кода Рида--Маллера, вычисляется по формуле
-\[
-|\mathcal E|=\frac{n!h_k}{2^mh_m},
-\]
+\[ |\mathcal E|=\frac{n!h_k}{2^mh_m},\]
 здесь \(h_k=h_k(2)\) и \(h_m=h_m(2)\).
 #+end_corollary
 
 #+begin_theorem*
 Сумма квадратов катетов равна квадрату гипотенузы, т.е.
-\begin{equation}\labe{eq:thm-pif}
+#+NAME: eq:thm-pif
+\begin{equation}
     a^2+b^2=c^2.
 \end{equation}
 #+end_theorem*
@@ -246,9 +246,9 @@ A\cdot R=R\cdot \Gamma\}.\]
 #+end_remark*
 
 #+NAME: ex:001
-#+begin_example
+#+begin_example0
   Это пример.
-#+end_example
+#+end_example0
 
 #+begin_example*
   Это пример.
@@ -338,7 +338,7 @@ A\cdot R=R\cdot \Gamma\}.\]
 А это ссылки:
 
 - Раздел\nbsp{}[[#sec:ref-to-articles]]
-- Определение[[\nbsp{}def:001]]
+- Определение\nbsp{}[[def:001]]
 - Замечание\nbsp{}[[rem:001]]
 - Пример\nbsp{}[[ex:001]]
 - Задача\nbsp{}[[task:001]]
