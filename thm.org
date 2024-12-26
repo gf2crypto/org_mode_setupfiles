@@ -11,7 +11,7 @@
 #+LATEX_HEADER:   \declaretheorem[style=remark, numbered=no, name=Замечание]{remark*}
 #+LATEX_HEADER:   %% Пример
 #+LATEX_HEADER:   \declaretheorem[style=definition, numberwithin=section,
-#+LATEX_HEADER:   name=Пример]{example}
+#+LATEX_HEADER:   name=Пример]{example0}
 #+LATEX_HEADER:   \declaretheorem[style=definition, numbered=no,
 #+LATEX_HEADER:   name=Пример]{example*}
 #+LATEX_HEADER:   %% Задача
