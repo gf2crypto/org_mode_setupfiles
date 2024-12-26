@@ -1,0 +1,406 @@
+%! Author = Ivan Chizhov
+%! Date = 08.11.2022
+
+% Preamble
+%%%% ОПЦИИ
+%%%% colorthm - цветные окружения: теоремы, утверждений и прочее
+%%%% listings - поддержка листингов
+%%%% algo - поддержка алгоритмов
+%%%% gentium - шрифты гентиум
+%%%% xcharter - шрифры XCharter
+%%%% txmath - математический шрифт newtxmath
+%%%% times - шрифты близкие к MS Word
+\documentclass[colorthm]{../civarticle}
+
+%%% Печатаем библиографию
+\AtEndDocument{
+  \printbibliography[heading=bibintoc]
+}
+
+\usepackage[math]{blindtext}
+
+\title{
+    Пример использования класса `civarticle`\\
+    \medskip\Large{(оформление окружений цветом и пр.)}
+}
+\author{И.~В.~Чижов}
+
+% Document
+\begin{document}
+\blindmathtrue
+
+%%% Титульная страница
+\maketitle
+
+\begin{abstract}
+  \Blindtext[2]
+\end{abstract}
+
+\keywords{%
+  \Blindtext[1]
+}
+
+% \thispagestyle{empty}
+% \newpage
+\tableofcontents
+\par
+\vspace{3\bigskipamount}
+\par
+% \newpage
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\Blindtext[1]
+\section{Теорема Пифагора}
+\label{sec:thm-pif}
+
+\begin{definition}\label{def:example.tex:triange}
+  \emph{Прямоугольным треугольником} называется треугольник, у
+  которого один угол равен \(90^{\circ}\).
+\end{definition}
+
+\Blindtext[2]
+
+\begin{definition*}
+  \emph{Прямоугольным треугольником} называется треугольник, у
+  которого один угол равен 90 градусам.
+\end{definition*}
+
+\blindmathtrue\blindmathpaper
+
+\begin{remark} \label{rem:example.tex:numbered}
+  Это замечание с номером.
+  \blindtext%
+\end{remark}
+
+\Blindtext[2]
+
+\begin{remark*}
+  Замечание без номера.
+
+  \Blindtext[2]
+\end{remark*}
+
+\Blindtext[2]
+
+\begin{example}\label{ex:example:myexample}
+  Это пример с номером.
+  Рассмотрим замечание~\ref{rem:example.tex:numbered}.
+  \Blindtext[2]
+\end{example}
+
+\Blindtext[2]
+
+\blinditemize%
+
+\blindenumerate%
+
+\blinddescription%
+
+\begin{example*}
+  Пример без номера.
+  \Blindtext[2]
+\end{example*}
+
+\Blindtext[2]
+
+\begin{theorem}
+  Сумма квадратов катетов равна квадрату гипотенузы, т.е.
+  \begin{equation}
+    \label{eq:thm-pif}
+    a^2+b^2=c^2.
+  \end{equation}
+\end{theorem}
+\begin{proof}
+  Доказательство очень простое.
+\end{proof}
+
+\begin{theorem}\label{thm:example:noproof}
+  В этой теореме нет доказательства.
+  \Blindtext[2]
+\end{theorem}
+
+\Blindtext[2]
+
+Множество решений уравнения~\eqref{eq:thm-pif} называется пифагоровыми
+тройками.  Обозначим их символом $\mathcal{C}$ (каллиграфическое $C$).
+Очевидно, что $\mathcal{C}\subseteq \mathbb{R}^{3}$.  А это множество
+$\mathcal{B}$ (каллиграфическое $B$).
+
+\textit{Курсивный шрифт}.  \textbf{Жирный шрифт}.
+\textit{\textbf{Курсивный жирный шрифт}}.
+
+
+\begin{proposition}\label{prop:example:numbered}
+  Утверждение с номером.
+  \Blindtext[2]
+\end{proposition}
+
+\begin{proposition*}
+  Утверждение без номера.
+  \Blindtext[2]
+\end{proposition*}
+
+\Blindtext[2]
+
+\begin{lemma}\label{lem:example:numbered}
+  Это лемма с номером.
+  \Blindtext[2]
+\end{lemma}
+
+\begin{lemma*}
+  Это лемма без номера.
+  \Blindtext[2]
+\end{lemma*}
+
+\begin{theorem}\label{thm:example:withlemm}
+  Это теорема, в доказательстве которой содержится лемма.
+  \Blindtext[2]
+\end{theorem}
+\begin{proof}
+  Доказательство разобъем на несколько лемм.
+
+  \begin{lemma}\label{lem:example:in-1}
+    Это первая внутренняя лемма.
+    \Blindtext[2]
+  \end{lemma}
+
+  \Blindtext[2]
+
+  \begin{lemma}\label{lem:example:in-2}
+    Это вторая лемма.
+    \Blindtext[2]
+  \end{lemma}
+
+  \begin{lemma}\label{lem:example:in-3}
+    Это третья лемма.
+    \Blindtext[2]
+  \end{lemma}
+
+  \Blindtext[2]
+ \end{proof}
+
+ \Blindtext[11][1]
+
+ \begin{corollary}\label{cor:example:num}
+   Это следствие с номером.
+   \Blindtext[2]
+ \end{corollary}
+
+ \Blindtext[2]
+
+ \begin{corollary*}
+   Это следствие без номера.
+   \Blindtext[2]
+ \end{corollary*}
+
+ \Blindtext[2]
+
+
+\section{Ссылки на разные научные статьи}
+\label{sec:ref-to-articles}
+
+\begin{definition}
+  \label{def:001}
+  \Blindtext[2]
+\end{definition}
+
+\begin{definition*}
+  \Blindtext[2]
+\end{definition*}
+
+\begin{remark}
+  \label{rem:001}
+  \Blindtext[2]
+\end{remark}
+
+\begin{remark*}
+  \Blindtext[2]
+\end{remark*}
+
+\begin{example}
+  \label{ex:001}
+  \Blindtext[2]
+\end{example}
+
+\begin{example*}
+  \Blindtext[2]
+\end{example*}
+
+\begin{task}
+  \label{task:001}
+  \Blindtext[2]
+\end{task}
+
+\begin{task*}
+  \Blindtext[2]
+\end{task*}
+
+\begin{exercise}
+  \label{exer:001}
+  \Blindtext[2]
+\end{exercise}
+
+\begin{exercise*}
+  \Blindtext[2]
+\end{exercise*}
+
+\begin{problem}
+  \label{prob:001}
+  \Blindtext[2]
+\end{problem}
+
+\begin{problem*}
+  \Blindtext[2]
+\end{problem*}
+
+\begin{question}
+  \label{ques:001}
+  \Blindtext[2]
+\end{question}
+
+\begin{question*}
+  \Blindtext[2]
+\end{question*}
+
+\begin{theorem}
+  \label{thm:001}
+  \Blindtext[2]
+\end{theorem}
+
+\begin{theorem*}
+  \Blindtext[2]
+\end{theorem*}
+
+\begin{proposition}
+  \label{prop:001}
+  \Blindtext[2]
+\end{proposition}
+
+\begin{proposition*}
+  \Blindtext[2]
+\end{proposition*}
+
+\begin{assertion}
+  \label{ass:001}
+  \Blindtext[2]
+\end{assertion}
+
+\begin{assertion*}
+  \Blindtext[2]
+\end{assertion*}
+
+\begin{corollary}
+  \label{cor:001}
+  \Blindtext[2]
+\end{corollary}
+
+\begin{corollary*}
+  \Blindtext[2]
+\end{corollary*}
+
+\begin{lemma}
+  \label{lem:001}
+  \Blindtext[2]
+\end{lemma}
+
+\begin{lemma*}
+  \Blindtext[2]
+\end{lemma*}
+
+А это ссылки:
+
+\begin{itemize}
+\item Определение~\ref{def:001}
+\item Замечание~\ref{rem:001}
+\item Пример~\ref{ex:001}
+\item Задача~\ref{task:001}
+\item Упражнение~\ref{exer:001}
+\item Проблема~\ref{prob:001}
+\item Вопрос~\ref{ques:001}
+\item Теорема~\ref{thm:001}
+\item Утверждение~\ref{prop:001}
+\item Утверждение~\ref{ass:001}
+\item Леммы~\ref{lem:001}
+\item Следствие~\ref{cor:001}
+\end{itemize}
+
+Статья~\cite{ahlswede1977} посвящена геометрии булевого куба.
+
+Статья~\cite{ahmed2013} рассказывает о конструкции генератора
+псевдослучайных чисел на основе теории кодов, исправляющих ошибки.
+
+
+\section{Гиперссылки}
+\label{sec:hyper}
+
+Ссылка на раздел~\ref{sec:thm-pif} с теоремой Пифагора.  А
+формула~\eqref{eq:thm-pif} описывает суть теоремы Пифагора.
+
+Чтобы увидеть ссылки на разные научные статьи, смотри раздел
+\hyperref[sec:ref-to-articles]{\textquote{Ссылки на разные научные
+    статьи}}.
+
+А вот ссылка на \href{https://ru.wikipedia.org}{википедию}.
+
+
+\section{Пакет minted}
+\label{sec:minted}
+
+Чтобы увидеть код на языке python, пожалуйста, включите опцию \texttt{minted}.
+% \show\MINTED
+\if \MINTED\empty
+% do nothing, minted is off
+\else \inputminted{python}{code.py} \fi
+
+\section{Подписи и оформление писем}\label{sec:example:sign}
+На следующей странице представлен пример оформления официального
+письма.
+
+\newpage
+\thispagestyle{empty}  % Удаляем нумерацию страниц и убираем все
+% колонтитулы
+
+\letterHeader{% Кому
+  Ректору МГУ имени М.В.Ломоносова\\
+  академику В.А.Садовничему
+}
+
+\vspace{6\bigskipamount}
+
+\letterTitle{% Суть документа
+  З А Я В Л Е Н И Е
+}
+
+\vspace{3\bigskipamount}
+
+\begin{spacing}{2} % Текст с расстоянием в 2 пункта
+  \large Прошу принять меня на работу в МГУ имени М.В.Ломоносова на
+  должность доцента кафедры информационной безопасности факультета
+  вычислительной математики и кибернетики с \today
+
+  С правилами внутреннего трудового распорядка и должностной
+  инструкцией доцента ознакомлен.
+\end{spacing}
+
+\medskip
+
+\letterDate % Ставим сегодняшнюю дату
+
+\vspace{4\bigskipamount}
+
+% Подпись
+\sign{Доцент кафедры информационной безопасности ВМК МГУ имени
+  М.В.Ломоносова, канд.физ.--мат.наук.}{И.И.Иванов}
+
+\vspace{3\bigskipamount}
+
+% Согласующая подпись
+\sign[С О Г Л А С О В А Н О:]{Декан факультета вычислительной
+  математики и кибернетики МГУ имени М.В.Ломоносова, академик}{А.А.Петров}
+\newpage
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
