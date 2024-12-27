@@ -134,3 +134,53 @@
 
 #+LATEX_HEADER: \declaretheorem[style=thmredbox10, numbered=no,
 #+LATEX_HEADER: name=Следствие]{corollary*}
+
+
+# \usepackage[
+#   theorems,
+#   skins,
+#   breakable]{tcolorbox}
+# \tcbset{
+#   defstyle/.style={
+#       enhanced,
+#       % frame empty,
+#       interior empty,
+#       colframe=green!30,
+#       coltitle=black,
+#       fonttitle=\bfseries,
+#       colbacktitle=green!60,
+#       separator sign none,
+#       description delimiters = {(}{)},
+#       borderline={0.5mm}{0mm}{green!60},
+#       top=10mm,
+#       % borderline={0.5mm}{0mm}{ForestGreen!50!white,dashed},
+#       attach boxed title to top left={yshift=-4mm, xshift=2mm},
+#       boxed title style={boxrule=0.4pt},
+#       varwidth boxed title},
+#   theostyle/.style={fonttitle=\bfseries\upshape, fontupper=\slshape,
+#       colback=red!10!white,colframe=red!75!black},
+# }
+
+# \tcolorboxenvironment{proof}{%
+#   blanker,
+#   breakable,
+#   left=5mm,
+#   before skip=10pt,
+#   after skip=10pt,
+#   borderline west={1mm}{0pt}{red!70!white}
+# }%
+# \usepackage{varwidth}
+
+# \newcounter{defcounter}[section]
+# \numberwithin{defcounter}{section}
+
+# \newtcbtheorem{TCBdefinition}{Определение~\thedefcounter}{defstyle}{}
+# \newenvironment*{definition}[1][]{
+#   \refstepcounter{defcounter}
+#   \begin{TCBdefinition*}{#1}
+#     }{\end{TCBdefinition*}}
+
+# \newtcbtheorem{TCBdefinition0}{Определение}{defstyle}{}
+# \newenvironment*{definition*}{
+#   \begin{TCBdefinition0*}{}
+#     }{\end{TCBdefinition0*}}
