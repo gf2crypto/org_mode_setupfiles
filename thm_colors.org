@@ -140,6 +140,14 @@
 #   theorems,
 #   skins,
 #   breakable]{tcolorbox}
+# \definecolor{blue}{RGB}{118,139,166}
+# \definecolor{red}{RGB}{187,70,52}
+# \definecolor{red}{RGB}{247,206,205}
+# \definecolor{yellow}{RGB}{255,255,146}
+# \definecolor{green}{RGB}{167,252,143}
+# \definecolor{purple}{RGB}{146,129,247}
+# \definecolor{orange}{RGB}{247,204,139}
+
 # \tcbset{
 #   defstyle/.style={
 #       enhanced,
@@ -157,8 +165,40 @@
 #       attach boxed title to top left={yshift=-4mm, xshift=2mm},
 #       boxed title style={boxrule=0.4pt},
 #       varwidth boxed title},
-#   theostyle/.style={fonttitle=\bfseries\upshape, fontupper=\slshape,
-#       colback=red!10!white,colframe=red!75!black},
+#   propstyle/.style={
+#       enhanced,
+#       % frame empty,
+#       interior empty,
+#       colframe=red!15!white,
+#       coltitle=black,
+#       fonttitle=\bfseries,
+#       % fontupper=\itshape,
+#       colbacktitle=red!30!white,
+#       separator sign none,
+#       description delimiters = {(}{)},
+#       borderline={0.5mm}{0mm}{red!30},
+#       top=10mm,
+#       % borderline={0.5mm}{0mm}{ForestGreen!50!white,dashed},
+#       attach boxed title to top left={yshift=-4mm, xshift=2mm},
+#       boxed title style={boxrule=0.4pt},
+#       varwidth boxed title},
+#   probstyle/.style={
+#       enhanced,
+#       % frame empty,
+#       interior empty,
+#       colframe=blue!15!white,
+#       coltitle=black,
+#       fonttitle=\bfseries,
+#       % fontupper=\itshape,
+#       colbacktitle=blue!30!white,
+#       separator sign none,
+#       description delimiters = {(}{)},
+#       borderline={0.5mm}{0mm}{blue!30},
+#       top=10mm,
+#       % borderline={0.5mm}{0mm}{ForestGreen!50!white,dashed},
+#       attach boxed title to top left={yshift=-4mm, xshift=2mm},
+#       boxed title style={boxrule=0.4pt},
+#       varwidth boxed title},
 # }
 
 # \tcolorboxenvironment{proof}{%
@@ -171,6 +211,7 @@
 # }%
 # \usepackage{varwidth}
 
+# %%%   DEFINITIONS
 # \newcounter{defcounter}[section]
 # \numberwithin{defcounter}{section}
 
@@ -184,3 +225,93 @@
 # \newenvironment*{definition*}{
 #   \begin{TCBdefinition0*}{}
 #     }{\end{TCBdefinition0*}}
+
+# %%%   PROPOSITION
+# \newcounter{propcounter}[section]
+# \numberwithin{propcounter}{section}
+
+# \newtcbtheorem{TCBproposition}{Утверждение~\thepropcounter}{propstyle}{}
+# \newenvironment*{proposition}[1][]{
+#   \refstepcounter{propcounter}
+#   \begin{TCBproposition*}{#1}
+#     }{\end{TCBproposition*}}
+
+# \newtcbtheorem{TCBproposition0}{Утверждение}{propstyle}{}
+# \newenvironment*{proposition*}{
+#   \begin{TCBproposition0*}{}
+#     }{\end{TCBproposition0*}}
+
+# %%%   THEOREM
+# \newcounter{thmcounter}[section]
+# \numberwithin{thmcounter}{section}
+
+# \newtcbtheorem{TCBtheorem}{Теорема~\thethmcounter}{propstyle}{}
+# \newenvironment*{theorem}[1][]{
+#   \refstepcounter{thmcounter}
+#   \begin{TCBtheorem*}{#1}
+#     }{\end{TCBtheorem*}}
+
+# \newtcbtheorem{TCBtheorem0}{Теорема}{propstyle}{}
+# \newenvironment*{theorem*}{
+#   \begin{TCBtheorem0*}{}
+#     }{\end{TCBtheorem0*}}
+
+# %%%   LEMMA
+# \newcounter{lemmacounter}[section]
+# \numberwithin{lemmacounter}{section}
+
+# \newtcbtheorem{TCBlemma}{Лемма~\thelemmacounter}{propstyle}{}
+# \newenvironment*{lemma}[1][]{
+#   \refstepcounter{lemmacounter}
+#   \begin{TCBlemma*}{#1}
+#     }{\end{TCBlemma*}}
+
+# \newtcbtheorem{TCBlemma0}{Лемма}{propstyle}{}
+# \newenvironment*{lemma*}{
+#   \begin{TCBlemma0*}{}
+#     }{\end{TCBlemma0*}}
+
+# %%%   ASSERTION
+# \newcounter{assertioncounter}[section]
+# \numberwithin{assertioncounter}{section}
+
+# \newtcbtheorem{TCBassertion}{Утверждение~\theassertioncounter}{propstyle}{}
+# \newenvironment*{assertion}[1][]{
+#   \refstepcounter{assertioncounter}
+#   \begin{TCBassertion*}{#1}
+#     }{\end{TCBassertion*}}
+
+# \newtcbtheorem{TCBassertion0}{Утверждение}{propstyle}{}
+# \newenvironment*{assertion*}{
+#   \begin{TCBassertion0*}{}
+#     }{\end{TCBassertion0*}}
+
+# %%% COROLLARY
+# \newcounter{corollarycounter}[section]
+# \numberwithin{corollarycounter}{section}
+
+# \newtcbtheorem{TCBcorollary}{Следствие~\thecorollarycounter}{propstyle}{}
+# \newenvironment*{corollary}[1][]{
+#   \refstepcounter{corollarycounter}
+#   \begin{TCBcorollary*}{#1}
+#     }{\end{TCBcorollary*}}
+
+# \newtcbtheorem{TCBcorollary0}{Следствие}{propstyle}{}
+# \newenvironment*{corollary*}{
+#   \begin{TCBcorollary0*}{}
+#     }{\end{TCBcorollary0*}}
+
+# %%% PROBLEM
+# \newcounter{problemcounter}[section]
+# \numberwithin{problemcounter}{section}
+
+# \newtcbtheorem{TCBproblem}{Проблема~\theproblemcounter}{probstyle}{}
+# \newenvironment*{problem}[1][]{
+#   \refstepcounter{problemcounter}
+#   \begin{TCBproblem*}{#1}
+#     }{\end{TCBproblem*}}
+
+# \newtcbtheorem{TCBproblem0}{Проблема}{probstyle}{}
+# \newenvironment*{problem*}{
+#   \begin{TCBproblem0*}{}
+#     }{\end{TCBproblem0*}}
