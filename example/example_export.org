@@ -64,12 +64,13 @@
 значений \(\Omega_f\) всех булевых функций \(f(y_1,\ldots,y_m)\),
 степень нелинейности (максимальная длина монома, входящего в полином
 Жегалкина функции \(f\)) которых не превосходит \(r\), то есть
-\[\begin{aligned}
-\RM(r,m)&=&\{\Omega_f=(x_1,\ldots,x_n),
-n=2^m|\\&&f(y_1,\ldots,y_m)=a_0\oplus\bigoplus_{s=1}^{t}\bigoplus_{1\leqslant
+\[\begin{multlined}
+\RM(r,m)=\biggl\{\Omega_f=(x_1,\ldots,x_n),
+n=2^m|\ f(y_1,\ldots,y_m)=\\
+=a_0\oplus\bigoplus_{s=1}^{t}\bigoplus_{1\le
 i_1<\ldots<i_s\leqslant m}a_{i_1,\ldots,i_s}y_{i_1}\ldots
-y_{i_s},\;t\leqslant r\}
-\end{aligned}\]
+y_{i_s},\;t\leqslant r\biggr\}
+\end{multlined}\]
 #+end_remark
 
 Далее рассмотрим замечание, которое не имеет номера.
@@ -178,7 +179,7 @@ A\cdot R=R\cdot \Gamma\}.\]
 
 #+NAME: lem:numbered
 #+begin_lemma
-Пусть кортеж \((A_1,\ldots,A_u)\) принадлежит множеству \(\mathcal{L}(H_1,\ldots,H_u)\).
+Пусть кортеж \((A_1,\ldots,A_u)\) принадлежит множеству \[\mathcal{L}(H_1,\ldots,H_u)\).\]
 Тогда для любых матриц \(D_1,\ldots,D_u\in \mathrm{A}(\RM(r,m))\) и любой перестановки \(\Gamma\in S_u\) кортеж
 \[(A_{\Gamma(1)}D_1,\ldots,A_{\Gamma(u)}D_u)\] также принадлежит
 множеству \(\mathcal L(H_1,\ldots,H_u)\).
