@@ -1,3 +1,4 @@
+#+LATEX_HEADER: %% Математические операторы, которые я часто использую
 #+LATEX_HEADER: \DeclareMathOperator{\supp}{supp}
 #+LATEX_HEADER: \DeclareMathOperator{\wt}{wt}
 #+LATEX_HEADER: \DeclareMathOperator{\len}{len}
@@ -5,3 +6,9 @@
 #+LATEX_HEADER: \DeclareMathOperator{\im}{Im}
 #+LATEX_HEADER: \DeclareMathOperator{\ord}{ord}
 #+LATEX_HEADER: \DeclareMathOperator{\rank}{rank}
+#+LATEX_HEADER: \newcommand{\getsR}{\mathrel{\overset{\$}{\gets}}}
+#+LATEX_HEADER: \newcommand{\code}[1]{\ensuremath{\mathcal{#1}}}
+#+LATEX_HEADER: \newcommand{\RM}{\code{RM}}
+#+LATEX_HEADER: \newcommand{\GL}{\mathrm{GL}}
+#+LATEX_HEADER: \newcommand{\GF}[1]{\mathbb{F}_{#1}} %% \GF{q}=F_q
+#+LATEX_HEADER: % \newcommand{\GF}[1]{\mathrm{GF}(#1)} %% \GF{q}=GF(q)

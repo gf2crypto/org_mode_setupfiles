@@ -1,9 +1,4 @@
-#+SETUPFILE: ../plaintimes.org
-#+LANGUAGE: ru
-#+OPTIONS: tags:nil
-#+LATEX_HEADER: \usepackage[math, toc]{blindtext}
-#+LATEX_HEADER: \newcommand*{\RM}{\code{RM}}
-#+LATEX_HEADER: \newcommand*{\GL}{\mathsf{GL}}
+#+setupfile: ../article-.org
 
 #+title: Пример оформления окружений и текста
 #+subtitle: (Тестирование настроек и пр.)
@@ -219,6 +214,8 @@ A\cdot R=R\cdot \Gamma\}.\]
 #+begin_lemma
 Это третья внутренняя лемма.
 #+end_lemma
+
+Наконец, можно завершить доказательство теоремы, применив к лемме\nbsp{}[[lem:example:in-3]] леммы\nbsp{}[[lem:example:in-1]] и\nbsp{}[[lem:example:in-2]].
 
 #+end_proof
 

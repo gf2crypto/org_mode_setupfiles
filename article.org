@@ -1,0 +1,5 @@
+#+setupfile: ./base.org
+#+setupfile: ./math.org
+#+setupfile: ./thm.org
+#+LANGUAGE: ru
+#+LATEX_CLASS_OPTIONS: [12pt]

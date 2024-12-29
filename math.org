@@ -11,37 +11,6 @@
 #+LATEX_HEADER: %%%!!! масштабирование формулы
 #+LATEX_HEADER: \newcommand\scalemath[2]{\scalebox{#1}{\mbox{\ensuremath{\displaystyle #2}}}}
 #+LATEX_HEADER: %%%%
-
-#+LATEX_HEADER: %%% Русская традиция начертания математических знаков
-#+LATEX_HEADER: \renewcommand{\le}{\ensuremath{\leqslant}}
-#+LATEX_HEADER: \renewcommand{\leq}{\ensuremath{\leqslant}}
-#+LATEX_HEADER: \renewcommand{\ge}{\ensuremath{\geqslant}}
-#+LATEX_HEADER: \renewcommand{\geq}{\ensuremath{\geqslant}}
-#+LATEX_HEADER: \renewcommand{\emptyset}{\varnothing}
-
-#+LATEX_HEADER: %%% Русская традиция начертания математических функций
-#+LATEX_HEADER: \renewcommand{\tan}{\operatorname{tg}}
-#+LATEX_HEADER: \renewcommand{\cot}{\operatorname{ctg}}
-#+LATEX_HEADER: \renewcommand{\csc}{\operatorname{cosec}}
-
-#+LATEX_HEADER: \newcommand{\getsR}{\mathrel{\overset{\$}{\gets}}}
-
-#+LATEX_HEADER: \newcommand*{\vect}[1]{\boldsymbol{#1}} %% разметка для выделения векторов
-#+LATEX_HEADER: \newcommand*{\vectrow}[1]{\overrightarrow{\boldsymbol{#1}}}  %% разметка для векторов-строк
-#+LATEX_HEADER: \newcommand*{\vectcol}[1]{\boldsymbol{#1^{\downarrow}}}      %% разметка для векторов-столбцов
-#+LATEX_HEADER: \newcommand*{\matr}[1]{\boldsymbol{#1}}     %% разметка для выделения матриц
-#+LATEX_HEADER: \newcommand*{\code}[1]{\mathcal{#1}}        %% разметка для выделения линейных кодов
-#+LATEX_HEADER: \newcommand{\vecspace}[1]{\mathcal{#1}}
-#+LATEX_HEADER: \newcommand{\groupa}[1]{\ensuremath{\mathsf{#1}}} %% \groupa{GL}_{k}(2) = GL_{k}(2)
-#+LATEX_HEADER: \newcommand{\GF}[1]{\mathbb{F}_{#1}} %% \GF{q}=F_q
-#+LATEX_HEADER: % \newcommand{\GF}[1]{\mathrm{GF}(#1)} %% \GF{q}=GF(q)
-#+LATEX_HEADER: \newcommand{\progname}[1]{\ensuremath{\mathsf{#1}}} % \progname{Enc}_{k}(m)
 #+LATEX_HEADER: %   Duplicate the symbol after the '\HM' command on the next line
 #+LATEX_HEADER: \newcommand*{\HM}[1]{#1\nobreak\discretionary{}{\hbox{\(\mathsurround=0pt #1\)}}{}}
-#+LATEX_HEADER: %% Математические операторы, которые я часто использую
-#+LATEX_HEADER: \DeclareMathOperator{\supp}{supp}
-#+LATEX_HEADER: \DeclareMathOperator{\wt}{wt}
-#+LATEX_HEADER: \DeclareMathOperator{\len}{len}
-#+LATEX_HEADER: \DeclareMathOperator{\im}{Im}
-#+LATEX_HEADER: \DeclareMathOperator{\ord}{ord}
-#+LATEX_HEADER: \DeclareMathOperator{\rank}{rank}
+#+setupfile: ./math_operators.org
