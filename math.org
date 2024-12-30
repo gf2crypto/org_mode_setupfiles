@@ -1,13 +1,10 @@
-#+LATEX_HEADER: % Обеспечиваем работу с математикой
 #+LATEX_HEADER: \usepackage{amsthm}
 #+LATEX_HEADER: \usepackage{amstext}
-#+LATEX_HEADER: \usepackage{amsmath}
 #+LATEX_HEADER: \usepackage{amssymb}
 #+LATEX_HEADER: \usepackage{amsfonts}
 #+LATEX_HEADER: \usepackage{mathtools}
 #+LATEX_HEADER: %Красивые дроби
 #+LATEX_HEADER: \usepackage{xfrac}
-
 #+LATEX_HEADER: %%%!!! масштабирование формулы
 #+LATEX_HEADER: \newcommand\scalemath[2]{\scalebox{#1}{\mbox{\ensuremath{\displaystyle #2}}}}
 #+LATEX_HEADER: %%%%

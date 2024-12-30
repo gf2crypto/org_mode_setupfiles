@@ -11,6 +11,8 @@
 #+LATEX_HEADER: \renewcommand*{\labelitemii}{---}
 #+LATEX_HEADER: \renewcommand*{\labelitemiii}{---}
 #+LATEX_HEADER: \renewcommand*{\labelitemiv}{---}
+#+LATEX_HEADER: % Обеспечиваем работу с математикой
+#+LATEX_HEADER: \usepackage{amsmath}
 #+LATEX_HEADER: %Тонкое оформление перекрёстных ссылок
 #+LATEX_HEADER: \usepackage[russian]{cleveref}
 #+LATEX_HEADER: \usepackage[dvipsnames, table, hyperref]{xcolor}

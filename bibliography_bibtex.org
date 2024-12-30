@@ -5,3 +5,4 @@
 #+LATEX_HEADER:   \bibliographystyle{plain}
 #+LATEX_HEADER:   \bibliography{/Users/surehand/Documents/library/library}
 #+LATEX_HEADER: }
+#+CITE_EXPORT: bibtex
