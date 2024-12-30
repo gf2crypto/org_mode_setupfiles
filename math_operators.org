@@ -2,7 +2,7 @@
 #+LATEX_HEADER: \DeclareMathOperator{\Supp}{supp}
 #+LATEX_HEADER: \DeclareMathOperator{\wt}{wt}
 #+LATEX_HEADER: \DeclareMathOperator{\len}{len}
-#+LATEX_HEADER: \DeclareMathOperator{\argmin}{argmin}
+#+LATEX_HEADER: \DeclareMathOperator{\Argmin}{argmin}
 #+LATEX_HEADER: \DeclareMathOperator{\im}{Im}
 #+LATEX_HEADER: \DeclareMathOperator{\ord}{ord}
 #+LATEX_HEADER: \DeclareMathOperator{\rank}{rank}

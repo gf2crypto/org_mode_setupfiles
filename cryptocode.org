@@ -17,3 +17,7 @@
 #+LATEX_HEADER: asymptotics,
 #+LATEX_HEADER: keys
 #+LATEX_HEADER: ]{cryptocode}
+#+LATEX_HEADER: % Fix bug in cryptocode package
+#+LATEX_HEADER: \renewcommand{\supp}[1]{\ensuremath{
+#+LATEX_HEADER:    \operatorname{\supportname}\left(#1\right)}}
+#+LATEX_HEADER: \renewcommand{\supportname}{supp}

@@ -2,6 +2,7 @@
 #+setupfile: ./math.org
 #+setupfile: ./thm.org
 #+setupfile: ./algorithms.org
+#+setupfile: ./cryptocode.org
 #+LATEX_HEADER: \newenvironment{keywords}{\par\medskip
 #+LATEX_HEADER: \noindent \textbf{Ключевые слова}:\ }{\medskip}
 #+LANGUAGE: ru
