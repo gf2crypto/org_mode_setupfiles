@@ -1,14 +1,29 @@
+#+LATEX_HEADER: \usepackage{suffix}
 #+LATEX_HEADER: %% Математические операторы, которые я часто использую
-#+LATEX_HEADER: \DeclareMathOperator{\Supp}{supp}
-#+LATEX_HEADER: \DeclareMathOperator{\wt}{wt}
-#+LATEX_HEADER: \DeclareMathOperator{\len}{len}
-#+LATEX_HEADER: \DeclareMathOperator{\Argmin}{argmin}
+#+LATEX_HEADER: \newcommand{\Supp}[1]{\operatorname{supp}\left(#1\right)}
+#+LATEX_HEADER: \newcommand{\wt}[1]{\operatorname{wt}\left(#1\right)}
+#+LATEX_HEADER: \newcommand{\len}[1]{\operatorname{len}\left(#1\right)}
+#+LATEX_HEADER: \DeclareMathOperator{\Argmin}{arg\ min}
 #+LATEX_HEADER: \DeclareMathOperator{\im}{Im}
 #+LATEX_HEADER: \DeclareMathOperator{\ord}{ord}
-#+LATEX_HEADER: \DeclareMathOperator{\rank}{rank}
+#+LATEX_HEADER: \newcommand{\rank}[1]{\operatorname{rank}\left(#1\right)}
 #+LATEX_HEADER: \newcommand{\getsR}{\mathrel{\overset{\$}{\gets}}}
-#+LATEX_HEADER: \newcommand{\code}[1]{\ensuremath{\mathcal{#1}}}
-#+LATEX_HEADER: \newcommand{\RM}{\code{RM}}
+#+LATEX_HEADER: \newcommand{\codestyle}[1]{\ensuremath{\mathcal{#1}}}
+#+LATEX_HEADER: \newcommand{\RM}{\codestyle{RM}}
+#+LATEX_HEADER: \newcommand{\code}{\codestyle{C}}
+#+LATEX_HEADER: \newcommand{\aode}{\codestyle{A}}
+#+LATEX_HEADER: \newcommand{\bode}{\codestyle{B}}
+#+LATEX_HEADER: \newcommand{\dualcode}[1]{{#1}^{\perp}}
+#+LATEX_HEADER: \WithSuffix\newcommand\dualcode*[1]{\left(#1\right)^{\perp}}
+#+LATEX_HEADER: \newcommand{\transpose}[1]{{#1}^{\top}}
+#+LATEX_HEADER: \WithSuffix\newcommand\transpose*[1]{\left(#1\right)^{\top}}
+#+LATEX_HEADER: \newcommand{\pautname}{PAut}
+#+LATEX_HEADER: \newcommand{\pautstyle}[1]{\ensuremath{\mathsf{#1}}}
+#+LATEX_HEADER: \newcommand{\paut}[1]{\pautstyle{\pautname}\left(#1\right)}
+#+LATEX_HEADER: \newcommand{\vecspacestyle}[1]{\codestyle{#1}}
+#+LATEX_HEADER: \newcommand{\vecspace}{\vecspacestyle{V}}
+#+LATEX_HEADER: \newcommand{\uecspace}{\vecspacestyle{U}}
+#+LATEX_HEADER: \newcommand{\wecspace}{\vecspacestyle{W}}
 #+LATEX_HEADER: \newcommand{\GL}{\mathrm{GL}}
 #+LATEX_HEADER: \newcommand{\GF}[1]{\mathbb{F}_{#1}} %% \GF{q}=F_q
 #+LATEX_HEADER: % \newcommand{\GF}[1]{\mathrm{GF}(#1)} %% \GF{q}=GF(q)
