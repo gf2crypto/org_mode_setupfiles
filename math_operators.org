@@ -1,5 +1,5 @@
 #+LATEX_HEADER: %% Математические операторы, которые я часто использую
-#+LATEX_HEADER: \DeclareMathOperator{\supp}{supp}
+#+LATEX_HEADER: \DeclareMathOperator{\Supp}{supp}
 #+LATEX_HEADER: \DeclareMathOperator{\wt}{wt}
 #+LATEX_HEADER: \DeclareMathOperator{\len}{len}
 #+LATEX_HEADER: \DeclareMathOperator{\argmin}{argmin}

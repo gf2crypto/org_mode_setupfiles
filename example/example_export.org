@@ -1,4 +1,4 @@
-#+setupfile: ../article.org
+#+setupfile: ../articleA4p.org
 
 #+title: Пример оформления окружений и текста
 #+subtitle: (Тестирование настроек и пр.)

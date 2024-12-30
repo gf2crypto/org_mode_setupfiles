@@ -1,0 +1,2 @@
+#+setupfile: ./article.org
+#+setupfile: ./geometryA4p.org

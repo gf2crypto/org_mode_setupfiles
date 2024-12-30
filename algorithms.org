@@ -1,0 +1,7 @@
+#+LATEX_HEADER: % Окружение для написания алгоритмов в псевдокоде
+#+LATEX_HEADER: \usepackage[ruled, vlined, algosection, linesnumbered,  titlenumbered]{algorithm2e}
+
+#+LATEX_HEADER:% Русификация окружения алгоритмов
+#+LATEX_HEADER: \SetKwComment{Comment}{/* }{ */} \SetKwInput{KwData}{Вход}
+#+LATEX_HEADER: \SetKwInput{KwOutput}{Выход}
+#+LATEX_HEADER: \SetAlgorithmName{Алгоритм}{алгоритм}{Список алгоритмов}

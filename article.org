@@ -1,6 +1,7 @@
 #+setupfile: ./base.org
 #+setupfile: ./math.org
 #+setupfile: ./thm.org
+#+setupfile: ./algorithms.org
 #+LATEX_HEADER: \newenvironment{keywords}{\par\medskip
 #+LATEX_HEADER: \noindent \textbf{Ключевые слова}:\ }{\medskip}
 #+LANGUAGE: ru
