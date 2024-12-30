@@ -1,0 +1,9 @@
+#+setupfile: ./base.org
+#+setupfile: ./math.org
+#+setupfile: ./thm.org
+#+setupfile: ./algorithms.org
+#+setupfile: ./cryptocode.org
+#+setupfile: ./geometryA4p.org
+#+LANGUAGE: ru
+#+LATEX_CLASS_OPTIONS: [12pt]
+#+OPTIONS: tags:nil toc:nil author:nil date:nil
