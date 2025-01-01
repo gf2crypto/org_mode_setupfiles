@@ -1,0 +1,88 @@
+#+LATEX_HEADER: % Дополнительные символы
+#+LATEX_HEADER: \usepackage{textcomp}
+#+LATEX_HEADER: %% Настраиваем дизайн текста (отступы, интервалы и пр.)&&&&&&
+#+LATEX_HEADER: %Отступ в первом абзаце раздела
+#+LATEX_HEADER: \usepackage{indentfirst}
+#+LATEX_HEADER: %Точка после номера раздела
+#+LATEX_HEADER: \usepackage{misccorr}
+#+LATEX_HEADER: \usepackage{hyperref}
+#+LATEX_HEADER: % Красивые гиперссылки
+#+LATEX_HEADER: \hypersetup{
+#+LATEX_HEADER:     colorlinks=true,
+#+LATEX_HEADER:     linkcolor=red,
+#+LATEX_HEADER:     filecolor=blue,
+#+LATEX_HEADER:     runcolor=blue,
+#+LATEX_HEADER:     urlcolor=blue,
+#+LATEX_HEADER:     citecolor=green,
+#+LATEX_HEADER:     pdfpagemode=FullScreen,
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \urlstyle{same}
+#+LATEX_HEADER:
+#+LATEX_HEADER: %%% Изменяем метки ненумерованных списков
+#+LATEX_HEADER:
+#+LATEX_HEADER: \renewcommand*{\labelitemi}{---}
+#+LATEX_HEADER: \renewcommand*{\labelitemii}{---}
+#+LATEX_HEADER: \renewcommand*{\labelitemiii}{---}
+#+LATEX_HEADER: \renewcommand*{\labelitemiv}{---}
+#+LATEX_HEADER:
+#+LATEX_HEADER: %Тонкое оформление перекрёстных ссылок
+#+LATEX_HEADER: \usepackage[russian]{cleveref}
+#+LATEX_HEADER: \usepackage[dvipsnames, table, hyperref]{xcolor}
+#+LATEX_HEADER:
+#+LATEX_HEADER: \definecolor{green}{RGB}{168, 189, 145}
+#+LATEX_HEADER: \definecolor{blue}{RGB}{135, 160, 190}
+#+LATEX_HEADER: \definecolor{red}{RGB}{178, 102, 107}
+#+LATEX_HEADER: \definecolor{yellow}{RGB}{230, 204, 147}
+#+LATEX_HEADER: \definecolor{violet}{RGB}{174, 143, 171}
+#+LATEX_HEADER: \definecolor{skyblue}{RGB}{148, 190, 206}
+#+LATEX_HEADER:
+#+LATEX_HEADER:
+#+LATEX_HEADER: \usepackage{hyphenat}
+#+LATEX_HEADER: \usepackage{titlesec}
+#+LATEX_HEADER: %% Настройка макета страницы
+#+LATEX_HEADER: \usepackage[
+#+LATEX_HEADER:     paper=a4paper,
+#+LATEX_HEADER:     includefoot,
+#+LATEX_HEADER:     bmargin=2cm,
+#+LATEX_HEADER:     tmargin=2cm,
+#+LATEX_HEADER:     lmargin=3cm,
+#+LATEX_HEADER:     rmargin=1cm,
+#+LATEX_HEADER:     includehead,
+#+LATEX_HEADER:     headsep=1cm,
+#+LATEX_HEADER: ]{geometry}
+#+LATEX_HEADER: % Изменение ориентации страницы внутри документа
+#+LATEX_HEADER: \usepackage{changepage}
+#+LATEX_HEADER: % Для включения альбомных страниц
+#+LATEX_HEADER: \usepackage{pdflscape}
+#+LATEX_HEADER: % Добавление внешних pdf файлов
+#+LATEX_HEADER: \usepackage{pdfpages}
+
+#+LATEX_HEADER: %% Обеспечиваем работу с медиа-контентом (с рисунками)
+#+LATEX_HEADER: % Крутой пакет для рисования
+#+LATEX_HEADER: \usepackage{tikz}
+#+LATEX_HEADER: \usepackage[style=american]{csquotes}  %% используем американский стиль кавычек
+
+#+LATEX_HEADER: % Возможность использовать автонумерацию
+#+LATEX_HEADER: \newcounter{index}
+#+LATEX_HEADER: \newcommand*{\No}{\noindent\refstepcounter{index}\textnumero~\theindex}
+#+LATEX_HEADER: \newcommand*{\Index}{\refstepcounter{index}\theindex}
+
+#+LATEX_HEADER: \usepackage{setspace}
+
+#+LATEX_HEADER: % Окружение для написания алгоритмов в псевдокоде
+#+LATEX_HEADER: \usepackage[ruled, vlined, algosection, linesnumbered,  titlenumbered]{algorithm2e}
+
+#+LATEX_HEADER:% Русификация окружения алгоритмов
+#+LATEX_HEADER: \SetKwComment{Comment}{/* }{ */} \SetKwInput{KwData}{Вход}
+#+LATEX_HEADER: \SetKwInput{KwOutput}{Выход}
+#+LATEX_HEADER: \SetAlgorithmName{Алгоритм}{алгоритм}{Список алгоритмов}
+
+#+LATEX_HEADER: %% Ключевые слова
+#+LATEX_HEADER:
+#+LATEX_HEADER: \newcommand{\keywords}[1]{%
+#+LATEX_HEADER:   \noindent
+#+LATEX_HEADER:   \begingroup
+#+LATEX_HEADER:   \small\textbf{\textit{Ключевые слова}}~--- #1
+#+LATEX_HEADER:   \endgroup\par
+#+LATEX_HEADER:   \medskip\par
+#+LATEX_HEADER: }

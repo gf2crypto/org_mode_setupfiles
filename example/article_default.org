@@ -1,0 +1,7 @@
+#+setupfile: ../article.org
+
+#+title: Пример оформления окружений и текста
+#+subtitle: (Стиль ~article~ по умолчанию)
+#+author: И.\nbsp{}В.\nbsp{}Чижов
+
+#+INCLUDE: ./article.org

@@ -1,0 +1,2 @@
+#+SETUPFILE: ./article.org
+#+SETUPFILE: ./font_xcharter.org
