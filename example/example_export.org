@@ -76,6 +76,15 @@ n=2^m|\ f(y_1,\ldots,y_m)=\\
 i_1<\ldots<i_s\leqslant m}a_{i_1,\ldots,i_s}y_{i_1}\ldots
 y_{i_s},\;t\leqslant r\biggr\}
 \end{multlined}\]
+Тестируем формулу
+\[ \condset{\Omega_f=(x_1,\ldots,x_n)}{f(y_{1},\ldots, y_{m})=a_0\oplus\bigoplus_{s=1}^{r}\bigoplus_{1\le
+i_1<\ldots<i_s\leqslant m}a_{i_1,\ldots,i_s}y_{i_1}\ldots
+y_{i_s}} \]
+Тестируем разбиение формулы на части
+\[ \condset*[\RM(r,m)=]{\Omega_f=(x_1,\ldots,x_n), n=2^{m}}{f(y_{1},\ldots, y_{m})=}{=a_0\oplus\bigoplus_{s=1}^{r}\bigoplus_{1\le
+i_1<\ldots<i_s\leqslant m}a_{i_1,\ldots,i_s}y_{i_1}\ldots
+y_{i_s}}.  \]
+
 #+end_remark
 
 Далее рассмотрим замечание, которое не имеет номера.

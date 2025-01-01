@@ -28,4 +28,5 @@
 #+LATEX_HEADER: \newcommand{\GL}{\mathrm{GL}}
 #+LATEX_HEADER: \newcommand{\GF}[1]{\mathbb{F}_{#1}} %% \GF{q}=F_q
 #+LATEX_HEADER: % \newcommand{\GF}[1]{\mathrm{GF}(#1)} %% \GF{q}=GF(q)
-#+LATEX_HEADER: \newcommand{\condset}[2]{\left\{#1\left|\vphantom{#1}#2\right. \right\}}
+#+LATEX_HEADER: \newcommand{\condset}[2]{\left\{#1\,\left|\,\vphantom{#1}#2\right. \right\}}
+#+LATEX_HEADER: \WithSuffix\newcommand\condset*[4][]{\begin{multlined}#1\left\{#2\,\left|\, \vphantom{#2#4}#3\right.\right.\\ \left.\vphantom{#2#3}#4\right\}\end{multlined}}
