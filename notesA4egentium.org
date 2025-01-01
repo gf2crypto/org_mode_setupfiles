@@ -1,0 +1,2 @@
+#+setupfile: ./notesA4e.org
+#+setupfile: ./font_gentium.org

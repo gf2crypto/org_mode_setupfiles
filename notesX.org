@@ -1,0 +1,2 @@
+#+setupfile: ./notes.org
+#+setupfile: ./font_xcharter.org

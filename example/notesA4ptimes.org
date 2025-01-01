@@ -1,0 +1,8 @@
+#+setupfile: ../notesA4ptimes.org
+
+#+title: Пример оформления окружений и текста
+#+subtitle: (Стиль ~notes~, страница A4 и поля для печати, шрифт ~TIMES~)
+#+author: И.\nbsp{}В.\nbsp{}Чижов
+
+
+#+INCLUDE: ./notes.org

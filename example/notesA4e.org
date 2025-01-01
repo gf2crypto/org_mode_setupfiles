@@ -1,0 +1,8 @@
+#+setupfile: ../notesA4e.org
+
+#+title: Пример оформления окружений и текста
+#+subtitle: (Стиль ~notes~, страница A4 и поля для монитора)
+#+author: И.\nbsp{}В.\nbsp{}Чижов
+
+
+#+INCLUDE: ./notes.org

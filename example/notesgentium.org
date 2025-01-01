@@ -1,0 +1,8 @@
+#+setupfile: ../notesgentium.org
+
+#+title: Пример оформления окружений и текста
+#+subtitle: (Стиль ~notes~, настройки по-умолчанию, шрифт ~GENTIUM~)
+#+author: И.\nbsp{}В.\nbsp{}Чижов
+
+
+#+INCLUDE: ./notes.org

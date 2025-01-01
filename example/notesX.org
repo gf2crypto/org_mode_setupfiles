@@ -1,0 +1,8 @@
+#+setupfile: ../notesX.org
+
+#+title: Пример оформления окружений и текста
+#+subtitle: (Стиль ~notes~, настройки по-умолчанию, шрифт ~XCHARTER~)
+#+author: И.\nbsp{}В.\nbsp{}Чижов
+
+
+#+INCLUDE: ./notes.org

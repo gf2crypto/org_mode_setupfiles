@@ -1,0 +1,8 @@
+#+setupfile: ../notestimes.org
+
+#+title: Пример оформления окружений и текста
+#+subtitle: (Стиль ~notes~, настройки по-умолчанию, шрифт ~TIMES~)
+#+author: И.\nbsp{}В.\nbsp{}Чижов
+
+
+#+INCLUDE: ./notes.org
