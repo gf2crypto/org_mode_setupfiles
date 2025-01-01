@@ -1,0 +1,7 @@
+#+setupfile: ../articletimes.org
+
+#+title: Пример оформления окружений и текста
+#+subtitle: (Стиль ~article~ по умолчанию, шрифт ~TIMES~)
+#+author: И.\nbsp{}В.\nbsp{}Чижов
+
+#+INCLUDE: ./article.org

@@ -1,0 +1,7 @@
+#+setupfile: ../articleX.org
+
+#+title: Пример оформления окружений и текста
+#+subtitle: (Стиль ~article~ по умолчанию, шрифт ~XCHARTER~)
+#+author: И.\nbsp{}В.\nbsp{}Чижов
+
+#+INCLUDE: ./article.org
