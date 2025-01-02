@@ -1,0 +1,7 @@
+#+setupfile: ../articleCA4e.org
+
+#+title: Пример оформления окружений и текста
+#+subtitle: (Стиль ~articleA4e~ в цвете, страница A4 и поля для монитора)
+#+author: И.\nbsp{}В.\nbsp{}Чижов
+
+#+INCLUDE: ./article.org

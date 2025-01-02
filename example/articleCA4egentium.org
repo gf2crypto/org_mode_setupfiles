@@ -1,0 +1,7 @@
+#+setupfile: ../articleCA4egentium.org
+
+#+title: Пример оформления окружений и текста
+#+subtitle: (Стиль ~articleA4e~ в цвете, страница A4 и поля для монитора, шрифт ~GENTIUM~)
+#+author: И.\nbsp{}В.\nbsp{}Чижов
+
+#+INCLUDE: ./article.org

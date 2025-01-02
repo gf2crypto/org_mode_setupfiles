@@ -1,0 +1,7 @@
+#+setupfile: ../articleCA4p.org
+
+#+title: Пример оформления окружений и текста
+#+subtitle: (Стиль ~articleA4p~ в цвете, страница A4 и поля для печати)
+#+author: И.\nbsp{}В.\nbsp{}Чижов
+
+#+INCLUDE: ./article.org
