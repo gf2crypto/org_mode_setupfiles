@@ -1,0 +1,22 @@
+#+setupfile: ./base.org
+#+setupfile: ./math.org
+#+setupfile: ./algorithms.org
+#+setupfile: ./cryptocode.org
+#+setupfile: ./color_scheme_adobe.org
+#+LATEX_HEADER: \hypersetup{
+#+LATEX_HEADER:     colorlinks=true,
+#+LATEX_HEADER:     linkcolor=red,
+#+LATEX_HEADER:     filecolor=red,
+#+LATEX_HEADER:     runcolor=red,
+#+LATEX_HEADER:     urlcolor=red,
+#+LATEX_HEADER:     citecolor=red,
+#+LATEX_HEADER:     pdfpagemode=FullScreen,
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \urlstyle{same}
+#+setupfile: ./thm_colors.org
+#+LATEX_HEADER: \newenvironment{keywords}{\par\medskip
+#+LATEX_HEADER: \noindent \textbf{Ключевые слова}:\ }{\medskip}
+#+LANGUAGE: ru
+#+LATEX_CLASS_OPTIONS: [12pt]
+#+setupfile: ./bibliography_bibtex.org
+#+OPTIONS: tags:nil

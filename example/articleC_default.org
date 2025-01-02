@@ -1,0 +1,7 @@
+#+setupfile: ../articleC.org
+
+#+title: Пример оформления окружений и текста
+#+subtitle: (Стиль ~articleС~ в цвете)
+#+author: И.\nbsp{}В.\nbsp{}Чижов
+
+#+INCLUDE: ./article.org
