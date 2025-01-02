@@ -1,0 +1,2 @@
+#+setupfile: ./notesC.org
+#+setupfile: ./geometryA4p.org
