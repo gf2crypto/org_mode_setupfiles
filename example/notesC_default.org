@@ -1,0 +1,10 @@
+#+setupfile: ../notesC.org
+
+#+title: Пример оформления окружений и текста
+#+subtitle: (Стиль ~notesC~ в цвете, настройки по-умолчанию)
+#+author: И.\nbsp{}В.\nbsp{}Чижов
+
+
+#+INCLUDE: ./notes.org
+
+#+LATEX: \signature{Автор}{И.В.Чижов}
