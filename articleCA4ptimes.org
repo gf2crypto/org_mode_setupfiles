@@ -1,0 +1,2 @@
+#+SETUPFILE: ./articleCA4p.org
+#+SETUPFILE: ./font_times.org

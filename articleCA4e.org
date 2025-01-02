@@ -1,0 +1,2 @@
+#+setupfile: ./articleC.org
+#+setupfile: ./geometryA4e.org
