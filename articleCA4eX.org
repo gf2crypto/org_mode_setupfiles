@@ -1,2 +1,2 @@
-#+SETUPFILE: ./articleCA4eX.org
+#+SETUPFILE: ./articleCA4e.org
 #+SETUPFILE: ./font_xcharter.org
