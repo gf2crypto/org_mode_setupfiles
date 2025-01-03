@@ -1,0 +1,7 @@
+#+LATEX_HEADER_EXTRA: \definecolor{blue}{RGB}{34,185,255}
+#+LATEX_HEADER_EXTRA: \definecolor{red}{RGB}{255,34,75}
+#+LATEX_HEADER_EXTRA: \definecolor{yellow}{RGB}{255,214,34}
+#+LATEX_HEADER_EXTRA: \definecolor{green}{RGB}{34,255,104}
+#+LATEX_HEADER_EXTRA: \definecolor{purple}{RGB}{255,34,185}
+#+LATEX_HEADER_EXTRA: \definecolor{orange}{RGB}{255,104,34}
+#+LATEX_HEADER_EXTRA: \definecolor{background}{RGB}{255,253,218}

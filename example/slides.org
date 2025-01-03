@@ -1,0 +1,276 @@
+#+setupfile: ../cmcbeamer_dracula.org
+#+setupfile: ../beamer_bibliography.org
+
+#+title: Алгоритм расщепления носителя или support splitting algorithm
+
+* Алгоритм расщепления носителя или support splitting algorithm
+# <2024-11-25 пн 15:21>
+
+** Задача об эквивалентности линейных кодов
+*** Дано:                                                         :B_block:
+:PROPERTIES:
+:BEAMER_env: block
+:END:
++ \( G_{1} \)\nbsp{}--- \( (k\times n) \)-матрица над полем \( \GF{2} \)
++ \( G_{2} \)\nbsp{}--- \( (k\times n) \)-матрица над полем \( \GF{2} \)
+*** Найти:                                                        :B_block:
+:PROPERTIES:
+:BEAMER_env: block
+:END:
++ \( \sigma\in S_{n} \)\nbsp{}--- подстановка на множестве \( [n]=\{1,2,\ldots, n\} \)
++ \( A\in \GL_{k}(2) \)\nbsp{}--- невырожденная \( (k\times k) \)-матрица над полем \( \GF{2} \).
+
+Такие, что
+\[ A\cdot G_{1}\cdot \sigma = G_{2}. \]
+** Задача об эквивалентности линейных кодов II
+*** Дано:                                                         :B_block:
+:PROPERTIES:
+:BEAMER_env: block
+:END:
++ \( G_{1} \)\nbsp{}--- порождает \( [n,k] \)-код \( \code_{1} \);
++ \( G_{2} \)\nbsp{}--- порождает \( [n,k] \)-код \( \code_{2} \)
+*** Найти:                                                        :B_block:
+:PROPERTIES:
+:BEAMER_env: block
+:END:
++ \( \sigma\in S_{n} \)\nbsp{}--- подстановка на множестве \( [n]=\{1,2,\ldots, n\} \)
+
+Такую, что
+\[ \code_{1}^{\sigma}=\code_{2}. \]
+** Оригинальная статья
+#+attr_latex: :overlay +-
++ Алгоритм разделения (расщепления) носителя кода предложен Н. Сендрие в 2000 г.
++ Базовая статья: Sendrier, N. Finding the Permutation between Equivalent Linear Codes: The Support Splitting Algorithm, IEEE Transactions on Information Theory : 2000, vol. 46, no. 4, pp. 1193–1203\nbsp{}[cite:@sendrier2000].
++ Использует теорию инвариантов.
+** Предварительные сведения
+#+attr_latex: :overlay +-
++ Пусть \( x\in \vecspace_{n} \), тогда *носителем* \( x \) называется множество, состоящее из номеров ненулевых координат вектора \( x \), т.е.
+  \[ \supp{x}=\{i\in [n]|\ x_{i}\neq 0\}\subseteq [n] \]
++ Для подмножества \( X\subseteq \vecspace_{n}\) можно определить его *носитель*:
+  \[ \supp{X}=\bigcup\limits_{x\in X} \supp{x}. \]
++ \( [n,k] \)-код \( \code \) называется кодом *с полным носителем*, если \( \supp{\code}=[n]. \)
+** Предварительные сведения II
+Пусть:
++ \( \code \)\nbsp{}--- некоторый \( [n,k] \)-код
++ \( I\subseteq [n] \)\nbsp{}--- произвольное подмножество \( [n] \).
++ Для \( x\in\vecspace_{n} \) через \( x(I) \) обозначим вектор, который получается из \( x \) выбором только координат из множества \( I \), т.е. если \( I=\{i_{1},i_{2},\ldots, i_{s}\} \), то
+  \[ x(I)=x(i\in I)=(x_{i_{1}},x_{i_{2}},\ldots, x_{i_{s}})\in \vecspace_{|I|}. \]
+** Предварительные сведения III
+#+attr_latex: :overlay +-
++ \( I \)-*выкалыванием* вектора \( x=(x_{1},x_{2},\ldots, x_{n}) \) называется вектор \( x^{(I)}=(x^{(I)}_{1}, x^{(I)}_{2},\ldots, x^{(I)}_{n})\):
+  \[ x^{(I)}_{i}=\begin{cases}0,&\text{если }i\in I\\ x_{i},\text{если }i\in [n]\setminus I\end{cases}. \]
++ \( I \)-*выкалыванием* кода \( \code \) называется \( [n] \)-код \( \code^{(I)}=\{c^{(I)}|\ c\in\code\} \).
++ \( I \)-*укорочением* кода \( \code \) называется \( [n] \)-код \( \code^{I} \), состоящий только из тех кодовых слов \( c\in\code \), координаты которых на позициях из \( I \) равны \( 0 \), т.е.
+  \[ \code^{I} = \{c\in \code|\ c(I)=0\}. \]
+** Сигнатура для линейного кода
+***                                                          :B_definition:
+:PROPERTIES:
+:BEAMER_env: definition
+:END:
++ \( F \)\nbsp{}--- произвольное множество
++ \( \mathsf{C}_{n} \)\nbsp{}--- множество всех \( [n] \)-кодов
+Отображение \( \Sigma:\mathsf{C}\times [n]\rightarrow F \) называется *сигнатурой* на множестве \( F \) кода \( \code\in\mathsf{C}_{n} \), если для любого \( \sigma\in S_{n} \) выполняется равенство
+\[ \Sigma(\code^{\sigma},\sigma(i))=\Sigma(\code,i)\ \forall\ i\in [n]. \]
+** Различающая сигнатура
+#+attr_latex: :overlay +-
++ Сигнатура \( \Sigma \) называется *различающей* для кода \( \code \), если существуют таки \( i,j\in[n] \), \( i\neq j \), что
+  \[ \Sigma(\code, i) \neq \Sigma(\code, j). \]
++ Различающая сигнатура \( \Sigma \) называется *полностью различающей* для кода \( \code \), если для любых \( i,j\in [n] \), \( i\neq j \),
+  \[ \Sigma(\code, i) \neq \Sigma(\code,j). \]
+** Свойства сигнатуры
+#+attr_latex: :overlay +-
++ \( \code \)\nbsp{}--- \( [n,k] \)-кода.
++ \( \code^{\sigma} \)\nbsp{}--- код, эквивалентный \( \code \), \( \sigma\in S_{n} \).
++ \( \Sigma \)\nbsp{}--- сигнатура на \( F \)
++ Для каждого \( f\in F \) определим
+  \[ [n]_{f}(\Sigma,\code) = \{i\in [n]|\ \Sigma(\code, i)=f\}. \]
++ Тогда для любого \( \code \) и любой сигнатуры \( \Sigma \) верно
+  \[ [n]=\bigcup_{f\in F}  [n]_{f}(\Sigma,\code)\quad \text{ и }\quad [n]_{f}(\Sigma, \code)\cap [n]_{g}(\Sigma,\code)=\varnothing\ \forall\ f,g\in F,\ f\neq g. \]
+** Свойства сигнатуры
++ \( \code \)\nbsp{}--- \( [n,k] \)-кода.
++ \( \code^{\sigma} \)\nbsp{}--- код, эквивалентный \( \code \), \( \sigma\in S_{n} \).
++ \( \Sigma \)\nbsp{}--- сигнатура на \( F \)
+#+attr_latex: :overlay +-
++ Для каждого \( U\subseteq F \) определим
+  \[ [n]_{U}(\Sigma,\code) = \bigcup_{f\in U}[n]_{f}(\Sigma,\code). \]
++ Тогда для любого \( \code \) и любой сигнатуры \( \Sigma \) верно
+  \[ [n]_{U}(\Sigma,\code)\cap [n]_{V}(\Sigma,\code)=\varnothing\quad \forall\ U,V\subseteq F,\ U\cap V=\varnothing. \]
+
+** Свойства сигнатуры
+*** Утверждение                                                   :B_block:
+:PROPERTIES:
+:BEAMER_env: block
+:END:
+Для любого \( \sigma\in S_{n} \), любой сигнатуры \( \Sigma \) и любого \( f\in F \) выполняется равенство
+  \[ [n]_{f}(\Sigma,\code^{\sigma}) = \sigma([n]_{f}(\Sigma,\code))\stackrel{\mathrm{def}}{=}\{\sigma(i)|\ i\in [n]_{f}(\Sigma,\code)\}.\]
+
+  Аналогично для любого \( U\subseteq F \) верно
+  \[ [n]_{U}(\Sigma,\code^{\sigma}) = \sigma([n]_{u}(\Sigma, \code)). \]
+** Свойства сигнатуры
+*** Доказательство                                                :B_block:
+:PROPERTIES:
+:BEAMER_env: block
+:BEAMER_act: +-
+:END:
+#+attr_latex: :overlay +-
++ По определению
+  \[ \sigma([n]_{f}(\Sigma,\code))=\{\sigma(i)\in [n]|\ \Sigma(\code, i)=f\}=\{j\in [n]|\ \Sigma(\code, \sigma^{-1}(j))=f\}. \]
++ По определению сигнатуры выполнено равенство
+  \[ \Sigma(\code,\sigma^{-1}(j))=\Sigma(\code^{\sigma}, j), \]
++ поэтому
+  \[ \sigma([n]_{f}(\Sigma,\code))=\{j\in [n]|\ \Sigma(\code^{\sigma}, j)=f\}=[n]_{f}(\Sigma,\code^{\sigma}).\qed \]
+** Алгоритм расщепления носителя SSA
+***                                                             :B_columns:
+:PROPERTIES:
+:BEAMER_env: columns
+:BEAMER_opt: [t]
+:END:
+****                                                               :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.5
+:END:
+***** Вход:                                                     :B_block:
+:PROPERTIES:
+:BEAMER_env: block
+:BEAMER_act: +-
+:END:
+#+attr_latex: :overlay +-
++ \( G_{1}\in \mathbb{F}_{2}^{k\times n} \)\nbsp{}--- порождающая \( (k\times n) \)-матрица кода \( \code \)
++ \( G_{2} \in\mathbb{F}_{2}^{k\times n}\)\nbsp{}--- порождающая \( (k\times n) \)-матрица кода \( \code^{\sigma} \)
++ \( \Sigma:\ \mathsf{C}_{n}\times [n] \rightarrow F \)\nbsp{}--- сигнатура.
+***** Выход:                                                    :B_block:
+:PROPERTIES:
+:BEAMER_act: +-
+:BEAMER_env: block
+:END:
++ \( M\in\GL_{k}(2) \)\nbsp{}--- невырожденная матрица
++ \( \sigma\in S_{n} \)\nbsp{}--- подстановка
+Такие, что \( M\cdot G_{1}\cdot \sigma = G_{2}. \)
+****                                                               :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.5
+:END:
+***** Алгоритм:                                                 :B_block:
+:PROPERTIES:
+:BEAMER_env: block
+:BEAMER_act: +-
+:END:
+#+attr_latex: :overlay +-
+1. Вычислить \((\Sigma(G_{1},i)\ i\in [n]) \)
+2. Вычислить \( (\Sigma(G_{2}, i)\ i\in [n]) \)
+3. Построить \( \{[n]_{f}(\Sigma, G_{1})\ f\in F\} \)
+4. Построить \( \{[n]_{f}(\Sigma, G_{2})\ f\in F\} \)
+5. Перебирать \( \sigma \) такие, что \( \sigma([n]_{f}(\Sigma, G_{1}))= [n]_{f}(\Sigma, G_{2})\) для всех \( f \):
+   1. Решить: \( M\cdot G_{1}\cdot \sigma = G_{2}. \)
+   2. Если есть решение, то выдать \( (M, \sigma) \).
+6. Выдать \enquote{Нет решений}.
+** Число итераций на шаге 6
+#+attr_latex: :overlay +-
++ Если \( \Sigma \)\nbsp{}--- полностью различающая, то для всех \(f\in F \) множества \( [n]_{f}(\Sigma, G_{i}) \), \( i=1,2 \), состоят ровно из одного элемента и в этом случае подстановка \( \sigma \) восстанавливается однозначно:
+  \[ \sigma(i) = j\text{, если } [n]_{f}(\Sigma, G_{1})=\{i\},\ [n]_{f}(\Sigma, G_{2})=\{j\}. \]
++ Если \( \Sigma \)\nbsp{}--- различающая, то число итераций равно
+  \[ \prod_{f\in F} |[n]_{f}(\Sigma, G_{1})|! \]
++ В остальных случаях число итераций равно \( n! \) \( \Rightarrow \) *полный перебор*.
+** Как строить сигнатуры: инвариант
+#+attr_latex: :overlay +-
+***                                                          :B_definition:
+:PROPERTIES:
+:BEAMER_env: definition
+:END:
++ \( E \)\nbsp{}--- произвольное множество;
++ \( \mu:\ \mathsf{C}_{n}\rightarrow E \)\nbsp{}--- отображение множества всех \( [n] \)-кодов во множество \( E \).
+Тогда \( \mu \)\nbsp{}--- *инвариант*, если для любого \( \sigma \in S_{n} \) и любого \( [n] \)-кода \( \code \) выполняется равенство
+\[ \mu(\code^{\sigma})=\mu(\code). \]
+***                                                             :B_example:
+:PROPERTIES:
+:BEAMER_env: example
+:END:
++ Длина кода \( n \)
++ Размерность кода \( k \)
++ Минимальное расстояние \( d \)
++ *Спектр весов* \( D(\code)=(D_{0},D_{1},\ldots, D_{n}) \), \( D_{i} \)\nbsp{}--- число слов в коде \( \code \) веса \( i \).
+** Как строить сигнатуры
+#+attr_latex: :overlay +-
++ Пусть \( \mu:\mathsf{C}_{n}\rightarrow F \)\nbsp{}--- инвариант.
++ Построим отображение \( \Sigma \) следующим образом:
+  \[ \Sigma(\code, i)=\mu\left(\code^{(\{i\})}\right). \]
++ Тогда \( \Sigma \)\nbsp{}--- сигнатура на множестве \( E \) для любого кода \( \code \), так как
+  \[ \Sigma(\code^{\sigma}, \sigma(i))=\mu\left((\code^{\sigma})^{(\{\sigma(i)\})}\right)=\mu\left(\code^{(\{i\})}\right)=\Sigma(\code,i). \]
++ Степень различения сигнатуры будет зависеть от инварианта.
++ Если инвариант \( n \) или \( k \), то скорее всего сигнатура не будет различающей.
++ Спектр весов \( D \) предпочтительней для построения сигнатуры. Но! Сложность его вычисления \( 2^{k} \).
+
+** Оболочка линейного кода
+***                                                          :B_definition:
+:PROPERTIES:
+:BEAMER_env: definition
+:END:
+*Оболочкой* \( [n] \)-кода \( \code \) называется код
+\[ \code^{\cap}=\code\cap\dualcode{\code}. \]
+Так как \( \dualcode*{\dualcode{\code}}=\code \), то
+\[ \left(\dualcode{\code}\right)^{\cap} = \code^{\cap}. \]
+*** Утверждение\nbsp{}[cite:@Sendrier_1997]                                            :B_block:
+:PROPERTIES:
+:BEAMER_env: block
+:END:
+Если \( P_{\ell} \)\nbsp{}--- доля \( [n] \)-кодов, имеющих размерность оболочки \( \ell \), то верно асимптотическое равенство
+\[ \sum_{\ell=0}^{n}\ell\cdot P_{\ell} \sim \sum_{i=1}^{n}\frac{1}{2^{i}+1}. \]
+** \enquote{Хороший} инвариант
+
+\( \mu(\code) = d_{\code^{\cap}} \).
+#+attr_latex: :overlay +-
++ Так как можно ожидать, что размерность оболочки кода мала, то скорее всего инвариант \( \mu \) можно вычислить эффективно.
++ Проблема: \( \code\subseteq \dualcode{\code} \) или \( \dualcode{\code} \subseteq \code  \) \( \Rightarrow \) \( \code^{\cap} = \code\text{ или }\dualcode{\code} \). *Высокая сложность вычислений*
++ Проблема: \(\code\cap\dualcode{\code}=\{0\} \) \( \Rightarrow \) \( \dim \code^{\cap} = 0 \). *Не будет различающей*.
++ В алгоритме SSA почти всегда используется именно этот инвариант.
+** Когда существует различающая сигнатура?
+***                                                             :B_theorem:
+:PROPERTIES:
+:BEAMER_env: theorem
+:END:
++ Рассмотрим сигнатуру \( \Omega(\code) \):
+  \[ \Omega(\code, i) = \{(\code^{\sigma}, \left(\code^{(\{i\})}\right)^{\sigma})|\ \sigma\in S_{n}\} \Rightarrow |\Omega(\code, i)|=n!. \]
++ Пусть \( \Sigma(\code, i) \)\nbsp{}--- любая другая сигнатура кода \( \code \).
+Тогда если \( \Omega(\code, i)=\Omega(\code,j) \) для некоторых \( i,j\in [n] \), \( i\neq j \), то и \(\Sigma(\code,i)=\Sigma(\code,j).  \)
+** Доказательство
+#+attr_latex: :overlay +-
++ \( \paut{\code} \)\nbsp{}--- группа перестановочных автоморфизм (т.е. для любого \( \pi \in \paut{\code} \) выполняется равенство \( \code^{\pi}=\code \)).
++ Заметим, что если существует такая \( \gamma\in\paut{\code} \), что \( \code^{(\{j\})}=\left(\code^{(\{i\})}\right)^{\gamma} \), то найдется такая \( \pi\in\paut{\code} \), что \( \code^{(\{j\})}=\left(\code^{(\{i\})}\right)^{\pi} \) и при этом \( \pi(i)=j \).
++ Пусть \( \gamma(i)=j' \). Если \( j=j' \), то \( \pi=\gamma \).
++ Пусть \( j\neq j' \). Так как \( \gamma \)\nbsp{}--- автоморфизм, то
+  \[ \code^{(\{j\})}=\left(\code^{(\{i\})}\right)^{\gamma}=\left(\code^{\gamma}\right)^{(\{j'=\gamma(i)\})}=\left(\code\right)^{(\{j'\})}. \]
+** Доказательство
+#+attr_latex: :overlay +-
++ Итак, \( \code^{(\{j\})}=\code^{(\{j'\})} \).
++ Фиксируем произвольное \( c\in\code \).
++ Пусть \( c_{j}\neq c_{j'} \).
++ Значит \( c_{j} \) и \( c_{j'} \) одновременно не обращаются в ноль, предположим, что \( c_{j}\neq 0 \).
++ Но тогда \( (c^{(\{j'\})})_{j}=c_{j}\neq 0 \) и поэтому \( c^{(\{j'\})}\not\in \code^{(\{j\})} \), а при этом по построению \( c^{(\{j'\})}\code^{(\{j'\})} \). Противоречие.
++ Значит во всех кодовых словах \( c \) координаты \( c_{j} \) и \( c_{j'} \) *одинаковые*.
++ Выходит, что транспозиция \( \tau=j'\leftrightarrow j \) принадлежит \( \paut{\code} \).
++ Значит для \( \pi=\gamma\circ \tau\in\paut{\code} \) верны равенства:
+  \[ \pi(i)=\tau(\gamma(i))=\tau(j')=j\text{ и } \left(\code^{(\{i\})}\right)^{\pi}=\left(\code^{\pi}\right)^{(\{\pi(i)\})}=\code^{(\{j\})}.\]
+** Доказательство
+#+attr_latex: :overlay +-
++ Итак, если \( \left(\code^{\pi}\right)^{(\{\pi(i)\})}=\code^{(\{j\})}, \) для некоторого \( \pi\in \paut{\code} \), то можно считать, что \( \pi(i)=j \).
++ Пусть \( \Omega(\code,i)=\Omega(\code, j) \).
++ Тогда по определению \( \Omega \) для некоторых \( \pi \) и \( \gamma \)
+  \[ \code^{\sigma} = \code^{\gamma},\ \left(\code^{(\{i\})}\right)^{\sigma} =\left(\code^{(\{j\})}\right)^{\gamma}.  \]
++ Из первого равенства следует, что \( \pi=\sigma\circ \gamma^{-1}\in\paut{\code} \)
++ Но тогда в силу второго равенства можно считать, что \( \pi(i)=j \).
++ Поэтому \( \Sigma(\code, j)=\Sigma(\code^{\pi},\pi(i) ). \)
++ И, наконец, по определению сигнатуры \[ \Sigma(\code^{\pi}, \pi(i))=\Sigma(\code,i) \Rightarrow  \Sigma(\code, i)=\Sigma(\code,j).\qed \]
+** Когда существует различающая сигнатура
+#+attr_latex: :overlay +-
++ Из доказательства теоремы следует, что \( \Omega(\code,i)=\Omega(\code, j) \), то существует такой автоморфизм \( \pi\in\paut{\code} \), что \( \pi(i)=j \).
++ Но очевидно верно и обратное, а именно, если существует \( \pi\in\paut{\code} \), для которого \( \pi(i)=j \), то \( \Omega(\code,i)=\Omega(\code, j) \).
+\pause
+Значит
+#+attr_latex: :overlay +-
++ *Полностью различающая сигнатура* для кода \( \code \) существует, если и только если \( \paut{\code}=\{e\} \), \( e \)\nbsp{}--- тождественная подстановка.
++ *Различающая сигнатура* для кода \( \code \) существует, если и только если \( \paut{\code} \) не является транзитивной.
+** Выводы
+#+attr_latex: :overlay +-
++ SSA эффективно работает только кодов с тривиальной группой подстановок, либо близкой к тривиальной.
++ Подбор сигнатуры\nbsp{}--- сложная задача, так как она должна быть полностью различающей и эффективно вычислимой.
++ Если у кода оболочка мала, то следует использовать сигнатуру, построенную на основе такого инварианта, как спектр весов оболочки.
