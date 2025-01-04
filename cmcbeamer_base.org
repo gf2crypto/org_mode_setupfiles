@@ -117,7 +117,7 @@
 #+LATEX_HEADER_EXTRA:   \setbeamercolor{author}{fg=blue!50!black}
 #+LATEX_HEADER_EXTRA:   \setbeamercolor{institute}{fg=blue!50!black}
 #+LATEX_HEADER_EXTRA:   \setbeamercolor{date}{fg=blue!50!black}
-#+LATEX_HEADER_EXTRA:
+#+LATEX_HEADER_EXTRA:   \IfFileExists{msu-cmc-logo.png}{%
 #+LATEX_HEADER_EXTRA:   \usebackgroundtemplate{%
 #+LATEX_HEADER_EXTRA:     \begin{tikzpicture}[remember picture,overlay]
 #+LATEX_HEADER_EXTRA:       \node [opacity=0.2, xshift=7cm,yshift=3cm] at (current page.south west){
@@ -125,6 +125,7 @@
 #+LATEX_HEADER_EXTRA:         ]{msu-cmc-logo.png}};
 #+LATEX_HEADER_EXTRA:     \end{tikzpicture}
 #+LATEX_HEADER_EXTRA:   }
+#+LATEX_HEADER_EXTRA:  }{}
 #+LATEX_HEADER_EXTRA:   \begin{frame}
 #+LATEX_HEADER_EXTRA:     \titlepage%
 #+LATEX_HEADER_EXTRA:   \end{frame}}
