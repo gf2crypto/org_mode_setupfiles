@@ -1,4 +1,4 @@
-#+setupfile: ../cmcbeamer_dracula.org
+#+setupfile: ../cmcbeamer_adobe.org
 #+setupfile: ../beamer_bibliography.org
 
 #+title: Алгоритм расщепления носителя или support splitting algorithm
@@ -119,6 +119,35 @@
 - Три
 - Четыре
 #+end_proposition*
+** Свойства сигнатуры: пример в две колонки
+#+attr_latex: :options [t]
+#+begin_columns
+#+attr_latex: :options {0.5\columnwidth}
+#+begin_column
+#+attr_latex: :options <+->
+#+begin_proposition*
+#+attr_latex: :overlay +-
+- Раз
+- Два
+- Три
+#+end_proposition*
+#+attr_latex: :overlay +-
+- Один
+- Два
+- Пять
+#+end_column
+
+#+attr_latex: :options {0.5\columnwidth}
+#+begin_column
+#+attr_latex: :options <+->
+#+begin_lemma*
+#+attr_latex: :overlay +-
+- Три
+- Четыре
+- Пять
+#+end_lemma*
+#+end_column
+#+end_columns
 ** Свойства сигнатуры
 *** Доказательство                                                :B_block:
 :PROPERTIES:
