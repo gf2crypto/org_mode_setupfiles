@@ -148,6 +148,34 @@
 #+end_lemma*
 #+end_column
 #+end_columns
+** Пример окружений
+#+attr_latex: :options [t]
+#+begin_columns
+#+attr_latex: :options {0.5\columnwidth}
+#+begin_column
+#+name: def:test-d
+#+attr_latex: :options <+->
+#+begin_definition
+#+attr_latex: :overlay +-
+- Это первое слово
+- Это второе слово
+- Это третье слово
+#+end_definition
+#+end_column
+
+#+attr_latex: :options {0.5\columnwidth}
+#+begin_column
+#+attr_latex: :options <+->
+#+begin_example*
+#+attr_latex: :overlay +-
+- А это пример определения;
+- Один и тот же.
+#+end_example*
+
+#+end_column
+
+#+end_columns
+
 ** Свойства сигнатуры
 *** Доказательство                                                :B_block:
 :PROPERTIES:
