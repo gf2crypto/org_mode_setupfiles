@@ -167,21 +167,153 @@
 #+begin_column
 
 #+name: ex:1
-#+attr_latex: :options <+->
-#+begin_example0
+#+begin_A_example
 #+attr_latex: :overlay +-
 - А это пример определения;
 - Один и тот же.
-#+end_example0
+#+end_A_example
 
-#+attr_latex: :options {Утверждение}
+#+attr_latex: :options <+->{Утверждение}
 #+begin_block
-Это простое утверждение.
+См. пример\nbsp{}[[ex:1]]
 #+end_block
 
 #+end_column
 
 #+end_columns
+
+** Примеры окружений: теоремы и доказательства.
+
+# \t, \tt (org-id), \t+-, \tt+-
+#+name: thm:T1
+#+attr_latex: :options <+->
+#+begin_theorem
+Это теорема с номером\nbsp{}[[thm:T1]]
+#+end_theorem
+
+# \P, \P+-
+#+attr_latex: :options <+->
+#+begin_proof
+Доказательство теоремы.
+#+end_proof
+
+# \t*, \t*+-
+#+attr_latex: :options <+->
+#+begin_theorem*
+Это теорема без номера.
+#+end_theorem*
+
+** Примеры окружений: утверждения и лемма
+
+# \p, \pp (org-id), \p+-, \p+-
+#+name: prop:P1
+#+attr_latex: :options <+->
+#+begin_proposition
+Это утверждение с номером\nbsp{}[[prop:P1]]
+#+end_proposition
+
+# \p*, \p*+-
+#+attr_latex: :options <+->
+#+begin_proposition*
+Это утверждение без номера.
+#+end_proposition*
+
+# \l, \ll (org-id), \l+-, \l+-
+#+NAME: lem:L1
+#+attr_latex: :options <+->
+#+begin_lemma
+Это лемма с номером\nbsp{}[[lem:L1]]
+#+end_lemma
+
+# \l*, \l*+-
+#+attr_latex: :options <+->
+#+begin_lemma*
+Это лемма без номера.
+#+end_lemma*
+
+** Примеры окружений: следствие и замечание
+
+# \s, \ss (org-id), \s+-, \s+-
+#+name: cor:C1
+#+attr_latex: :options <+->
+#+begin_corollary
+Это следствие с номером\nbsp{}[[cor:C1]]
+#+end_corollary
+
+# \s*, \s*+-
+#+attr_latex: :options <+->
+#+begin_corollary*
+Это следствие без номера.
+#+end_corollary*
+
+# \r, \rr (org-id), \r+-, \r+-
+#+NAME: rem:R1
+#+attr_latex: :options <+->
+#+begin_remark
+Это замечание с номером\nbsp{}[[rem:R1]]
+#+end_remark
+
+# \r*, \r*+-
+#+attr_latex: :options <+->
+#+begin_remark*
+Это замечание без номера.
+#+end_remark*
+
+
+
+** Примеры окружений: определение и пример
+
+# \d, \dd (org-id), \d+-, \d+-
+#+name: def:D1
+#+attr_latex: :options <+->
+#+begin_definition
+Это определение с номером\nbsp{}[[def:D1]]
+#+end_definition
+
+# \d*, \d*+-
+#+attr_latex: :options <+->
+#+begin_definition*
+Это определением без номера.
+#+end_definition*
+
+# \e, \ee (org-id), \e+-, \e+-
+#+NAME: ex:E1
+#+attr_latex: :options <+->
+#+begin_A_example
+Это пример с номером\nbsp{}[[ex:E1]]
+#+end_A_example
+
+# \e*, \e*+-
+#+attr_latex: :options <+->
+#+begin_example*
+Это пример без номера.
+#+end_example*
+
+** Примеры блоков
+
+#+attr_latex: :options <+->
+#+begin_definition
+#+attr_latex: :overlay +-
+- Это пример.
+#+end_definition
+
+#+attr_latex: :options <+->{Блок по-умолчанию}
+#+begin_block
+#+attr_latex: :overlay +-
+- Это обычный блок.
+#+end_block
+
+#+attr_latex: :options <+->{Alert-блок}
+#+begin_alertblock
+#+attr_latex: :overlay +-
+- Блок для привлечения внимания.
+#+end_alertblock
+
+#+attr_latex: :options <+->{Пример-блок}
+#+begin_exampleblock
+#+attr_latex: :overlay +-
+- Блок для оформления примеров.
+#+end_exampleblock
 
 ** Свойства сигнатуры
 *** Доказательство                                                :B_block:

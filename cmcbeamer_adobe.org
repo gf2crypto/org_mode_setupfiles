@@ -1,4 +1,4 @@
-#+LATEX_CLASS_OPTIONS: [pdf, unicode, xcolor={dvipsnames, hyperref, table}, aspectratio=169, 12pt]
+#+LATEX_CLASS_OPTIONS: [pdf, unicode, xcolor={dvipsnames, hyperref, table}, aspectratio=169, notheorems, 12pt]
 #+OPTIONS: H:2 tags:nil title:nil toc:nil
 #+LATEX_HEADER_EXTRA: \uselanguage{Russian}
 #+LATEX_HEADER_EXTRA: \languagepath{Russian}

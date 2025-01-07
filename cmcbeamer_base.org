@@ -25,62 +25,79 @@
 
 #+LATEX_HEADER_EXTRA: \setbeamercolor{structure}{fg=red}
 
-#+LATEX_HEADER_EXTRA: \BeforeBeginEnvironment{definition}{
+#+LATEX_HEADER_EXTRA: \AtBeginEnvironment{definition}{
 #+LATEX_HEADER_EXTRA:   \setbeamercolor{block title}{fg=white, bg=green}
 #+LATEX_HEADER_EXTRA:   \setbeamercolor{block body}{fg=black, bg=green!10}
 #+LATEX_HEADER_EXTRA: }
 
-#+LATEX_HEADER_EXTRA: \BeforeBeginEnvironment{theorem}{
+#+LATEX_HEADER_EXTRA: \AtBeginEnvironment{definition*}{
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{block title}{fg=white, bg=green}
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{block body}{fg=black, bg=green!10}
+#+LATEX_HEADER_EXTRA: }
+
+#+LATEX_HEADER_EXTRA: \AtBeginEnvironment{theorem}{
 #+LATEX_HEADER_EXTRA:   \setbeamercolor{block title}{fg=white, bg=red}
 #+LATEX_HEADER_EXTRA:   \setbeamercolor{block body}{fg=black, bg=red!10}
 #+LATEX_HEADER_EXTRA: }
-#+LATEX_HEADER_EXTRA: \BeforeBeginEnvironment{theorem*}{
+#+LATEX_HEADER_EXTRA: \AtBeginEnvironment{theorem*}{
 #+LATEX_HEADER_EXTRA:   \setbeamercolor{block title}{fg=white, bg=red}
 #+LATEX_HEADER_EXTRA:   \setbeamercolor{block body}{fg=black, bg=red!10}
 #+LATEX_HEADER_EXTRA: }
 
-#+LATEX_HEADER_EXTRA: \BeforeBeginEnvironment{lemma}{
+#+LATEX_HEADER_EXTRA: \AtBeginEnvironment{lemma}{
 #+LATEX_HEADER_EXTRA:   \setbeamercolor{block title}{fg=white, bg=red}
 #+LATEX_HEADER_EXTRA:   \setbeamercolor{block body}{fg=black, bg=red!10}
 #+LATEX_HEADER_EXTRA: }
-#+LATEX_HEADER_EXTRA: \BeforeBeginEnvironment{lemma*}{
-#+LATEX_HEADER_EXTRA:   \setbeamercolor{block title}{fg=white, bg=red}
-#+LATEX_HEADER_EXTRA:   \setbeamercolor{block body}{fg=black, bg=red!10}
-#+LATEX_HEADER_EXTRA: }
-
-#+LATEX_HEADER_EXTRA: \BeforeBeginEnvironment{corollary}{
-#+LATEX_HEADER_EXTRA:   \setbeamercolor{block title}{fg=white, bg=red}
-#+LATEX_HEADER_EXTRA:   \setbeamercolor{block body}{fg=black, bg=red!10}
-#+LATEX_HEADER_EXTRA: }
-#+LATEX_HEADER_EXTRA: \BeforeBeginEnvironment{corollary*}{
+#+LATEX_HEADER_EXTRA: \AtBeginEnvironment{lemma*}{
 #+LATEX_HEADER_EXTRA:   \setbeamercolor{block title}{fg=white, bg=red}
 #+LATEX_HEADER_EXTRA:   \setbeamercolor{block body}{fg=black, bg=red!10}
 #+LATEX_HEADER_EXTRA: }
 
-#+LATEX_HEADER_EXTRA: \BeforeBeginEnvironment{proposition}{
+#+LATEX_HEADER_EXTRA: \AtBeginEnvironment{corollary}{
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{block title}{fg=white, bg=red}
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{block body}{fg=black, bg=red!10}
+#+LATEX_HEADER_EXTRA: }
+#+LATEX_HEADER_EXTRA: \AtBeginEnvironment{corollary*}{
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{block title}{fg=white, bg=red}
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{block body}{fg=black, bg=red!10}
+#+LATEX_HEADER_EXTRA: }
+
+#+LATEX_HEADER_EXTRA: \AtBeginEnvironment{proposition}{
 #+LATEX_HEADER_EXTRA:     \setbeamercolor{block title}{fg=white, bg=red}
 #+LATEX_HEADER_EXTRA:   \setbeamercolor{block body}{fg=black, bg=red!10}
 #+LATEX_HEADER_EXTRA: }
 
-#+LATEX_HEADER_EXTRA: \BeforeBeginEnvironment{proposition*}{
+#+LATEX_HEADER_EXTRA: \AtBeginEnvironment{proposition*}{
 #+LATEX_HEADER_EXTRA:   \setbeamercolor{block title}{fg=white, bg=red}
 #+LATEX_HEADER_EXTRA:   \setbeamercolor{block body}{fg=black, bg=red!10}
 #+LATEX_HEADER_EXTRA: }
 
-#+LATEX_HEADER_EXTRA: \BeforeBeginEnvironment{proof}{
+#+LATEX_HEADER_EXTRA: \AtBeginEnvironment{proof}{
 #+LATEX_HEADER_EXTRA:   \setbeamercolor{block title}{fg=structure.fg, bg=red!10}
 #+LATEX_HEADER_EXTRA:   \setbeamercolor{block body}{fg=black, bg=red!10}
 #+LATEX_HEADER_EXTRA: }
 
-#+LATEX_HEADER_EXTRA: \BeforeBeginEnvironment{remark}{
+#+LATEX_HEADER_EXTRA: \AtBeginEnvironment{remark}{
 #+LATEX_HEADER_EXTRA:   \setbeamercolor{block title}{fg=white, bg=blue}
 #+LATEX_HEADER_EXTRA:   \setbeamercolor{block body}{fg=black, bg=blue!10}
 #+LATEX_HEADER_EXTRA: }
 
-#+LATEX_HEADER_EXTRA: \BeforeBeginEnvironment{example0}{
+#+LATEX_HEADER_EXTRA: \AtBeginEnvironment{remark*}{
 #+LATEX_HEADER_EXTRA:   \setbeamercolor{block title}{fg=white, bg=blue}
 #+LATEX_HEADER_EXTRA:   \setbeamercolor{block body}{fg=black, bg=blue!10}
 #+LATEX_HEADER_EXTRA: }
+
+
+#+LATEX_HEADER_EXTRA: \AtBeginEnvironment{example}{
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{block title}{fg=white, bg=blue}
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{block body}{fg=black, bg=blue!10}
+#+LATEX_HEADER_EXTRA: }
+
+#+LATEX_HEADER_EXTRA: \AtBeginEnvironment{A_example}{
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{block title}{fg=white, bg=blue}
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{block body}{fg=black, bg=blue!10}
+#+LATEX_HEADER_EXTRA: }
+
 
 #+LATEX_HEADER_EXTRA: %%% Example block
 #+LATEX_HEADER_EXTRA: \setbeamercolor{block title example}{fg=blue, bg=white}
@@ -96,7 +113,7 @@
 #+LATEX_HEADER_EXTRA: }
 
 #+LATEX_HEADER_EXTRA: %%% Example without numbering
-#+LATEX_HEADER_EXTRA: \BeforeBeginEnvironment{example*}{
+#+LATEX_HEADER_EXTRA: \AtBeginEnvironment{example*}{
 #+LATEX_HEADER_EXTRA:   \setbeamercolor{block title}{fg=white, bg=blue}%
 #+LATEX_HEADER_EXTRA:   \setbeamercolor{block body}{fg=black, bg=blue!10}%
 #+LATEX_HEADER_EXTRA:   \setbeamercolor{itemize item}{fg=blue}%

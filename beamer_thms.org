@@ -1,12 +1,22 @@
+#+LATEX_HEADER: %\usepackage{thmtools}
+#+LATEX_HEADER_EXTRA: \setbeamertemplate{theorem}[ams style]
 #+LATEX_HEADER_EXTRA: \setbeamertemplate{theorems}[numbered]  % using theorem numbering
 #+LATEX_HEADER_EXTRA: \setbeamertemplate{caption}[numbered]   % numbering captions of tables
+#+LATEX_HEADER_EXTRA: \addtobeamertemplate{theorem begin}{\normalfont}{}
 #+LATEX_HEADER_EXTRA:                                 % and figures
+#+LATEX_HEADER_EXTRA: \theoremstyle{definition}
+#+LATEX_HEADER_EXTRA: \newtheorem{definition}{\translate{Definition}}
+#+LATEX_HEADER_EXTRA: \newtheorem*{definition*}{\translate{Definition}}
 #+LATEX_HEADER_EXTRA: \newtheorem{proposition}{\translate{Proposition}}
 #+LATEX_HEADER_EXTRA: \newtheorem*{proposition*}{\translate{Proposition}}
+#+LATEX_HEADER_EXTRA: \newtheorem{theorem}{\translate{Theorem}}
 #+LATEX_HEADER_EXTRA: \newtheorem*{theorem*}{\translate{Theorem}}
+#+LATEX_HEADER_EXTRA: \newtheorem{lemma}{\translate{Lemma}}
 #+LATEX_HEADER_EXTRA: \newtheorem*{lemma*}{\translate{Lemma}}
+#+LATEX_HEADER_EXTRA: \newtheorem{corollary}{\translate{Corollary}}
 #+LATEX_HEADER_EXTRA: \newtheorem*{corollary*}{\translate{Corollary}}
-#+LATEX_HEADER_EXTRA: \theoremstyle{definition}
 #+LATEX_HEADER_EXTRA: \newtheorem{remark}{\translate{Remark}}
+#+LATEX_HEADER_EXTRA: \newtheorem*{remark*}{\translate{Remark}}
 #+LATEX_HEADER_EXTRA: \newtheorem*{example*}{\translate{Example}}
-#+LATEX_HEADER_EXTRA: \newtheorem{example0}{\translate{Example}}
+#+LATEX_HEADER_EXTRA: \newtheorem{example}{\translate{Example}}
+#+LATEX_HEADER_EXTRA: \newtheorem{A_example}{\translate{Example}}
