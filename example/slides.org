@@ -165,12 +165,19 @@
 
 #+attr_latex: :options {0.5\columnwidth}
 #+begin_column
+
+#+name: ex:1
 #+attr_latex: :options <+->
-#+begin_example*
+#+begin_example0
 #+attr_latex: :overlay +-
 - А это пример определения;
 - Один и тот же.
-#+end_example*
+#+end_example0
+
+#+attr_latex: :options {Утверждение}
+#+begin_block
+Это простое утверждение.
+#+end_block
 
 #+end_column
 

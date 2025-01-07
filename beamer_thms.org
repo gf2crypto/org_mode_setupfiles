@@ -9,3 +9,4 @@
 #+LATEX_HEADER_EXTRA: \theoremstyle{definition}
 #+LATEX_HEADER_EXTRA: \newtheorem{remark}{\translate{Remark}}
 #+LATEX_HEADER_EXTRA: \newtheorem*{example*}{\translate{Example}}
+#+LATEX_HEADER_EXTRA: \newtheorem{example0}{\translate{Example}}
