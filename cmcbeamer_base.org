@@ -68,7 +68,7 @@
 #+LATEX_HEADER_EXTRA: }
 
 #+LATEX_HEADER_EXTRA: \BeforeBeginEnvironment{proof}{
-#+LATEX_HEADER_EXTRA:   \setbeamercolor{block title}{fg=structure.fg, bg=red!5}
+#+LATEX_HEADER_EXTRA:   \setbeamercolor{block title}{fg=structure.fg, bg=red!10}
 #+LATEX_HEADER_EXTRA:   \setbeamercolor{block body}{fg=black, bg=red!10}
 #+LATEX_HEADER_EXTRA: }
 
