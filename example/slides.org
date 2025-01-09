@@ -1,3 +1,4 @@
+#+startup: beamer
 #+setupfile: ../cmcbeamer_adobe.org
 #+setupfile: ../beamer_bibliography.org
 
@@ -167,11 +168,12 @@
 #+begin_column
 
 #+name: ex:1
-#+begin_A_example
+#+attr_latex: :options <+->
+#+begin_exmpl
 #+attr_latex: :overlay +-
 - А это пример определения;
 - Один и тот же.
-#+end_A_example
+#+end_exmpl
 
 #+attr_latex: :options <+->{Утверждение}
 #+begin_block
@@ -188,7 +190,8 @@
 #+name: thm:T1
 #+attr_latex: :options <+->
 #+begin_theorem
-Это теорема с номером\nbsp{}[[thm:T1]]
+#+attr_latex: :overlay +-
+- Это теорема с номером\nbsp{}[[thm:T1]]
 #+end_theorem
 
 # \P, \P+-
@@ -202,6 +205,20 @@
 #+begin_theorem*
 Это теорема без номера.
 #+end_theorem*
+
+** Пример доказательства c другим заголовком
+
+#+name: thm:T2
+#+attr_latex: :options <+->
+#+begin_theorem
+#+attr_beamer: :overlay <+->
+- В равнобедренном треугольнике углы при основании равны.
+#+end_theorem
+
+#+attr_latex: :options <+->[Доказательство теоремы~\ref{thm:T2}]
+#+begin_proof
+Доказательство элементарное и дается в школьном курсе геометрии.
+#+end_proof
 
 ** Примеры окружений: утверждения и лемма
 
@@ -230,6 +247,56 @@
 #+begin_lemma*
 Это лемма без номера.
 #+end_lemma*
+
+** Примеры окружений: assertion и проблема
+
+#+NAME: prop:A1
+#+attr_latex: :options <+->
+#+begin_assertion
+Это утверждение (assertion) с номером\nbsp{}[[prop:A1]]
+#+end_assertion
+
+#+attr_latex: :options <+->
+#+begin_assertion*
+Это утверждение (assertion) без номера.
+#+end_assertion*
+
+#+NAME: prob:PB1
+#+attr_latex: :options <+->
+#+begin_problem
+Это проблема с номером\nbsp{}[[prob:PB1]]
+#+end_problem
+
+#+attr_latex: :options <+->
+#+begin_problem*
+Это проблема без номера.
+#+end_problem*
+
+
+** Примеры окружений: задача и вопрос
+
+#+NAME: task:TT1
+#+attr_latex: :options <+->
+#+begin_task
+Это \translate{Task} с номером\nbsp{}[[task:TT1]]
+#+end_task
+
+#+attr_latex: :options <+->
+#+begin_task*
+Это \translate{Task} без номера.
+#+end_task*
+
+#+NAME: qu:QU1
+#+attr_latex: :options <+->
+#+begin_question
+Это \translate{Question} с номером\nbsp{}[[qu:QU1]]
+#+end_question
+
+#+attr_latex: :options <+->
+#+begin_question*
+Это \translate{Question} без номера.
+#+end_question*
+
 
 ** Примеры окружений: следствие и замечание
 
@@ -279,15 +346,30 @@
 # \e, \ee (org-id), \e+-, \e+-
 #+NAME: ex:E1
 #+attr_latex: :options <+->
-#+begin_A_example
+#+begin_exmpl
 Это пример с номером\nbsp{}[[ex:E1]]
-#+end_A_example
+#+end_exmpl
 
 # \e*, \e*+-
 #+attr_latex: :options <+->
 #+begin_example*
 Это пример без номера.
 #+end_example*
+
+
+** Примеры окружений: упражнение
+
+#+name: excer:EXR1
+#+attr_latex: :options <+->
+#+begin_excercise
+Это \translate{Excercise} с номером\nbsp{}[[excer:EXR1]]
+#+end_excercise
+
+#+attr_latex: :options <+->
+#+begin_excercise*
+Это \translate{Excercise} без номера.
+#+end_excercise*
+
 
 ** Примеры блоков
 

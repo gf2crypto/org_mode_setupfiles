@@ -93,7 +93,7 @@
 #+LATEX_HEADER_EXTRA:   \setbeamercolor{block body}{fg=black, bg=blue!10}
 #+LATEX_HEADER_EXTRA: }
 
-#+LATEX_HEADER_EXTRA: \AtBeginEnvironment{A_example}{
+#+LATEX_HEADER_EXTRA: \AtBeginEnvironment{exmpl}{
 #+LATEX_HEADER_EXTRA:   \setbeamercolor{block title}{fg=white, bg=blue}
 #+LATEX_HEADER_EXTRA:   \setbeamercolor{block body}{fg=black, bg=blue!10}
 #+LATEX_HEADER_EXTRA: }
