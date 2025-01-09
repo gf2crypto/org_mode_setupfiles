@@ -1,18 +1,14 @@
 #+LATEX_HEADER_EXTRA: % \setbeamertemplate{theorem}[ams style]
 #+LATEX_HEADER_EXTRA: \setbeamertemplate{theorems}[numbered]  % using theorem numbering
 #+LATEX_HEADER_EXTRA: \setbeamertemplate{caption}[numbered]   % numbering captions of tables
-#+LATEX_HEADER_EXTRA: % \addtobeamertemplate{theorem begin}{\normalfont}{}
+#+LATEX_HEADER_EXTRA: \addtobeamertemplate{theorem begin}{\normalfont}{}
 #+LATEX_HEADER_EXTRA:                                 % and figures
 
 #+LATEX_HEADER_EXTRA: \usepackage{etoolbox}
-#+LATEX_HEADER_EXTRA: \undef{\task}
-#+LATEX_HEADER_EXTRA: \undef{\excercise}
-#+LATEX_HEADER_EXTRA: \undef{\question}
 #+LATEX_HEADER_EXTRA: \undef{\lemma}
 #+LATEX_HEADER_EXTRA: \undef{\corollary}
 #+LATEX_HEADER_EXTRA: \undef{\example}
 #+LATEX_HEADER_EXTRA: \undef{\problem}
-#+LATEX_HEADER_EXTRA: \undef{\remark}
 
 #+LATEX_HEADER_EXTRA: \theoremstyle{definition}
 #+LATEX_HEADER_EXTRA: \newtheorem*{theorem*}{\translate{Theorem}}
@@ -45,10 +41,4 @@
 #+LATEX_HEADER_EXTRA: \newtheorem*{question*}{\translate{Question}}
 #+LATEX_HEADER_EXTRA: \newtheorem*{example*}{\translate{Example}}
 #+LATEX_HEADER_EXTRA: \newtheorem{example}{\translate{Example}}
-#+LATEX_HEADER_EXTRA: % \newtheorem{A_example}{\translate{Example}}
-
-#+LATEX_HEADER_EXTRA: %\usepackage{thmtools}
-
-#+LATEX_HEADER_EXTRA:   % \declaretheorem[name=\translate{Example},sibling=example]{exmpl}
 #+LATEX_HEADER_EXTRA: \newtheorem{exmpl}[example]{\translate{Example}}
-#+LATEX_HEADER_EXTRA:   %\declaretheorem[style=definition, numbered=no, name=\translate{Proof}, qed=\qedsymbol]{proof}
