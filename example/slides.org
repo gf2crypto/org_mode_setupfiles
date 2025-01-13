@@ -1,4 +1,4 @@
-#+setupfile: ../cmcbeamer_dracula.org
+#+setupfile: ../cmcbeamer.org
 #+setupfile: ../beamer_bibliography.org
 
 #+title: Алгоритм расщепления носителя или support splitting algorithm
