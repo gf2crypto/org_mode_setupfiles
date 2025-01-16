@@ -26,7 +26,15 @@
 #+LATEX_HEADER: \newcommand{\uecspace}{\vecspacestyle{U}}
 #+LATEX_HEADER: \newcommand{\wecspace}{\vecspacestyle{W}}
 #+LATEX_HEADER: \newcommand{\GL}{\mathrm{GL}}
-#+LATEX_HEADER: \newcommand{\GF}[1]{\mathbb{F}_{#1}} %% \GF{q}=F_q
-#+LATEX_HEADER: % \newcommand{\GF}[1]{\mathrm{GF}(#1)} %% \GF{q}=GF(q)
+#+LATEX_HEADER: \newcommand{\fieldstyle}[1]{\mathbb{#1}}
+#+LATEX_HEADER: \newcommand{\field}{\fieldstyle{F}}
+#+LATEX_HEADER: \newcommand{\GF}[1]{\field_{#1}} %% \GF{q}=F_q
+#+LATEX_HEADER: \WithSuffix\newcommand\GF*[1]{\mathrm{GF}(#1)} %% \GF*{q}=GF(q)
+#+LATEX_HEADER: \newcommand{\gf}{\GF{2}}
+#+LATEX_HEADER: \WithSuffix\newcommand\gf*{\GF*{2}} %% GF(2)
+#+LATEX_HEADER: \newcommand{\gfq}{\GF{q}}
+#+LATEX_HEADER: \WithSuffix\newcommand\gfq*{\GF*{q}} %% GF(q)
+#+LATEX_HEADER: \newcommand{\hprod}{\mathop{\circ}}
+#+LATEX_HEADER: \newcommand{\sprod}{\hprod}
 #+LATEX_HEADER: \newcommand{\condset}[2]{\left\{#1\,\left|\,\vphantom{#1}#2\right. \right\}}
 #+LATEX_HEADER: \WithSuffix\newcommand\condset*[4][]{\begin{multlined}#1\left\{#2\,\left|\, \vphantom{#2#4}#3\right.\right.\\ \left.\vphantom{#2#3}#4\right\}\end{multlined}}
