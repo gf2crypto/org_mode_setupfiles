@@ -9,32 +9,175 @@
 #+LATEX_HEADER: \newcommand{\rank}[1]{\operatorname{rank} #1}
 #+LATEX_HEADER: \WithSuffix\newcommand\rank*[1]{\operatorname{rank}\left(#1\right)}
 #+LATEX_HEADER: \newcommand{\getsR}{\mathrel{\overset{\$}{\gets}}}
+#+LATEX_HEADER: \newcommand{\hprod}{\mathop{\circ}}
+#+LATEX_HEADER: \newcommand{\sprod}{\hprod}
+
 #+LATEX_HEADER: \newcommand{\codestyle}[1]{\ensuremath{\mathcal{#1}}}
 #+LATEX_HEADER: \newcommand{\RM}{\codestyle{RM}}
 #+LATEX_HEADER: \newcommand{\code}{\codestyle{C}}
 #+LATEX_HEADER: \newcommand{\aode}{\codestyle{A}}
 #+LATEX_HEADER: \newcommand{\bode}{\codestyle{B}}
+#+LATEX_HEADER: \newcommand{\dode}{\codestyle{D}}
+#+LATEX_HEADER: \newcommand{\eode}{\codestyle{E}}
+#+LATEX_HEADER: \newcommand{\fode}{\codestyle{F}}
+#+LATEX_HEADER: \newcommand{\gode}{\codestyle{G}}
+#+LATEX_HEADER: \newcommand{\hode}{\codestyle{H}}
+#+LATEX_HEADER: \newcommand{\iode}{\codestyle{I}}
+#+LATEX_HEADER: \newcommand{\jode}{\codestyle{J}}
+#+LATEX_HEADER: \newcommand{\lode}{\codestyle{L}}
+#+LATEX_HEADER: \newcommand{\nnode}{\codestyle{N}}
+#+LATEX_HEADER: \newcommand{\oode}{\codestyle{O}}
+#+LATEX_HEADER: \newcommand{\pode}{\codestyle{P}}
+#+LATEX_HEADER: \newcommand{\qode}{\codestyle{Q}}
+#+LATEX_HEADER: \newcommand{\rode}{\codestyle{R}}
+#+LATEX_HEADER: \newcommand{\sode}{\codestyle{S}}
+#+LATEX_HEADER: \newcommand{\tode}{\codestyle{T}}
+#+LATEX_HEADER: \newcommand{\uode}{\codestyle{U}}
+#+LATEX_HEADER: \newcommand{\wode}{\codestyle{W}}
+#+LATEX_HEADER: \newcommand{\vode}{\codestyle{V}}
+#+LATEX_HEADER: \newcommand{\xode}{\codestyle{X}}
+#+LATEX_HEADER: \newcommand{\yode}{\codestyle{Y}}
+#+LATEX_HEADER: \newcommand{\zode}{\codestyle{Z}}
+#+LATEX_HEADER: \newcommand{\kode}{\codestyle{K}}
+#+LATEX_HEADER: \newcommand{\qode}{\codestyle{Q}}
+#+LATEX_HEADER: \newcommand{\mmode}{\codestyle{M}}
+
+#+LATEX_HEADER: \newcommand{\grs}[2][n,k,q]{\codestyle{GRS}_{#1}(#2)}
+#+LATEX_HEADER: \newcommand{\altcode}[2][n,k,m,q]{\codestyle{A}_{#1}({#2})}
+#+LATEX_HEADER: \newcommand{\goppa}[2][n,t,m,q]{\codestyle{G}_{#1}({#2})}
+#+LATEX_HEADER: \newcommand{\rmcode}[1][]{\codestyle{RM}_{#1}}
+#+LATEX_HEADER: \newcommand{\codefamilystyle}[1]{\ensuremath{\mathrm{#1}}}
+#+LATEX_HEADER: \newcommand{\codefamily}[1][C]{\codefamilystyle{#1}}
+
+
 #+LATEX_HEADER: \newcommand{\dualcode}[1]{{#1}^{\perp}}
 #+LATEX_HEADER: \WithSuffix\newcommand\dualcode*[1]{\left(#1\right)^{\perp}}
 #+LATEX_HEADER: \newcommand{\transpose}[1]{{#1}^{\top}}
 #+LATEX_HEADER: \WithSuffix\newcommand\transpose*[1]{\left(#1\right)^{\top}}
-#+LATEX_HEADER: \newcommand{\pautname}{PAut}
-#+LATEX_HEADER: \newcommand{\pautstyle}[1]{\ensuremath{\mathsf{#1}}}
-#+LATEX_HEADER: \newcommand{\paut}[1]{\pautstyle{\pautname}\left(#1\right)}
+
 #+LATEX_HEADER: \newcommand{\vecspacestyle}[1]{\codestyle{#1}}
 #+LATEX_HEADER: \newcommand{\vecspace}{\vecspacestyle{V}}
 #+LATEX_HEADER: \newcommand{\uecspace}{\vecspacestyle{U}}
 #+LATEX_HEADER: \newcommand{\wecspace}{\vecspacestyle{W}}
 #+LATEX_HEADER: \newcommand{\GL}{\mathrm{GL}}
-#+LATEX_HEADER: \newcommand{\fieldstyle}[1]{\mathbb{#1}}
-#+LATEX_HEADER: \newcommand{\field}{\fieldstyle{F}}
-#+LATEX_HEADER: \newcommand{\GF}[1]{\field_{#1}} %% \GF{q}=F_q
-#+LATEX_HEADER: \WithSuffix\newcommand\GF*[1]{\mathrm{GF}(#1)} %% \GF*{q}=GF(q)
-#+LATEX_HEADER: \newcommand{\gf}{\GF{2}}
-#+LATEX_HEADER: \WithSuffix\newcommand\gf*{\GF*{2}} %% GF(2)
-#+LATEX_HEADER: \newcommand{\gfq}{\GF{q}}
-#+LATEX_HEADER: \WithSuffix\newcommand\gfq*{\GF*{q}} %% GF(q)
-#+LATEX_HEADER: \newcommand{\hprod}{\mathop{\circ}}
-#+LATEX_HEADER: \newcommand{\sprod}{\hprod}
+#+LATEX_HEADER: \newcommand{\GF}[1]{\mathbb{F}_{#1}} %% \GF{q}=F_q
+#+LATEX_HEADER: % \newcommand{\GF}[1]{\mathrm{GF}(#1)} %% \GF{q}=GF(q)
 #+LATEX_HEADER: \newcommand{\condset}[2]{\left\{#1\,\left|\,\vphantom{#1}#2\right. \right\}}
 #+LATEX_HEADER: \WithSuffix\newcommand\condset*[4][]{\begin{multlined}#1\left\{#2\,\left|\, \vphantom{#2#4}#3\right.\right.\\ \left.\vphantom{#2#3}#4\right\}\end{multlined}}
+#+LATEX_HEADER: \newcommand{\spanname}{span}
+#+LATEX_HEADER: \newcommand{\lspan}[1]{\ensuremath{\operatorname{\spanname}}\left(#1\right)}
+#+LATEX_HEADER: \newcommand{\coeffname}{coeff}
+#+LATEX_HEADER: \newcommand{\coeff}{\ensuremath{\operatorname{\coeffname}}}
+
+
+#+LATEX_HEADER: \newcommand{\sSD}{\pcnotionstyle{sSD}}
+#+LATEX_HEADER: \newcommand{\SD}{\pcnotionstyle{SD}}
+#+LATEX_HEADER: \newcommand{\sWS}{\pcnotionstyle{sWS}}
+#+LATEX_HEADER: \newcommand{\WS}{\pcnotionstyle{WS}}
+#+LATEX_HEADER: \newcommand{\PEC}{\pcnotionstyle{PEC}}
+#+LATEX_HEADER: \newcommand{\PE}{\pcnotionstyle{PE}}
+#+LATEX_HEADER: \newcommand{\decode}{\pcalgostyle{Decode}}
+#+LATEX_HEADER: \newcommand{\cgen}{\pcalgostyle{CGen}}
+#+LATEX_HEADER: \newcommand{\gpub}{G_{\pcalgostyle{pub}}}
+#+LATEX_HEADER: \newcommand{\hpub}{H_{\pcalgostyle{pub}}}
+#+LATEX_HEADER: \newcommand{\mcel}{\pcnotionstyle{McEl}}
+#+LATEX_HEADER: \newcommand{\nied}{\pcnotionstyle{NiEd}}
+
+# Algebraic structures
+#+LATEX_HEADER: \newcommand{\algstructstyle}[1]{\ensuremath{\mathrm{#1}}}
+#+LATEX_HEADER: \newcommand{\simgroup}[1][n]{\algstructstyle{S}_{#1}}
+#+LATEX_HEADER: \newcommand{\pautname}{PAut}
+#+LATEX_HEADER: \newcommand{\paut}[1]{\algstructstyle{\pautname}\left(#1\right)}
+#+LATEX_HEADER: \newcommand{\gl}[1][2]{\algstructstyle{GL}_{#1}}
+
+# Fields
+#+LATEX_HEADER: \newcommand{\fieldstyle}[1]{\mathbb{#1}}
+#+LATEX_HEADER: \newcommand{\field}{\fieldstyle{F}}
+#+LATEX_HEADER: \newcommand{\gf}[1][2]{\ensuremath{\mathbb{\field}}_{#1}}
+#+LATEX_HEADER: \newcommand{\gfq}{\gf[q]}
+#+LATEX_HEADER: \newcommand{\gf2}{\gf[2]}
+#+LATEX_HEADER: \newcommand{\gf3}{\gf[3]}
+#+LATEX_HEADER: \newcommand{\gfqm}{\gf[q^m]}
+#+LATEX_HEADER: \newcommand{\gf2m}{\gf[q^m]}
+#+LATEX_HEADER: \newcommand{\gf3m}{\gf[3^m]}
+#+LATEX_HEADER: \newcommand{\gfqn}{\gf[q^n]}
+#+LATEX_HEADER: \newcommand{\gf2n}{\gf[q^n]}
+#+LATEX_HEADER: \newcommand{\gf3n}{\gf[3^n]}
+#+LATEX_HEADER: \WithSuffix\newcommand\gf*[1][2]{\algstructstyle{GF}(#1)}
+#+LATEX_HEADER: \WithSuffix\newcommand\gf2*{\gf*}
+#+LATEX_HEADER: \WithSuffix\newcommand\gfq*{\gf*[q]}
+#+LATEX_HEADER: \WithSuffix\newcommand\gf3*{\gf*[3]}
+#+LATEX_HEADER: \WithSuffix\newcommand\gfqm*{\gf*[q^m]}
+#+LATEX_HEADER: \WithSuffix\newcommand\gf2m*{\gf*[q^m]}
+#+LATEX_HEADER: \WithSuffix\newcommand\gf3m*{\gf*[3^m]}
+#+LATEX_HEADER: \WithSuffix\newcommand\gfqn*{\gf*[q^n]}
+#+LATEX_HEADER: \WithSuffix\newcommand\gf2n*{\gf*[q^n]}
+#+LATEX_HEADER: \WithSuffix\newcommand\gf3n*{\gf*[3^n]}
+
+#+LATEX_HEADER: \newcommand{\bydef}{\ensuremath{\stackrel{\mathrm{def}}{=}}}
+
+# Matrices
+#+LATEX_HEADER: \newcommand{\matrixstyle}[1]{\ensuremath{\mathbf{#1}}}
+#+LATEX_HEADER: \newcommand{\matr}[1][M]{\matrixstyle{#1}}
+#+LATEX_HEADER: \newcommand{\aatr}{\matr[A]}
+#+LATEX_HEADER: \newcommand{\batr}{\matr[B]}
+#+LATEX_HEADER: \newcommand{\catr}{\matr[C]}
+#+LATEX_HEADER: \newcommand{\datr}{\matr[D]}
+#+LATEX_HEADER: \newcommand{\eatr}{\matr[E]}
+#+LATEX_HEADER: \newcommand{\fatr}{\matr[F]}
+#+LATEX_HEADER: \newcommand{\gatr}{\matr[G]}
+#+LATEX_HEADER: \newcommand{\hatr}{\matr[H]}
+#+LATEX_HEADER: \newcommand{\iatr}{\matr[I]}
+#+LATEX_HEADER: \newcommand{\jatr}{\matr[J]}
+#+LATEX_HEADER: \newcommand{\katr}{\matr[K]}
+#+LATEX_HEADER: \newcommand{\latr}{\matr[L]}
+#+LATEX_HEADER: \newcommand{\natr}{\matr[N]}
+#+LATEX_HEADER: \newcommand{\oatr}{\matr[O]}
+#+LATEX_HEADER: \newcommand{\patr}{\matr[P]}
+#+LATEX_HEADER: \newcommand{\qatr}{\matr[Q]}
+#+LATEX_HEADER: \newcommand{\ratr}{\matr[R]}
+#+LATEX_HEADER: \newcommand{\satr}{\matr[S]}
+#+LATEX_HEADER: \newcommand{\tatr}{\matr[T]}
+#+LATEX_HEADER: \newcommand{\uatr}{\matr[U]}
+#+LATEX_HEADER: \newcommand{\vatr}{\matr[V]}
+#+LATEX_HEADER: \newcommand{\watr}{\matr[W]}
+#+LATEX_HEADER: \newcommand{\xatr}{\matr[X]}
+#+LATEX_HEADER: \newcommand{\yatr}{\matr[Y]}
+#+LATEX_HEADER: \newcommand{\zatr}{\matr[Z]}
+
+# Vectors
+#+LATEX_HEADER: \newcommand{\vectorstyle}[1]{\ensuremath{\mathbf{#1}}}
+#+LATEX_HEADER: \newcommand{\vect}[1][v]{\vectorstyle{#1}}
+#+LATEX_HEADER: \newcommand{\wect}{\vect[w]}
+#+LATEX_HEADER: \newcommand{\xect}{\vect[x]}
+#+LATEX_HEADER: \newcommand{\yvect}{\vect[y]}
+#+LATEX_HEADER: \newcommand{\aect}{\vect[a]}
+#+LATEX_HEADER: \newcommand{\bect}{\vect[b]}
+#+LATEX_HEADER: \newcommand{\cect}{\vect[c]}
+#+LATEX_HEADER: \newcommand{\dect}{\vect[d]}
+#+LATEX_HEADER: \newcommand{\eect}{\vect[e]}
+#+LATEX_HEADER: \newcommand{\fect}{\vect[f]}
+#+LATEX_HEADER: \newcommand{\gect}{\vect[g]}
+#+LATEX_HEADER: \newcommand{\hect}{\vect[h]}
+#+LATEX_HEADER: \newcommand{\iect}{\vect[i]}
+#+LATEX_HEADER: \newcommand{\ject}{\vect[j]}
+#+LATEX_HEADER: \newcommand{\kect}{\vect[k]}
+#+LATEX_HEADER: \newcommand{\lect}{\vect[]\ell]}
+#+LATEX_HEADER: \newcommand{\mect}{\vect[m]}
+#+LATEX_HEADER: \newcommand{\nect}{\vect[n]}
+#+LATEX_HEADER: \newcommand{\oect}{\vect[o]}
+#+LATEX_HEADER: \newcommand{\pect}{\vect[p]}
+#+LATEX_HEADER: \newcommand{\qect}{\vect[q]}
+#+LATEX_HEADER: \newcommand{\rect}{\vect[r]}
+#+LATEX_HEADER: \newcommand{\sect}{\vect[s]}
+#+LATEX_HEADER: \newcommand{\yect}{\vect[t]}
+#+LATEX_HEADER: \newcommand{\uect}{\vect[u]}
+#+LATEX_HEADER: \newcommand{\zect}{\vect[z]}
+#+LATEX_HEADER: \newcommand{\aaect}{\vect[\alpha]}
+#+LATEX_HEADER: \newcommand{\bbect}{\vect[\beta]}
+#+LATEX_HEADER: \newcommand{\ggect}{\vect[\gamma]}
+#+LATEX_HEADER: \newcommand{\ddect}{\vect[\delta]}
+#+LATEX_HEADER: \newcommand{\eeect}{\vect[\varepsilon]}
+#+LATEX_HEADER: \newcommand{\ooect}{\vect[\omega]}
+#+LATEX_HEADER: \newcommand{\ffect}{\vect[\varphi]}
+#+LATEX_HEADER: \newcommand{\ppect}{\vect[\psi]}
