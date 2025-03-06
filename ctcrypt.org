@@ -79,4 +79,4 @@
 #+LATEX_HEADER:   %======================================================================
 #+LATEX_HEADER:   %
 #+LATEX_HEADER:
-#+OPTIONS: toc:nil title:nil author:nil date:nil
+#+OPTIONS: toc:nil title:nil author:nil date:nil tags:nil
