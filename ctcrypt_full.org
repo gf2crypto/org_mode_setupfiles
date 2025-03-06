@@ -1,0 +1,5 @@
+#+setupfile: ./ctcrypt_base.org
+#+setupfile: ./math.org
+#+setupfile: ./algorithms.org
+#+setupfile: ./cryptocode.org
+#+setupfile: ./bibliography_bibtex.org
