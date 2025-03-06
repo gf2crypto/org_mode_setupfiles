@@ -1,4 +1,5 @@
 #+setupfile: ./ctcrypt_base.org
+#+LATEX_HEADER: \usepackage{csquotes}
 #+setupfile: ./math.org
 #+setupfile: ./algorithms.org
 #+setupfile: ./cryptocode.org
