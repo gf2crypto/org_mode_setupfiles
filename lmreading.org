@@ -1,5 +1,6 @@
 #+LATEX_CLASS: extreport
 #+LATEX_CLASS_OPTIONS: [russian,14pt,twoside]
+#+LATEX_HEADER: \usepackage[utf8]{inputenc}
 #+LATEX_HEADER: \usepackage{setspace}
 #+LATEX_HEADER: \selectfont
 #+LATEX_HEADER: \parindent=18pt
@@ -298,9 +299,7 @@
 #+LATEX_HEADER: %%----------------------------------------------------------------------------
 #+LATEX_HEADER: \makeatother
 #+LATEX_HEADER: %%----------------------------------------------------------------------------
-#+LATEX_HEADER: \AtBeginDocument{
-#+LATEX_HEADER: \begin{lmrarticle}%
-#+LATEX_HEADER: }
 #+LATEX_HEADER: \AtEndDocument{
 #+LATEX_HEADER: \end{lmrarticle}%
 #+LATEX_HEADER: }
+#+OPTIONS: toc:nil title:nil author:nil date:nil tags:nil
