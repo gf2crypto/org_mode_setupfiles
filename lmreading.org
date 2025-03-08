@@ -1,0 +1,306 @@
+#+LATEX_CLASS: extreport
+#+LATEX_CLASS_OPTIONS: [russian,14pt,twoside]
+#+LATEX_HEADER: \usepackage{setspace}
+#+LATEX_HEADER: \selectfont
+#+LATEX_HEADER: \parindent=18pt
+#+LATEX_HEADER: \frenchspacing
+#+LATEX_HEADER: %%----------------------------------------------------------------------------
+#+LATEX_HEADER: \usepackage{amsmath}
+#+LATEX_HEADER: \usepackage{amssymb}
+#+LATEX_HEADER: \usepackage{amscd}
+#+LATEX_HEADER: \usepackage{amsthm}
+#+LATEX_HEADER: \usepackage{etoolbox}
+#+LATEX_HEADER: %\usepackage{mathtools}
+#+LATEX_HEADER: \usepackage{bm}
+#+LATEX_HEADER: \usepackage{titlesec}
+#+LATEX_HEADER: \usepackage{caption}
+#+LATEX_HEADER: \usepackage{graphicx}
+#+LATEX_HEADER: \usepackage{listings}
+#+LATEX_HEADER: \usepackage[all]{xy}
+#+LATEX_HEADER: \usepackage{url}
+#+LATEX_HEADER: \usepackage{array}
+#+LATEX_HEADER: \usepackage{tabularx}
+#+LATEX_HEADER: \usepackage{booktabs}
+#+LATEX_HEADER: %%----------------------------------------------------------------------------
+#+LATEX_HEADER: \usepackage[%
+#+LATEX_HEADER:         a4paper,%
+#+LATEX_HEADER:         includehead,%
+#+LATEX_HEADER:         left=2cm,%
+#+LATEX_HEADER:         top=2cm,%
+#+LATEX_HEADER:         right=2cm,%
+#+LATEX_HEADER:         bottom=2cm,%
+#+LATEX_HEADER:         headheight=0.7cm,%
+#+LATEX_HEADER:         headsep=0.3cm,%
+#+LATEX_HEADER:         footskip=1.6cm]{geometry}
+#+LATEX_HEADER: \special{papersize=210mm,297mm}
+#+LATEX_HEADER: %%----------------------------------------------------------------------------
+#+LATEX_HEADER: \renewcommand{\thefootnote}{\fnsymbol{footnote}}
+#+LATEX_HEADER: %%----------------------------------------------------------------------------
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \pagestyle{fancy}%
+#+LATEX_HEADER: \fancyhead{}%
+#+LATEX_HEADER: \fancyfoot{}%
+#+LATEX_HEADER: \fancyhead[LE,RO]{\normalsize \thepage}%
+#+LATEX_HEADER: \fancyhead[RE,LO]{\leftmark}
+#+LATEX_HEADER: %%----------------------------------------------------------------------------
+#+LATEX_HEADER: \raggedbottom
+#+LATEX_HEADER: %%----------------------------------------------------------------------------
+#+LATEX_HEADER: \makeatletter
+#+LATEX_HEADER: %%----------------------------------------------------------------------------
+#+LATEX_HEADER: \protected\def\switchinitials#1{%
+#+LATEX_HEADER: \begingroup%
+#+LATEX_HEADER: \edef\temp{\endgroup%
+#+LATEX_HEADER:     \noexpand\switchinitials@fixcomma%
+#+LATEX_HEADER:     \forcsvlist{\switchinitials@item}{#1}\relax}%
+#+LATEX_HEADER:     \temp}
+#+LATEX_HEADER: \def\switchinitials@fixcomma, #1{#1}
+#+LATEX_HEADER: \def\switchinitials@item#1{, \switchinitials@single#1\relax}
+#+LATEX_HEADER: \def\switchinitials@single#1~#2\relax{#2~#1}
+#+LATEX_HEADER: %% Счетчик для списка авторов в колонтитуле
+#+LATEX_HEADER: \newcounter{headauthorscounter}
+#+LATEX_HEADER: \def\saveauthor#1{%
+#+LATEX_HEADER:     \stepcounter{headauthorscounter}%
+#+LATEX_HEADER:     \expandafter\def\csname headauthorslist\theheadauthorscounter%
+#+LATEX_HEADER:         \endcsname{#1}}
+#+LATEX_HEADER: \def\ifnthauthor#1{%
+#+LATEX_HEADER:     \ifcsname headauthorslist#1\endcsname}
+#+LATEX_HEADER: \def\getnthauthor#1{%
+#+LATEX_HEADER:     , \csname headauthorslist#1\endcsname}
+#+LATEX_HEADER: \def\putnthauthor#1{%
+#+LATEX_HEADER:     \ifnthauthor#1\getnthauthor#1\fi}
+#+LATEX_HEADER: \def\getfirstivauthors{%
+#+LATEX_HEADER:     \noexpand\switchinitials@fixcomma%
+#+LATEX_HEADER:     \putnthauthor1\putnthauthor2\putnthauthor3\putnthauthor4%
+#+LATEX_HEADER:     \ifnthauthor5 и др.\fi}
+#+LATEX_HEADER: %%----------------------------------------------------------------------------
+#+LATEX_HEADER: \newenvironment{lmrarticle}[3][russian]{%
+#+LATEX_HEADER: \setcounter{figure}{0}
+#+LATEX_HEADER: \setcounter{equation}{0}
+#+LATEX_HEADER: \setcounter{definition}{0}
+#+LATEX_HEADER: \setcounter{theorem}{0}
+#+LATEX_HEADER: \setcounter{lemma}{0}
+#+LATEX_HEADER: \setcounter{statement}{0}
+#+LATEX_HEADER: \setcounter{remark}{0}
+#+LATEX_HEADER: \setcounter{corollary}{0}
+#+LATEX_HEADER: \pagebreak[2]
+#+LATEX_HEADER: \vskip 12pt plus 6pt minus 3pt
+#+LATEX_HEADER: \vglue 4pt plus 2pt minus 2pt
+#+LATEX_HEADER: {\leftskip=1.5\parindent
+#+LATEX_HEADER: \rightskip=1.5\parindent
+#+LATEX_HEADER: \vbox{\centering\sffamily\scshape\bfseries\boldmath\Large #2\unboldmath}}
+#+LATEX_HEADER: \setcounter{headauthorscounter}{0}
+#+LATEX_HEADER: \forcsvlist{\saveauthor}{#3}
+#+LATEX_HEADER: \markboth{\getfirstivauthors}{}
+#+LATEX_HEADER: \nopagebreak
+#+LATEX_HEADER: \vskip 6pt
+#+LATEX_HEADER: \@afterheading
+#+LATEX_HEADER: }{%
+#+LATEX_HEADER: }
+#+LATEX_HEADER: %%----------------------------------------------------------------------------
+#+LATEX_HEADER: \newcommand\OneAuthor[3]{%
+#+LATEX_HEADER: \vbox{%
+#+LATEX_HEADER: {\centering\bfseries\normalsize #1\par}
+#+LATEX_HEADER: \vskip 3pt
+#+LATEX_HEADER: \raggedright
+#+LATEX_HEADER: \leavevmode\noindent\footnotesize
+#+LATEX_HEADER: \hangindent=18pt\hangafter=1
+#+LATEX_HEADER: #2, e-mail: \texttt{#3}\\*\par}
+#+LATEX_HEADER: \nopagebreak
+#+LATEX_HEADER: \medskip
+#+LATEX_HEADER: \@afterheading
+#+LATEX_HEADER: }
+#+LATEX_HEADER: %%----------------------------------------------------------------------------
+#+LATEX_HEADER: \newcommand\TwoAuthor[6]{%
+#+LATEX_HEADER: \vbox{%
+#+LATEX_HEADER: {\centering\bfseries\normalsize #1$^1$, #4$^2$\\}
+#+LATEX_HEADER: \vskip 3pt
+#+LATEX_HEADER: \raggedright
+#+LATEX_HEADER: \leavevmode\noindent\footnotesize
+#+LATEX_HEADER: \hangindent=18pt\hangafter=1
+#+LATEX_HEADER: $^1$ {#2}, e-mail: \texttt{#3}\par
+#+LATEX_HEADER: \hangindent=18pt\hangafter=1
+#+LATEX_HEADER: $^2$ {#5}, e-mail: \texttt{#6}\\*\par}
+#+LATEX_HEADER: \nopagebreak
+#+LATEX_HEADER: \smallskip
+#+LATEX_HEADER: \@afterheading
+#+LATEX_HEADER: }
+#+LATEX_HEADER: %%----------------------------------------------------------------------------
+#+LATEX_HEADER: \newcommand\ThreeAuthor[9]{%
+#+LATEX_HEADER: \vbox{%
+#+LATEX_HEADER: {\centering\bfseries\normalsize #1$^1$, #4$^2$, #7$^3$\\}
+#+LATEX_HEADER: \vskip 3pt
+#+LATEX_HEADER: \raggedright
+#+LATEX_HEADER: \leavevmode\noindent\footnotesize
+#+LATEX_HEADER: \hangindent=18pt\hangafter=1
+#+LATEX_HEADER: $^1$ {#2}, e-mail: \texttt{#3}\par
+#+LATEX_HEADER: \hangindent=18pt\hangafter=1
+#+LATEX_HEADER: $^2$ {#5}, e-mail: \texttt{#6}\par
+#+LATEX_HEADER: \hangindent=18pt\hangafter=1
+#+LATEX_HEADER: $^3$ {#8}, e-mail: \texttt{#9}\\*\par}
+#+LATEX_HEADER: \nopagebreak
+#+LATEX_HEADER: \smallskip
+#+LATEX_HEADER: \@afterheading
+#+LATEX_HEADER: }
+#+LATEX_HEADER: %%----------------------------------------------------------------------------
+#+LATEX_HEADER: \newcommand\FourAuthor[9]{%
+#+LATEX_HEADER: \def\Argi{{#1}}%
+#+LATEX_HEADER: \def\Argii{{#2}}%
+#+LATEX_HEADER: \def\Argiii{{#3}}%
+#+LATEX_HEADER: \def\Argiv{{#4}}%
+#+LATEX_HEADER: \def\Argv{{#5}}%
+#+LATEX_HEADER: \def\Argvi{{#6}}%
+#+LATEX_HEADER: \def\Argvii{{#7}}%
+#+LATEX_HEADER: \def\Argviii{{#8}}%
+#+LATEX_HEADER: \def\Argix{{#9}}%
+#+LATEX_HEADER: \FourAuthorContinue
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \newcommand\FourAuthorContinue[3]{%
+#+LATEX_HEADER: \vbox{%
+#+LATEX_HEADER: {\centering
+#+LATEX_HEADER: {\bfseries\normalsize \Argi$^1$, \Argiv$^2$, \Argvii$^3$, #1$^4$\\}}
+#+LATEX_HEADER: \vskip 3pt
+#+LATEX_HEADER: \raggedright
+#+LATEX_HEADER: \leavevmode\noindent\footnotesize
+#+LATEX_HEADER: \hangindent=18pt\hangafter=1
+#+LATEX_HEADER: $^1$ \Argii, e-mail: \texttt{\Argiii}\par
+#+LATEX_HEADER: \hangindent=18pt\hangafter=1
+#+LATEX_HEADER: $^2$ \Argv, e-mail: \texttt{\Argvi}\par
+#+LATEX_HEADER: \hangindent=18pt\hangafter=1
+#+LATEX_HEADER: $^3$ \Argviii, e-mail: \texttt{\Argix}\par
+#+LATEX_HEADER: \hangindent=18pt\hangafter=1
+#+LATEX_HEADER: $^4$ #2, e-mail: \texttt{#3}\\*\par}
+#+LATEX_HEADER: \nopagebreak
+#+LATEX_HEADER: \smallskip
+#+LATEX_HEADER: \@afterheading
+#+LATEX_HEADER: }
+#+LATEX_HEADER: %%----------------------------------------------------------------------------
+#+LATEX_HEADER: \newcommand\FiveAuthor[9]{%
+#+LATEX_HEADER: \def\Argi{{#1}}%
+#+LATEX_HEADER: \def\Argii{{#2}}%
+#+LATEX_HEADER: \def\Argiii{{#3}}%
+#+LATEX_HEADER: \def\Argiv{{#4}}%
+#+LATEX_HEADER: \def\Argv{{#5}}%
+#+LATEX_HEADER: \def\Argvi{{#6}}%
+#+LATEX_HEADER: \def\Argvii{{#7}}%
+#+LATEX_HEADER: \def\Argviii{{#8}}%
+#+LATEX_HEADER: \def\Argix{{#9}}%
+#+LATEX_HEADER: \FiveAuthorContinue
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \newcommand\FiveAuthorContinue[6]{%
+#+LATEX_HEADER: \vbox{%
+#+LATEX_HEADER: {\centering
+#+LATEX_HEADER: \bfseries\normalsize \Argi$^1$, \Argiv$^2$, \Argvii$^3$, #1$^4$, #4$^5$\\}
+#+LATEX_HEADER: \vskip 3pt
+#+LATEX_HEADER: \raggedright
+#+LATEX_HEADER: \leavevmode\noindent\footnotesize
+#+LATEX_HEADER: \hangindent=18pt\hangafter=1
+#+LATEX_HEADER: $^1$ {\Argii}, e-mail: \texttt{\Argiii}\par
+#+LATEX_HEADER: \hangindent=18pt\hangafter=1
+#+LATEX_HEADER: $^2$ {\Argv}, e-mail: \texttt{\Argvi}\par
+#+LATEX_HEADER: \hangindent=18pt\hangafter=1
+#+LATEX_HEADER: $^3$ {\Argviii}, e-mail: \texttt{\Argix}\par
+#+LATEX_HEADER: \hangindent=18pt\hangafter=1
+#+LATEX_HEADER: $^4$ {#2}, e-mail: \texttt{#3}\par
+#+LATEX_HEADER: \hangindent=18pt\hangafter=1
+#+LATEX_HEADER: $^5$ {#5}, e-mail: \texttt{#6}\\*\par}
+#+LATEX_HEADER: \nopagebreak
+#+LATEX_HEADER: \smallskip
+#+LATEX_HEADER: \@afterheading
+#+LATEX_HEADER: }
+#+LATEX_HEADER: %%----------------------------------------------------------------------------
+#+LATEX_HEADER: \titleformat{\paragraph}[runin]{\bfseries}{}{0pt}{}
+#+LATEX_HEADER: \titleformat{\section}{\bfseries}{}{0pt}{}
+#+LATEX_HEADER: \let\subsection\@undefined
+#+LATEX_HEADER: \let\subsubsection\@undefined
+#+LATEX_HEADER: \let\subparagraph\@undefined
+#+LATEX_HEADER: %%----------------------------------------------------------------------------
+#+LATEX_HEADER: \newtheorem{definition}{\protect\definitionname}
+#+LATEX_HEADER: \newtheorem*{definition*}{\protect\definitionname}
+#+LATEX_HEADER: \newtheorem{theorem}{\protect\theoremname}
+#+LATEX_HEADER: \newtheorem*{theorem*}{\protect\theoremname}
+#+LATEX_HEADER: \newtheorem{lemma}{\protect\lemmaname}
+#+LATEX_HEADER: \newtheorem*{lemma*}{\protect\lemmaname}
+#+LATEX_HEADER: \newtheorem{statement}{\protect\statementname}
+#+LATEX_HEADER: \newtheorem*{statement*}{\protect\statementname}
+#+LATEX_HEADER: \newtheorem{remark}{\protect\remarkname}
+#+LATEX_HEADER: \newtheorem*{remark*}{\protect\remarkname}
+#+LATEX_HEADER: \newtheorem{corollary}{\protect\corollaryname}
+#+LATEX_HEADER: \newtheorem*{corollary*}{\protect\corollaryname}
+#+LATEX_HEADER: \newcommand{\definitionname}{}
+#+LATEX_HEADER: \newcommand{\theoremname}{}
+#+LATEX_HEADER: \newcommand{\lemmaname}{}
+#+LATEX_HEADER: \newcommand{\statementname}{}
+#+LATEX_HEADER: \newcommand{\remarkname}{}
+#+LATEX_HEADER: \newcommand{\corollaryname}{}
+#+LATEX_HEADER: \addto\captionsrussian{%
+#+LATEX_HEADER:   \renewcommand{\definitionname}{Определение}%
+#+LATEX_HEADER:   \renewcommand{\theoremname}{Теорема}%
+#+LATEX_HEADER:   \renewcommand{\lemmaname}{Лемма}%
+#+LATEX_HEADER:   \renewcommand{\statementname}{Утверждение}%
+#+LATEX_HEADER:   \renewcommand{\remarkname}{Замечание}%
+#+LATEX_HEADER:   \renewcommand{\corollaryname}{Следствие}%
+#+LATEX_HEADER: }
+#+LATEX_HEADER: %%----------------------------------------------------------------------------
+#+LATEX_HEADER: \usepackage{enumitem}
+#+LATEX_HEADER: \setlist[enumerate]{%
+#+LATEX_HEADER:     %labelindent=0pt by default
+#+LATEX_HEADER:     leftmargin=*,%
+#+LATEX_HEADER:     topsep=4pt plus 2pt minus 2pt,%
+#+LATEX_HEADER:     partopsep=2pt plus 1pt minus 1pt,%
+#+LATEX_HEADER:     parsep=2pt plus 1pt,%
+#+LATEX_HEADER:     itemsep=2pt plus 1pt%
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \setlist[itemize]{%
+#+LATEX_HEADER:     %labelindent=0pt by default
+#+LATEX_HEADER:     label={---},%
+#+LATEX_HEADER:     leftmargin=*,%
+#+LATEX_HEADER:     topsep=4pt plus 2pt minus 2pt,%
+#+LATEX_HEADER:     partopsep=2pt plus 1pt minus 1pt,%
+#+LATEX_HEADER:     parsep=2pt plus 1pt,%
+#+LATEX_HEADER:     itemsep=2pt plus 1pt%
+#+LATEX_HEADER: }
+#+LATEX_HEADER: %%----------------------------------------------------------------------------
+#+LATEX_HEADER: \newenvironment{lmrreferences}{
+#+LATEX_HEADER: \pagebreak[1]
+#+LATEX_HEADER: \medskip
+#+LATEX_HEADER: \noindent
+#+LATEX_HEADER: {\scshape\large Список литературы}
+#+LATEX_HEADER: \par\nopagebreak
+#+LATEX_HEADER: \smallskip
+#+LATEX_HEADER: \@afterheading
+#+LATEX_HEADER: \begin{enumerate}[label={[\arabic*]},leftmargin=*]
+#+LATEX_HEADER: \sloppy
+#+LATEX_HEADER: }{
+#+LATEX_HEADER: \end{enumerate}
+#+LATEX_HEADER: }
+#+LATEX_HEADER: %%----------------------------------------------------------------------------
+#+LATEX_HEADER: \binoppenalty=10000
+#+LATEX_HEADER: \relpenalty=10000
+#+LATEX_HEADER: \@clubpenalty=10000
+#+LATEX_HEADER: \clubpenalty=10000
+#+LATEX_HEADER: \widowpenalty=10000
+#+LATEX_HEADER: %%----------------------------------------------------------------------------
+#+LATEX_HEADER: %%----------------------------------------------------------------------------
+#+LATEX_HEADER: \let\le\leqslant
+#+LATEX_HEADER: \let\leq\leqslant
+#+LATEX_HEADER: \let\ge\geqslant
+#+LATEX_HEADER: \let\geq\geqslant
+#+LATEX_HEADER: \let\emptyset\varnothing
+#+LATEX_HEADER: \apptocmd\normalsize{%
+#+LATEX_HEADER:   \abovedisplayskip=6pt plus 4pt minus 3pt
+#+LATEX_HEADER:   \belowdisplayskip=6pt plus 4pt minus 3pt
+#+LATEX_HEADER:   \abovedisplayshortskip=3pt plus 6pt minus 1pt
+#+LATEX_HEADER:   \belowdisplayshortskip=3pt plus 6pt minus 1pt
+#+LATEX_HEADER: }
+#+LATEX_HEADER: %%----------------------------------------------------------------------------
+#+LATEX_HEADER: \titlespacing*{\paragraph}{\parindent}{0pt}{4pt}
+#+LATEX_HEADER: %%----------------------------------------------------------------------------
+#+LATEX_HEADER: %%----------------------------------------------------------------------------
+#+LATEX_HEADER: \makeatother
+#+LATEX_HEADER: %%----------------------------------------------------------------------------
+#+LATEX_HEADER: \AtBeginDocument{
+#+LATEX_HEADER: \begin{lmrarticle}%
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \AtEndDocument{
+#+LATEX_HEADER: \end{lmrarticle}%
+#+LATEX_HEADER: }
