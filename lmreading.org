@@ -302,4 +302,4 @@
 #+LATEX_HEADER: \AtEndDocument{
 #+LATEX_HEADER: \end{lmrarticle}%
 #+LATEX_HEADER: }
-#+OPTIONS: toc:nil title:nil author:nil date:nil tags:nil
+#+OPTIONS: toc:nil title:nil author:t date:nil tags:nil
