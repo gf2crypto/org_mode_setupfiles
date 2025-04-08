@@ -1,0 +1,6 @@
+#+LATEX_CLASS: memoir
+#+LATEX_CLASS_OPTIONS: [a4paper,14pt,oneside,openany]
+#+LANGUAGE: ru
+#+OPTIONS: toc:t title:t date:t author:t
+#+setupfile: ./base.org
+#+setupfile: ./font_xcharter.org
