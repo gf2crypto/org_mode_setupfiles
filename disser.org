@@ -6,11 +6,11 @@
 #+setupfile: ./font_xcharter.org
 #+latex_header: \newcommand{\thesisDiscipline}{}
 #+latex_header: \newcommand{\thesisAdvisor}{}
-#+latex_header: \newcommand{\thesisCity}{}
 #+latex_header: \newcommand{\thesisUniversity}{}
+#+latex_header: \newcommand{\thesisSubtitle}{}
 #+latex_header: \newcommand{\discipline}[1]{\renewcommand{\thesisDiscipline}{#1}}
 #+latex_header: \newcommand{\advisor}[1]{\renewcommand{\thesisAdvisor}{#1}}
-#+latex_header: \newcommand{\city}[1]{\renewcommand{\thesisCity}{#1}}
+#+latex_header: \newcommand{\subtitle}[1]{\renewcommand{\thesisSubtitle}{#1}}
 #+latex_header: \newcommand{\university}[1]{\renewcommand{\thesisUniversity}{#1}}
 #+LATEX_HEADER: \newcommand{\thesisLogoPath}{images/logo.jpg}
 #+LATEX_HEADER: \newcommand{\logo}[1]{\renewcommand{\thesisLogoPath}{#1}}
@@ -25,6 +25,7 @@
 #+LATEX_HEADER: \end{center}
 
 # Число перед fill = кратность относительно некоторого расстояния fill, кусками которого заполнены пустые места
+#+LATEX_HEADER:
 #+LATEX_HEADER: \vspace{0pt plus4fill}
 
 # Logo
@@ -53,24 +54,30 @@
 #+LATEX_HEADER: {\large \UseName{@author}}
 #+LATEX_HEADER: \end{center}
 
+#+LATEX_HEADER:
 #+LATEX_HEADER: \vspace{0pt plus1fill}
 
 #+LATEX_HEADER: \begin{center}
-#+LATEX_HEADER:     \textbf{\large \UseName{@title}}
+#+LATEX_HEADER: {\bfseries\large \UseName{@title}}\par
+#+LATEX_HEADER: \end{center}
 #+LATEX_HEADER:
-#+LATEX_HEADER:     \vspace{0pt plus2fill}
-#+LATEX_HEADER:     \thesisDiscipline
+#+LATEX_HEADER: \vspace{0pt plus2fill}
+#+LATEX_HEADER: \begin{center}
+#+LATEX_HEADER:     \thesisDiscipline\par
+#+LATEX_HEADER: \end{center}
 #+LATEX_HEADER:
-#+LATEX_HEADER:     \vspace{0pt plus2fill}
-#+LATEX_HEADER:     \UseName{@subtitle}
+#+LATEX_HEADER: \vspace{0pt plus2fill}
+#+LATEX_HEADER: \begin{center}
+#+LATEX_HEADER:     \thesisSubtitle\par
 #+LATEX_HEADER: \end{center}
 #+LATEX_HEADER:
 #+LATEX_HEADER: \vspace{0pt plus4fill}
 #+LATEX_HEADER: \begin{flushright}
-#+LATEX_HEADER:     \thesisAdvisor
+#+LATEX_HEADER:     \thesisAdvisor\par
 #+LATEX_HEADER: \end{flushright}
 #+LATEX_HEADER:
 #+LATEX_HEADER: \vspace{0pt plus4fill}
-#+LATEX_HEADER: {\centering\thesisCity "--- \UseName{@date}\par}
+#+LATEX_HEADER: {\centering\UseName{@date}\par}
+#+LATEX_HEADER: \newpage
 #+LATEX_HEADER: }
 #+LATEX_HEADER: %\makeatother
