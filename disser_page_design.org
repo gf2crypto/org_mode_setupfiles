@@ -1,0 +1,124 @@
+# ## Красная строка
+# Красная строка после заголовков типа chapter
+#+latex_header: \indentafterchapter
+#+latex_header: \usepackage{indentfirst}
+
+# ## Полуторный интервал везде, даже в таблицах
+#+latex_header: \OnehalfSpacing*
+
+
+# Выставляем значения полей (ГОСТ 7.0.11-2011, 5.3.7)
+#+LATEX_HEADER: \usepackage[a4paper, top=2cm, bottom=2cm, left=2.5cm, right=1cm, nofoot, nomarginpar]{geometry}
+# Размер дополнительного верхнего поля
+#+LATEX_HEADER: \setlength{\topskip}{0pt}
+# Снимет warning, согласно https://tex.stackexchange.com/a/334346
+#+LATEX_HEADER: \setlength{\footskip}{12.3pt}
+
+#  #### Выравнивание и переносы
+# http://tex.stackexchange.com/questions/241343/what-is-the-meaning-of-fussy-sloppy-emergencystretch-tolerance-hbadness
+# http://www.latex-community.org/forum/viewtopic.php?p=70342#p70342
+#+LATEX_HEADER: \tolerance 1414
+#+LATEX_HEADER: \hbadness 1414
+
+# В случае проблем регулировать в первую очередь
+#+LATEX_HEADER: \emergencystretch 1.5em
+#+LATEX_HEADER: \hfuzz 0.3pt
+#+LATEX_HEADER: \vfuzz \hfuzz
+#+LATEX_HEADER: \raggedbottom
+
+# Избавляемся от переполнений
+#+LATEX_HEADER: \sloppy
+
+# Запрещаем разрыв страницы после первой строки абзаца
+#+LATEX_HEADER: \clubpenalty=10000
+
+# Запрещаем разрыв страницы после последней строки абзаца
+#+LATEX_HEADER: \widowpenalty=10000
+
+# Ограничение на разрыв страницы, если строка заканчивается переносом
+#+LATEX_HEADER: \brokenpenalty=4991
+
+# Выравнивание заголовков
+# Без переноса, как и надо (ГОСТ Р 7.0.11-2011, 5.3.5)
+#+LATEX_HEADER: \newlength{\otstuplen}
+#+LATEX_HEADER: \setlength{\otstuplen}{0pt}
+#+LATEX_HEADER: \newcommand{\hdngalign}{}
+#+LATEX_HEADER: \newcommand{\hdngaligni}{\hspace{\otstuplen}}
+
+
+# Колонтитулы
+# Порядковый номер страницы печатают на середине верхнего поля страницы (ГОСТ Р 7.0.11-2011, 5.3.8)
+#+LATEX_HEADER: \makeevenhead{plain}{}{\rmfamily\thepage}{}
+#+LATEX_HEADER: \makeoddhead{plain}{}{\rmfamily\thepage}{}
+#+LATEX_HEADER: \makeevenfoot{plain}{}{}{}
+#+LATEX_HEADER: \makeoddfoot{plain}{}{}{}
+#+LATEX_HEADER: \pagestyle{plain}
+
+# Оформление заголовков глав, разделов, подразделов
+# Работа должна быть выполнена ... размером шрифта 12-14 пунктов (ГОСТ Р 7.0.11-2011, 5.3.8). То есть не должно быть надписей шрифтом более 14. Так и поставим.
+# Эти установки будут давать одинаковый результат независимо от выбора базовым шрифтом 12 пт или 14 пт
+# Коэффициент кратности к размеру шрифта
+#+LATEX_HEADER: \newcounter{intvl}
+#+LATEX_HEADER: \setcounter{intvl}{3}
+# Установки для размера шрифта 14 pt
+#+LATEX_HEADER: \newlength{\curtextsize}
+#+LATEX_HEADER: \newlength{\bigtextsize}
+#+LATEX_HEADER: \setlength{\bigtextsize}{13.9pt}
+#+LATEX_HEADER: \makeatletter
+#+LATEX_HEADER: \setlength{\curtextsize}{\f@size pt}
+#+LATEX_HEADER: \makeatother
+
+#+LATEX_HEADER: \newcommand{\basegostsectionfont}{\fontsize{14pt}{16pt}\selectfont\bfseries}
+#+LATEX_HEADER:
+#+LATEX_HEADER: \makechapterstyle{thesisgost}{%
+#+LATEX_HEADER:     \chapterstyle{default}
+#+LATEX_HEADER:     \setlength{\beforechapskip}{0pt}
+#+LATEX_HEADER:     \setlength{\midchapskip}{0pt}
+#+LATEX_HEADER:     \setlength{\afterchapskip}{\theintvl\curtextsize}
+#+LATEX_HEADER:     \renewcommand*{\chapnamefont}{\basegostsectionfont}
+#+LATEX_HEADER:     \renewcommand*{\chapnumfont}{\basegostsectionfont}
+#+LATEX_HEADER:     \renewcommand*{\chaptitlefont}{\basegostsectionfont}
+#+LATEX_HEADER:     \renewcommand*{\chapterheadstart}{}
+# добавляет точку с пробелом после номера раздела
+#+LATEX_HEADER:     \renewcommand*{\afterchapternum}{.\space}
+#+LATEX_HEADER:     \renewcommand*{\printchapternum}{\hdngaligni\hdngalign\chapnumfont \thechapter}
+#+LATEX_HEADER:     \renewcommand*{\printchaptername}{}
+#+LATEX_HEADER:     \renewcommand*{\printchapternonum}{\hdngaligni\hdngalign}
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \setsecnumdepth{subsubsection}
+# Точка после номера раздела и подраздела
+#+LATEX_HEADER: \setsecnumformat{\csname the#1\endcsname.\quad}
+#+LATEX_HEADER:
+#+LATEX_HEADER: \makeatletter
+#+LATEX_HEADER: \makechapterstyle{thesisgostchapname}{%
+#+LATEX_HEADER:     \chapterstyle{thesisgost}
+#+LATEX_HEADER:     \renewcommand*{\printchapternum}{\chapnumfont \thechapter}
+#+LATEX_HEADER:     \renewcommand*{\printchaptername}{\hdngaligni\hdngalign\chapnamefont \@chapapp} %
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \makeatother
+#+LATEX_HEADER:
+#+LATEX_HEADER: \chapterstyle{thesisgost}
+#+LATEX_HEADER:
+#+LATEX_HEADER: \setsecheadstyle{\basegostsectionfont\hdngalign}
+#+LATEX_HEADER: \setsecindent{\otstuplen}
+#+LATEX_HEADER:
+#+LATEX_HEADER: \setsubsecheadstyle{\basegostsectionfont\hdngalign}
+#+LATEX_HEADER: \setsubsecindent{\otstuplen}
+#+LATEX_HEADER:
+#+LATEX_HEADER: \setsubsubsecheadstyle{\basegostsectionfont\hdngalign}
+#+LATEX_HEADER: \setsubsubsecindent{\otstuplen}
+# Заголовки подразделов центрируются с учетом номера, как block
+#+LATEX_HEADER:
+#+LATEX_HEADER: \sethangfrom{\noindent #1}
+#+LATEX_HEADER:
+#+LATEX_HEADER: \chapterstyle{thesisgostchapname}
+# будет вписано слово Глава перед каждым номером раздела в оглавлении
+#+LATEX_HEADER: \renewcommand*{\cftchaptername}{\chaptername\space}
+# Интервалы между заголовками
+# Заголовки отделяют от текста сверху и снизу тремя интервалами (ГОСТ Р 7.0.11-2011, 5.3.5).
+#+LATEX_HEADER: \setbeforesecskip{\theintvl\curtextsize}
+#+LATEX_HEADER: \setaftersecskip{\theintvl\curtextsize}
+#+LATEX_HEADER: \setbeforesubsecskip{\theintvl\curtextsize}
+#+LATEX_HEADER: \setaftersubsecskip{\theintvl\curtextsize}
+#+LATEX_HEADER: \setbeforesubsubsecskip{\theintvl\curtextsize}
+#+LATEX_HEADER: \setaftersubsubsecskip{\theintvl\curtextsize}

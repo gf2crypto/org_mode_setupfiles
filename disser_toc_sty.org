@@ -1,0 +1,42 @@
+# Оглавление
+# Отбивка точками до номера страницы начала главы/раздела
+#+LATEX_HEADER: \renewcommand{\cftchapterdotsep}{\cftdotsep}
+
+# Переносить слова в заголовке не допускается (ГОСТ Р 7.0.11-2011, 5.3.5). Заголовки в оглавлении должны точно повторять заголовки в тексте (ГОСТ Р 7.0.11-2011, 5.2.3). Прямого указания на запрет переносов в оглавлении нет, но по той же логике невнесения искажений в смысл, лучше в оглавлении не переносить:
+#+LATEX_HEADER: \setrmarg{2.55em plus1fil}
+
+# Нежирные номера страниц у глав в оглавлении
+#+LATEX_HEADER: \renewcommand{\cftchapterpagefont}{\normalfont}
+
+# нежирные точки до номеров страниц у глав в оглавлении
+#+LATEX_HEADER: \renewcommand{\cftchapterleader}{\cftdotfill{\cftchapterdotsep}}
+
+# добавляет точку с пробелом после номера подраздела в оглавлении
+#+LATEX_HEADER: \renewcommand\cftchapteraftersnum{.\space}
+#+LATEX_HEADER: \renewcommand\cftsectionaftersnum{.\space}
+#+LATEX_HEADER: \renewcommand\cftsubsectionaftersnum{.\space}
+#+LATEX_HEADER: \renewcommand\cftsubsubsectionaftersnum{.\space}
+
+# Слово 'Приложение' в оглавлении
+#+latex_header: \renewcommand*{\cftappendixname}{\appendixname\space}
+
+# добавить Стр. над номерами страниц в оглавлении
+# http://tex.stackexchange.com/a/306950
+#+LATEX_HEADER: \usepackage{afterpage}
+#+LATEX_HEADER: \newif\ifendTOC
+#+LATEX_HEADER:
+#+LATEX_HEADER: \newcommand*{\tocheader}{
+#+LATEX_HEADER:     \ifendTOC\else\hbox to \linewidth%
+#+LATEX_HEADER:       {\noindent{}~\hfill{Стр.}}\par%
+#+LATEX_HEADER:       \ifnumless{\value{page}}{3}{}{%
+#+LATEX_HEADER:         \vspace{0.5\onelineskip}
+#+LATEX_HEADER:       }
+#+LATEX_HEADER:       \afterpage{\tocheader}
+#+LATEX_HEADER:     \fi%
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \let\tableofcontentsORIG\tableofcontents
+#+LATEX_HEADER: \renewcommand\tableofcontents{
+#+LATEX_HEADER: \tableofcontentsORIG*
+#+LATEX_HEADER: \addtocontents{toc}{\protect\tocheader}
+#+LATEX_HEADER: \endTOCtrue
+#+LATEX_HEADER: }
