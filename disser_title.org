@@ -25,16 +25,17 @@
 
 # Logo
 #+LATEX_HEADER: \IfFileExists{\thesisLogoPath}{
-#+LATEX_HEADER:   \begin{minipage}[b]{0.5\linewidth}
+#+LATEX_HEADER:   \begin{minipage}[t]{0.5\linewidth}
 #+LATEX_HEADER:     \begin{flushleft}
 #+LATEX_HEADER:       \includegraphics[height=3.5cm]{\thesisLogoPath}
 #+LATEX_HEADER:     \end{flushleft}
 #+LATEX_HEADER:   \end{minipage}%
+#+LATEX_HEADER:   %
 #+LATEX_HEADER:   \begin{minipage}[b]{0.5\linewidth}
 #+LATEX_HEADER:     \begin{flushright}
 #+LATEX_HEADER:       На правах рукописи
 #+LATEX_HEADER:     \end{flushright}
-#+LATEX_HEADER:   \end{minipage}
+#+LATEX_HEADER:   \end{minipage}%
 #+LATEX_HEADER: }{
 #+LATEX_HEADER: \begin{flushright}
 #+LATEX_HEADER: На правах рукописи

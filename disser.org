@@ -5,4 +5,6 @@
 #+setupfile: ./font_xcharter.org
 #+setupfile: ./disser_page_design.org
 #+setupfile: ./disser_toc_sty.org
+#+setupfile: ./basic_packages.org
+#+setupfile: ./math_ru.org
 #+setupfile: ./disser_title.org
