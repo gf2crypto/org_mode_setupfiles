@@ -1,4 +1,3 @@
-#+setupfile: ./math.org
 #+LATEX_HEADER: %%% Русская традиция начертания математических знаков
 #+LATEX_HEADER: \renewcommand{\le}{\ensuremath{\leqslant}}
 #+LATEX_HEADER: \renewcommand{\leq}{\ensuremath{\leqslant}}
