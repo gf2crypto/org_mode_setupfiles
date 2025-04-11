@@ -6,6 +6,7 @@
 #+setupfile: ./disser_page_design.org
 #+setupfile: ./disser_toc_sty.org
 #+setupfile: ./basic_packages.org
+#+setupfile: ./math.org
 #+setupfile: ./math_ru.org
 #+setupfile: ./math_fix_qref.org
 #+setupfile: ./disser_title.org
