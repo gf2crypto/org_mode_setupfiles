@@ -1,0 +1,21 @@
+# https://tex.stackexchange.com/questions/269525/changing-ref-to-eqref
+# https://tex.stackexchange.com/questions/85169/why-doesnt-renewcommand-ref-autoref-change-ref-into-autoref
+
+#+LATEX_HEADER_EXTRA: \usepackage{xstring}
+
+#+LATEX_HEADER_EXTRA: \let\origref\ref
+#+LATEX_HEADER_EXTRA:
+#+LATEX_HEADER_EXTRA: \makeatletter
+#+LATEX_HEADER_EXTRA: \renewcommand{\eqref}[1]{%
+#+LATEX_HEADER_EXTRA:   \textup{\tagform@{\origref{#1}}}%
+#+LATEX_HEADER_EXTRA: }
+#+LATEX_HEADER_EXTRA: \makeatother
+#+LATEX_HEADER_EXTRA: \AtBeginDocument{%
+#+LATEX_HEADER_EXTRA: \renewcommand{\ref}[1]{%
+#+LATEX_HEADER_EXTRA:   \IfSubStr{#1}{eq:}{%
+#+LATEX_HEADER_EXTRA:     \eqref{#1}%
+#+LATEX_HEADER_EXTRA:   }{%
+#+LATEX_HEADER_EXTRA:     \origref{#1}%
+#+LATEX_HEADER_EXTRA:   }%
+#+LATEX_HEADER_EXTRA: }
+#+LATEX_HEADER_EXTRA: }
