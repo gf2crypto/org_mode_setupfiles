@@ -21,3 +21,6 @@
 
 # Кавычки
 #+LATEX_HEADER: \usepackage[style=american]{csquotes}
+
+# Выделение текста
+#+LATEX_HEADER: \usepackage[normalem]{ulem}
