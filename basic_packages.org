@@ -1,6 +1,12 @@
 # Работа с картинками
 #+latex_header: \usepackage{graphicx}
 
+# Таблицы
+#+latex_header: \usepackage{booktabs}
+#+latex_header: \usepackage{longtable}
+#+latex_header: \usepackage{multirow,makecell}
+#+latex_header: \usepackage{colortbl}
+
 # Дополнительные символы
 #+LATEX_HEADER: \usepackage{textcomp}
 
