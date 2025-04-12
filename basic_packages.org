@@ -6,6 +6,7 @@
 #+latex_header: \usepackage{longtable}
 #+latex_header: \usepackage{multirow,makecell}
 #+latex_header: \usepackage{colortbl}
+#+latex_header: \usepackage{caption}
 
 # Дополнительные символы
 #+LATEX_HEADER: \usepackage{textcomp}
