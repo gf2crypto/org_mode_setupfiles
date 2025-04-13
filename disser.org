@@ -10,4 +10,5 @@
 #+setupfile: ./math_ru_subsequations.org
 #+setupfile: ./math_ru.org
 #+setupfile: ./math_fix_qref.org
+#+setupfile: ./disser_tables.org
 #+setupfile: ./disser_title.org
