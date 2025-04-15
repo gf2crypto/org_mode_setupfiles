@@ -12,4 +12,6 @@
 #+setupfile: ./math_fix_qref.org
 #+setupfile: ./disser_tables.org
 #+setupfile: ./disser_pictures.org
+#+setupfile: ./disser_lists.org
+#+setupfile: ./disser_appendix.org
 #+setupfile: ./disser_title.org
