@@ -12,9 +12,6 @@
 # Дополнительные символы
 #+LATEX_HEADER: \usepackage{textcomp}
 
-# Работа со ссылками
-#+LATEX_HEADER: \usepackage{hyperref}
-
 # Цвет
 #+LATEX_HEADER: \usepackage[dvipsnames, table, hyperref]{xcolor}
 

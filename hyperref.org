@@ -1,0 +1,15 @@
+#+LATEX_HEADER_EXTRA: \usepackage{hyperref}
+
+#+LATEX_HEADER_EXTRA: \newcommand{\TMPkeywords}{}
+#+LATEX_HEADER_EXTRA: \newcommand{\keywords}[1]{\renewcommand{\TMPkeywords}{#1}}
+#+LATEX_HEADER_EXTRA: \makeatletter
+#+LATEX_HEADER_EXTRA: \hypersetup{
+#+LATEX_HEADER_EXTRA:     linktocpage=true,
+#+LATEX_HEADER_EXTRA:     plainpages=false,
+#+LATEX_HEADER_EXTRA:     colorlinks,
+#+LATEX_HEADER_EXTRA:     pdftitle={Это привет!\@title},
+#+LATEX_HEADER_EXTRA:     pdfauthor={\@author},
+#+LATEX_HEADER_EXTRA:     pdfkeywords={\TMPkeywords},
+#+LATEX_HEADER_EXTRA:     pdflang={ru},
+#+LATEX_HEADER_EXTRA: }
+#+LATEX_HEADER_EXTRA: \makeatother
