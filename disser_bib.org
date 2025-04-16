@@ -1,0 +1,26 @@
+#+LATEX_HEADER_EXTRA: \defbibfilter{vakscopuswos}{%
+#+LATEX_HEADER_EXTRA:     keyword=biblioauthorvak or keyword=biblioauthorscopus or keyword=biblioauthorwos
+#+LATEX_HEADER_EXTRA: }
+#+LATEX_HEADER_EXTRA:
+#+LATEX_HEADER_EXTRA: \defbibfilter{scopuswos}{%
+#+LATEX_HEADER_EXTRA:     keyword=biblioauthorscopus or keyword=biblioauthorwos
+#+LATEX_HEADER_EXTRA: }
+#+LATEX_HEADER_EXTRA:
+#+LATEX_HEADER_EXTRA: \defbibfilter{papersregistered}{%
+#+LATEX_HEADER_EXTRA:     keyword=biblioauthor or keyword=biblioregistered
+#+LATEX_HEADER_EXTRA: }
+
+
+# Создание команд для вывода списка литературы
+#+LATEX_HEADER_EXTRA: \newcommand*{\insertbibliofull}{
+#+LATEX_HEADER_EXTRA:     \printbibliography[keyword=bibliofull,section=0,title=\bibtitlefull]
+#+LATEX_HEADER_EXTRA:     \ifnumequal{\value{draft}}{0}{
+#+LATEX_HEADER_EXTRA:       \printbibliography[heading=nobibheading,env=counter,keyword=bibliofull,section=0]
+#+LATEX_HEADER_EXTRA:     }{}
+#+LATEX_HEADER_EXTRA: }
+#+LATEX_HEADER_EXTRA: \newcommand*{\insertbiblioauthor}{
+#+LATEX_HEADER_EXTRA:     \printbibliography[heading=pubgroup, section=0, filter=papersregistered, title=\bibtitleauthor]
+#+LATEX_HEADER_EXTRA: }
+#+LATEX_HEADER_EXTRA: \newcommand*{\insertbiblioauthorimportant}{
+#+LATEX_HEADER_EXTRA:     \printbibliography[heading=pubgroup, section=2, filter=papersregistered, title=\bibtitleauthorimportant]
+#+LATEX_HEADER_EXTRA: }

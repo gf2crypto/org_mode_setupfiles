@@ -1,0 +1,211 @@
+#+CITE_EXPORT: biblatex
+
+#+LATEX_HEADER_EXTRA: \usepackage{csquotes}
+#+LATEX_HEADER_EXTRA: \usepackage[%
+#+LATEX_HEADER_EXTRA: backend=biber,
+#+LATEX_HEADER_EXTRA: bibencoding=utf8,
+#+LATEX_HEADER_EXTRA: sorting=none,
+#+LATEX_HEADER_EXTRA: style=gost-numeric,
+#+LATEX_HEADER_EXTRA: language=autobib,
+#+LATEX_HEADER_EXTRA: autolang=other,
+#+LATEX_HEADER_EXTRA: clearlang=true,
+#+LATEX_HEADER_EXTRA: defernumbers=true,
+#+LATEX_HEADER_EXTRA: sortcites=true,
+#+LATEX_HEADER_EXTRA: doi=false,
+#+LATEX_HEADER_EXTRA: isbn=false,
+#+LATEX_HEADER_EXTRA: ]{biblatex}
+
+#+LATEX_HEADER_EXTRA:   \addbibresource{/Users/surehand/Documents/library/library.bib}
+
+
+#+LATEX_HEADER_EXTRA: # Исправление случая неподдержки знака номера в pdflatex
+#+LATEX_HEADER_EXTRA: \DefineBibliographyStrings{russian}{number={\textnumero}}
+
+
+# Исправление случая отсутствия прописных букв в некоторых случаях
+#  https://github.com/plk/biblatex/issues/960#issuecomment-596658282
+#+LATEX_HEADER_EXTRA: \providebool{blxmc} % biblatex version needs and has MakeCapital workaround
+#+LATEX_HEADER_EXTRA: \boolfalse{blxmc} % setting our new boolean flag to default false
+#+LATEX_HEADER_EXTRA: \ifdefmacro{\ExplSyntaxOn}{}{\usepackage{expl3}}
+#+LATEX_HEADER_EXTRA: \makeatletter
+#+LATEX_HEADER_EXTRA: \ltx@ifpackagelater{biblatex}{2020/02/23}{
+#+LATEX_HEADER_EXTRA: % Assuming this version of biblatex defines MakeCapital correctly
+#+LATEX_HEADER_EXTRA: }{
+#+LATEX_HEADER_EXTRA:     \ltx@ifpackagelater{biblatex}{2019/12/01}{
+#+LATEX_HEADER_EXTRA:         % Assuming this version of biblatex defines MakeCapital incorrectly
+#+LATEX_HEADER_EXTRA:         \usepackage{expl3}[2020/02/25]
+#+LATEX_HEADER_EXTRA:         \@ifpackagelater{expl3}{2020/02/25}{
+#+LATEX_HEADER_EXTRA:             \booltrue{blxmc} % setting our new boolean flag to true
+#+LATEX_HEADER_EXTRA:         }{}
+#+LATEX_HEADER_EXTRA:     }{}
+#+LATEX_HEADER_EXTRA: }
+#+LATEX_HEADER_EXTRA: \makeatother
+#+LATEX_HEADER_EXTRA: \ifblxmc
+#+LATEX_HEADER_EXTRA:     \typeout{Assuming this version of biblatex defines MakeCapital
+#+LATEX_HEADER_EXTRA:     incorrectly}
+#+LATEX_HEADER_EXTRA:     \usepackage{xparse}
+#+LATEX_HEADER_EXTRA:     \makeatletter
+#+LATEX_HEADER_EXTRA:     \ExplSyntaxOn
+#+LATEX_HEADER_EXTRA:     \NewDocumentCommand \blx@maketext@lowercase {m}
+#+LATEX_HEADER_EXTRA:       {
+#+LATEX_HEADER_EXTRA:         \text_lowercase:n {#1}
+#+LATEX_HEADER_EXTRA:       }
+#+LATEX_HEADER_EXTRA:
+#+LATEX_HEADER_EXTRA:     \NewDocumentCommand \blx@maketext@uppercase {m}
+#+LATEX_HEADER_EXTRA:       {
+#+LATEX_HEADER_EXTRA:         \text_uppercase:n {#1}
+#+LATEX_HEADER_EXTRA:       }
+#+LATEX_HEADER_EXTRA:
+#+LATEX_HEADER_EXTRA:     \RenewDocumentCommand \MakeCapital {m}
+#+LATEX_HEADER_EXTRA:       {
+#+LATEX_HEADER_EXTRA:         \text_titlecase_first:n {#1}
+#+LATEX_HEADER_EXTRA:       }
+#+LATEX_HEADER_EXTRA:     \ExplSyntaxOff
+#+LATEX_HEADER_EXTRA:
+#+LATEX_HEADER_EXTRA:     \protected\def\blx@biblcstring#1#2#3{%
+#+LATEX_HEADER_EXTRA:       \blx@begunit
+#+LATEX_HEADER_EXTRA:       \blx@hyphenreset
+#+LATEX_HEADER_EXTRA:       \blx@bibstringsimple
+#+LATEX_HEADER_EXTRA:       \lowercase{\edef\blx@tempa{#3}}%
+#+LATEX_HEADER_EXTRA:       \ifcsundef{#2@\blx@tempa}
+#+LATEX_HEADER_EXTRA:         {\blx@warn@nostring\blx@tempa
+#+LATEX_HEADER_EXTRA:          \blx@endnounit}
+#+LATEX_HEADER_EXTRA:         {#1{\blx@maketext@lowercase{\csuse{#2@\blx@tempa}}}%
+#+LATEX_HEADER_EXTRA:          \blx@endunit}}
+#+LATEX_HEADER_EXTRA:
+#+LATEX_HEADER_EXTRA:     \protected\def\blx@bibucstring#1#2#3{%
+#+LATEX_HEADER_EXTRA:       \blx@begunit
+#+LATEX_HEADER_EXTRA:       \blx@hyphenreset
+#+LATEX_HEADER_EXTRA:       \blx@bibstringsimple
+#+LATEX_HEADER_EXTRA:       \lowercase{\edef\blx@tempa{#3}}%
+#+LATEX_HEADER_EXTRA:       \ifcsundef{#2@\blx@tempa}
+#+LATEX_HEADER_EXTRA:         {\blx@warn@nostring\blx@tempa
+#+LATEX_HEADER_EXTRA:          \blx@endnounit}
+#+LATEX_HEADER_EXTRA:         {#1{\blx@maketext@uppercase{\csuse{#2@\blx@tempa}}}%
+#+LATEX_HEADER_EXTRA:          \blx@endunit}}
+#+LATEX_HEADER_EXTRA:     \makeatother
+#+LATEX_HEADER_EXTRA: \fi
+
+
+# http://tex.stackexchange.com/a/141831/79756
+# There is a way to automatically map the language field to the langid field. The following lines in the preamble should be enough to do that.
+# This command will copy the language field into the langid field and will then delete the contents of the language field. The language field will only be deleted if it was successfully copied into the langid field.
+#+LATEX_HEADER_EXTRA: \DeclareSourcemap{ %модификация bib файла перед тем, как им займётся biblatex
+#+LATEX_HEADER_EXTRA:     \maps{
+#+LATEX_HEADER_EXTRA:         \map{% перекидываем значения полей language в поля langid, которыми пользуется biblatex
+#+LATEX_HEADER_EXTRA:             \step[fieldsource=language, fieldset=langid, origfieldval, final]
+#+LATEX_HEADER_EXTRA:             \step[fieldset=language, null]
+#+LATEX_HEADER_EXTRA:         }
+#+LATEX_HEADER_EXTRA:         \map{% перекидываем значения полей numpages в поля pagetotal, которыми пользуется biblatex
+#+LATEX_HEADER_EXTRA:             \step[fieldsource=numpages, fieldset=pagetotal, origfieldval, final]
+#+LATEX_HEADER_EXTRA:             \step[fieldset=numpages, null]
+#+LATEX_HEADER_EXTRA:         }
+#+LATEX_HEADER_EXTRA:         \map{% перекидываем значения полей pagestotal в поля pagetotal, которыми пользуется biblatex
+#+LATEX_HEADER_EXTRA:             \step[fieldsource=pagestotal, fieldset=pagetotal, origfieldval, final]
+#+LATEX_HEADER_EXTRA:             \step[fieldset=pagestotal, null]
+#+LATEX_HEADER_EXTRA:         }
+#+LATEX_HEADER_EXTRA:         \map[overwrite]{% перекидываем значения полей shortjournal, если они есть, в поля journal, которыми пользуется biblatex
+#+LATEX_HEADER_EXTRA:             \step[fieldsource=shortjournal, final]
+#+LATEX_HEADER_EXTRA:             \step[fieldset=journal, origfieldval]
+#+LATEX_HEADER_EXTRA:             \step[fieldset=shortjournal, null]
+#+LATEX_HEADER_EXTRA:         }
+#+LATEX_HEADER_EXTRA:         \map[overwrite]{% перекидываем значения полей shortbooktitle, если они есть, в поля booktitle, которыми пользуется biblatex
+#+LATEX_HEADER_EXTRA:             \step[fieldsource=shortbooktitle, final]
+#+LATEX_HEADER_EXTRA:             \step[fieldset=booktitle, origfieldval]
+#+LATEX_HEADER_EXTRA:             \step[fieldset=shortbooktitle, null]
+#+LATEX_HEADER_EXTRA:         }
+#+LATEX_HEADER_EXTRA:         \map{% если в поле medium написано "Электронный ресурс", то устанавливаем поле media, которым пользуется biblatex, в значение eresource.
+#+LATEX_HEADER_EXTRA:             \step[fieldsource=medium,
+#+LATEX_HEADER_EXTRA:             match=\regexp{Электронный\s+ресурс},
+#+LATEX_HEADER_EXTRA:             final]
+#+LATEX_HEADER_EXTRA:             \step[fieldset=media, fieldvalue=eresource]
+#+LATEX_HEADER_EXTRA:             \step[fieldset=medium, null]
+#+LATEX_HEADER_EXTRA:         }
+#+LATEX_HEADER_EXTRA:         \map[overwrite]{% стираем значения всех полей issn
+#+LATEX_HEADER_EXTRA:             \step[fieldset=issn, null]
+#+LATEX_HEADER_EXTRA:         }
+#+LATEX_HEADER_EXTRA:         \map[overwrite]{% стираем значения всех полей abstract, поскольку ими не пользуемся, а там бывают "неприятные" латеху символы
+#+LATEX_HEADER_EXTRA:             \step[fieldsource=abstract]
+#+LATEX_HEADER_EXTRA:             \step[fieldset=abstract,null]
+#+LATEX_HEADER_EXTRA:         }
+#+LATEX_HEADER_EXTRA:         \map[overwrite]{ % переделка формата записи даты
+#+LATEX_HEADER_EXTRA:             \step[fieldsource=urldate,
+#+LATEX_HEADER_EXTRA:             match=\regexp{([0-9]{2})\.([0-9]{2})\.([0-9]{4})},
+#+LATEX_HEADER_EXTRA:             replace={$3-$2-$1$4}, % $4 вставлен исключительно ради нормальной работы программ подсветки синтаксиса, которые некорректно обрабатывают $ в таких конструкциях
+#+LATEX_HEADER_EXTRA:             final]
+#+LATEX_HEADER_EXTRA:         }
+#+LATEX_HEADER_EXTRA:         \map[overwrite]{ % стираем ключевые слова
+#+LATEX_HEADER_EXTRA:             \step[fieldsource=keywords]
+#+LATEX_HEADER_EXTRA:             \step[fieldset=keywords,null]
+#+LATEX_HEADER_EXTRA:         }
+#+LATEX_HEADER_EXTRA:         % реализация foreach различается для biblatex v3.12 и v3.13.
+#+LATEX_HEADER_EXTRA:         % Для версии v3.13 эта конструкция заменяет последующие 7 структур map
+#+LATEX_HEADER_EXTRA:         % \map[overwrite,foreach={authorvak,authorscopus,authorwos,authorconf,authorother,authorparent,authorprogram}]{ % записываем информацию о типе публикации в ключевые слова
+#+LATEX_HEADER_EXTRA:         %     \step[fieldsource=$MAPLOOP,final=true]
+#+LATEX_HEADER_EXTRA:         %     \step[fieldset=keywords,fieldvalue={,biblio$MAPLOOP},append=true]
+#+LATEX_HEADER_EXTRA:         % }
+#+LATEX_HEADER_EXTRA:         \map[overwrite]{ % записываем информацию о типе публикации в ключевые слова
+#+LATEX_HEADER_EXTRA:             \step[fieldsource=authorvak,final=true]
+#+LATEX_HEADER_EXTRA:             \step[fieldset=keywords,fieldvalue={,biblioauthorvak},append=true]
+#+LATEX_HEADER_EXTRA:         }
+#+LATEX_HEADER_EXTRA:         \map[overwrite]{ % записываем информацию о типе публикации в ключевые слова
+#+LATEX_HEADER_EXTRA:             \step[fieldsource=authorscopus,final=true]
+#+LATEX_HEADER_EXTRA:             \step[fieldset=keywords,fieldvalue={,biblioauthorscopus},append=true]
+#+LATEX_HEADER_EXTRA:         }
+#+LATEX_HEADER_EXTRA:         \map[overwrite]{ % записываем информацию о типе публикации в ключевые слова
+#+LATEX_HEADER_EXTRA:             \step[fieldsource=authorwos,final=true]
+#+LATEX_HEADER_EXTRA:             \step[fieldset=keywords,fieldvalue={,biblioauthorwos},append=true]
+#+LATEX_HEADER_EXTRA:         }
+#+LATEX_HEADER_EXTRA:         \map[overwrite]{ % записываем информацию о типе публикации в ключевые слова
+#+LATEX_HEADER_EXTRA:             \step[fieldsource=authorconf,final=true]
+#+LATEX_HEADER_EXTRA:             \step[fieldset=keywords,fieldvalue={,biblioauthorconf},append=true]
+#+LATEX_HEADER_EXTRA:         }
+#+LATEX_HEADER_EXTRA:         \map[overwrite]{ % записываем информацию о типе публикации в ключевые слова
+#+LATEX_HEADER_EXTRA:             \step[fieldsource=authorother,final=true]
+#+LATEX_HEADER_EXTRA:             \step[fieldset=keywords,fieldvalue={,biblioauthorother},append=true]
+#+LATEX_HEADER_EXTRA:         }
+#+LATEX_HEADER_EXTRA:         \map[overwrite]{ % записываем информацию о типе публикации в ключевые слова
+#+LATEX_HEADER_EXTRA:             \step[fieldsource=authorpatent,final=true]
+#+LATEX_HEADER_EXTRA:             \step[fieldset=keywords,fieldvalue={,biblioauthorpatent},append=true]
+#+LATEX_HEADER_EXTRA:         }
+#+LATEX_HEADER_EXTRA:         \map[overwrite]{ % записываем информацию о типе публикации в ключевые слова
+#+LATEX_HEADER_EXTRA:             \step[fieldsource=authorprogram,final=true]
+#+LATEX_HEADER_EXTRA:             \step[fieldset=keywords,fieldvalue={,biblioauthorprogram},append=true]
+#+LATEX_HEADER_EXTRA:         }
+#+LATEX_HEADER_EXTRA:         \map[overwrite]{ % добавляем ключевые слова, чтобы различать источники
+#+LATEX_HEADER_EXTRA:             \perdatasource{biblio/external.bib}
+#+LATEX_HEADER_EXTRA:             \step[fieldset=keywords, fieldvalue={,biblioexternal},append=true]
+#+LATEX_HEADER_EXTRA:         }
+#+LATEX_HEADER_EXTRA:         \map[overwrite]{ % добавляем ключевые слова, чтобы различать источники
+#+LATEX_HEADER_EXTRA:             \perdatasource{biblio/author.bib}
+#+LATEX_HEADER_EXTRA:             \step[fieldset=keywords, fieldvalue={,biblioauthor},append=true]
+#+LATEX_HEADER_EXTRA:         }
+#+LATEX_HEADER_EXTRA:         \map[overwrite]{ % добавляем ключевые слова, чтобы различать источники
+#+LATEX_HEADER_EXTRA:             \perdatasource{biblio/registered.bib}
+#+LATEX_HEADER_EXTRA:             \step[fieldset=keywords, fieldvalue={,biblioregistered},append=true]
+#+LATEX_HEADER_EXTRA:         }
+#+LATEX_HEADER_EXTRA:         \map[overwrite]{ % добавляем ключевые слова, чтобы различать источники
+#+LATEX_HEADER_EXTRA:             \step[fieldset=keywords, fieldvalue={,bibliofull},append=true]
+#+LATEX_HEADER_EXTRA:         }
+#+LATEX_HEADER_EXTRA: %        \map[overwrite]{% стираем значения всех полей series
+#+LATEX_HEADER_EXTRA: %            \step[fieldset=series, null]
+#+LATEX_HEADER_EXTRA: %        }
+#+LATEX_HEADER_EXTRA:         \map[overwrite]{% перекидываем значения полей howpublished в поля organization для типа online
+#+LATEX_HEADER_EXTRA:             \step[typesource=online, typetarget=online, final]
+#+LATEX_HEADER_EXTRA:             \step[fieldsource=howpublished, fieldset=organization, origfieldval]
+#+LATEX_HEADER_EXTRA:             \step[fieldset=howpublished, null]
+#+LATEX_HEADER_EXTRA:         }
+#+LATEX_HEADER_EXTRA:         \map{% использование media=text по умолчанию
+#+LATEX_HEADER_EXTRA:              \step[fieldset=media, fieldvalue=text]
+#+LATEX_HEADER_EXTRA:         }
+#+LATEX_HEADER_EXTRA:     }
+#+LATEX_HEADER_EXTRA: }
+# В списке литературы обозначение одной буквой диапазона страниц англоязычного источника %%%
+#+LATEX_HEADER_EXTRA: \DefineBibliographyStrings{english}{%
+#+LATEX_HEADER_EXTRA:     pages = {p\adddot} %заглавность буквы затем по месту определяется работой самого biblatex
+#+LATEX_HEADER_EXTRA: }
+#+LATEX_HEADER_EXTRA: # Set higher penalty for breaking in number, dates and pages ranges
+#+LATEX_HEADER_EXTRA: \setcounter{abbrvpenalty}{10000} % default is \hyphenpenalty which is 12
+#+LATEX_HEADER_EXTRA: # Set higher penalty for breaking in names
+#+LATEX_HEADER_EXTRA: \setcounter{highnamepenalty}{10000} % If you prefer the traditional BibTeX behavior (no linebreaks at highnamepenalty breakpoints), set it to ‘infinite’ (10 000 or higher).
+#+LATEX_HEADER_EXTRA: \setcounter{lownamepenalty}{10000}
