@@ -15,10 +15,7 @@
 #+LATEX_HEADER_EXTRA: isbn=false,
 #+LATEX_HEADER_EXTRA: ]{biblatex}
 
-#+LATEX_HEADER_EXTRA:   \addbibresource{/Users/surehand/Documents/library/library.bib}
-
-
-#+LATEX_HEADER_EXTRA: # Исправление случая неподдержки знака номера в pdflatex
+# Исправление случая неподдержки знака номера в pdflatex
 #+LATEX_HEADER_EXTRA: \DefineBibliographyStrings{russian}{number={\textnumero}}
 
 
@@ -26,66 +23,6 @@
 #  https://github.com/plk/biblatex/issues/960#issuecomment-596658282
 #+LATEX_HEADER_EXTRA: \providebool{blxmc} % biblatex version needs and has MakeCapital workaround
 #+LATEX_HEADER_EXTRA: \boolfalse{blxmc} % setting our new boolean flag to default false
-#+LATEX_HEADER_EXTRA: \ifdefmacro{\ExplSyntaxOn}{}{\usepackage{expl3}}
-#+LATEX_HEADER_EXTRA: \makeatletter
-#+LATEX_HEADER_EXTRA: \ltx@ifpackagelater{biblatex}{2020/02/23}{
-#+LATEX_HEADER_EXTRA: % Assuming this version of biblatex defines MakeCapital correctly
-#+LATEX_HEADER_EXTRA: }{
-#+LATEX_HEADER_EXTRA:     \ltx@ifpackagelater{biblatex}{2019/12/01}{
-#+LATEX_HEADER_EXTRA:         % Assuming this version of biblatex defines MakeCapital incorrectly
-#+LATEX_HEADER_EXTRA:         \usepackage{expl3}[2020/02/25]
-#+LATEX_HEADER_EXTRA:         \@ifpackagelater{expl3}{2020/02/25}{
-#+LATEX_HEADER_EXTRA:             \booltrue{blxmc} % setting our new boolean flag to true
-#+LATEX_HEADER_EXTRA:         }{}
-#+LATEX_HEADER_EXTRA:     }{}
-#+LATEX_HEADER_EXTRA: }
-#+LATEX_HEADER_EXTRA: \makeatother
-#+LATEX_HEADER_EXTRA: \ifblxmc
-#+LATEX_HEADER_EXTRA:     \typeout{Assuming this version of biblatex defines MakeCapital
-#+LATEX_HEADER_EXTRA:     incorrectly}
-#+LATEX_HEADER_EXTRA:     \usepackage{xparse}
-#+LATEX_HEADER_EXTRA:     \makeatletter
-#+LATEX_HEADER_EXTRA:     \ExplSyntaxOn
-#+LATEX_HEADER_EXTRA:     \NewDocumentCommand \blx@maketext@lowercase {m}
-#+LATEX_HEADER_EXTRA:       {
-#+LATEX_HEADER_EXTRA:         \text_lowercase:n {#1}
-#+LATEX_HEADER_EXTRA:       }
-#+LATEX_HEADER_EXTRA:
-#+LATEX_HEADER_EXTRA:     \NewDocumentCommand \blx@maketext@uppercase {m}
-#+LATEX_HEADER_EXTRA:       {
-#+LATEX_HEADER_EXTRA:         \text_uppercase:n {#1}
-#+LATEX_HEADER_EXTRA:       }
-#+LATEX_HEADER_EXTRA:
-#+LATEX_HEADER_EXTRA:     \RenewDocumentCommand \MakeCapital {m}
-#+LATEX_HEADER_EXTRA:       {
-#+LATEX_HEADER_EXTRA:         \text_titlecase_first:n {#1}
-#+LATEX_HEADER_EXTRA:       }
-#+LATEX_HEADER_EXTRA:     \ExplSyntaxOff
-#+LATEX_HEADER_EXTRA:
-#+LATEX_HEADER_EXTRA:     \protected\def\blx@biblcstring#1#2#3{%
-#+LATEX_HEADER_EXTRA:       \blx@begunit
-#+LATEX_HEADER_EXTRA:       \blx@hyphenreset
-#+LATEX_HEADER_EXTRA:       \blx@bibstringsimple
-#+LATEX_HEADER_EXTRA:       \lowercase{\edef\blx@tempa{#3}}%
-#+LATEX_HEADER_EXTRA:       \ifcsundef{#2@\blx@tempa}
-#+LATEX_HEADER_EXTRA:         {\blx@warn@nostring\blx@tempa
-#+LATEX_HEADER_EXTRA:          \blx@endnounit}
-#+LATEX_HEADER_EXTRA:         {#1{\blx@maketext@lowercase{\csuse{#2@\blx@tempa}}}%
-#+LATEX_HEADER_EXTRA:          \blx@endunit}}
-#+LATEX_HEADER_EXTRA:
-#+LATEX_HEADER_EXTRA:     \protected\def\blx@bibucstring#1#2#3{%
-#+LATEX_HEADER_EXTRA:       \blx@begunit
-#+LATEX_HEADER_EXTRA:       \blx@hyphenreset
-#+LATEX_HEADER_EXTRA:       \blx@bibstringsimple
-#+LATEX_HEADER_EXTRA:       \lowercase{\edef\blx@tempa{#3}}%
-#+LATEX_HEADER_EXTRA:       \ifcsundef{#2@\blx@tempa}
-#+LATEX_HEADER_EXTRA:         {\blx@warn@nostring\blx@tempa
-#+LATEX_HEADER_EXTRA:          \blx@endnounit}
-#+LATEX_HEADER_EXTRA:         {#1{\blx@maketext@uppercase{\csuse{#2@\blx@tempa}}}%
-#+LATEX_HEADER_EXTRA:          \blx@endunit}}
-#+LATEX_HEADER_EXTRA:     \makeatother
-#+LATEX_HEADER_EXTRA: \fi
-
 
 # http://tex.stackexchange.com/a/141831/79756
 # There is a way to automatically map the language field to the langid field. The following lines in the preamble should be enough to do that.
@@ -204,8 +141,8 @@
 #+LATEX_HEADER_EXTRA: \DefineBibliographyStrings{english}{%
 #+LATEX_HEADER_EXTRA:     pages = {p\adddot} %заглавность буквы затем по месту определяется работой самого biblatex
 #+LATEX_HEADER_EXTRA: }
-#+LATEX_HEADER_EXTRA: # Set higher penalty for breaking in number, dates and pages ranges
+# Set higher penalty for breaking in number, dates and pages ranges
 #+LATEX_HEADER_EXTRA: \setcounter{abbrvpenalty}{10000} % default is \hyphenpenalty which is 12
-#+LATEX_HEADER_EXTRA: # Set higher penalty for breaking in names
+# Set higher penalty for breaking in names
 #+LATEX_HEADER_EXTRA: \setcounter{highnamepenalty}{10000} % If you prefer the traditional BibTeX behavior (no linebreaks at highnamepenalty breakpoints), set it to ‘infinite’ (10 000 or higher).
 #+LATEX_HEADER_EXTRA: \setcounter{lownamepenalty}{10000}
