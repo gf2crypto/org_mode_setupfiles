@@ -9,6 +9,7 @@
 #+setupfile: ./math.org
 #+setupfile: ./math_ru_subsequations.org
 #+setupfile: ./math_ru.org
+#+LATEX_HEADER_EXTRA: \setDisplayskipStretch{-0.078}
 #+setupfile: ./math_fix_qref.org
 #+setupfile: ./disser_tables.org
 #+setupfile: ./disser_pictures.org
