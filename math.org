@@ -3,11 +3,24 @@
 #+LATEX_HEADER: \usepackage{amssymb}
 #+LATEX_HEADER: \usepackage{amsfonts}
 #+LATEX_HEADER: \usepackage{mathtools}
-#+LATEX_HEADER: %Красивые дроби
+# Красивые дроби
 #+LATEX_HEADER: \usepackage{xfrac}
-#+LATEX_HEADER: %%%!!! масштабирование формулы
+#+LATEX_HEADER_EXTRA: \usepackage[
+#+LATEX_HEADER_EXTRA:     locale = DE,
+#+LATEX_HEADER_EXTRA:     list-separator       = {;\,},
+#+LATEX_HEADER_EXTRA:     list-final-separator = {;\,},
+#+LATEX_HEADER_EXTRA:     list-pair-separator  = {;\,},
+#+LATEX_HEADER_EXTRA:     list-units           = single,
+#+LATEX_HEADER_EXTRA:     range-units          = single,
+#+LATEX_HEADER_EXTRA:     range-phrase={\text{\ensuremath{-}}},
+#+LATEX_HEADER_EXTRA:     % quotient-mode        = fraction, % красивые дроби могут не соответствовать ГОСТ
+#+LATEX_HEADER_EXTRA:     fraction-function    = \sfrac,
+#+LATEX_HEADER_EXTRA:     separate-uncertainty,
+#+LATEX_HEADER_EXTRA:     ]{siunitx}
+#+LATEX_HEADER_EXTRA: \sisetup{inter-unit-product = \ensuremath{{}\cdot{}}}
+# масштабирование формулы
 #+LATEX_HEADER: \newcommand\scalemath[2]{\scalebox{#1}{\mbox{\ensuremath{\displaystyle #2}}}}
-#+LATEX_HEADER: %%%%
-#+LATEX_HEADER: %   Duplicate the symbol after the '\HM' command on the next line
+
+# Duplicate the symbol after the '\HM' command on the next line
 #+LATEX_HEADER: \newcommand*{\HM}[1]{#1\nobreak\discretionary{}{\hbox{\(\mathsurround=0pt #1\)}}{}}
 #+setupfile: ./math_operators.org
