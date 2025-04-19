@@ -1,5 +1,0 @@
-#+setupfile: ./bib_biblatex.org
-#+LATEX_HEADER_EXTRA: \newcommand{\bibsectiontitle}{Список литературы}
-#+LATEX_HEADER_EXTRA: \newcommand{\insertbib}{
-#+LATEX_HEADER_EXTRA: \printbibliography[section=0,title=\bibsectiontitle]
-#+LATEX_HEADER_EXTRA: }

@@ -15,5 +15,4 @@
 #+setupfile: ./disser_lists.org
 #+setupfile: ./disser_appendix.org
 #+setupfile: ./hyperref.org
-#+setupfile: ./disser_bib.org
 #+setupfile: ./disser_title.org
