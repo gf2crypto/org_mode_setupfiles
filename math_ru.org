@@ -40,3 +40,5 @@
 #+LATEX_HEADER: \renewcommand{\chi}{\ensuremath{\upchi}}
 #+LATEX_HEADER: \renewcommand{\psi}{\ensuremath{\uppsi}}
 #+LATEX_HEADER: \renewcommand{\omega}{\ensuremath{\upomega}}
+# Break math symbol and repeat it in next line
+#+LATEX_HEADER: \usepackage{rmathbr}
