@@ -1,8 +1,7 @@
-#+LATEX_HEADER: %%% Библиография
-#+LATEX_HEADER: \usepackage{cite}
-#+LATEX_HEADER: %\usepackage{gost}
-#+LATEX_HEADER: \AtEndDocument{%
-#+LATEX_HEADER:   \bibliographystyle{plain}
-#+LATEX_HEADER:   \bibliography{/Users/surehand/Documents/library/library}
-#+LATEX_HEADER: }
+# To insert bibliography just use command:
+# #+include: ./bibliography_bibtex.org
+
 #+CITE_EXPORT: bibtex
+#+LATEX_HEADER_EXTRA: \usepackage{cite}
+#+LATEX:   \bibliographystyle{plain}
+#+LATEX:   \bibliography{/Users/surehand/Documents/library/library}
