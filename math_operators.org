@@ -97,7 +97,7 @@
 #+LATEX_HEADER: \newcommand{\simgroup}[1][n]{\algstructstyle{S}_{#1}}
 #+LATEX_HEADER: \newcommand{\pautname}{PAut}
 #+LATEX_HEADER: \newcommand{\paut}[1]{\algstructstyle{\pautname}\left(#1\right)}
-#+LATEX_HEADER: \newcommand{\gl}[1][2]{\algstructstyle{GL}_{#1}}
+#+LATEX_HEADER: \newcommand{\gl}[2][2]{\algstructstyle{GL}_{#2}(#1)}
 
 # Fields
 #+LATEX_HEADER: \newcommand{\fieldstyle}[1]{\mathbb{#1}}
