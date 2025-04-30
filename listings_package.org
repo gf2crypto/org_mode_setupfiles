@@ -166,8 +166,8 @@
 #+LATEX_HEADER:   {Ї}{{\selectfont\char136}}1
 #+LATEX_HEADER:   {Є}{{\selectfont\char153}}1
 #+LATEX_HEADER:   {Ґ}{{\selectfont\char128}}1
-#+LATEX_HEADER:
-#+LATEX_HEADER: Ширина текста минус ширина надписи 999
+#+LATEX_HEADER: }
+# Ширина текста минус ширина надписи 999
 #+LATEX_HEADER: \newlength{\twless}
 #+LATEX_HEADER: \newlength{\lmarg}
 #+LATEX_HEADER: \setlength{\lmarg}{\widthof{999}}   % ширина надписи 999
@@ -189,8 +189,7 @@
 #+LATEX_HEADER:   captionpos=t,                   % sets the caption-position to top
 #+LATEX_HEADER:   breaklines=true,                % sets automatic line breaking
 #+LATEX_HEADER:   breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
-#+LATEX_HEADER:    title=\lstname,                 % show the filename of files included with \lstinputlisting;
-#+LATEX_HEADER: also try caption instead of title
+#+LATEX_HEADER:    title=\lstname,                 % show the filename of files included with \lstinputlisting; also try caption instead of title
 #+LATEX_HEADER:   basicstyle=\fontsize{12pt}{14pt}\selectfont\ttfamily,% the size of the fonts that are used for the code
 #+LATEX_HEADER:    keywordstyle=\color{blue},      % keyword style
 #+LATEX_HEADER:   commentstyle=\color{ForestGreen}\emph,% comment style
