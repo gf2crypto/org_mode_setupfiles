@@ -1,0 +1,12 @@
+#+LATEX_HEADER_EXTRA: \usepackage[pdfusetitle]{hyperref}
+
+#+LATEX_HEADER_EXTRA: \newcommand{\TMPkeywords}{}
+#+LATEX_HEADER_EXTRA: \newcommand{\keywords}[1]{\renewcommand{\TMPkeywords}{#1}}
+#+LATEX_HEADER_EXTRA: \hypersetup{
+#+LATEX_HEADER_EXTRA:     linktocpage=true,
+#+LATEX_HEADER_EXTRA:     plainpages=false,
+#+LATEX_HEADER_EXTRA:     colorlinks,
+#+LATEX_HEADER_EXTRA:     pdfsubject={\thesisSubtitle},
+#+LATEX_HEADER_EXTRA:     pdfkeywords={\TMPkeywords},
+#+LATEX_HEADER_EXTRA:     pdflang={ru},
+#+LATEX_HEADER_EXTRA: }

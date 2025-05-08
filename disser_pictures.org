@@ -1,0 +1,30 @@
+# Рисунки
+#+LATEX_HEADER_EXTRA: \DeclareCaptionLabelSeparator{figsep}{~---\ } % нумерация рисунков
+#+LATEX_HEADER_EXTRA:
+#+LATEX_HEADER_EXTRA: \captionsetup[figure]{
+#+LATEX_HEADER_EXTRA:         format=plain,                     % формат подписи (plain|hang)
+#+LATEX_HEADER_EXTRA:         font=normal,                      % нормальные размер, цвет, стиль шрифта
+#+LATEX_HEADER_EXTRA:         skip=.0pt,                        % отбивка под подписью
+#+LATEX_HEADER_EXTRA:         parskip=.0pt,                     % отбивка между параграфами подписи
+#+LATEX_HEADER_EXTRA:         position=below,                   % положение подписи
+#+LATEX_HEADER_EXTRA:         singlelinecheck=true,             % выравнивание по центру, если умещается в одну строку
+#+LATEX_HEADER_EXTRA:         justification=centerlast,         % центровка
+#+LATEX_HEADER_EXTRA:         labelsep=figsep,                  % разделитель
+#+LATEX_HEADER_EXTRA: }
+#+LATEX_HEADER_EXTRA:
+# Подписи подрисунков
+#+LATEX_HEADER_EXTRA: \DeclareCaptionSubType{figure}
+#+LATEX_HEADER_EXTRA: \renewcommand\thesubfigure{\asbuk{subfigure}} % нумерация подрисунков
+#+LATEX_HEADER_EXTRA: \DeclareCaptionFont{norm}{\fontsize{14pt}{16pt}\selectfont}
+#+LATEX_HEADER_EXTRA:
+#+LATEX_HEADER_EXTRA: \captionsetup[subfloat]{
+#+LATEX_HEADER_EXTRA:         labelfont=norm,                 % нормальный размер подписей подрисунков
+#+LATEX_HEADER_EXTRA:         textfont=norm,                  % нормальный размер подписей подрисунков
+#+LATEX_HEADER_EXTRA:         labelsep=space,                 % разделитель
+#+LATEX_HEADER_EXTRA:         labelformat=brace,              % одна скобка справа от номера
+#+LATEX_HEADER_EXTRA:         justification=centering,        % центровка
+#+LATEX_HEADER_EXTRA:         singlelinecheck=true,           % выравнивание по центру, если умещается в одну строку
+#+LATEX_HEADER_EXTRA:         skip=0.pt,            % отбивка над подписью
+#+LATEX_HEADER_EXTRA:         parskip=.0pt,                   % отбивка между параграфами подписи
+#+LATEX_HEADER_EXTRA:         position=below,                 % положение подписи
+#+LATEX_HEADER_EXTRA: }

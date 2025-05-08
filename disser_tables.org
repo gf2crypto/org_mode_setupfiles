@@ -1,0 +1,15 @@
+# Таблицы
+#+LATEX_HEADER_EXTRA: \DeclareCaptionLabelSeparator{tabsep}{~---\ } % нумерация таблиц
+#+LATEX_HEADER_EXTRA: \DeclareCaptionFormat{split}{\splitformatlabel#1\par\splitformattext#3}
+#+LATEX_HEADER_EXTRA:
+#+LATEX_HEADER_EXTRA: \captionsetup[table]{
+#+LATEX_HEADER_EXTRA:         format=plain,  % формат подписи (plain|hang)
+#+LATEX_HEADER_EXTRA:         font=normal,                      % нормальные размер, цвет, стиль шрифта
+#+LATEX_HEADER_EXTRA:         skip=.0pt,                        % отбивка под подписью
+#+LATEX_HEADER_EXTRA:         parskip=.0pt,                     % отбивка между параграфами подписи
+#+LATEX_HEADER_EXTRA:         position=above,                   % положение подписи
+#+LATEX_HEADER_EXTRA:         justification=justified,           % центровка
+#+LATEX_HEADER_EXTRA:         indent=0cm,                % смещение строк после первой
+#+LATEX_HEADER_EXTRA:         labelsep=tabsep,                  % разделитель
+#+LATEX_HEADER_EXTRA:         singlelinecheck=false, % не выравнивать по центру, если умещается в одну строку
+#+LATEX_HEADER_EXTRA: }

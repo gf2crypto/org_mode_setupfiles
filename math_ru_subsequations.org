@@ -1,0 +1,5 @@
+# Кириллица в нумерации subequations
+#  Для правильной работы требуется выполнение сразу после загрузки пакетов
+#+LATEX_HEADER_EXTRA: \patchcmd{\subequations}{\def\theequation{\theparentequation\alph{equation}}}
+#+LATEX_HEADER_EXTRA: {\def\theequation{\theparentequation\asbuk{equation}}}
+#+LATEX_HEADER_EXTRA: {\typeout{subequations patched}}{\typeout{subequations not patched}}

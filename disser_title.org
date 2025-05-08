@@ -1,0 +1,79 @@
+# ### Title page of Disser
+# #### Титульный лист (ГОСТ Р 7.0.11-2001, 5.1)
+#+latex_header: \newcommand{\thesisDiscipline}{}
+#+latex_header: \newcommand{\thesisAdvisor}{}
+#+latex_header: \newcommand{\thesisUniversity}{}
+#+latex_header: \newcommand{\thesisSubtitle}{}
+#+latex_header: \newcommand{\discipline}[1]{\renewcommand{\thesisDiscipline}{#1}}
+#+latex_header: \newcommand{\advisor}[1]{\renewcommand{\thesisAdvisor}{#1}}
+#+latex_header: \newcommand{\subtitle}[1]{\renewcommand{\thesisSubtitle}{#1}}
+#+latex_header: \newcommand{\university}[1]{\renewcommand{\thesisUniversity}{#1}}
+#+LATEX_HEADER: \newcommand{\thesisLogoPath}{images/logo.jpg}
+#+LATEX_HEADER: \newcommand{\logo}[1]{\renewcommand{\thesisLogoPath}{#1}}
+
+# Title page
+#+LATEX_HEADER: %\makeatletter
+#+LATEX_HEADER: \renewcommand{\maketitle}{%
+#+LATEX_HEADER: \thispagestyle{empty}
+#+LATEX_HEADER: \begin{center}
+#+LATEX_HEADER:     \thesisUniversity
+#+LATEX_HEADER: \end{center}
+
+# Число перед fill = кратность относительно некоторого расстояния fill, кусками которого заполнены пустые места
+#+LATEX_HEADER:
+#+LATEX_HEADER: \vspace{0pt plus4fill}
+
+# Logo
+#+LATEX_HEADER: \IfFileExists{\thesisLogoPath}{
+#+LATEX_HEADER:   \begin{minipage}[t]{0.5\linewidth}
+#+LATEX_HEADER:     \begin{flushleft}
+#+LATEX_HEADER:       \includegraphics[height=3.5cm]{\thesisLogoPath}
+#+LATEX_HEADER:     \end{flushleft}
+#+LATEX_HEADER:   \end{minipage}%
+#+LATEX_HEADER:   %
+#+LATEX_HEADER:   \begin{minipage}[b]{0.5\linewidth}
+#+LATEX_HEADER:     \begin{flushright}
+#+LATEX_HEADER:       На правах рукописи
+#+LATEX_HEADER:     \end{flushright}
+#+LATEX_HEADER:   \end{minipage}%
+#+LATEX_HEADER: }{
+#+LATEX_HEADER: \begin{flushright}
+#+LATEX_HEADER: На правах рукописи
+#+LATEX_HEADER: \end{flushright}
+#+LATEX_HEADER: }
+
+#+LATEX_HEADER:
+#+LATEX_HEADER: \vspace{0pt plus6fill}
+
+# Author
+#+LATEX_HEADER: \begin{center}
+#+LATEX_HEADER: {\large \UseName{@author}}
+#+LATEX_HEADER: \end{center}
+
+#+LATEX_HEADER:
+#+LATEX_HEADER: \vspace{0pt plus1fill}
+
+#+LATEX_HEADER: \begin{center}
+#+LATEX_HEADER: {\bfseries\large \UseName{@title}}\par
+#+LATEX_HEADER: \end{center}
+#+LATEX_HEADER:
+#+LATEX_HEADER: \vspace{0pt plus2fill}
+#+LATEX_HEADER: \begin{center}
+#+LATEX_HEADER:     \thesisDiscipline\par
+#+LATEX_HEADER: \end{center}
+#+LATEX_HEADER:
+#+LATEX_HEADER: \vspace{0pt plus2fill}
+#+LATEX_HEADER: \begin{center}
+#+LATEX_HEADER:     \thesisSubtitle\par
+#+LATEX_HEADER: \end{center}
+#+LATEX_HEADER:
+#+LATEX_HEADER: \vspace{0pt plus4fill}
+#+LATEX_HEADER: \begin{flushright}
+#+LATEX_HEADER:     \thesisAdvisor\par
+#+LATEX_HEADER: \end{flushright}
+#+LATEX_HEADER:
+#+LATEX_HEADER: \vspace{0pt plus4fill}
+#+LATEX_HEADER: {\centering\UseName{@date}\par}
+#+LATEX_HEADER: \newpage
+#+LATEX_HEADER: }
+#+LATEX_HEADER: %\makeatother

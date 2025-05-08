@@ -1,0 +1,3 @@
+#+setupfile: ./disser_no_thm.org
+#+setupfile: ./thm.org
+#+setupfile: ./bib_biblatex.org
