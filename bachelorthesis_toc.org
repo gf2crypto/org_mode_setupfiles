@@ -1,4 +1,31 @@
-# добавить Стр. над номерами страниц в оглавлении
+# Оглавление
+#+LATEX_HEADER_EXTRA: \addto\captionsrussian{% Replace "english" with the language you use
+#+LATEX_HEADER_EXTRA:  \renewcommand{\contentsname}%
+#+LATEX_HEADER_EXTRA:    {Оглавление}%
+#+LATEX_HEADER_EXTRA: }
+# Отбивка точками до номера страницы начала главы/раздела
+#+LATEX_HEADER_EXTRA: \usepackage[titles]{tocloft}
+#+LATEX_HEADER_EXTRA: \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+# Переносить слова в заголовке не допускается (ГОСТ Р 7.0.11-2011, 5.3.5). Заголовки в оглавлении должны точно повторять заголовки в тексте (ГОСТ Р 7.0.11-2011, 5.2.3). Прямого указания на запрет переносов в оглавлении нет, но по той же логике невнесения искажений в смысл, лучше в оглавлении не переносить:
+#+LATEX_HEADER_EXTRA: \makeatletter
+#+LATEX_HEADER_EXTRA: \renewcommand\@tocrmarg{2.55em plus1fill} % versus 2.55em
+#+LATEX_HEADER_EXTRA: \makeatother
+
+# Нежирные номера страниц у глав в оглавлении
+#+LATEX_HEADER_EXTRA: \renewcommand{\cftsecpagefont}{\normalfont}
+
+# нежирные точки до номеров страниц у глав в оглавлении
+#+LATEX_HEADER_EXTRA: % \renewcommand{\cftchapterleader}{\cftdotfill{\cftchapterdotsep}}
+
+# добавляет точку с пробелом после номера подраздела в оглавлении
+#+LATEX_HEADER_EXTRA: \renewcommand\cftsecaftersnum{.\space}
+#+LATEX_HEADER_EXTRA: \renewcommand\cftsubsecaftersnum{.\space}
+#+LATEX_HEADER_EXTRA: \renewcommand\cftsubsubsecaftersnum{.\space}
+#+LATEX_HEADER_EXTRA: \usepackage{appendix}
+#+LATEX_HEADER_EXTRA: \appendixtitletocon
+
+# Стр. над номерами страниц в оглавлении
 # http://tex.stackexchange.com/a/306950
 #+LATEX_HEADER_EXTRA: \usepackage{afterpage}
 #+LATEX_HEADER_EXTRA: \newif\ifendTOC
