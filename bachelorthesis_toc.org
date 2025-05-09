@@ -1,0 +1,21 @@
+# добавить Стр. над номерами страниц в оглавлении
+# http://tex.stackexchange.com/a/306950
+#+LATEX_HEADER_EXTRA: \usepackage{afterpage}
+#+LATEX_HEADER_EXTRA: \newif\ifendTOC
+#+LATEX_HEADER_EXTRA:
+#+LATEX_HEADER_EXTRA: \newcommand*{\tocheader}{
+#+LATEX_HEADER_EXTRA:     \ifendTOC\else\hbox to \linewidth%
+#+LATEX_HEADER_EXTRA:       {\noindent{}~\hfill{Стр.}}\par%
+#+LATEX_HEADER_EXTRA:       \ifnumless{\value{page}}{3}{}{%
+#+LATEX_HEADER_EXTRA:         \vspace{0.5\baselineskip}
+#+LATEX_HEADER_EXTRA:       }
+#+LATEX_HEADER_EXTRA:       \afterpage{\tocheader}
+#+LATEX_HEADER_EXTRA:     \fi%
+#+LATEX_HEADER_EXTRA: }
+#+LATEX_HEADER_EXTRA: \let\tableofcontentsORIG\tableofcontents
+#+LATEX_HEADER_EXTRA: \renewcommand\tableofcontents{
+#+LATEX_HEADER_EXTRA: \tableofcontentsORIG
+#+LATEX_HEADER_EXTRA: \addtocontents{toc}{\protect\tocheader}
+#+LATEX_HEADER_EXTRA: \endTOCtrue
+#+LATEX_HEADER_EXTRA: \newpage
+#+LATEX_HEADER_EXTRA: }

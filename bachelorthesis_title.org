@@ -1,0 +1,64 @@
+# #### Титульный лист
+#+latex_header: \newcommand{\printAdvisor}{}
+#+latex_header: \newcommand{\printUniversity}{Московский государственный университет имени М.В.Ломоносова\\Факультет вычислительной математики и кибернетики\\Кафедра информационной безопасности}
+#+latex_header: \newcommand{\printSubtitle}{Выпускная квалификационная работа}
+#+latex_header: \newcommand{\advisor}[1]{\renewcommand{\printAdvisor}{#1}}
+#+latex_header: \newcommand{\subtitle}[1]{\renewcommand{\printSubtitle}{#1}}
+#+latex_header: \newcommand{\university}[1]{\renewcommand{\printUniversity}{#1}}
+#+LATEX_HEADER: \newcommand{\thesisLogoPath}{./images/logo.jpg}
+#+LATEX_HEADER: \newcommand{\logo}[1]{\renewcommand{\thesisLogoPath}{#1}}
+
+# Title page
+#+LATEX_HEADER: \renewcommand{\maketitle}{%
+#+LATEX_HEADER: \clearpage
+#+LATEX_HEADER: \thispagestyle{empty}
+#+LATEX_HEADER: \begin{center}
+#+LATEX_HEADER: \singlespacing
+#+LATEX_HEADER: \IfFileExists{\thesisLogoPath}{
+#+LATEX_HEADER:     \includegraphics[height=3.5cm]{\thesisLogoPath}\par
+#+LATEX_HEADER: }{}
+#+LATEX_HEADER:     \printUniversity\par
+#+LATEX_HEADER: \end{center}
+
+# Число перед fill = кратность относительно некоторого расстояния fill, кусками которого заполнены пустые места
+#+LATEX_HEADER:
+#+LATEX_HEADER: \vspace{0pt plus2fill}
+
+# На правах рукописи
+#+LATEX_HEADER: \begin{flushright}
+#+LATEX_HEADER: На правах рукописи
+#+LATEX_HEADER: \end{flushright}
+
+#+LATEX_HEADER:
+#+LATEX_HEADER: \vspace{0pt plus2fill}
+
+# Author
+#+LATEX_HEADER: \begin{center}
+#+LATEX_HEADER: \singlespacing
+#+LATEX_HEADER: {\large \UseName{@author}}
+#+LATEX_HEADER: \end{center}
+
+#+LATEX_HEADER:
+#+LATEX_HEADER: \vspace{0pt plus1fill}
+
+#+LATEX_HEADER: \begin{center}
+#+LATEX_HEADER: \singlespacing
+#+LATEX_HEADER: {\bfseries\large \UseName{@title}}\par
+#+LATEX_HEADER: \end{center}
+#+LATEX_HEADER:
+#+LATEX_HEADER: \vspace{0pt plus-1fill}
+#+LATEX_HEADER: \begin{center}
+#+LATEX_HEADER: \singlespacing
+#+LATEX_HEADER:     \MakeUppercase{\printSubtitle}\par
+#+LATEX_HEADER: \end{center}
+#+LATEX_HEADER:
+#+LATEX_HEADER: \vspace{0pt plus4fill}
+#+LATEX_HEADER: \begin{flushright}
+#+LATEX_HEADER: \singlespacing
+#+LATEX_HEADER:     \printAdvisor\par
+#+LATEX_HEADER: \end{flushright}
+#+LATEX_HEADER:
+#+LATEX_HEADER: \vspace{0pt plus4fill}
+#+LATEX_HEADER: {\centering\UseName{@date}\par}
+#+LATEX_HEADER: \newpage
+#+LATEX_HEADER: }

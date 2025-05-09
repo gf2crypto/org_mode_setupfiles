@@ -1,0 +1,41 @@
+#+LATEX_HEADER: \usepackage{setspace}
+#+LATEX_HEADER: \onehalfspacing
+#+LATEX_HEADER: \setdisplayskipstretch{-0.078}
+# Выставляем значения полей (ГОСТ 7.0.11-2011, 5.3.7)
+#+LATEX_HEADER_EXTRA: \usepackage[a4paper, top=2cm, bottom=2cm, left=3cm, right=1.5cm, nofoot, nomarginpar]{geometry}
+
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhf{} % clear all header fields
+#+LATEX_HEADER: \fancyhead[C]{\rmfamily\thepage}
+#+LATEX_HEADER: \renewcommand{\headrulewidth}{0pt}
+#+LATEX_HEADER: \fancyheadoffset{3cm}  % left margin (see geometry)
+
+# Размер дополнительного верхнего поля
+#+LATEX_HEADER_EXTRA: \setlength{\topskip}{0pt}
+# Снимет warning, согласно https://tex.stackexchange.com/a/334346
+#+LATEX_HEADER_EXTRA: \setlength{\footskip}{12.3pt}
+
+#  #### Выравнивание и переносы
+# http://tex.stackexchange.com/questions/241343/what-is-the-meaning-of-fussy-sloppy-emergencystretch-tolerance-hbadness
+# http://www.latex-community.org/forum/viewtopic.php?p=70342#p70342
+#+LATEX_HEADER_EXTRA: \tolerance 1414
+#+LATEX_HEADER_EXTRA: \hbadness 1414
+
+# В случае проблем регулировать в первую очередь
+#+LATEX_HEADER_EXTRA: \emergencystretch 1.5em
+#+LATEX_HEADER_EXTRA: \hfuzz 0.3pt
+#+LATEX_HEADER_EXTRA: \vfuzz \hfuzz
+#+LATEX_HEADER_EXTRA: \raggedbottom
+
+# Избавляемся от переполнений
+#+LATEX_HEADER_EXTRA: \sloppy
+
+# Запрещаем разрыв страницы после первой строки абзаца
+#+LATEX_HEADER_EXTRA: \clubpenalty=10000
+
+# Запрещаем разрыв страницы после последней строки абзаца
+#+LATEX_HEADER_EXTRA: \widowpenalty=10000
+
+# Ограничение на разрыв страницы, если строка заканчивается переносом
+#+LATEX_HEADER_EXTRA: \brokenpenalty=4991

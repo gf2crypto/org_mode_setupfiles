@@ -6,7 +6,7 @@
 #+LATEX_HEADER_EXTRA:     linktocpage=true,
 #+LATEX_HEADER_EXTRA:     plainpages=false,
 #+LATEX_HEADER_EXTRA:     colorlinks,
-#+LATEX_HEADER_EXTRA:     pdfsubject={\thesisSubtitle},
+#+LATEX_HEADER_EXTRA:     pdfsubject={\printSubtitle},
 #+LATEX_HEADER_EXTRA:     pdfkeywords={\TMPkeywords},
 #+LATEX_HEADER_EXTRA:     pdflang={ru},
 #+LATEX_HEADER_EXTRA: }
