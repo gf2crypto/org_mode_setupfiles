@@ -10,6 +10,7 @@
 #+LATEX_HEADER: \fancyhead[C]{\rmfamily\thepage}
 #+LATEX_HEADER: \renewcommand{\headrulewidth}{0pt}
 #+LATEX_HEADER: \fancyheadoffset{3cm}  % left margin (see geometry)
+#+LATEX_HEADER:  \setlength{\headheight}{14.49998pt}
 
 # Размер дополнительного верхнего поля
 #+LATEX_HEADER_EXTRA: \setlength{\topskip}{0pt}
