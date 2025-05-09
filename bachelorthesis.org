@@ -1,5 +1,5 @@
 #+LATEX_CLASS: extarticle
-#+LATEX_CLASS_OPTIONS: [a4paper,12pt,oneside,openany]
+#+LATEX_CLASS_OPTIONS: [a4paper,12pt,oneside]
 #+LANGUAGE: ru
 #+OPTIONS: toc:t title:t date:t author:t
 #+setupfile: ./font_xcharter.org
