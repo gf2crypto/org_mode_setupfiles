@@ -13,7 +13,7 @@
 # #+setupfile: ./disser_tables.org
 #+setupfile: ./bachelorthesis_pictures.org
 # #+setupfile: ./disser_lists.org
-# #+setupfile: ./disser_appendix.org
+#+setupfile: ./bachelorthesis_appendix.org
 #+setupfile: ./hyperref.org
 #+setupfile: ./listings_package.org
 #+setupfile: ./bachelorthesis_title.org

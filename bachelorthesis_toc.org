@@ -22,8 +22,6 @@
 #+LATEX_HEADER_EXTRA: \renewcommand\cftsecaftersnum{.\space}
 #+LATEX_HEADER_EXTRA: \renewcommand\cftsubsecaftersnum{.\space}
 #+LATEX_HEADER_EXTRA: \renewcommand\cftsubsubsecaftersnum{.\space}
-#+LATEX_HEADER_EXTRA: \usepackage{appendix}
-#+LATEX_HEADER_EXTRA: \appendixtitletocon
 
 # Стр. над номерами страниц в оглавлении
 # http://tex.stackexchange.com/a/306950
