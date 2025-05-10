@@ -1,0 +1,4 @@
+#+setupfile: ./bachelorthesis_base.org
+#+LATEX_CLASS_OPTIONS: [a4paper,14pt,oneside]
+#+setupfile: ./thm.org
+#+setupfile: ./bib_biblatex.org
