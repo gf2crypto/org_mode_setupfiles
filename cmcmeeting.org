@@ -1,110 +1,132 @@
-#+LATEX_CLASS: memoir
-#+LATEX_CLASS_OPTIONS: [a4paper,oneside,onecolumn,14pt]
-
-#+LATEX_HEADER: \usepackage{titlesec}
-#+LATEX_HEADER: \usepackage{titling}
-#+LATEX_HEADER: \usepackage{enumitem}
-#+LATEX_HEADER: \titleformat{\section}{\large\bfseries}{\thesection.}{1em}{\underline}
-#+LATEX_HEADER: \titleformat{\subsection}{\large\bfseries}{\thesubsection.}{1em}{}
-#+LATEX_HEADER: \titleformat{\subsubsection}{\itshape}{\thesubsubsection.}{1em}{}
-#+LATEX_HEADER: \setlength{\droptitle}{-6em}
-#+LATEX_HEADER: \pretitle{
-#+LATEX_HEADER:   \thispagestyle{empty}
-#+LATEX_HEADER:   \begin{center}\SingleSpacing\Large\bfseries}
-#+LATEX_HEADER: \posttitle{\par\end{center}}
-#+LATEX_HEADER: \predate{\begin{flushright}\bfseries}
-#+LATEX_HEADER: \postdate{\par\end{flushright}}
-#+LATEX_HEADER: \postauthor{}
-#+LATEX_HEADER: \preauthor{}
-#+LATEX_HEADER: \setlist[description]{leftmargin=2\parindent,labelindent=\parindent}
-#+LATEX_HEADER: \setlist[itemize]{label=--}
-#+LATEX_HEADER: %%%%%%%%% Geometry of page
-#+LATEX_HEADER: \settrimmedsize{297mm}{210mm}{*}
-#+LATEX_HEADER: \setlength{\trimtop}{0pt}
-#+LATEX_HEADER: \setlength{\trimedge}{\stockwidth}
-#+LATEX_HEADER: \addtolength{\trimedge}{-\paperwidth}
-#+LATEX_HEADER: \settypeblocksize{634pt}{448.13pt}{*}
-#+LATEX_HEADER: \setulmarginsandblock{
-#+LATEX_HEADER:     2cm    % top margin
-#+LATEX_HEADER: }{
-#+LATEX_HEADER:     2cm    % bottom margin
-#+LATEX_HEADER: }{*}
-#+LATEX_HEADER: \setlrmarginsandblock{
-#+LATEX_HEADER:     3cm    % left margin
-#+LATEX_HEADER: }{
-#+LATEX_HEADER:     1.5cm  % right margin
-#+LATEX_HEADER: }{*}
-#+LATEX_HEADER: \setmarginnotes{17pt}{51pt}{\onelineskip}
-#+LATEX_HEADER: \setheadfoot{2\onelineskip}{2\onelineskip}
-#+LATEX_HEADER: \setheaderspaces{*}{\onelineskip}{*}
-#+LATEX_HEADER: \checkandfixthelayout
-#+LATEX_HEADER: %spacing
-#+LATEX_HEADER: \OnehalfSpacing
-#+LATEX_HEADER: % ----------------------Page numbering-----------------------------
-#+LATEX_HEADER:
-#+LATEX_HEADER: \makepagestyle{standard}  % Make standard pagestyle
-#+LATEX_HEADER:
-#+LATEX_HEADER: \makeatletter             % Define standard pagestyle
-#+LATEX_HEADER:
-#+LATEX_HEADER: % -----------------------Header-------------------------------------
-#+LATEX_HEADER: \makeevenhead{standard}{}{\thepage}{}  % place page number in the center of footer
-#+LATEX_HEADER: \makeoddhead{standard}{}{\thepage}{}
-#+LATEX_HEADER:
-#+LATEX_HEADER: % -----------------------Footer-------------------------------------
-#+LATEX_HEADER: \makeevenfoot{standard}{}{}{}
-#+LATEX_HEADER: \makeoddfoot{standard}{}{}{}
-#+LATEX_HEADER: \makeatother
-#+LATEX_HEADER:
-#+LATEX_HEADER: %Hyphenation rules
-#+LATEX_HEADER: %--------------------------------------
-#+LATEX_HEADER: \usepackage{hyphenat}
-#+LATEX_HEADER: \hyphenation{ма-те-ма-ти-ка вос-ста-нав-ли-вать}
-#+LATEX_HEADER: %--------------------------------------
-#+LATEX_HEADER: % Times-совместимый шрифт для математики
-#+LATEX_HEADER: \DeclareSymbolFont{letters}{OML}{ztmcm}{m}{it}
-#+LATEX_HEADER: \DeclareSymbolFontAlphabet{\mathnormal}{letters}
-#+LATEX_HEADER: \usepackage{tempora}
-#+LATEX_HEADER: \usepackage{amsthm}
-#+LATEX_HEADER: \usepackage{amstext}
-#+LATEX_HEADER: \usepackage{amsmath}
-#+LATEX_HEADER: \usepackage{amssymb}
-#+LATEX_HEADER: \usepackage{booktabs}   %  качественные таблицы
-#+LATEX_HEADER: \usepackage{longtable}   %  "длинные" таблицы
-#+LATEX_HEADER: \usepackage{changepage}
-#+LATEX_HEADER: \usepackage{csquotes}
-#+LATEX_HEADER: %===================================================================
-#+LATEX_HEADER: %   Special commands
-#+LATEX_HEADER: %===================================================================
-#+LATEX_HEADER: \newcommand*{\sign}[2]{  % insert signature
-#+LATEX_HEADER:     \noindent
-#+LATEX_HEADER:     \begin{minipage}[b][][b]{0.5\textwidth}
-#+LATEX_HEADER:         \begin{flushleft}
-#+LATEX_HEADER:             \SingleSpacing
-#+LATEX_HEADER:             #1
-#+LATEX_HEADER:         \end{flushleft}
-#+LATEX_HEADER:     \end{minipage}
-#+LATEX_HEADER:     \begin{minipage}[b][][b]{0.48\textwidth}
-#+LATEX_HEADER:         \begin{flushright}
-#+LATEX_HEADER:             \SingleSpacing
-#+LATEX_HEADER:             #2
-#+LATEX_HEADER:         \end{flushright}
-#+LATEX_HEADER:     \end{minipage}
-#+LATEX_HEADER: }
-#+LATEX_HEADER: % How to use:
-#+LATEX_HEADER: %    \sign{Job position}{FirstName SecondName}
-#+LATEX_HEADER:
-#+LATEX_HEADER: %-----------Autonumeration index---------------------------------------
-#+LATEX_HEADER: \newcounter{index}
-#+LATEX_HEADER: \newcommand*{\No}{\noindent\refstepcounter{index}\textnumero~\theindex}
-#+LATEX_HEADER: \newcommand*{\Index}{\refstepcounter{index}\theindex}
-#+LATEX_HEADER: \usepackage{etoolbox}
-#+LATEX_HEADER: \AtBeginDocument{
-#+LATEX_HEADER:     \pagestyle{standard}
-#+LATEX_HEADER:     \maketitle
-#+LATEX_HEADER:     \thispagestyle{empty}
-#+LATEX_HEADER: }
-#+LATEX_HEADER: \usepackage{ulem}
 #+LANGUAGE: ru
-#+OPTIONS: toc:nil
-#+OPTIONS: title:nil
-#+OPTIONS: author:nil
+#+OPTIONS: toc:nil title:t author:t
+
+#+LATEX_HEADER: \newcommand{\printSUBTITLE}{}
+#+LATEX_HEADER: \newcommand{\subtitle}[1]{\renewcommand{\printSUBTITLE}{#1}}
+
+# Работа с картинками
+#+latex_header: \usepackage{graphicx}
+
+# Таблицы
+#+latex_header: \usepackage{booktabs}
+#+latex_header: \usepackage{longtable}
+#+latex_header: \usepackage{tabularx}
+#+latex_header: \usepackage{multirow,makecell}
+#+latex_header: \usepackage{colortbl}
+#+latex_header: \usepackage{caption}
+
+# Дополнительные символы
+#+LATEX_HEADER: \usepackage{textcomp}
+
+# Цвет
+#+LATEX_HEADER: \usepackage[dvipsnames, table, hyperref]{xcolor}
+
+# Переносы
+#+LATEX_HEADER: \usepackage{hyphenat}
+
+# Для включения альбомных страниц
+#+LATEX_HEADER: \usepackage{pdflscape}
+
+# Добавление внешних pdf файлов
+#+LATEX_HEADER: \usepackage{pdfpages}
+
+# Кавычки
+#+LATEX_HEADER: \usepackage[style=american]{csquotes}
+
+# Выделение текста
+#+LATEX_HEADER: \usepackage[normalem]{ulem}
+
+#+LATEX_HEADER_EXTRA: \usepackage{indentfirst}
+
+# ## Полуторный интервал везде
+#+LATEX_HEADER_EXTRA: \usepackage{setspace}
+#+LATEX_HEADER_EXTRA: \onehalfspacing
+
+#+LATEX_HEADER: %%% Изменяем метки ненумерованных списков
+#+LATEX_HEADER:
+#+LATEX_HEADER: \renewcommand*{\labelitemi}{---}
+#+LATEX_HEADER: \renewcommand*{\labelitemii}{---}
+#+LATEX_HEADER: \renewcommand*{\labelitemiii}{---}
+#+LATEX_HEADER: \renewcommand*{\labelitemiv}{---}
+
+#+LATEX_HEADER_EXTRA: \usepackage{titlesec}
+#+LATEX_HEADER_EXTRA: \titleformat{\section}[runin]{\normalfont\bfseries}{}{0pt}{}[]
+#+LATEX_HEADER_EXTRA: \titlespacing{\section}{0pt}{0pt}{\wordsep}
+#+LATEX_HEADER_EXTRA: \titleformat{\subsection}{\normalfont\bfseries}{}{1em}{}[]
+#+LATEX_HEADER_EXTRA: \titleformat{\subsubsection}{\normalfont\bfseries}{}{1em}{}[]
+
+# Выставляем значения полей (ГОСТ 7.0.11-2011, 5.3.7)
+#+LATEX_HEADER_EXTRA: \usepackage[a4paper, top=2cm, bottom=2cm, left=2.5cm, right=1cm, nofoot, nomarginpar]{geometry}
+# Размер дополнительного верхнего поля
+#+LATEX_HEADER_EXTRA: \setlength{\topskip}{0pt}
+# Снимет warning, согласно https://tex.stackexchange.com/a/334346
+#+LATEX_HEADER_EXTRA: \setlength{\footskip}{12.3pt}
+
+#  #### Выравнивание и переносы
+# http://tex.stackexchange.com/questions/241343/what-is-the-meaning-of-fussy-sloppy-emergencystretch-tolerance-hbadness
+# http://www.latex-community.org/forum/viewtopic.php?p=70342#p70342
+#+LATEX_HEADER_EXTRA: \tolerance 1414
+#+LATEX_HEADER_EXTRA: \hbadness 1414
+
+# В случае проблем регулировать в первую очередь
+#+LATEX_HEADER_EXTRA: \emergencystretch 1.5em
+#+LATEX_HEADER_EXTRA: \hfuzz 0.3pt
+#+LATEX_HEADER_EXTRA: \vfuzz \hfuzz
+#+LATEX_HEADER_EXTRA: \raggedbottom
+
+# Избавляемся от переполнений
+#+LATEX_HEADER_EXTRA: \sloppy
+
+# Запрещаем разрыв страницы после первой строки абзаца
+#+LATEX_HEADER_EXTRA: \clubpenalty=10000
+
+# Запрещаем разрыв страницы после последней строки абзаца
+#+LATEX_HEADER_EXTRA: \widowpenalty=10000
+
+# Ограничение на разрыв страницы, если строка заканчивается переносом
+#+LATEX_HEADER_EXTRA: \brokenpenalty=4991
+
+# ### Title page of Disser
+
+# Title page
+#+LATEX_HEADER: \newcommand{\printAUTHOR}{}
+#+LATEX_HEADER: \renewcommand{\maketitle}{%
+#+LATEX_HEADER: \thispagestyle{empty}
+#+LATEX_HEADER: \begin{center}
+#+LATEX_HEADER: \singlespacing
+#+LATEX_HEADER: {\bfseries \UseName{@title}}\par
+#+LATEX_HEADER: {\bfseries от\ \UseName{@date}}\par
+#+LATEX_HEADER: \renewcommand{\printAUTHOR}{\UseName{@author}}
+#+LATEX_HEADER: \end{center}
+#+LATEX_HEADER: \medskip
+#+LATEX_HEADER: }
+
+#+LATEX_HEADER_EXTRA: \newcommand*{\sign}[3][]{  % insert signature
+#+LATEX_HEADER_EXTRA:   \par\noindent
+#+LATEX_HEADER_EXTRA:   \textsc{#1}
+#+LATEX_HEADER_EXTRA:   \par
+#+LATEX_HEADER_EXTRA:   \medskip
+#+LATEX_HEADER_EXTRA:   \noindent
+#+LATEX_HEADER_EXTRA:   \begin{minipage}[b][][b]{0.5\textwidth}
+#+LATEX_HEADER_EXTRA:     \begin{flushleft}
+#+LATEX_HEADER_EXTRA:       \begin{spacing}{1}
+#+LATEX_HEADER_EXTRA:         #2
+#+LATEX_HEADER_EXTRA:       \end{spacing}
+#+LATEX_HEADER_EXTRA:     \end{flushleft}
+#+LATEX_HEADER_EXTRA:   \end{minipage}
+#+LATEX_HEADER_EXTRA:   \begin{minipage}[b][][b]{0.48\textwidth}
+#+LATEX_HEADER_EXTRA:     \begin{flushright}
+#+LATEX_HEADER_EXTRA:       \begin{spacing}{1}
+#+LATEX_HEADER_EXTRA:         #3
+#+LATEX_HEADER_EXTRA:       \end{spacing}
+#+LATEX_HEADER_EXTRA:     \end{flushright}
+#+LATEX_HEADER_EXTRA:   \end{minipage}
+#+LATEX_HEADER_EXTRA: }
+#+LATEX_HEADER_EXTRA: %%%% \sign[Согласовано:]{Декан ВМК МГУ имени М.В.Ломосонова}{И.А.Соколов}
+
+#+LATEX_HEADER_EXTRA: \WithSuffix\newcommand\sign*[2][]{  % insert signature
+#+LATEX_HEADER_EXTRA: \sign[#1]{#2}{\UseName{@author}}
+#+LATEX_HEADER_EXTRA:}
+
+#+setupfile: ./math.org
+#+setupfile: ./font_xcharter.org
