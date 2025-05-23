@@ -1,0 +1,5 @@
+#+setupfile: ./bachelorthesis_base.org
+#+LATEX_CLASS_OPTIONS: [a4paper,12pt,oneside]
+#+setupfile: ./cmcbeamer_color_scheme_dracula.org
+#+setupfile: ./thm_colors.org
+#+setupfile: ./bib_biblatex.org

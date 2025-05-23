@@ -1,0 +1,31 @@
+# Работа с картинками
+#+latex_header: \usepackage{graphicx}
+
+# Таблицы
+#+latex_header: \usepackage{booktabs}
+#+latex_header: \usepackage{longtable}
+#+latex_header: \usepackage{tabularx}
+#+latex_header: \usepackage{multirow,makecell}
+#+latex_header: \usepackage{colortbl}
+#+latex_header: \usepackage{caption}
+
+# Дополнительные символы
+#+LATEX_HEADER: \usepackage{textcomp}
+
+# Цвет
+#+LATEX_HEADER: \usepackage[dvipsnames, table, hyperref]{xcolor}
+
+# Переносы
+#+LATEX_HEADER: \usepackage{hyphenat}
+
+# Для включения альбомных страниц
+#+LATEX_HEADER: \usepackage{pdflscape}
+
+# Добавление внешних pdf файлов
+#+LATEX_HEADER: \usepackage{pdfpages}
+
+# Кавычки
+#+LATEX_HEADER: \usepackage[style=american]{csquotes}
+
+# Выделение текста
+#+LATEX_HEADER: \usepackage[normalem]{ulem}

@@ -25,7 +25,6 @@
 #+LATEX_HEADER:   \begin{minipage}{0.4\textwidth}
 #+LATEX_HEADER:     \begin{flushleft}
 #+LATEX_HEADER:       \begin{spacing}{1}
-#+LATEX_HEADER:         \Large
 #+LATEX_HEADER:         #1
 #+LATEX_HEADER:       \end{spacing}
 #+LATEX_HEADER:     \end{flushleft}
@@ -35,7 +34,6 @@
 #+LATEX_HEADER:     % V. A. Sadovnichii
 #+LATEX_HEADER:     \begin{flushleft}
 #+LATEX_HEADER:       \begin{spacing}{1}
-#+LATEX_HEADER:         \Large
 #+LATEX_HEADER:         #2
 #+LATEX_HEADER:       \end{spacing}
 #+LATEX_HEADER:     \end{flushleft}
@@ -48,7 +46,6 @@
 #+LATEX_HEADER:   % For example: Dear Victor Antonovich!
 #+LATEX_HEADER:   \begin{center}
 #+LATEX_HEADER:     \begin{spacing}{1}
-#+LATEX_HEADER:       \Large
 #+LATEX_HEADER:       \textsc{#1}
 #+LATEX_HEADER:     \end{spacing}
 #+LATEX_HEADER:   \end{center}

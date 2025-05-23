@@ -1,9 +1,6 @@
 #+LANGUAGE: ru
 #+OPTIONS: toc:nil title:t author:t
 
-#+LATEX_HEADER: \newcommand{\printSUBTITLE}{}
-#+LATEX_HEADER: \newcommand{\subtitle}[1]{\renewcommand{\printSUBTITLE}{#1}}
-
 # Работа с картинками
 #+latex_header: \usepackage{graphicx}
 
@@ -51,9 +48,7 @@
 
 #+LATEX_HEADER_EXTRA: \usepackage{titlesec}
 #+LATEX_HEADER_EXTRA: \titleformat{\section}[runin]{\normalfont\bfseries}{}{0pt}{}[]
-#+LATEX_HEADER_EXTRA: \titlespacing{\section}{0pt}{0pt}{\wordsep}
-#+LATEX_HEADER_EXTRA: \titleformat{\subsection}{\normalfont\bfseries}{}{1em}{}[]
-#+LATEX_HEADER_EXTRA: \titleformat{\subsubsection}{\normalfont\bfseries}{}{1em}{}[]
+#+LATEX_HEADER_EXTRA: \titlespacing{\section}{\parindent}{0pt}{\wordsep}
 
 # Выставляем значения полей (ГОСТ 7.0.11-2011, 5.3.7)
 #+LATEX_HEADER_EXTRA: \usepackage[a4paper, top=2cm, bottom=2cm, left=2.5cm, right=1cm, nofoot, nomarginpar]{geometry}
@@ -87,23 +82,25 @@
 #+LATEX_HEADER_EXTRA: \brokenpenalty=4991
 
 # ### Title page of Disser
+# #### Титульный лист (ГОСТ Р 7.0.11-2001, 5.1)
+#+latex_header: \newcommand{\printPlace}{}
+#+latex_header: \newcommand{\place}[1]{\renewcommand{\printPlace}{#1}}
 
 # Title page
-#+LATEX_HEADER: \newcommand{\printAUTHOR}{}
 #+LATEX_HEADER: \renewcommand{\maketitle}{%
 #+LATEX_HEADER: \thispagestyle{empty}
 #+LATEX_HEADER: \begin{center}
 #+LATEX_HEADER: \singlespacing
+#+LATEX_HEADER:     \printPlace\par
+#+LATEX_HEADER: \smallskip
 #+LATEX_HEADER: {\bfseries \UseName{@title}}\par
-#+LATEX_HEADER: {\bfseries от\ \UseName{@date}}\par
-#+LATEX_HEADER: \renewcommand{\printAUTHOR}{\UseName{@author}}
 #+LATEX_HEADER: \end{center}
 #+LATEX_HEADER: \medskip
 #+LATEX_HEADER: }
 
 #+LATEX_HEADER_EXTRA: \newcommand*{\sign}[3][]{  % insert signature
 #+LATEX_HEADER_EXTRA:   \par\noindent
-#+LATEX_HEADER_EXTRA:   \textsc{#1}
+#+LATEX_HEADER_EXTRA:   \textsc{#1}:
 #+LATEX_HEADER_EXTRA:   \par
 #+LATEX_HEADER_EXTRA:   \medskip
 #+LATEX_HEADER_EXTRA:   \noindent

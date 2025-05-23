@@ -1,0 +1,18 @@
+#+LATEX_CLASS: extarticle
+#+LANGUAGE: ru
+#+OPTIONS: toc:t title:t date:t author:t
+#+setupfile: ./font_xcharter.org
+#+setupfile: ./bachelorthesis_page_design.org
+#+setupfile: ./bachelorthesis_toc.org
+#+setupfile: ./basic_packages.org
+#+setupfile: ./math.org
+#+setupfile: ./math_ru_subsequations.org
+#+setupfile: ./math_ru.org
+#+setupfile: ./math_fix_qref.org
+#+setupfile: ./bachelorthesis_tables.org
+#+setupfile: ./bachelorthesis_pictures.org
+#+setupfile: ./bachelorthesis_lists.org
+#+setupfile: ./bachelorthesis_appendix.org
+#+setupfile: ./hyperref.org
+#+setupfile: ./listings_package.org
+#+setupfile: ./bachelorthesis_title.org

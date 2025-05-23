@@ -1,0 +1,9 @@
+#+LATEX_HEADER:   %---------------------------------------------------------
+#+LATEX_HEADER:   %
+#+LATEX_HEADER:   \newcommand{\NN}{\mathbb{N}}
+#+LATEX_HEADER:   \newcommand{\ZZ}{\mathbb{Z}}
+#+LATEX_HEADER:   \newcommand{\RR}{\mathbb{R}}
+#+LATEX_HEADER:   \newcommand{\CC}{\mathbb{C}}
+#+LATEX_HEADER:   \newcommand{\GG}{\mathbb{G}}
+#+LATEX_HEADER:   \newcommand{\FF}{\mathbb{F}}
+#+LATEX_HEADER:   %

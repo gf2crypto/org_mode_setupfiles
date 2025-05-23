@@ -1,0 +1,124 @@
+# ## Красная строка
+# Красная строка после заголовков типа chapter
+#+LATEX_HEADER_EXTRA: \indentafterchapter
+#+LATEX_HEADER_EXTRA: \usepackage{indentfirst}
+
+# ## Полуторный интервал везде, даже в таблицах
+#+LATEX_HEADER_EXTRA: \OnehalfSpacing*
+
+
+# Выставляем значения полей (ГОСТ 7.0.11-2011, 5.3.7)
+#+LATEX_HEADER_EXTRA: \usepackage[a4paper, top=2cm, bottom=2cm, left=2.5cm, right=1cm, nofoot, nomarginpar]{geometry}
+# Размер дополнительного верхнего поля
+#+LATEX_HEADER_EXTRA: \setlength{\topskip}{0pt}
+# Снимет warning, согласно https://tex.stackexchange.com/a/334346
+#+LATEX_HEADER_EXTRA: \setlength{\footskip}{12.3pt}
+
+#  #### Выравнивание и переносы
+# http://tex.stackexchange.com/questions/241343/what-is-the-meaning-of-fussy-sloppy-emergencystretch-tolerance-hbadness
+# http://www.latex-community.org/forum/viewtopic.php?p=70342#p70342
+#+LATEX_HEADER_EXTRA: \tolerance 1414
+#+LATEX_HEADER_EXTRA: \hbadness 1414
+
+# В случае проблем регулировать в первую очередь
+#+LATEX_HEADER_EXTRA: \emergencystretch 1.5em
+#+LATEX_HEADER_EXTRA: \hfuzz 0.3pt
+#+LATEX_HEADER_EXTRA: \vfuzz \hfuzz
+#+LATEX_HEADER_EXTRA: \raggedbottom
+
+# Избавляемся от переполнений
+#+LATEX_HEADER_EXTRA: \sloppy
+
+# Запрещаем разрыв страницы после первой строки абзаца
+#+LATEX_HEADER_EXTRA: \clubpenalty=10000
+
+# Запрещаем разрыв страницы после последней строки абзаца
+#+LATEX_HEADER_EXTRA: \widowpenalty=10000
+
+# Ограничение на разрыв страницы, если строка заканчивается переносом
+#+LATEX_HEADER_EXTRA: \brokenpenalty=4991
+
+# Выравнивание заголовков
+# Без переноса, как и надо (ГОСТ Р 7.0.11-2011, 5.3.5)
+#+LATEX_HEADER_EXTRA: \newlength{\otstuplen}
+#+LATEX_HEADER_EXTRA: \setlength{\otstuplen}{0pt}
+#+LATEX_HEADER_EXTRA: \newcommand{\hdngalign}{}
+#+LATEX_HEADER_EXTRA: \newcommand{\hdngaligni}{\hspace{\otstuplen}}
+
+
+# Колонтитулы
+# Порядковый номер страницы печатают на середине верхнего поля страницы (ГОСТ Р 7.0.11-2011, 5.3.8)
+#+LATEX_HEADER_EXTRA: \makeevenhead{plain}{}{\rmfamily\thepage}{}
+#+LATEX_HEADER_EXTRA: \makeoddhead{plain}{}{\rmfamily\thepage}{}
+#+LATEX_HEADER_EXTRA: \makeevenfoot{plain}{}{}{}
+#+LATEX_HEADER_EXTRA: \makeoddfoot{plain}{}{}{}
+#+LATEX_HEADER_EXTRA: \pagestyle{plain}
+
+# Оформление заголовков глав, разделов, подразделов
+# Работа должна быть выполнена ... размером шрифта 12-14 пунктов (ГОСТ Р 7.0.11-2011, 5.3.8). То есть не должно быть надписей шрифтом более 14. Так и поставим.
+# Эти установки будут давать одинаковый результат независимо от выбора базовым шрифтом 12 пт или 14 пт
+# Коэффициент кратности к размеру шрифта
+#+LATEX_HEADER_EXTRA: \newcounter{intvl}
+#+LATEX_HEADER_EXTRA: \setcounter{intvl}{3}
+# Установки для размера шрифта 14 pt
+#+LATEX_HEADER_EXTRA: \newlength{\curtextsize}
+#+LATEX_HEADER_EXTRA: \newlength{\bigtextsize}
+#+LATEX_HEADER_EXTRA: \setlength{\bigtextsize}{13.9pt}
+#+LATEX_HEADER_EXTRA: \makeatletter
+#+LATEX_HEADER_EXTRA: \setlength{\curtextsize}{\f@size pt}
+#+LATEX_HEADER_EXTRA: \makeatother
+
+#+LATEX_HEADER_EXTRA: \newcommand{\basegostsectionfont}{\fontsize{14pt}{16pt}\selectfont\bfseries}
+#+LATEX_HEADER_EXTRA:
+#+LATEX_HEADER_EXTRA: \makechapterstyle{thesisgost}{%
+#+LATEX_HEADER_EXTRA:     \chapterstyle{default}
+#+LATEX_HEADER_EXTRA:     \setlength{\beforechapskip}{0pt}
+#+LATEX_HEADER_EXTRA:     \setlength{\midchapskip}{0pt}
+#+LATEX_HEADER_EXTRA:     \setlength{\afterchapskip}{\theintvl\curtextsize}
+#+LATEX_HEADER_EXTRA:     \renewcommand*{\chapnamefont}{\basegostsectionfont}
+#+LATEX_HEADER_EXTRA:     \renewcommand*{\chapnumfont}{\basegostsectionfont}
+#+LATEX_HEADER_EXTRA:     \renewcommand*{\chaptitlefont}{\basegostsectionfont}
+#+LATEX_HEADER_EXTRA:     \renewcommand*{\chapterheadstart}{}
+# добавляет точку с пробелом после номера раздела
+#+LATEX_HEADER_EXTRA:     \renewcommand*{\afterchapternum}{.\space}
+#+LATEX_HEADER_EXTRA:     \renewcommand*{\printchapternum}{\hdngaligni\hdngalign\chapnumfont \thechapter}
+#+LATEX_HEADER_EXTRA:     \renewcommand*{\printchaptername}{}
+#+LATEX_HEADER_EXTRA:     \renewcommand*{\printchapternonum}{\hdngaligni\hdngalign}
+#+LATEX_HEADER_EXTRA: }
+#+LATEX_HEADER_EXTRA: \setsecnumdepth{subsubsection}
+# Точка после номера раздела и подраздела
+#+LATEX_HEADER_EXTRA: \setsecnumformat{\csname the#1\endcsname.\quad}
+#+LATEX_HEADER_EXTRA:
+#+LATEX_HEADER_EXTRA: \makeatletter
+#+LATEX_HEADER_EXTRA: \makechapterstyle{thesisgostchapname}{%
+#+LATEX_HEADER_EXTRA:     \chapterstyle{thesisgost}
+#+LATEX_HEADER_EXTRA:     \renewcommand*{\printchapternum}{\chapnumfont \thechapter}
+#+LATEX_HEADER_EXTRA:     \renewcommand*{\printchaptername}{\hdngaligni\hdngalign\chapnamefont \@chapapp} %
+#+LATEX_HEADER_EXTRA: }
+#+LATEX_HEADER_EXTRA: \makeatother
+#+LATEX_HEADER_EXTRA:
+#+LATEX_HEADER_EXTRA: \chapterstyle{thesisgost}
+#+LATEX_HEADER_EXTRA:
+#+LATEX_HEADER_EXTRA: \setsecheadstyle{\basegostsectionfont\hdngalign}
+#+LATEX_HEADER_EXTRA: \setsecindent{\otstuplen}
+#+LATEX_HEADER_EXTRA:
+#+LATEX_HEADER_EXTRA: \setsubsecheadstyle{\basegostsectionfont\hdngalign}
+#+LATEX_HEADER_EXTRA: \setsubsecindent{\otstuplen}
+#+LATEX_HEADER_EXTRA:
+#+LATEX_HEADER_EXTRA: \setsubsubsecheadstyle{\basegostsectionfont\hdngalign}
+#+LATEX_HEADER_EXTRA: \setsubsubsecindent{\otstuplen}
+# Заголовки подразделов центрируются с учетом номера, как block
+#+LATEX_HEADER_EXTRA:
+#+LATEX_HEADER_EXTRA: \sethangfrom{\noindent #1}
+#+LATEX_HEADER_EXTRA:
+#+LATEX_HEADER_EXTRA: \chapterstyle{thesisgostchapname}
+# будет вписано слово Глава перед каждым номером раздела в оглавлении
+#+LATEX_HEADER_EXTRA: \renewcommand*{\cftchaptername}{\chaptername\space}
+# Интервалы между заголовками
+# Заголовки отделяют от текста сверху и снизу тремя интервалами (ГОСТ Р 7.0.11-2011, 5.3.5).
+#+LATEX_HEADER_EXTRA: \setbeforesecskip{\theintvl\curtextsize}
+#+LATEX_HEADER_EXTRA: \setaftersecskip{\theintvl\curtextsize}
+#+LATEX_HEADER_EXTRA: \setbeforesubsecskip{\theintvl\curtextsize}
+#+LATEX_HEADER_EXTRA: \setaftersubsecskip{\theintvl\curtextsize}
+#+LATEX_HEADER_EXTRA: \setbeforesubsubsecskip{\theintvl\curtextsize}
+#+LATEX_HEADER_EXTRA: \setaftersubsubsecskip{\theintvl\curtextsize}

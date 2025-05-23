@@ -1,0 +1,20 @@
+#+LATEX_CLASS: memoir
+#+LATEX_CLASS_OPTIONS: [a4paper,14pt,oneside,openany]
+#+LANGUAGE: ru
+#+OPTIONS: toc:t title:t date:t author:t
+#+setupfile: ./font_xcharter.org
+#+setupfile: ./disser_page_design.org
+#+setupfile: ./disser_toc_sty.org
+#+setupfile: ./basic_packages.org
+#+setupfile: ./math.org
+#+setupfile: ./math_ru_subsequations.org
+#+setupfile: ./math_ru.org
+#+LATEX_HEADER_EXTRA: \setDisplayskipStretch{-0.078}
+#+setupfile: ./math_fix_qref.org
+#+setupfile: ./disser_tables.org
+#+setupfile: ./disser_pictures.org
+#+setupfile: ./disser_lists.org
+#+setupfile: ./disser_appendix.org
+#+setupfile: ./hyperref.org
+#+setupfile: ./listings_package.org
+#+setupfile: ./disser_title.org

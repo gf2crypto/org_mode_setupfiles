@@ -31,4 +31,3 @@
 #+LATEX_HEADER: \newcounter{index}
 #+LATEX_HEADER: \newcommand*{\No}{\noindent\refstepcounter{index}\textnumero~\theindex}
 #+LATEX_HEADER: \newcommand*{\Index}{\refstepcounter{index}\theindex}
-#+LATEX_HEADER: \usepackage{setspace}
