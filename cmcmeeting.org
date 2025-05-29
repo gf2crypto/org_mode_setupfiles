@@ -39,8 +39,8 @@
 #+LATEX_HEADER_EXTRA: \usepackage{indentfirst}
 
 # ## Полуторный интервал везде
-#+LATEX_HEADER_EXTRA: \usepackage{setspace}
-#+LATEX_HEADER_EXTRA: \onehalfspacing
+#+LATEX_HEADER: \usepackage{setspace}
+#+LATEX_HEADER: \onehalfspacing
 
 #+LATEX_HEADER: %%% Изменяем метки ненумерованных списков
 #+LATEX_HEADER:
@@ -49,14 +49,14 @@
 #+LATEX_HEADER: \renewcommand*{\labelitemiii}{---}
 #+LATEX_HEADER: \renewcommand*{\labelitemiv}{---}
 
-#+LATEX_HEADER_EXTRA: \usepackage{titlesec}
-#+LATEX_HEADER_EXTRA: \titleformat{\section}[runin]{\normalfont\bfseries}{}{0pt}{}[]
+#+LATEX_HEADER: \usepackage{titlesec}
+#+LATEX_HEADER_EXTRA: \titleformat{\section}[hang]{\normalfont\bfseries}{}{0pt}{}[]
 #+LATEX_HEADER_EXTRA: \titlespacing{\section}{0pt}{0pt}{\wordsep}
 #+LATEX_HEADER_EXTRA: \titleformat{\subsection}{\normalfont\bfseries}{}{1em}{}[]
 #+LATEX_HEADER_EXTRA: \titleformat{\subsubsection}{\normalfont\bfseries}{}{1em}{}[]
 
 # Выставляем значения полей (ГОСТ 7.0.11-2011, 5.3.7)
-#+LATEX_HEADER_EXTRA: \usepackage[a4paper, top=2cm, bottom=2cm, left=2.5cm, right=1cm, nofoot, nomarginpar]{geometry}
+#+LATEX_HEADER: \usepackage[a4paper, top=2cm, bottom=2cm, left=2.5cm, right=1cm, nofoot, nomarginpar]{geometry}
 # Размер дополнительного верхнего поля
 #+LATEX_HEADER_EXTRA: \setlength{\topskip}{0pt}
 # Снимет warning, согласно https://tex.stackexchange.com/a/334346
