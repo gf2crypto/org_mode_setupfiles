@@ -86,7 +86,7 @@
 # Ограничение на разрыв страницы, если строка заканчивается переносом
 #+LATEX_HEADER_EXTRA: \brokenpenalty=4991
 
-# ### Title page of Disser
+# ### Title page of Extraction
 
 # Title page
 #+LATEX_HEADER: \newcommand{\printAUTHOR}{}
@@ -95,6 +95,7 @@
 #+LATEX_HEADER: \begin{center}
 #+LATEX_HEADER: \singlespacing
 #+LATEX_HEADER: {\bfseries \UseName{@title}}\par
+#+LATEX_HEADER: {\bfseries \printSUBTITLE}\par
 #+LATEX_HEADER: {\bfseries от\ \UseName{@date}}\par
 #+LATEX_HEADER: \renewcommand{\printAUTHOR}{\UseName{@author}}
 #+LATEX_HEADER: \end{center}

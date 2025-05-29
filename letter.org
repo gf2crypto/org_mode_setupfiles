@@ -1,59 +1,160 @@
-#+LATEX_HEADER: % Дополнительные символы
+#+LANGUAGE: ru
+#+OPTIONS: toc:nil title:t author:t
+
+#+LATEX_HEADER: \newcommand{\printSUBTITLE}{}
+#+LATEX_HEADER: \newcommand{\subtitle}[1]{\renewcommand{\printSUBTITLE}{#1}}
+
+# Работа с картинками
+#+latex_header: \usepackage{graphicx}
+
+# Таблицы
+#+latex_header: \usepackage{booktabs}
+#+latex_header: \usepackage{longtable}
+#+latex_header: \usepackage{tabularx}
+#+latex_header: \usepackage{multirow,makecell}
+#+latex_header: \usepackage{colortbl}
+#+latex_header: \usepackage{caption}
+
+# Дополнительные символы
 #+LATEX_HEADER: \usepackage{textcomp}
-#+LATEX_HEADER: %% Настраиваем дизайн текста (отступы, интервалы и пр.)&&&&&&
-#+LATEX_HEADER: %Отступ в первом абзаце раздела
-#+LATEX_HEADER: \usepackage{indentfirst}
-#+LATEX_HEADER: %Точка после номера раздела
-#+LATEX_HEADER: \usepackage{misccorr}
-#+LATEX_HEADER:
+
+# Цвет
+#+LATEX_HEADER: \usepackage[dvipsnames, table, hyperref]{xcolor}
+
+# Переносы
+#+LATEX_HEADER: \usepackage{hyphenat}
+
+# Для включения альбомных страниц
+#+LATEX_HEADER: \usepackage{pdflscape}
+
+# Добавление внешних pdf файлов
+#+LATEX_HEADER: \usepackage{pdfpages}
+
+# Кавычки
+#+LATEX_HEADER: \usepackage[style=american]{csquotes}
+
+# Выделение текста
+#+LATEX_HEADER: \usepackage[normalem]{ulem}
+
+#+LATEX_HEADER_EXTRA: \usepackage{indentfirst}
+
+# ## Полуторный интервал везде
+#+LATEX_HEADER_EXTRA: \usepackage{setspace}
+#+LATEX_HEADER_EXTRA: \onehalfspacing
+
 #+LATEX_HEADER: %%% Изменяем метки ненумерованных списков
 #+LATEX_HEADER:
 #+LATEX_HEADER: \renewcommand*{\labelitemi}{---}
 #+LATEX_HEADER: \renewcommand*{\labelitemii}{---}
 #+LATEX_HEADER: \renewcommand*{\labelitemiii}{---}
 #+LATEX_HEADER: \renewcommand*{\labelitemiv}{---}
-#+LATEX_HEADER:
-#+LATEX_HEADER: \usepackage{hyphenat}
-#+LATEX_HEADER: \usepackage{titlesec}
-#+LATEX_HEADER: %% Настройка макета страницы
-#+LATEX_HEADER: \usepackage[
-#+LATEX_HEADER:     paper=a4paper,
-#+LATEX_HEADER:     includefoot,
-#+LATEX_HEADER:     bmargin=2cm,
-#+LATEX_HEADER:     tmargin=2cm,
-#+LATEX_HEADER:     lmargin=3cm,
-#+LATEX_HEADER:     rmargin=1cm,
-#+LATEX_HEADER:     includehead,
-#+LATEX_HEADER:     headsep=1cm,
-#+LATEX_HEADER: ]{geometry}
-#+LATEX_HEADER: % Изменение ориентации страницы внутри документа
-#+LATEX_HEADER: \usepackage{changepage}
-#+LATEX_HEADER: % Для включения альбомных страниц
-#+LATEX_HEADER: \usepackage{pdflscape}
-#+LATEX_HEADER: % Добавление внешних pdf файлов
-#+LATEX_HEADER: \usepackage{pdfpages}
 
-#+LATEX_HEADER: \usepackage[style=american]{csquotes}  %% используем американский стиль кавычек
+#+LATEX_HEADER_EXTRA: \usepackage{titlesec}
+#+LATEX_HEADER_EXTRA: \titleformat{\section}[runin]{\normalfont\bfseries}{}{0pt}{}[]
+#+LATEX_HEADER_EXTRA: \titlespacing{\section}{0pt}{0pt}{\wordsep}
+#+LATEX_HEADER_EXTRA: \titleformat{\subsection}{\normalfont\bfseries}{}{1em}{}[]
+#+LATEX_HEADER_EXTRA: \titleformat{\subsubsection}{\normalfont\bfseries}{}{1em}{}[]
 
-#+LATEX_HEADER: % Возможность использовать автонумерацию
-#+LATEX_HEADER: \newcounter{index}
-#+LATEX_HEADER: \newcommand*{\No}{\noindent\refstepcounter{index}\textnumero~\theindex}
-#+LATEX_HEADER: \newcommand*{\Index}{\refstepcounter{index}\theindex}
+# Выставляем значения полей (ГОСТ 7.0.11-2011, 5.3.7)
+#+LATEX_HEADER_EXTRA: \usepackage[a4paper, nofoot, nomarginpar]{geometry}
+#+LATEX_HEADER_EXTRA: \geometry{top=2cm, bottom=2cm, left=2.5cm, right=1cm}
+# Размер дополнительного верхнего поля
+#+LATEX_HEADER_EXTRA: \setlength{\topskip}{0pt}
+# Снимет warning, согласно https://tex.stackexchange.com/a/334346
+#+LATEX_HEADER_EXTRA: \setlength{\footskip}{12.3pt}
 
-#+LATEX_HEADER: \usepackage{setspace}
+#  #### Выравнивание и переносы
+# http://tex.stackexchange.com/questions/241343/what-is-the-meaning-of-fussy-sloppy-emergencystretch-tolerance-hbadness
+# http://www.latex-community.org/forum/viewtopic.php?p=70342#p70342
+#+LATEX_HEADER_EXTRA: \tolerance 1414
+#+LATEX_HEADER_EXTRA: \hbadness 1414
 
-#+LATEX_HEADER: %% Ключевые слова
-#+LATEX_HEADER:
-#+LATEX_HEADER: \newcommand{\keywords}[1]{%
-#+LATEX_HEADER:   \noindent
-#+LATEX_HEADER:   \begingroup
-#+LATEX_HEADER:   \small\textbf{\textit{Ключевые слова}}~--- #1
-#+LATEX_HEADER:   \endgroup\par
-#+LATEX_HEADER:   \medskip\par
+# В случае проблем регулировать в первую очередь
+#+LATEX_HEADER_EXTRA: \emergencystretch 1.5em
+#+LATEX_HEADER_EXTRA: \hfuzz 0.3pt
+#+LATEX_HEADER_EXTRA: \vfuzz \hfuzz
+#+LATEX_HEADER_EXTRA: \raggedbottom
+
+# Избавляемся от переполнений
+#+LATEX_HEADER_EXTRA: \sloppy
+
+# Запрещаем разрыв страницы после первой строки абзаца
+#+LATEX_HEADER_EXTRA: \clubpenalty=10000
+
+# Запрещаем разрыв страницы после последней строки абзаца
+#+LATEX_HEADER_EXTRA: \widowpenalty=10000
+
+# Ограничение на разрыв страницы, если строка заканчивается переносом
+#+LATEX_HEADER_EXTRA: \brokenpenalty=4991
+
+#+LATEX_HEADER_EXTRA: \newcommand*{\sign}[3][]{  % insert signature
+#+LATEX_HEADER_EXTRA:   \par\noindent
+#+LATEX_HEADER_EXTRA:   \textsc{#1}
+#+LATEX_HEADER_EXTRA:   \par
+#+LATEX_HEADER_EXTRA:   \medskip
+#+LATEX_HEADER_EXTRA:   \noindent
+#+LATEX_HEADER_EXTRA:   \begin{minipage}[b][][b]{0.5\textwidth}
+#+LATEX_HEADER_EXTRA:     \begin{flushleft}
+#+LATEX_HEADER_EXTRA:       \begin{spacing}{1}
+#+LATEX_HEADER_EXTRA:         #2
+#+LATEX_HEADER_EXTRA:       \end{spacing}
+#+LATEX_HEADER_EXTRA:     \end{flushleft}
+#+LATEX_HEADER_EXTRA:   \end{minipage}
+#+LATEX_HEADER_EXTRA:   \begin{minipage}[b][][b]{0.48\textwidth}
+#+LATEX_HEADER_EXTRA:     \begin{flushright}
+#+LATEX_HEADER_EXTRA:       \begin{spacing}{1}
+#+LATEX_HEADER_EXTRA:         #3
+#+LATEX_HEADER_EXTRA:       \end{spacing}
+#+LATEX_HEADER_EXTRA:     \end{flushright}
+#+LATEX_HEADER_EXTRA:   \end{minipage}
+#+LATEX_HEADER_EXTRA: }
+#+LATEX_HEADER_EXTRA: %%%% \sign[Согласовано:]{Декан ВМК МГУ имени М.В.Ломосонова}{И.А.Соколов}
+
+#+LATEX_HEADER_EXTRA: \WithSuffix\newcommand\sign*[2][]{  % insert signature
+#+LATEX_HEADER_EXTRA: \sign[#1]{#2}{\UseName{@author}}
+#+LATEX_HEADER_EXTRA:}
+
+#+LATEX_HEADER_EXTRA: \newcommand*{\letterDate}[1][\today]{% Insert date
+#+LATEX_HEADER_EXTRA:   \begin{flushright}
+#+LATEX_HEADER_EXTRA:     \begin{spacing}{1}
+#+LATEX_HEADER_EXTRA:       #1
+#+LATEX_HEADER_EXTRA:     \end{spacing}
+#+LATEX_HEADER_EXTRA:   \end{flushright}
+#+LATEX_HEADER_EXTRA: }
+#+LATEX_HEADER_EXTRA: \AtEndDocument{\letterDate[\UseName{@date}]}
+
+#+LATEX_HEADER: \newcommand*{\letterHeader}[2][]{
+#+LATEX_HEADER:   \begin{minipage}{0.4\textwidth}
+#+LATEX_HEADER:     \begin{flushleft}
+#+LATEX_HEADER:       \begin{spacing}{1}
+#+LATEX_HEADER:         #1
+#+LATEX_HEADER:       \end{spacing}
+#+LATEX_HEADER:     \end{flushleft}
+#+LATEX_HEADER:   \end{minipage}
+#+LATEX_HEADER:   \begin{minipage}{0.6\textwidth} % the field `to whom`
+#+LATEX_HEADER:     % for example: Rector of Lomonosov Moscow University academician
+#+LATEX_HEADER:     % V. A. Sadovnichii
+#+LATEX_HEADER:     \begin{flushleft}
+#+LATEX_HEADER:       \begin{spacing}{1}
+#+LATEX_HEADER:         #2
+#+LATEX_HEADER:       \end{spacing}
+#+LATEX_HEADER:     \end{flushleft}
+#+LATEX_HEADER:   \end{minipage}
 #+LATEX_HEADER: }
 
-#+LATEX_HEADER: \AtBeginDocument{ \thispagestyle{empty} }
+# Title page
+#+LATEX_HEADER: \renewcommand{\maketitle}{%
+#+LATEX_HEADER: \thispagestyle{empty}
+#+LATEX_HEADER: \letterHeader{\printSUBTITLE}\par
+#+LATEX_HEADER: \vspace{0pt plus.2fill}
+#+LATEX_HEADER: \begin{center}
+#+LATEX_HEADER: \singlespacing
+#+LATEX_HEADER: {\textsc{\MakeUppercase{\UseName{@title}}}}\par
+#+LATEX_HEADER: \end{center}
+#+LATEX_HEADER: \vspace{0pt plus.1fill}
+#+LATEX_HEADER: }
 
-#+SETUPFILE: ./math.org
-#+SETUPFILE: ./font_times.org
-#+SETUPFILE: ./letters_commands.org
+
+
+#+setupfile: ./math.org
+#+setupfile: ./font_xcharter.org
