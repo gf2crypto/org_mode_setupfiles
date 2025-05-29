@@ -1,0 +1,5 @@
+#+setupfile: ./common.org
+#+LATEX_HEADER: \usepackage{setspace}
+#+LATEX_HEADER: \usepackage{geometry}
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \usepackage{titlesec}

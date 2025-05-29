@@ -1,0 +1,23 @@
+#  Выравнивание и переносы
+# http://tex.stackexchange.com/questions/241343/what-is-the-meaning-of-fussy-sloppy-emergencystretch-tolerance-hbadness
+# http://www.latex-community.org/forum/viewtopic.php?p=70342#p70342
+#+LATEX_HEADER_EXTRA: \tolerance 1414
+#+LATEX_HEADER_EXTRA: \hbadness 1414
+
+# В случае проблем регулировать в первую очередь
+#+LATEX_HEADER_EXTRA: \emergencystretch 1.5em
+#+LATEX_HEADER_EXTRA: \hfuzz 0.3pt
+#+LATEX_HEADER_EXTRA: \vfuzz \hfuzz
+#+LATEX_HEADER_EXTRA: \raggedbottom
+
+# Избавляемся от переполнений
+#+LATEX_HEADER_EXTRA: \sloppy
+
+# Запрещаем разрыв страницы после первой строки абзаца
+#+LATEX_HEADER_EXTRA: \clubpenalty=10000
+
+# Запрещаем разрыв страницы после последней строки абзаца
+#+LATEX_HEADER_EXTRA: \widowpenalty=10000
+
+# Ограничение на разрыв страницы, если строка заканчивается переносом
+#+LATEX_HEADER_EXTRA: \brokenpenalty=4991
