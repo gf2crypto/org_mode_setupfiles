@@ -37,3 +37,9 @@
 # Определение команд с суффиксом *
 # Например: \WithSuffix\newcommand\test*[1][]{#1}
 #+LATEX_HEADER: \usepackage{suffix}
+
+# Поддержка подзаголовков
+#+LATEX_HEADER: \makeatletter
+#+LATEX_HEADER: \newcommand{\@subtitle}{}
+#+LATEX_HEADER: \newcommand{\subtitle}[1]{\renewcommand{\@subtitle}{#1}}
+#+LATEX_HEADER: \makeatother

@@ -77,7 +77,7 @@
 # Title page
 #+LATEX_HEADER_EXTRA: \renewcommand{\maketitle}{%
 #+LATEX_HEADER_EXTRA: \thispagestyle{empty}
-#+LATEX_HEADER_EXTRA: \printheader{\printSUBTITLE}\par
+#+LATEX_HEADER_EXTRA: \printheader{\UseName{@subtitle}}\par
 #+LATEX_HEADER_EXTRA: \vspace{0pt plus.2fill}
 #+LATEX_HEADER_EXTRA: \begin{center}
 #+LATEX_HEADER_EXTRA: \singlespacing
