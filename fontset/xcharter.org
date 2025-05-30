@@ -1,0 +1,2 @@
+#+LATEX_HEADER: \usepackage[sups,scaled=0.914]{XCharter}
+#+LATEX_HEADER: \usepackage[libertine,bigdelims,vvarbb,scaled=1.048]{newtxmath}
