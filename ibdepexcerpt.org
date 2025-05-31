@@ -1,0 +1,69 @@
+#+setupfile: ./sty/article.org
+#+setupfile: ./sty/hypernations.org
+
+#+LATEX_HEADER: \onehalfspacing
+
+# Изменяем метки ненумерованных списков
+#+LATEX_HEADER: \renewcommand*{\labelitemi}{---}
+#+LATEX_HEADER: \renewcommand*{\labelitemii}{---}
+#+LATEX_HEADER: \renewcommand*{\labelitemiii}{---}
+#+LATEX_HEADER: \renewcommand*{\labelitemiv}{---}
+
+#+LATEX_HEADER_EXTRA: \titleformat{\section}{\normalfont\bfseries}{}{0pt}{}[]
+#+LATEX_HEADER_EXTRA: \titlespacing{\section}{0pt}{0pt}{\wordsep}
+#+LATEX_HEADER_EXTRA: \titleformat{\subsection}{\normalfont\bfseries}{}{1em}{}[]
+#+LATEX_HEADER_EXTRA: \titleformat{\subsubsection}{\normalfont\bfseries}{}{1em}{}[]
+
+#+LATEX_HEADER: \geometry{top=2cm, bottom=2cm, left=2.5cm, right=1cm}
+
+#+LATEX_HEADER_EXTRA: \newcommand*{\signedby}[3][]{  % insert signature
+#+LATEX_HEADER_EXTRA:   \par\noindent
+#+LATEX_HEADER_EXTRA:   \textsc{#1}
+#+LATEX_HEADER_EXTRA:   \par
+#+LATEX_HEADER_EXTRA:   \medskip
+#+LATEX_HEADER_EXTRA:   \noindent
+#+LATEX_HEADER_EXTRA:   \begin{minipage}[b][][b]{0.5\textwidth}
+#+LATEX_HEADER_EXTRA:     \begin{flushleft}
+#+LATEX_HEADER_EXTRA:       \begin{spacing}{1}
+#+LATEX_HEADER_EXTRA:         #2
+#+LATEX_HEADER_EXTRA:       \end{spacing}
+#+LATEX_HEADER_EXTRA:     \end{flushleft}
+#+LATEX_HEADER_EXTRA:   \end{minipage}
+#+LATEX_HEADER_EXTRA:   \begin{minipage}[b][][b]{0.48\textwidth}
+#+LATEX_HEADER_EXTRA:     \begin{flushright}
+#+LATEX_HEADER_EXTRA:       \begin{spacing}{1}
+#+LATEX_HEADER_EXTRA:         #3
+#+LATEX_HEADER_EXTRA:       \end{spacing}
+#+LATEX_HEADER_EXTRA:     \end{flushright}
+#+LATEX_HEADER_EXTRA:   \end{minipage}
+#+LATEX_HEADER_EXTRA: }
+#+LATEX_HEADER_EXTRA: %%%% \sign[Согласовано:]{Декан ВМК МГУ имени М.В.Ломосонова}{И.А.Соколов}
+
+#+LATEX_HEADER_EXTRA: \WithSuffix\newcommand\signedby*[2][]{  % insert signature
+#+LATEX_HEADER_EXTRA: \signedby[#1]{#2}{\UseName{@author}}
+#+LATEX_HEADER_EXTRA:}
+
+#+LATEX_HEADER_EXTRA: \newcommand*{\datesty}[1]{% Insert date
+#+LATEX_HEADER_EXTRA:   \begin{flushright}
+#+LATEX_HEADER_EXTRA:     \begin{spacing}{1}
+#+LATEX_HEADER_EXTRA:       #1
+#+LATEX_HEADER_EXTRA:     \end{spacing}
+#+LATEX_HEADER_EXTRA:   \end{flushright}
+#+LATEX_HEADER_EXTRA: }
+#+LATEX_HEADER_EXTRA: \newcommand*{\printdate}[1][\today]{\datesty{#1}}
+
+# Title page
+#+LATEX_HEADER: \renewcommand{\maketitle}{%
+#+LATEX_HEADER: \thispagestyle{empty}
+#+LATEX_HEADER: \begin{center}
+#+LATEX_HEADER: \singlespacing
+#+LATEX_HEADER: {\bfseries \UseName{@title}}\par
+#+LATEX_HEADER: {\bfseries \UseName{@subtitle}}\par
+#+LATEX_HEADER: {\bfseries от\ \UseName{@date}}\par
+#+LATEX_HEADER: \end{center}
+#+LATEX_HEADER: \medskip
+#+LATEX_HEADER: }
+
+#+LATEX_HEADER_EXTRA: \newcommand{\printposition}{Учёный секретарь кафедры}
+#+LATEX_HEADER_EXTRA: \newcommand{\position}[1]{\renewcommand{\printposition}{#1}}
+#+LATEX_HEADER_EXTRA: \AtEndDocument{\vspace{0pt plus.1fill}\par\signedby*{\printposition}}
