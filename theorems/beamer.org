@@ -2,11 +2,9 @@
 #+LATEX_HEADER_EXTRA: \undef{\corollary}
 #+LATEX_HEADER_EXTRA: \undef{\example}
 #+LATEX_HEADER_EXTRA: \undef{\problem}
+#+LATEX_HEADER_EXTRA: \undef{\definition}
 #+LATEX_HEADER_EXTRA: \theoremstyle{plain}
 #+LATEX_HEADER_EXTRA: \newtheorem*{theorem*}{\translate{Theorem}}
-#+LATEX_HEADER_EXTRA: \undef{\definition}
-#+LATEX_HEADER_EXTRA: \newtheorem{definition}{\translate{Definition}}
-#+LATEX_HEADER_EXTRA: \newtheorem*{definition*}{\translate{Definition}}
 #+LATEX_HEADER_EXTRA: \newtheorem{proposition}{\translate{Proposition}}
 #+LATEX_HEADER_EXTRA: \newtheorem*{proposition*}{\translate{Proposition}}
 #+LATEX_HEADER_EXTRA: \newtheorem{assertion}[proposition]{\translate{Proposition}}
@@ -15,8 +13,13 @@
 #+LATEX_HEADER_EXTRA: \newtheorem*{lemma*}{\translate{Lemma}}
 #+LATEX_HEADER_EXTRA: \newtheorem{corollary}{\translate{Corollary}}
 #+LATEX_HEADER_EXTRA: \newtheorem*{corollary*}{\translate{Corollary}}
-#+LATEX_HEADER_EXTRA: \newtheorem{remark}{\translate{Remark}}
-#+LATEX_HEADER_EXTRA: \newtheorem*{remark*}{\translate{Remark}}
+
+#+LATEX_HEADER_EXTRA: \theoremstyle{definition}
+#+LATEX_HEADER_EXTRA: \newtheorem{definition}{\translate{Definition}}
+#+LATEX_HEADER_EXTRA: \newtheorem*{definition*}{\translate{Definition}}
+#+LATEX_HEADER_EXTRA: \newtheorem*{example*}{\translate{Example}}
+#+LATEX_HEADER_EXTRA: \newtheorem{example}{\translate{Example}}
+#+LATEX_HEADER_EXTRA: \newtheorem{exmpl}[example]{\translate{Example}}
 #+LATEX_HEADER_EXTRA: \newtranslation[to=Russian]{Problem}{Проблема}
 #+LATEX_HEADER_EXTRA: \newtheorem{problem}{\translate{Problem}}
 #+LATEX_HEADER_EXTRA: \newtheorem*{problem*}{\translate{Problem}}
@@ -29,6 +32,7 @@
 #+LATEX_HEADER_EXTRA: \newtranslation[to=Russian]{Question}{Вопрос}
 #+LATEX_HEADER_EXTRA: \newtheorem{question}{\translate{Question}}
 #+LATEX_HEADER_EXTRA: \newtheorem*{question*}{\translate{Question}}
-#+LATEX_HEADER_EXTRA: \newtheorem*{example*}{\translate{Example}}
-#+LATEX_HEADER_EXTRA: \newtheorem{example}{\translate{Example}}
-#+LATEX_HEADER_EXTRA: \newtheorem{exmpl}[example]{\translate{Example}}
+
+#+LATEX_HEADER_EXTRA: \theoremstyle{remark}
+#+LATEX_HEADER_EXTRA: \newtheorem{remark}{\translate{Remark}}
+#+LATEX_HEADER_EXTRA: \newtheorem*{remark*}{\translate{Remark}}
