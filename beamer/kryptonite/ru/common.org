@@ -1,0 +1,7 @@
+# Russian
+#+LATEX_CLASS_OPTIONS: [pdf, unicode, xcolor={dvipsnames, hyperref, table}, aspectratio=169, 12pt]
+#+setupfile: ../../../sty/beamer/common.org
+#+latex_header_extra: \renewcommand{\homedir}{/Users/surehand/git-projects/org_mode_setupfiles/beamer/kryptonite/ru}
+#+OPTIONS: H:2 title:nil toc:nil
+#+latex_header_extra: \uselanguage{Russian}
+#+latex_header_extra: \languagepath{Russian}

@@ -1,0 +1,13 @@
+#+LATEX_HEADER: %% Математические операторы, которые я часто использую
+#+LATEX_HEADER: \newcommand{\Supp}[1]{\operatorname{supp}\left(#1\right)}
+#+LATEX_HEADER: \newcommand{\wt}[1]{\operatorname{wt}\left(#1\right)}
+#+LATEX_HEADER: \newcommand{\len}[1]{\operatorname{len}\left(#1\right)}
+#+LATEX_HEADER: \DeclareMathOperator{\Argmin}{arg\ min}
+#+LATEX_HEADER: \DeclareMathOperator{\im}{Im}
+#+LATEX_HEADER: \DeclareMathOperator{\ord}{ord}
+#+LATEX_HEADER: \newcommand{\rank}[1]{\operatorname{rank} #1}
+#+LATEX_HEADER: \WithSuffix\newcommand\rank*[1]{\operatorname{rank}\left(#1\right)}
+#+LATEX_HEADER: \newcommand{\spanname}{span}
+#+LATEX_HEADER: \newcommand{\lspan}[2][]{\ensuremath{\operatorname{\spanname}}_{#1}\left(#2\right)}
+#+LATEX_HEADER: \newcommand{\coeffname}{coeff}
+#+LATEX_HEADER: \newcommand{\coeff}{\ensuremath{\operatorname{\coeffname}}}

@@ -1,0 +1,6 @@
+#+setupfile: ./operators.org
+#+setupfile: ./linearcodes.org
+#+setupfile: ./commands.org
+#+setupfile: ./vectors_sty.org
+#+setupfile: ./matrix_sty.org
+#+setupfile: ./algebraic_sty.org

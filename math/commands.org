@@ -1,0 +1,45 @@
+#+LATEX_HEADER: \newcommand{\bydef}{\ensuremath{\stackrel{\mathrm{def}}{=}}}
+#+LATEX_HEADER: \newcommand{\getsR}{\mathrel{\overset{\$}{\gets}}}
+#+LATEX_HEADER: \newcommand{\transpose}[1]{{#1}^{\top}}
+#+LATEX_HEADER: \newcommand{\tran}[1]{{#1}^{\top}}
+#+LATEX_HEADER: \WithSuffix\newcommand\transpose*[1]{\transpose{\left(#1\right)}}
+#+LATEX_HEADER: \WithSuffix\newcommand\tran*[1]{\transpose*{#1}}
+
+#+LATEX_HEADER: \newcommand{\dualcode}[1]{{#1}^{\perp}}
+#+LATEX_HEADER: \newcommand{\dual}[1]{\dualcode{#1}}
+#+LATEX_HEADER: \WithSuffix\newcommand\dualcode*[1]{\dualcode{\left(#1\right)}}
+#+LATEX_HEADER: \WithSuffix\newcommand\dual*[1]{\dualcode*{#1}}
+#+LATEX_HEADER: \newcommand{\ort}[1]{{#1}^{\perp}}
+#+LATEX_HEADER: \WithSuffix\newcommand\ort*[1]{\ort{\left(#1\right)}}
+#+LATEX_HEADER: \newcommand{\hprod}{\mathop{\circ}}
+#+LATEX_HEADER: \newcommand{\sprod}{\hprod}
+#+LATEX_HEADER: \newcommand{\set}[1]{\left\{ #1 \right\}}
+#+LATEX_HEADER: \newcommand{\sequence}[1]{\left( #1 \right)}
+#+LATEX_HEADER: \newcommand{\condset}[2]{\left\{#1\,\left|\,\vphantom{#1}#2\right. \right\}}
+#+LATEX_HEADER: \WithSuffix\newcommand\condset*[4][]{\begin{multlined}#1\left\{#2\,\left|\, \vphantom{#2#4}#3\right.\right.\\ \left.\vphantom{#2#3}#4\right\}\end{multlined}}
+
+#+LATEX_HEADER: \newcommand{\sample}{\hskip2.3pt{\gets\!\!\raisebox{1pt}{\scriptsize${\$}$\normalsize}}\,}
+#+LATEX_HEADER: \newcommand{\floor}[1]{\ensuremath{\left\lfloor #1\right\rfloor}}
+#+LATEX_HEADER: \newcommand{\ceil}[1]{\ensuremath{\left\lceil #1\right\rceil}}
+#+LATEX_HEADER: \newcommand{\Angle}[1]{\ensuremath{\left\langle #1\right\rangle}}
+#+LATEX_HEADER: \newcommand{\abs}[1]{\ensuremath{\left\lvert #1 \right\rvert}}
+#+LATEX_HEADER: \newcommand{\norm}[1]{\ensuremath{\left\|#1\right\|}}
+#+LATEX_HEADER: \newcommand{\concat}{\ensuremath{\|}}
+#+LATEX_HEADER: \newcommand{\emptystring}{\ensuremath{\varepsilon}}
+
+#+LATEX_HEADER: \newcommand{\pol}{\ensuremath{\mathsf{P}}}
+#+LATEX_HEADER: \newcommand{\npol}{\ensuremath{\mathsf{NP}}}
+#+LATEX_HEADER: \newcommand{\sSD}{\ensuremath{\mathrm{sSD}}}
+#+LATEX_HEADER: \newcommand{\SD}{\ensuremath{\mathrm{SD}}}
+#+LATEX_HEADER: \newcommand{\sWS}{\ensuremath{\mathrm{sWS}}}
+#+LATEX_HEADER: \newcommand{\WS}{\ensuremath{\mathrm{WS}}}
+#+LATEX_HEADER: \newcommand{\PEC}{\ensuremath{\mathrm{PEC}}}
+#+LATEX_HEADER: \newcommand{\LEC}{\ensuremath{\mathrm{LEC}}}
+#+LATEX_HEADER: \newcommand{\IQ}{\ensuremath{\mathrm{IQ}}}
+#+LATEX_HEADER: \newcommand{\IPoS}{\ensuremath{\mathrm{IP1S}}}
+#+LATEX_HEADER: \newcommand{\GI}{\ensuremath{\mathrm{GI}}}
+#+LATEX_HEADER: \newcommand{\PE}{\ensuremath{\mathrm{PE}}}
+#+LATEX_HEADER: \newcommand{\decode}{\ensuremath{\mathrm{Decode}}}
+#+LATEX_HEADER: \newcommand{\cgen}{\ensuremath{\mathrm{CGen}}}
+#+LATEX_HEADER: \newcommand{\mcel}{\ensuremath{\mathrm{McEl}}}
+#+LATEX_HEADER: \newcommand{\nied}{\ensuremath{\mathrm{NiEd}}}

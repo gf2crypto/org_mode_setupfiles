@@ -1,0 +1,6 @@
+#+setupfile: ./common.org
+#+setupfile: ../common.org
+#+LATEX_HEADER: \SetKwInput{KwData}{Input}
+#+LATEX_HEADER: \SetKwInput{KwInput}{Input}
+#+LATEX_HEADER: \SetKwInput{KwOutput}{Output}
+#+LATEX_HEADER: \SetAlgorithmName{Algorithm}{algorithm}{List of algorithms}

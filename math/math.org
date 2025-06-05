@@ -1,0 +1,3 @@
+#+setupfile: ./common.org
+#+setupfile: ./user.org
+#+setupfile: ./symdup.org

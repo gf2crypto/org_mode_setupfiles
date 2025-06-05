@@ -1,0 +1,2 @@
+# Duplicate the symbol after the '\HM' command on the next line
+#+LATEX_HEADER: \newcommand*{\HM}[1]{#1\nobreak\discretionary{}{\hbox{\(\mathsurround=0pt #1\)}}{}}

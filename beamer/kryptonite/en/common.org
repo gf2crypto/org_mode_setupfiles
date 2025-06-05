@@ -1,0 +1,7 @@
+# English
+#+LATEX_CLASS_OPTIONS: [pdf, unicode, xcolor={dvipsnames, hyperref, table}, aspectratio=169, 12pt]
+#+setupfile: ../../../sty/beamer/kryptonite/common.org
+#+latex_header_extra: \renewcommand{\homedir}{/Users/surehand/git-projects/org_mode_setupfiles/beamer/kryptonite/en/images}
+#+OPTIONS: H:2 title:nil toc:nil
+#+latex_header_extra: \uselanguage{english}
+#+latex_header_extra: \languagepath{english}

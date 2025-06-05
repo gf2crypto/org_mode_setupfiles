@@ -1,0 +1,7 @@
+#+LATEX_HEADER: %Окружение для написания алгоритмов в псевдокоде
+#+LATEX_HEADER: \usepackage[%
+#+LATEX_HEADER: linesnumbered,
+#+LATEX_HEADER: titlenumbered
+#+LATEX_HEADER: ]{algorithm2e}
+#+LATEX_HEADER: %%% Исправляем номер алгоритма при использовании оверлеев.
+#+LATEX_HEADER_EXTRA: \resetcounteronoverlays{algocf}

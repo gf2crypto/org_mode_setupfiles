@@ -18,9 +18,9 @@
 #+LATEX_HEADER_EXTRA: \usepackage{blkarray}
 #+LATEX_HEADER: %Окружение для написания алгоритмов в псевдокоде
 #+LATEX_HEADER: \usepackage[%
-#+LATEX_HEADER: ruled,
+#+LATEX_HEADER: %ruled,
 #+LATEX_HEADER: vlined,
-#+LATEX_HEADER: algosection,
+#+LATEX_HEADER: %algosection,
 #+LATEX_HEADER: linesnumbered,
 #+LATEX_HEADER: titlenumbered
 #+LATEX_HEADER: ]{algorithm2e}

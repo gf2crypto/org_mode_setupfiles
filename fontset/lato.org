@@ -1,0 +1,2 @@
+#+LATEX_HEADER: \usepackage[default]{lato}
+#+LATEX_HEADER: \usepackage[cal=euler,frak=euler, scr=mathpi]{mathalfa}

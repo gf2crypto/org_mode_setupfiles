@@ -1,4 +1,5 @@
 #+setupfile: ./common.org
+#+setupfile: ./hypernations.org
 #+LATEX_HEADER: \usepackage{setspace}
 #+LATEX_HEADER: \usepackage{geometry}
 #+LATEX_HEADER: \usepackage{fancyhdr}
