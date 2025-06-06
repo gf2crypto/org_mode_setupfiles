@@ -65,8 +65,7 @@
 #+LATEX_HEADER_EXTRA:    \includegraphics[width=50pt]{\homedir/kryptonite_logo.png}
 #+LATEX_HEADER_EXTRA:  \end{textblock*}
 #+LATEX_HEADER_EXTRA:}
-#+LATEX_HEADER_EXTRA: \AtBeginDocument{%
-#+LATEX_HEADER_EXTRA: %%%%  Print title page
+#+LATEX_HEADER_EXTRA: \renewcommand{\maketitle}{
 #+LATEX_HEADER_EXTRA: {
 #+LATEX_HEADER_EXTRA:   \setbeamercolor{title}{fg=white}
 #+LATEX_HEADER_EXTRA:   \setbeamercolor{author}{fg=white}
@@ -76,11 +75,7 @@
 #+LATEX_HEADER_EXTRA: \setbeamerfont{author}{size=\normalsize, parent=structure}
 #+LATEX_HEADER_EXTRA:
 #+LATEX_HEADER_EXTRA:   \usebackgroundtemplate{%
-#+LATEX_HEADER_EXTRA:     %\begin{tikzpicture}[remember picture,overlay]
-#+LATEX_HEADER_EXTRA:     %  \node [xshift=0cm,yshift=0cm] at (0,0){
-#+LATEX_HEADER_EXTRA:         \includegraphics[height=\paperheight
-#+LATEX_HEADER_EXTRA:         ]{\homedir/title_page_kryptonite.png};
-#+LATEX_HEADER_EXTRA:     %\end{tikzpicture}
+#+LATEX_HEADER_EXTRA:          \includegraphics[height=\paperheight]{\homedir/title_page_kryptonite.png};
 #+LATEX_HEADER_EXTRA:   }
 #+LATEX_HEADER_EXTRA: \defbeamertemplate*{title page}{customized}[1][]
 #+LATEX_HEADER_EXTRA: {
@@ -102,13 +97,7 @@
 #+LATEX_HEADER_EXTRA: \begin{frame}
 #+LATEX_HEADER_EXTRA:     \titlepage%
 #+LATEX_HEADER_EXTRA:   \end{frame}
-#+LATEX_HEADER_EXTRA: }}
-#+LATEX_HEADER_EXTRA: \begin{frame}<beamer>%
-
-#+LATEX_HEADER_EXTRA: \frametitle{\translate{Outline}}%
-#+LATEX_HEADER_EXTRA: \tableofcontents
-#+LATEX_HEADER_EXTRA: \end{frame}%
-#+LATEX_HEADER_EXTRA: }
+#+LATEX_HEADER_EXTRA: }}}
 
 #+LATEX_HEADER_EXTRA: \AtBeginSection[]{%
 #+LATEX_HEADER_EXTRA:  \begin{transitionframe}
