@@ -1,0 +1,2 @@
+#+setupfile: ../../sty/math/common.org
+#+setupfile: ../../sty/math/user.org

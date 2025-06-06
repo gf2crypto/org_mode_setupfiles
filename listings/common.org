@@ -1,0 +1,1 @@
+#+setupfile: ../sty/listings/common.org

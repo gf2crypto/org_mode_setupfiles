@@ -1,2 +1,5 @@
 # Russian
 #+setupfile: ./ru/common.org
+#+setupfile: ../../math/beamer/ru.org
+#+setupfile: ../../theorems/beamer.org
+#+setupfile: ../../algorithms/beamer/ru.org

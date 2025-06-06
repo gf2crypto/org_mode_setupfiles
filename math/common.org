@@ -1,22 +1,8 @@
-#+LATEX_HEADER: \usepackage{amsmath}
-#+LATEX_HEADER: \usepackage{amstext}
-#+LATEX_HEADER: \usepackage{amssymb}
-#+LATEX_HEADER: \usepackage{amsfonts}
-#+LATEX_HEADER: \usepackage{mathtools}
-# Красивые дроби
-#+LATEX_HEADER: \usepackage{xfrac}
-#+LATEX_HEADER_EXTRA: \usepackage[
-#+LATEX_HEADER_EXTRA:     locale = DE,
-#+LATEX_HEADER_EXTRA:     list-separator       = {;\,},
-#+LATEX_HEADER_EXTRA:     list-final-separator = {;\,},
-#+LATEX_HEADER_EXTRA:     list-pair-separator  = {;\,},
-#+LATEX_HEADER_EXTRA:     list-units           = single,
-#+LATEX_HEADER_EXTRA:     range-units          = single,
-#+LATEX_HEADER_EXTRA:     range-phrase={\text{\ensuremath{-}}},
-#+LATEX_HEADER_EXTRA:     % quotient-mode        = fraction, % красивые дроби могут не соответствовать ГОСТ
-#+LATEX_HEADER_EXTRA:     fraction-function    = \sfrac,
-#+LATEX_HEADER_EXTRA:     separate-uncertainty,
-#+LATEX_HEADER_EXTRA:     ]{siunitx}
-#+LATEX_HEADER_EXTRA: \sisetup{inter-unit-product = \ensuremath{{}\cdot{}}}
-# масштабирование формулы
-#+LATEX_HEADER: \newcommand\scalemath[2]{\scalebox{#1}{\mbox{\ensuremath{\displaystyle #2}}}}
+#+setupfile: ../sty/math/common.org
+#+setupfile: ../sty/math/commands.org
+#+setupfile: ../sty/math/linearcodes.org
+#+setupfile: ../sty/math/matrix_sty.org
+#+setupfile: ../sty/math/vectors_sty.org
+#+setupfile: ../sty/math/qref.org
+#+setupfile: ../sty/math/operators.org
+#+setupfile: ../sty/math/user.org
