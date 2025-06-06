@@ -3,3 +3,4 @@
 #+setupfile: ../../math/beamer/en.org
 #+setupfile: ../../theorems/beamer.org
 #+setupfile: ../../algorithms/beamer/en.org
+#+setupfile: ../../listings/common.org
