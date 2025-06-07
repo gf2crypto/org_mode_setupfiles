@@ -4,4 +4,5 @@
 #+LATEX_CLASS_OPTIONS: [12pt]
 #+OPTIONS: toc:nil title:t author:t
 #+LATEX_HEADER: \geometry{top=2cm, bottom=2cm, left=2.5cm, right=1cm}
+#+LATEX_HEADER: \setstretch{1.25} % MSWORD compatible
 #+latex_header: \onehalfspacing % 1 1/2
