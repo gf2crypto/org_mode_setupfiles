@@ -43,3 +43,6 @@
 #+LATEX_HEADER: \newcommand{\cgen}{\ensuremath{\mathrm{CGen}}}
 #+LATEX_HEADER: \newcommand{\mcel}{\ensuremath{\mathrm{McEl}}}
 #+LATEX_HEADER: \newcommand{\nied}{\ensuremath{\mathrm{NiEd}}}
+
+#+LATEX_HEADER: \usepackage{stmaryrd}
+#+LATEX_HEADER: \newcommand{\nat}[1][n]{\llbracket #1 \rrbracket}  % [[n]] = {1,2,...,n}
