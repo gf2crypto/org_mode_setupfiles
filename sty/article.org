@@ -4,3 +4,4 @@
 #+LATEX_HEADER: \usepackage{geometry}
 #+LATEX_HEADER: \usepackage{fancyhdr}
 #+LATEX_HEADER: \usepackage{titlesec}
+#+LATEX_HEADER: \usepackage{translator}
