@@ -1,3 +1,4 @@
+#+setupfile: ./translations.org
 #+LATEX_HEADER_EXTRA: \undef{\lemma}
 #+LATEX_HEADER_EXTRA: \undef{\corollary}
 #+LATEX_HEADER_EXTRA: \undef{\example}
@@ -17,16 +18,12 @@
 #+LATEX_HEADER_EXTRA: \newtheorem*{corollary*}{\translate{Corollary}}
 #+LATEX_HEADER_EXTRA: \newtheorem{remark}{\translate{Remark}}
 #+LATEX_HEADER_EXTRA: \newtheorem*{remark*}{\translate{Remark}}
-#+LATEX_HEADER_EXTRA: \newtranslation[to=Russian]{Problem}{Проблема}
 #+LATEX_HEADER_EXTRA: \newtheorem{problem}{\translate{Problem}}
 #+LATEX_HEADER_EXTRA: \newtheorem*{problem*}{\translate{Problem}}
-#+LATEX_HEADER_EXTRA: \newtranslation[to=Russian]{Task}{Задача}
 #+LATEX_HEADER_EXTRA: \newtheorem{task}{\translate{Task}}
 #+LATEX_HEADER_EXTRA: \newtheorem*{task*}{\translate{Task}}
-#+LATEX_HEADER_EXTRA: \newtranslation[to=Russian]{Excercise}{Упражнение}
 #+LATEX_HEADER_EXTRA: \newtheorem{excercise}{\translate{Excercise}}
 #+LATEX_HEADER_EXTRA: \newtheorem*{excercise*}{\translate{Excercise}}
-#+LATEX_HEADER_EXTRA: \newtranslation[to=Russian]{Question}{Вопрос}
 #+LATEX_HEADER_EXTRA: \newtheorem{question}{\translate{Question}}
 #+LATEX_HEADER_EXTRA: \newtheorem*{question*}{\translate{Question}}
 #+LATEX_HEADER_EXTRA: \newtheorem*{example*}{\translate{Example}}

@@ -1,3 +1,5 @@
+#+setupfile: ./common.org
+#+setupfile: ../translations.org
 #+LATEX_HEADER: \usepackage{thmtools}
 #+LATEX_HEADER:   %% Замечание
 #+LATEX_HEADER:   \declaretheorem[style=plain, numberwithin=section,
