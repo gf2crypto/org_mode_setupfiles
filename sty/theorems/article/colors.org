@@ -1,26 +1,26 @@
 #+LATEX_HEADER: \usepackage{thmtools}
 #+LATEX_HEADER:   %% Замечание
 #+LATEX_HEADER:   \declaretheorem[style=plain, numberwithin=section,
-#+LATEX_HEADER:   name=Замечание]{remark}
-#+LATEX_HEADER:   \declaretheorem[style=plain, numbered=no, name=Замечание]{remark*}
+#+LATEX_HEADER:   name=\translate{Remark}]{remark}
+#+LATEX_HEADER:   \declaretheorem[style=plain, numbered=no, name=\translate{Remark}]{remark*}
 #+LATEX_HEADER:   %% Пример
 #+LATEX_HEADER:   \declaretheorem[style=definition, numberwithin=section,
-#+LATEX_HEADER:   name=Пример]{example0}
+#+LATEX_HEADER:   name=\translate{Example}]{example0}
 #+LATEX_HEADER:   \declaretheorem[style=definition, numbered=no,
-#+LATEX_HEADER:   name=Пример]{example*}
+#+LATEX_HEADER:   name=\translate{Example}]{example*}
 #+LATEX_HEADER:   %% Задача
 #+LATEX_HEADER:   \declaretheorem[style=remark, numberwithin=section,
-#+LATEX_HEADER:   name=Задача]{task}
-#+LATEX_HEADER:   \declaretheorem[style=remark, numbered=no, name=Задача]{task*}
+#+LATEX_HEADER:   name=\translate{Task}]{task}
+#+LATEX_HEADER:   \declaretheorem[style=remark, numbered=no, name=\translate{Task}]{task*}
 #+LATEX_HEADER:   %% Упражнение
 #+LATEX_HEADER:   \declaretheorem[style=remark, numberwithin=section,
-#+LATEX_HEADER:   name=Упражнение]{exercise}
+#+LATEX_HEADER:   name=\translate{Exercise}]{exercise}
 #+LATEX_HEADER:   \declaretheorem[style=remark, numbered=no,
-#+LATEX_HEADER:   name=Упражнение]{exercise*}
+#+LATEX_HEADER:   name=\translate{Exercise}]{exercise*}
 #+LATEX_HEADER:   %% Вопрос
 #+LATEX_HEADER:   \declaretheorem[style=remark, numberwithin=section,
-#+LATEX_HEADER:   name=Вопрос]{question}
-#+LATEX_HEADER:   \declaretheorem[style=remark, numbered=no, name=Вопрос]{question*}
+#+LATEX_HEADER:   name=\translate{Question}]{question}
+#+LATEX_HEADER:   \declaretheorem[style=remark, numbered=no, name=\translate{Question}]{question*}
 #+LATEX_HEADER: \usepackage[
 #+LATEX_HEADER:   theorems,
 #+LATEX_HEADER:   skins,
@@ -92,13 +92,13 @@
 #+LATEX_HEADER: \newcounter{defcounter}[section]
 #+LATEX_HEADER: \numberwithin{defcounter}{section}
 #+LATEX_HEADER:
-#+LATEX_HEADER: \newtcbtheorem{TCBdefinition}{Определение~\thedefcounter}{defstyle}{}
+#+LATEX_HEADER: \newtcbtheorem{TCBdefinition}{\translate{Definition}~\thedefcounter}{defstyle}{}
 #+LATEX_HEADER: \newenvironment*{definition}[1][]{
 #+LATEX_HEADER:   \refstepcounter{defcounter}
 #+LATEX_HEADER:   \begin{TCBdefinition*}{#1}
 #+LATEX_HEADER:     }{\end{TCBdefinition*}}
 #+LATEX_HEADER:
-#+LATEX_HEADER: \newtcbtheorem{TCBdefinition0}{Определение}{defstyle}{}
+#+LATEX_HEADER: \newtcbtheorem{TCBdefinition0}{\translate{Definition}}{defstyle}{}
 #+LATEX_HEADER: \newenvironment*{definition*}{
 #+LATEX_HEADER:   \begin{TCBdefinition0*}{}
 #+LATEX_HEADER:     }{\end{TCBdefinition0*}}
@@ -107,13 +107,13 @@
 #+LATEX_HEADER: \newcounter{propcounter}[section]
 #+LATEX_HEADER: \numberwithin{propcounter}{section}
 #+LATEX_HEADER:
-#+LATEX_HEADER: \newtcbtheorem{TCBproposition}{Утверждение~\thepropcounter}{propstyle}{}
+#+LATEX_HEADER: \newtcbtheorem{TCBproposition}{\translate{Proposition}~\thepropcounter}{propstyle}{}
 #+LATEX_HEADER: \newenvironment*{proposition}[1][]{
 #+LATEX_HEADER:   \refstepcounter{propcounter}
 #+LATEX_HEADER:   \begin{TCBproposition*}{#1}
 #+LATEX_HEADER:     }{\end{TCBproposition*}}
 #+LATEX_HEADER:
-#+LATEX_HEADER: \newtcbtheorem{TCBproposition0}{Утверждение}{propstyle}{}
+#+LATEX_HEADER: \newtcbtheorem{TCBproposition0}{\translate{Proposition}}{propstyle}{}
 #+LATEX_HEADER: \newenvironment*{proposition*}{
 #+LATEX_HEADER:   \begin{TCBproposition0*}{}
 #+LATEX_HEADER:     }{\end{TCBproposition0*}}
@@ -122,13 +122,13 @@
 #+LATEX_HEADER: \newcounter{thmcounter}[section]
 #+LATEX_HEADER: \numberwithin{thmcounter}{section}
 #+LATEX_HEADER:
-#+LATEX_HEADER: \newtcbtheorem{TCBtheorem}{Теорема~\thethmcounter}{propstyle}{}
+#+LATEX_HEADER: \newtcbtheorem{TCBtheorem}{\translate{Theorem}~\thethmcounter}{propstyle}{}
 #+LATEX_HEADER: \newenvironment*{theorem}[1][]{
 #+LATEX_HEADER:   \refstepcounter{thmcounter}
 #+LATEX_HEADER:   \begin{TCBtheorem*}{#1}
 #+LATEX_HEADER:     }{\end{TCBtheorem*}}
 #+LATEX_HEADER:
-#+LATEX_HEADER: \newtcbtheorem{TCBtheorem0}{Теорема}{propstyle}{}
+#+LATEX_HEADER: \newtcbtheorem{TCBtheorem0}{\translate{Theorem}}{propstyle}{}
 #+LATEX_HEADER: \newenvironment*{theorem*}{
 #+LATEX_HEADER:   \begin{TCBtheorem0*}{}
 #+LATEX_HEADER:     }{\end{TCBtheorem0*}}
@@ -137,13 +137,13 @@
 #+LATEX_HEADER: \newcounter{lemmacounter}[section]
 #+LATEX_HEADER: \numberwithin{lemmacounter}{section}
 #+LATEX_HEADER:
-#+LATEX_HEADER: \newtcbtheorem{TCBlemma}{Лемма~\thelemmacounter}{propstyle}{}
+#+LATEX_HEADER: \newtcbtheorem{TCBlemma}{\translate{Lemma}~\thelemmacounter}{propstyle}{}
 #+LATEX_HEADER: \newenvironment*{lemma}[1][]{
 #+LATEX_HEADER:   \refstepcounter{lemmacounter}
 #+LATEX_HEADER:   \begin{TCBlemma*}{#1}
 #+LATEX_HEADER:     }{\end{TCBlemma*}}
 #+LATEX_HEADER:
-#+LATEX_HEADER: \newtcbtheorem{TCBlemma0}{Лемма}{propstyle}{}
+#+LATEX_HEADER: \newtcbtheorem{TCBlemma0}{\translate{Lemma}}{propstyle}{}
 #+LATEX_HEADER: \newenvironment*{lemma*}{
 #+LATEX_HEADER:   \begin{TCBlemma0*}{}
 #+LATEX_HEADER:     }{\end{TCBlemma0*}}
@@ -152,13 +152,13 @@
 #+LATEX_HEADER: \newcounter{assertioncounter}[section]
 #+LATEX_HEADER: \numberwithin{assertioncounter}{section}
 #+LATEX_HEADER:
-#+LATEX_HEADER: \newtcbtheorem{TCBassertion}{Утверждение~\theassertioncounter}{propstyle}{}
+#+LATEX_HEADER: \newtcbtheorem{TCBassertion}{\translate{Assertion}~\theassertioncounter}{propstyle}{}
 #+LATEX_HEADER: \newenvironment*{assertion}[1][]{
 #+LATEX_HEADER:   \refstepcounter{assertioncounter}
 #+LATEX_HEADER:   \begin{TCBassertion*}{#1}
 #+LATEX_HEADER:     }{\end{TCBassertion*}}
 #+LATEX_HEADER:
-#+LATEX_HEADER: \newtcbtheorem{TCBassertion0}{Утверждение}{propstyle}{}
+#+LATEX_HEADER: \newtcbtheorem{TCBassertion0}{\translate{Assertion}}{propstyle}{}
 #+LATEX_HEADER: \newenvironment*{assertion*}{
 #+LATEX_HEADER:   \begin{TCBassertion0*}{}
 #+LATEX_HEADER:     }{\end{TCBassertion0*}}
@@ -167,13 +167,13 @@
 #+LATEX_HEADER: \newcounter{corollarycounter}[section]
 #+LATEX_HEADER: \numberwithin{corollarycounter}{section}
 #+LATEX_HEADER:
-#+LATEX_HEADER: \newtcbtheorem{TCBcorollary}{Следствие~\thecorollarycounter}{propstyle}{}
+#+LATEX_HEADER: \newtcbtheorem{TCBcorollary}{\translate{Corollary}~\thecorollarycounter}{propstyle}{}
 #+LATEX_HEADER: \newenvironment*{corollary}[1][]{
 #+LATEX_HEADER:   \refstepcounter{corollarycounter}
 #+LATEX_HEADER:   \begin{TCBcorollary*}{#1}
 #+LATEX_HEADER:     }{\end{TCBcorollary*}}
 #+LATEX_HEADER:
-#+LATEX_HEADER: \newtcbtheorem{TCBcorollary0}{Следствие}{propstyle}{}
+#+LATEX_HEADER: \newtcbtheorem{TCBcorollary0}{\translate{Corollary}}{propstyle}{}
 #+LATEX_HEADER: \newenvironment*{corollary*}{
 #+LATEX_HEADER:   \begin{TCBcorollary0*}{}
 #+LATEX_HEADER:     }{\end{TCBcorollary0*}}
@@ -181,12 +181,12 @@
 #+LATEX_HEADER: %%% PROBLEM
 #+LATEX_HEADER: \newcounter{problemcounter}[section]
 #+LATEX_HEADER: \numberwithin{problemcounter}{section}
-#+LATEX_HEADER: \newtcbtheorem{TCBproblem}{Проблема~\theproblemcounter}{probstyle}{}
+#+LATEX_HEADER: \newtcbtheorem{TCBproblem}{\translate{Problem}~\theproblemcounter}{probstyle}{}
 #+LATEX_HEADER: \newenvironment*{problem}[1][]{
 #+LATEX_HEADER:   \refstepcounter{problemcounter}
 #+LATEX_HEADER:   \begin{TCBproblem*}{#1}
 #+LATEX_HEADER:     }{\end{TCBproblem*}}
-#+LATEX_HEADER: \newtcbtheorem{TCBproblem0}{Проблема}{probstyle}{}
+#+LATEX_HEADER: \newtcbtheorem{TCBproblem0}{\translate{Problem}}{probstyle}{}
 #+LATEX_HEADER: \newenvironment*{problem*}{
 #+LATEX_HEADER:   \begin{TCBproblem0*}{}
 #+LATEX_HEADER:     }{\end{TCBproblem0*}}
