@@ -1,0 +1,53 @@
+#+setupfile: ./common.org
+#+LATEX_HEADER: \usepackage{thmtools}
+#+LATEX_HEADER: %% Определения
+#+LATEX_HEADER:   \declaretheorem[style=definition, numberwithin=section,
+#+LATEX_HEADER:   name=\translate{Definition}]{definition}
+#+LATEX_HEADER:   \declaretheorem[style=definition, numbered=no,
+#+LATEX_HEADER:   name=\translate{Definition}]{definition*}
+#+LATEX_HEADER:   %% Замечание
+#+LATEX_HEADER:   \declaretheorem[style=remark, numberwithin=section,
+#+LATEX_HEADER:   name=\translate{Remark}]{remark}
+#+LATEX_HEADER:   \declaretheorem[style=remark, numbered=no, name=\translate{Remark}]{remark*}
+#+LATEX_HEADER:   %% Пример
+#+LATEX_HEADER:   \declaretheorem[style=definition, numberwithin=section,
+#+LATEX_HEADER:   name=\translate{Example}]{example}
+#+LATEX_HEADER:   \declaretheorem[name=\translate{Example},sibling=example]{exmpl}
+#+LATEX_HEADER:   \declaretheorem[style=definition, numbered=no,
+#+LATEX_HEADER:   name=\translate{Example}]{example*}
+#+LATEX_HEADER:   %% Задача
+#+LATEX_HEADER:   \declaretheorem[style=remark, numberwithin=section,
+#+LATEX_HEADER:   name=\translate{Task}]{task}
+#+LATEX_HEADER:   \declaretheorem[style=remark, numbered=no, name=\translate{Task}]{task*}
+#+LATEX_HEADER:   %% Упражнение
+#+LATEX_HEADER:   \declaretheorem[style=remark, numberwithin=section,
+#+LATEX_HEADER:   name=\translate{Exercise}]{exercise}
+#+LATEX_HEADER:   \declaretheorem[style=remark, numbered=no,
+#+LATEX_HEADER:   name=\translate{Exercise}]{exercise*}
+#+LATEX_HEADER:   %% Проблема
+#+LATEX_HEADER:   \declaretheorem[style=remark, numberwithin=section,
+#+LATEX_HEADER:   name=\translate{Problem}]{problem}
+#+LATEX_HEADER:   \declaretheorem[style=remark, numbered=no, name=\translate{Problem}]{problem*}
+#+LATEX_HEADER:   %% Вопрос
+#+LATEX_HEADER:   \declaretheorem[style=remark, numberwithin=section,
+#+LATEX_HEADER:   name=\translate{Question}]{question}
+#+LATEX_HEADER:   \declaretheorem[style=remark, numbered=no, name=\translate{Question}]{question*}
+#+LATEX_HEADER:   %% Теорема
+#+LATEX_HEADER:   \declaretheorem[style=plain, numberwithin=section,
+#+LATEX_HEADER:   name=\translate{Theorem}]{theorem}
+#+LATEX_HEADER:   \declaretheorem[style=plain, numbered=no, name=\translate{Theorem}]{theorem*}
+#+LATEX_HEADER:   %% Утверждение
+#+LATEX_HEADER:   \declaretheorem[style=plain, numberwithin=section,
+#+LATEX_HEADER:   name=\translate{Proposition}]{proposition}
+#+LATEX_HEADER:   \declaretheorem[style=plain, numbered=no,
+#+LATEX_HEADER:   name=\translate{Proposition}]{proposition*}
+#+LATEX_HEADER:   \declaretheorem[style=plain, numberwithin=section,
+#+LATEX_HEADER:   name=\translate{Proposition}]{assertion}
+#+LATEX_HEADER:   \declaretheorem[style=plain, numbered=no, name=\translate{Proposition}]{assertion*}
+#+LATEX_HEADER:   %% Лемма
+#+LATEX_HEADER:   \declaretheorem[style=plain, numberwithin=section,
+#+LATEX_HEADER:   name=\translate{Lemma}]{lemma}
+#+LATEX_HEADER:   \declaretheorem[style=plain, numbered=no, name=\translate{Lemma}]{lemma*}
+#+LATEX_HEADER:   %% Следствие
+#+LATEX_HEADER:   \declaretheorem[style=plain, numberwithin=section, name=\translate{Corollary}]{corollary}
+#+LATEX_HEADER:   \declaretheorem[style=plain, numbered=no, name=\translate{Corollary}]{corollary*}

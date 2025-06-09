@@ -1,0 +1,192 @@
+#+LATEX_HEADER: \usepackage{thmtools}
+#+LATEX_HEADER:   %% Замечание
+#+LATEX_HEADER:   \declaretheorem[style=plain, numberwithin=section,
+#+LATEX_HEADER:   name=Замечание]{remark}
+#+LATEX_HEADER:   \declaretheorem[style=plain, numbered=no, name=Замечание]{remark*}
+#+LATEX_HEADER:   %% Пример
+#+LATEX_HEADER:   \declaretheorem[style=definition, numberwithin=section,
+#+LATEX_HEADER:   name=Пример]{example0}
+#+LATEX_HEADER:   \declaretheorem[style=definition, numbered=no,
+#+LATEX_HEADER:   name=Пример]{example*}
+#+LATEX_HEADER:   %% Задача
+#+LATEX_HEADER:   \declaretheorem[style=remark, numberwithin=section,
+#+LATEX_HEADER:   name=Задача]{task}
+#+LATEX_HEADER:   \declaretheorem[style=remark, numbered=no, name=Задача]{task*}
+#+LATEX_HEADER:   %% Упражнение
+#+LATEX_HEADER:   \declaretheorem[style=remark, numberwithin=section,
+#+LATEX_HEADER:   name=Упражнение]{exercise}
+#+LATEX_HEADER:   \declaretheorem[style=remark, numbered=no,
+#+LATEX_HEADER:   name=Упражнение]{exercise*}
+#+LATEX_HEADER:   %% Вопрос
+#+LATEX_HEADER:   \declaretheorem[style=remark, numberwithin=section,
+#+LATEX_HEADER:   name=Вопрос]{question}
+#+LATEX_HEADER:   \declaretheorem[style=remark, numbered=no, name=Вопрос]{question*}
+#+LATEX_HEADER: \usepackage[
+#+LATEX_HEADER:   theorems,
+#+LATEX_HEADER:   skins,
+#+LATEX_HEADER:   breakable]{tcolorbox}
+#+LATEX_HEADER: \tcbset{
+#+LATEX_HEADER:   defstyle/.style={
+#+LATEX_HEADER:       enhanced,
+#+LATEX_HEADER:       % frame empty,
+#+LATEX_HEADER:       interior empty,
+#+LATEX_HEADER:       colframe=green!15!white,
+#+LATEX_HEADER:       coltitle=black,
+#+LATEX_HEADER:       fonttitle=\bfseries,
+#+LATEX_HEADER:       colbacktitle=green!30!white,
+#+LATEX_HEADER:       separator sign none,
+#+LATEX_HEADER:       description delimiters = {(}{)},
+#+LATEX_HEADER:       borderline={0.5mm}{0mm}{green!30},
+#+LATEX_HEADER:       top=10mm,
+#+LATEX_HEADER:       % borderline={0.5mm}{0mm}{ForestGreen!50!white,dashed},
+#+LATEX_HEADER:       attach boxed title to top left={yshift=-4mm, xshift=2mm},
+#+LATEX_HEADER:       boxed title style={boxrule=0.4pt},
+#+LATEX_HEADER:       varwidth boxed title},
+#+LATEX_HEADER:   propstyle/.style={
+#+LATEX_HEADER:       enhanced,
+#+LATEX_HEADER:       % frame empty,
+#+LATEX_HEADER:       interior empty,
+#+LATEX_HEADER:       colframe=red!15!white,
+#+LATEX_HEADER:       coltitle=black,
+#+LATEX_HEADER:       fonttitle=\bfseries,
+#+LATEX_HEADER:       % fontupper=\itshape,
+#+LATEX_HEADER:       colbacktitle=red!30!white,
+#+LATEX_HEADER:       separator sign none,
+#+LATEX_HEADER:       description delimiters = {(}{)},
+#+LATEX_HEADER:       borderline={0.5mm}{0mm}{red!30},
+#+LATEX_HEADER:       top=10mm,
+#+LATEX_HEADER:       % borderline={0.5mm}{0mm}{ForestGreen!50!white,dashed},
+#+LATEX_HEADER:       attach boxed title to top left={yshift=-4mm, xshift=2mm},
+#+LATEX_HEADER:       boxed title style={boxrule=0.4pt},
+#+LATEX_HEADER:       varwidth boxed title},
+#+LATEX_HEADER:   probstyle/.style={
+#+LATEX_HEADER:       enhanced,
+#+LATEX_HEADER:       % frame empty,
+#+LATEX_HEADER:       interior empty,
+#+LATEX_HEADER:       colframe=blue!15!white,
+#+LATEX_HEADER:       coltitle=black,
+#+LATEX_HEADER:       fonttitle=\bfseries,
+#+LATEX_HEADER:       % fontupper=\itshape,
+#+LATEX_HEADER:       colbacktitle=blue!30!white,
+#+LATEX_HEADER:       separator sign none,
+#+LATEX_HEADER:       description delimiters = {(}{)},
+#+LATEX_HEADER:       borderline={0.5mm}{0mm}{blue!30},
+#+LATEX_HEADER:       top=10mm,
+#+LATEX_HEADER:       % borderline={0.5mm}{0mm}{ForestGreen!50!white,dashed},
+#+LATEX_HEADER:       attach boxed title to top left={yshift=-4mm, xshift=2mm},
+#+LATEX_HEADER:       boxed title style={boxrule=0.4pt},
+#+LATEX_HEADER:       varwidth boxed title},
+#+LATEX_HEADER: }
+#+LATEX_HEADER:
+#+LATEX_HEADER: \tcolorboxenvironment{proof}{%
+#+LATEX_HEADER:   blanker,
+#+LATEX_HEADER:   breakable,
+#+LATEX_HEADER:   left=5mm,
+#+LATEX_HEADER:   before skip=10pt,
+#+LATEX_HEADER:   after skip=10pt,
+#+LATEX_HEADER:   borderline west={1mm}{0pt}{red!70!white}
+#+LATEX_HEADER: }%
+#+LATEX_HEADER: \usepackage{varwidth}
+#+LATEX_HEADER:
+#+LATEX_HEADER: %%%   DEFINITIONS
+#+LATEX_HEADER: \newcounter{defcounter}[section]
+#+LATEX_HEADER: \numberwithin{defcounter}{section}
+#+LATEX_HEADER:
+#+LATEX_HEADER: \newtcbtheorem{TCBdefinition}{Определение~\thedefcounter}{defstyle}{}
+#+LATEX_HEADER: \newenvironment*{definition}[1][]{
+#+LATEX_HEADER:   \refstepcounter{defcounter}
+#+LATEX_HEADER:   \begin{TCBdefinition*}{#1}
+#+LATEX_HEADER:     }{\end{TCBdefinition*}}
+#+LATEX_HEADER:
+#+LATEX_HEADER: \newtcbtheorem{TCBdefinition0}{Определение}{defstyle}{}
+#+LATEX_HEADER: \newenvironment*{definition*}{
+#+LATEX_HEADER:   \begin{TCBdefinition0*}{}
+#+LATEX_HEADER:     }{\end{TCBdefinition0*}}
+#+LATEX_HEADER:
+#+LATEX_HEADER: %%%   PROPOSITION
+#+LATEX_HEADER: \newcounter{propcounter}[section]
+#+LATEX_HEADER: \numberwithin{propcounter}{section}
+#+LATEX_HEADER:
+#+LATEX_HEADER: \newtcbtheorem{TCBproposition}{Утверждение~\thepropcounter}{propstyle}{}
+#+LATEX_HEADER: \newenvironment*{proposition}[1][]{
+#+LATEX_HEADER:   \refstepcounter{propcounter}
+#+LATEX_HEADER:   \begin{TCBproposition*}{#1}
+#+LATEX_HEADER:     }{\end{TCBproposition*}}
+#+LATEX_HEADER:
+#+LATEX_HEADER: \newtcbtheorem{TCBproposition0}{Утверждение}{propstyle}{}
+#+LATEX_HEADER: \newenvironment*{proposition*}{
+#+LATEX_HEADER:   \begin{TCBproposition0*}{}
+#+LATEX_HEADER:     }{\end{TCBproposition0*}}
+#+LATEX_HEADER:
+#+LATEX_HEADER: %%%   THEOREM
+#+LATEX_HEADER: \newcounter{thmcounter}[section]
+#+LATEX_HEADER: \numberwithin{thmcounter}{section}
+#+LATEX_HEADER:
+#+LATEX_HEADER: \newtcbtheorem{TCBtheorem}{Теорема~\thethmcounter}{propstyle}{}
+#+LATEX_HEADER: \newenvironment*{theorem}[1][]{
+#+LATEX_HEADER:   \refstepcounter{thmcounter}
+#+LATEX_HEADER:   \begin{TCBtheorem*}{#1}
+#+LATEX_HEADER:     }{\end{TCBtheorem*}}
+#+LATEX_HEADER:
+#+LATEX_HEADER: \newtcbtheorem{TCBtheorem0}{Теорема}{propstyle}{}
+#+LATEX_HEADER: \newenvironment*{theorem*}{
+#+LATEX_HEADER:   \begin{TCBtheorem0*}{}
+#+LATEX_HEADER:     }{\end{TCBtheorem0*}}
+#+LATEX_HEADER:
+#+LATEX_HEADER: %%%   LEMMA
+#+LATEX_HEADER: \newcounter{lemmacounter}[section]
+#+LATEX_HEADER: \numberwithin{lemmacounter}{section}
+#+LATEX_HEADER:
+#+LATEX_HEADER: \newtcbtheorem{TCBlemma}{Лемма~\thelemmacounter}{propstyle}{}
+#+LATEX_HEADER: \newenvironment*{lemma}[1][]{
+#+LATEX_HEADER:   \refstepcounter{lemmacounter}
+#+LATEX_HEADER:   \begin{TCBlemma*}{#1}
+#+LATEX_HEADER:     }{\end{TCBlemma*}}
+#+LATEX_HEADER:
+#+LATEX_HEADER: \newtcbtheorem{TCBlemma0}{Лемма}{propstyle}{}
+#+LATEX_HEADER: \newenvironment*{lemma*}{
+#+LATEX_HEADER:   \begin{TCBlemma0*}{}
+#+LATEX_HEADER:     }{\end{TCBlemma0*}}
+#+LATEX_HEADER:
+#+LATEX_HEADER: %%%   ASSERTION
+#+LATEX_HEADER: \newcounter{assertioncounter}[section]
+#+LATEX_HEADER: \numberwithin{assertioncounter}{section}
+#+LATEX_HEADER:
+#+LATEX_HEADER: \newtcbtheorem{TCBassertion}{Утверждение~\theassertioncounter}{propstyle}{}
+#+LATEX_HEADER: \newenvironment*{assertion}[1][]{
+#+LATEX_HEADER:   \refstepcounter{assertioncounter}
+#+LATEX_HEADER:   \begin{TCBassertion*}{#1}
+#+LATEX_HEADER:     }{\end{TCBassertion*}}
+#+LATEX_HEADER:
+#+LATEX_HEADER: \newtcbtheorem{TCBassertion0}{Утверждение}{propstyle}{}
+#+LATEX_HEADER: \newenvironment*{assertion*}{
+#+LATEX_HEADER:   \begin{TCBassertion0*}{}
+#+LATEX_HEADER:     }{\end{TCBassertion0*}}
+#+LATEX_HEADER:
+#+LATEX_HEADER: %%% COROLLARY
+#+LATEX_HEADER: \newcounter{corollarycounter}[section]
+#+LATEX_HEADER: \numberwithin{corollarycounter}{section}
+#+LATEX_HEADER:
+#+LATEX_HEADER: \newtcbtheorem{TCBcorollary}{Следствие~\thecorollarycounter}{propstyle}{}
+#+LATEX_HEADER: \newenvironment*{corollary}[1][]{
+#+LATEX_HEADER:   \refstepcounter{corollarycounter}
+#+LATEX_HEADER:   \begin{TCBcorollary*}{#1}
+#+LATEX_HEADER:     }{\end{TCBcorollary*}}
+#+LATEX_HEADER:
+#+LATEX_HEADER: \newtcbtheorem{TCBcorollary0}{Следствие}{propstyle}{}
+#+LATEX_HEADER: \newenvironment*{corollary*}{
+#+LATEX_HEADER:   \begin{TCBcorollary0*}{}
+#+LATEX_HEADER:     }{\end{TCBcorollary0*}}
+#+LATEX_HEADER:
+#+LATEX_HEADER: %%% PROBLEM
+#+LATEX_HEADER: \newcounter{problemcounter}[section]
+#+LATEX_HEADER: \numberwithin{problemcounter}{section}
+#+LATEX_HEADER: \newtcbtheorem{TCBproblem}{Проблема~\theproblemcounter}{probstyle}{}
+#+LATEX_HEADER: \newenvironment*{problem}[1][]{
+#+LATEX_HEADER:   \refstepcounter{problemcounter}
+#+LATEX_HEADER:   \begin{TCBproblem*}{#1}
+#+LATEX_HEADER:     }{\end{TCBproblem*}}
+#+LATEX_HEADER: \newtcbtheorem{TCBproblem0}{Проблема}{probstyle}{}
+#+LATEX_HEADER: \newenvironment*{problem*}{
+#+LATEX_HEADER:   \begin{TCBproblem0*}{}
+#+LATEX_HEADER:     }{\end{TCBproblem0*}}

@@ -1,0 +1,9 @@
+#+LATEX_HEADER_EXTRA: \newtranslation[to=Russian]{Definition}{Определение}
+#+LATEX_HEADER_EXTRA: \newtranslation[to=Russian]{Remark}{Замечание}
+#+LATEX_HEADER_EXTRA: \newtranslation[to=Russian]{Theorem}{Теорема}
+#+LATEX_HEADER_EXTRA: \newtranslation[to=Russian]{Lemm}{Лемма}
+#+LATEX_HEADER_EXTRA: \newtranslation[to=Russian]{Proposition}{Утверждение}
+#+LATEX_HEADER_EXTRA: \newtranslation[to=Russian]{Assertion}{Утверждение}
+#+LATEX_HEADER_EXTRA: \newtranslation[to=Russian]{Problem}{Проблема}
+#+LATEX_HEADER_EXTRA: \newtranslation[to=Russian]{Task}{Задача} \newtranslation[to=Russian]{Excercise}{Упражнение} \newtranslation[to=Russian]{Question}{Вопрос}
+#+LATEX_HEADER_EXTRA: \newtranslation[to=Russian]{Corollary}{Следствие}
