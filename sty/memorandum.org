@@ -12,11 +12,19 @@
 #+LATEX_HEADER_EXTRA: \titleformat{\subsection}{\normalfont\bfseries}{}{1em}{}[]
 #+LATEX_HEADER_EXTRA: \titleformat{\subsubsection}{\normalfont\bfseries}{}{1em}{}[]
 
+#+LATEX_HEADER_EXTRA: \newcommand{\headerskip}{10\bigskipamount}
+#+LATEX_HEADER_EXTRA: \newcommand{\titleskip}{5\bigskipamount}
+#+LATEX_HEADER_EXTRA: \newcommand{\signedbyskip}{5\bigskipamount}
+#+LATEX_HEADER_EXTRA: \newcommand{\signedbyinternalskip}{\smallskipamount}
+#+LATEX_HEADER_EXTRA: \newcommand{\dateskip}{\smallskipamount}
+
+
 #+LATEX_HEADER_EXTRA: \newcommand*{\signedby}[3][]{  % insert signature
 #+LATEX_HEADER_EXTRA:   \par\noindent
+#+LATEX_HEADER_EXTRA:   \vspace{\signedbyskip}%
 #+LATEX_HEADER_EXTRA:   \textsc{#1}
 #+LATEX_HEADER_EXTRA:   \par
-#+LATEX_HEADER_EXTRA:   \medskip
+#+LATEX_HEADER_EXTRA:   \vspace{\signedbyinternalskip}
 #+LATEX_HEADER_EXTRA:   \noindent
 #+LATEX_HEADER_EXTRA:   \begin{minipage}[b][][b]{0.5\textwidth}
 #+LATEX_HEADER_EXTRA:     \begin{flushleft}
@@ -40,6 +48,7 @@
 #+LATEX_HEADER_EXTRA:}
 
 #+LATEX_HEADER_EXTRA: \newcommand*{\datesty}[1]{% Insert date
+#+LATEX_HEADER_EXTRA:   \vspace{\dateskip}%
 #+LATEX_HEADER_EXTRA:   \begin{flushright}
 #+LATEX_HEADER_EXTRA:     \begin{spacing}{1}
 #+LATEX_HEADER_EXTRA:       #1
@@ -74,10 +83,11 @@
 #+LATEX_HEADER_EXTRA: \renewcommand{\maketitle}{%
 #+LATEX_HEADER_EXTRA: \thispagestyle{empty}
 #+LATEX_HEADER_EXTRA: \printheader{\UseName{@subtitle}}\par
-#+LATEX_HEADER_EXTRA: \vspace{0pt plus.2fill}
+#+LATEX_HEADER_EXTRA: \vspace{\headerskip}%
 #+LATEX_HEADER_EXTRA: \begin{center}
 #+LATEX_HEADER_EXTRA: \singlespacing
 #+LATEX_HEADER_EXTRA: {\textsc{\MakeUppercase{\UseName{@title}}}}\par
 #+LATEX_HEADER_EXTRA: \end{center}
-#+LATEX_HEADER_EXTRA: \vspace{0pt plus.1fill}
+#+LATEX_HEADER_EXTRA: \par%
+#+LATEX_HEADER_EXTRA: \vspace{\titleskip}%
 #+LATEX_HEADER_EXTRA: }
