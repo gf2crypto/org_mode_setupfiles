@@ -1,7 +1,7 @@
 #+LATEX_HEADER_EXTRA: \newtranslation[to=Russian]{Definition}{Определение}
 #+LATEX_HEADER_EXTRA: \newtranslation[to=Russian]{Remark}{Замечание}
 #+LATEX_HEADER_EXTRA: \newtranslation[to=Russian]{Theorem}{Теорема}
-#+LATEX_HEADER_EXTRA: \newtranslation[to=Russian]{Lemm}{Лемма}
+#+LATEX_HEADER_EXTRA: \newtranslation[to=Russian]{Lemma}{Лемма}
 #+LATEX_HEADER_EXTRA: \newtranslation[to=Russian]{Proposition}{Утверждение}
 #+LATEX_HEADER_EXTRA: \newtranslation[to=Russian]{Assertion}{Утверждение}
 #+LATEX_HEADER_EXTRA: \newtranslation[to=Russian]{Problem}{Проблема}
