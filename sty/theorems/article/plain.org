@@ -42,8 +42,8 @@
 #+LATEX_HEADER:   \declaretheorem[style=plain, numbered=no,
 #+LATEX_HEADER:   name=\translate{Proposition}]{proposition*}
 #+LATEX_HEADER:   \declaretheorem[style=plain, numberwithin=section,
-#+LATEX_HEADER:   name=\translate{Proposition}]{assertion}
-#+LATEX_HEADER:   \declaretheorem[style=plain, numbered=no, name=\translate{Proposition}]{assertion*}
+#+LATEX_HEADER:   name=\translate{Assertion}]{assertion}
+#+LATEX_HEADER:   \declaretheorem[style=plain, numbered=no, name=\translate{Assertion}]{assertion*}
 #+LATEX_HEADER:   %% Лемма
 #+LATEX_HEADER:   \declaretheorem[style=plain, numberwithin=section,
 #+LATEX_HEADER:   name=\translate{Lemma}]{lemma}
