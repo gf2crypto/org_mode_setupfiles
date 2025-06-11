@@ -1,0 +1,5 @@
+#+setupfile: ./en.org
+#+setupfile: ../../sty/math/rustyles/common.org
+#+LANGUAGE: ru
+#+latex_header: \uselanguage{Russian}
+#+latex_header: \languagepath{Russian}

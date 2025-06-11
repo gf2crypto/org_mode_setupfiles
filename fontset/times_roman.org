@@ -1,2 +1,3 @@
-#+LATEX_HEADER: \usepackage{tempora}
-#+LATEX_HEADER: \usepackage{newtxmath}
+#+LATEX_HEADER: \usepackage[scale=0.98]{tempora}
+#+LATEX_HEADER: \usepackage[bigdelims,vvarb,upint,slantedGreek]{newtxmath}
+#+LATEX_HEADER: \usepackage[protrusion, expansion]{microtype}

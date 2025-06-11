@@ -1,0 +1,3 @@
+#+LATEX_HEADER: \usepackage[osf,lf,type1]{libertine}
+#+LATEX_HEADER: \usepackage[libertine,liby,bigdelims,vvarbb,upint, slantedGreek, scaled=1.03]{newtxmath}
+#+LATEX_HEADER: \usepackage[protrusion, expansion]{microtype}

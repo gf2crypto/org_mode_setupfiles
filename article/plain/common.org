@@ -1,0 +1,6 @@
+#+setupfile: ../../sty/article.org
+#+setupfile: ../../sty/math/common.org
+#+setupfile: ../../sty/math/user.org
+#+setupfile: ../../sty/math/qref.org
+#+setupfile: ../../sty/theorems/article/plain.org
+#+setupfile: ../../sty/listings/common.org

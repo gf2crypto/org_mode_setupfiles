@@ -200,3 +200,4 @@
 #+LATEX_HEADER:   xleftmargin={\lmarg},           % Чтобы весь код и полоска с номерами строк была смещена влево, так чтобы цифры не вылезали за пределы текста слева
 #+LATEX_HEADER: }
 #+LATEX_HEADER: \renewcommand{\lstlistingname}{\translate{Listing}}
+#+LATEX_HEADER: \newtranslation[to=Russian]{Listing}{Листинг}
