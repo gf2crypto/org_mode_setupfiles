@@ -1,2 +1,7 @@
 #+setupfile: ./common.org
 #+LANGUAGE: en
+#+LATEX_CLASS_OPTIONS: [12pt]
+#+LATEX_HEADER_EXTRA: \geometry{left=2.5cm, right=2cm, top=2cm, bottom=2cm}
+#+latex_header_extra: \setstretch{1.25}
+#+OPTIONS: tags:nil
+# #+LATEX_HEADER_EXTRA: \usepackage{indentfirst}
