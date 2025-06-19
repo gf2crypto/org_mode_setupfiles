@@ -1,0 +1,43 @@
+# По ГОСТ 2.105, п. 4.3.8 Приложения обозначают заглавными буквами русского алфавита,
+# начиная с А, за исключением букв Ё, З, Й, О, Ч, Ь, Ы, Ъ.
+# Здесь также переделаны все нумерации русскими буквами.
+#+LATEX_HEADER_EXTRA: \makeatletter
+#+LATEX_HEADER_EXTRA: \if@uni@ode
+#+LATEX_HEADER_EXTRA:   \def\russian@Alph#1{\ifcase#1\or
+#+LATEX_HEADER_EXTRA:     А\or Б\or В\or Г\or Д\or Е\or Ж\or
+#+LATEX_HEADER_EXTRA:     И\or К\or Л\or М\or Н\or
+#+LATEX_HEADER_EXTRA:     П\or Р\or С\or Т\or У\or Ф\or Х\or
+#+LATEX_HEADER_EXTRA:     Ц\or Ш\or Щ\or Э\or Ю\or Я\else\@ctrerr\fi}
+#+LATEX_HEADER_EXTRA: \else
+#+LATEX_HEADER_EXTRA:   \def\russian@Alph#1{\ifcase#1\or
+#+LATEX_HEADER_EXTRA:     \CYRA\or\CYRB\or\CYRV\or\CYRG\or\CYRD\or\CYRE\or\CYRZH\or
+#+LATEX_HEADER_EXTRA:     \CYRI\or\CYRK\or\CYRL\or\CYRM\or\CYRN\or
+#+LATEX_HEADER_EXTRA:     \CYRP\or\CYRR\or\CYRS\or\CYRT\or\CYRU\or\CYRF\or\CYRH\or
+#+LATEX_HEADER_EXTRA:     \CYRC\or\CYRSH\or\CYRSHCH\or\CYREREV\or\CYRYU\or
+#+LATEX_HEADER_EXTRA:     \CYRYA\else\@ctrerr\fi}
+#+LATEX_HEADER_EXTRA: \fi
+#+LATEX_HEADER_EXTRA: \if@uni@ode
+#+LATEX_HEADER_EXTRA:   \def\russian@alph#1{\ifcase#1\or
+#+LATEX_HEADER_EXTRA:     а\or б\or в\or г\or д\or е\or ж\or
+#+LATEX_HEADER_EXTRA:     и\or к\or л\or м\or н\or
+#+LATEX_HEADER_EXTRA:     п\or р\or с\or т\or у\or ф\or х\or
+#+LATEX_HEADER_EXTRA:     ц\or ш\or щ\or э\or ю\or я\else\@ctrerr\fi}
+#+LATEX_HEADER_EXTRA: \else
+#+LATEX_HEADER_EXTRA:   \def\russian@alph#1{\ifcase#1\or
+#+LATEX_HEADER_EXTRA:     \cyra\or\cyrb\or\cyrv\or\cyrg\or\cyrd\or\cyre\or\cyrzh\or
+#+LATEX_HEADER_EXTRA:     \cyri\or\cyrk\or\cyrl\or\cyrm\or\cyrn\or
+#+LATEX_HEADER_EXTRA:     \cyrp\or\cyrr\or\cyrs\or\cyrt\or\cyru\or\cyrf\or\cyrh\or
+#+LATEX_HEADER_EXTRA:     \cyrc\or\cyrsh\or\cyrshch\or\cyrerev\or\cyryu\or
+#+LATEX_HEADER_EXTRA:     \cyrya\else\@ctrerr\fi}
+#+LATEX_HEADER_EXTRA: \fi
+#+LATEX_HEADER_EXTRA: \makeatother
+
+#+LATEX_HEADER_EXTRA: \makeatletter
+#+LATEX_HEADER_EXTRA: \newcommand\appendix@section[1]{%
+#+LATEX_HEADER_EXTRA: \refstepcounter{section}%
+#+LATEX_HEADER_EXTRA: \orig@section*{Приложение \russian@Alph\c@section. #1}%
+#+LATEX_HEADER_EXTRA: \addcontentsline{toc}{section}{Приложение \russian@Alph\c@section. #1}%
+#+LATEX_HEADER_EXTRA: }
+#+LATEX_HEADER_EXTRA: \let\orig@section\section
+#+LATEX_HEADER_EXTRA: \g@addto@macro\appendix{\let\section\appendix@section}
+#+LATEX_HEADER_EXTRA: \makeatother

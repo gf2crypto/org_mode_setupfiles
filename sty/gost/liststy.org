@@ -1,0 +1,18 @@
+#+LATEX_HEADER_EXTRA: \usepackage{enumitem}
+# Используем короткое тире (endash) для ненумерованных списков (ГОСТ 2.105-95, пункт 4.1.7, требует дефиса, но так лучше смотрится)
+#+LATEX_HEADER_EXTRA: \renewcommand{\labelitemi}{\normalfont\bfseries{--}}
+#+LATEX_HEADER_EXTRA: \renewcommand{\labelitemii}{\normalfont\bfseries{--}}
+#+LATEX_HEADER_EXTRA: \renewcommand{\labelitemiii}{\normalfont\bfseries{--}}
+#+LATEX_HEADER_EXTRA: \renewcommand{\labelitemiv}{\normalfont\bfseries{--}}
+#+LATEX_HEADER_EXTRA:
+# Перечисление строчными буквами латинского алфавита (ГОСТ 2.105-95, 4.1.7)
+#+LATEX_HEADER_EXTRA: \makeatletter
+#+LATEX_HEADER_EXTRA: \AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+#+LATEX_HEADER_EXTRA: \makeatother
+#+LATEX_HEADER_EXTRA: \renewcommand{\theenumii}{\asbuk{enumii}}
+#+LATEX_HEADER_EXTRA: \renewcommand{\labelenumii}{\theenumii)}
+#+LATEX_HEADER_EXTRA: \renewcommand{\theenumiii}{\arabic{enumiii}}
+#+LATEX_HEADER_EXTRA: \renewcommand{\labelenumiii}{\theenumiii)}
+#+LATEX_HEADER_EXTRA: \setlist{nosep,                % Единый стиль для всех списков (пакет enumitem), без дополнительных интервалов.
+#+LATEX_HEADER_EXTRA:     labelindent=\parindent,leftmargin=*%            % Каждый пункт, подпункт и перечисление записывают с абзацного отступа (ГОСТ 2.105-95, 4.1.8)
+#+LATEX_HEADER_EXTRA: }
