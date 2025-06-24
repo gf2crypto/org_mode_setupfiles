@@ -1,5 +1,5 @@
 #+setupfile: ../../sty/article.org
-#+setupfile: ../../sty/math/common.org
-#+setupfile: ../../sty/math/user.org
-#+setupfile: ../../sty/math/qref.org
-#+setupfile: ../../sty/listings/common.org
+#+LATEX_CLASS_OPTIONS: [12pt]
+#+LATEX_HEADER_EXTRA: \geometry{left=2.5cm, right=2cm, top=2cm, bottom=2cm}
+#+latex_header_extra: \setstretch{1.25}
+#+OPTIONS: tags:nil

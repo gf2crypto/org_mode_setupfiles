@@ -7,10 +7,6 @@
 #+setupfile: ../sty/gost/page/article.org
 #+setupfile: ../sty/gost/titles/article.org
 #+setupfile: ../sty/gost/toc/article.org
-#+setupfile: ../sty/math/common.org
-#+setupfile: ../sty/math/user.org
-#+setupfile: ../sty/math/qref.org
-#+setupfile: ../sty/listings/common.org
 
 #+LANGUAGE: ru
 #+LATEX_HEADER: \uselanguage{Russian}
