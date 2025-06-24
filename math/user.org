@@ -1,0 +1,8 @@
+#+setupfile: ./common.org
+#+setupfile: ./qref.org
+#+setupfile: ./user/operators.org
+#+setupfile: ./user/linearcodes.org
+#+setupfile: ./user/commands.org
+#+setupfile: ./user/vectors_sty.org
+#+setupfile: ./user/matrix_sty.org
+#+setupfile: ./user/algebraic_sty.org

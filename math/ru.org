@@ -1,2 +1,2 @@
-#+setupfile: ./common.org
-#+setupfile: ../sty/math/rustyles/common.org
+#+setupfile: ./user.org
+#+setupfile: ./rustyles/common.org
