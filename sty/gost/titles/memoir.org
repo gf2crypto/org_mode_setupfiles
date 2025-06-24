@@ -1,0 +1,68 @@
+# Оформление заголовков глав, разделов, подразделов
+# Работа должна быть выполнена ... размером шрифта 12-14 пунктов (ГОСТ Р 7.0.11-2011, 5.3.8). То есть не должно быть надписей шрифтом более 14. Так и поставим.
+# Эти установки будут давать одинаковый результат независимо от выбора базовым шрифтом 12 пт или 14 пт
+# Коэффициент кратности к размеру шрифта
+#+LATEX_HEADER_EXTRA: \newcounter{intvl}
+#+LATEX_HEADER_EXTRA: \setcounter{intvl}{3}
+# Установки для размера шрифта 14 pt
+#+LATEX_HEADER_EXTRA: \newlength{\curtextsize}
+#+LATEX_HEADER_EXTRA: \newlength{\bigtextsize}
+#+LATEX_HEADER_EXTRA: \setlength{\bigtextsize}{13.9pt}
+#+LATEX_HEADER_EXTRA: \makeatletter
+#+LATEX_HEADER_EXTRA: \setlength{\curtextsize}{\f@size pt}
+#+LATEX_HEADER_EXTRA: \makeatother
+
+#+LATEX_HEADER_EXTRA: \newcommand{\basegostsectionfont}{\fontsize{14pt}{16pt}\selectfont\bfseries}
+#+LATEX_HEADER_EXTRA:
+#+LATEX_HEADER_EXTRA: \makechapterstyle{thesisgost}{%
+#+LATEX_HEADER_EXTRA:     \chapterstyle{default}
+#+LATEX_HEADER_EXTRA:     \setlength{\beforechapskip}{0pt}
+#+LATEX_HEADER_EXTRA:     \setlength{\midchapskip}{0pt}
+#+LATEX_HEADER_EXTRA:     \setlength{\afterchapskip}{\theintvl\curtextsize}
+#+LATEX_HEADER_EXTRA:     \renewcommand*{\chapnamefont}{\basegostsectionfont}
+#+LATEX_HEADER_EXTRA:     \renewcommand*{\chapnumfont}{\basegostsectionfont}
+#+LATEX_HEADER_EXTRA:     \renewcommand*{\chaptitlefont}{\basegostsectionfont}
+#+LATEX_HEADER_EXTRA:     \renewcommand*{\chapterheadstart}{}
+# добавляет точку с пробелом после номера раздела
+#+LATEX_HEADER_EXTRA:     \renewcommand*{\afterchapternum}{.\space}
+#+LATEX_HEADER_EXTRA:     \renewcommand*{\printchapternum}{\hdngaligni\hdngalign\chapnumfont \thechapter}
+#+LATEX_HEADER_EXTRA:     \renewcommand*{\printchaptername}{}
+#+LATEX_HEADER_EXTRA:     \renewcommand*{\printchapternonum}{\hdngaligni\hdngalign}
+#+LATEX_HEADER_EXTRA: }
+#+LATEX_HEADER_EXTRA: \setsecnumdepth{subsubsection}
+# Точка после номера раздела и подраздела
+#+LATEX_HEADER_EXTRA: \setsecnumformat{\csname the#1\endcsname.\quad}
+#+LATEX_HEADER_EXTRA:
+#+LATEX_HEADER_EXTRA: \makeatletter
+#+LATEX_HEADER_EXTRA: \makechapterstyle{thesisgostchapname}{%
+#+LATEX_HEADER_EXTRA:     \chapterstyle{thesisgost}
+#+LATEX_HEADER_EXTRA:     \renewcommand*{\printchapternum}{\chapnumfont \thechapter}
+#+LATEX_HEADER_EXTRA:     \renewcommand*{\printchaptername}{\hdngaligni\hdngalign\chapnamefont \@chapapp} %
+#+LATEX_HEADER_EXTRA: }
+#+LATEX_HEADER_EXTRA: \makeatother
+#+LATEX_HEADER_EXTRA:
+#+LATEX_HEADER_EXTRA: \chapterstyle{thesisgost}
+#+LATEX_HEADER_EXTRA:
+#+LATEX_HEADER_EXTRA: \setsecheadstyle{\basegostsectionfont\hdngalign}
+#+LATEX_HEADER_EXTRA: \setsecindent{\otstuplen}
+#+LATEX_HEADER_EXTRA:
+#+LATEX_HEADER_EXTRA: \setsubsecheadstyle{\basegostsectionfont\hdngalign}
+#+LATEX_HEADER_EXTRA: \setsubsecindent{\otstuplen}
+#+LATEX_HEADER_EXTRA:
+#+LATEX_HEADER_EXTRA: \setsubsubsecheadstyle{\basegostsectionfont\hdngalign}
+#+LATEX_HEADER_EXTRA: \setsubsubsecindent{\otstuplen}
+# Заголовки подразделов центрируются с учетом номера, как block
+#+LATEX_HEADER_EXTRA:
+#+LATEX_HEADER_EXTRA: \sethangfrom{\noindent #1}
+#+LATEX_HEADER_EXTRA:
+#+LATEX_HEADER_EXTRA: \chapterstyle{thesisgostchapname}
+# будет вписано слово Глава перед каждым номером раздела в оглавлении
+#+LATEX_HEADER_EXTRA: \renewcommand*{\cftchaptername}{\chaptername\space}
+# Интервалы между заголовками
+# Заголовки отделяют от текста сверху и снизу тремя интервалами (ГОСТ Р 7.0.11-2011, 5.3.5).
+#+LATEX_HEADER_EXTRA: \setbeforesecskip{\theintvl\curtextsize}
+#+LATEX_HEADER_EXTRA: \setaftersecskip{\theintvl\curtextsize}
+#+LATEX_HEADER_EXTRA: \setbeforesubsecskip{\theintvl\curtextsize}
+#+LATEX_HEADER_EXTRA: \setaftersubsecskip{\theintvl\curtextsize}
+#+LATEX_HEADER_EXTRA: \setbeforesubsubsecskip{\theintvl\curtextsize}
+#+LATEX_HEADER_EXTRA: \setaftersubsubsecskip{\theintvl\curtextsize}

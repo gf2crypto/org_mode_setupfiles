@@ -31,13 +31,3 @@
 #+LATEX_HEADER_EXTRA:     \cyrya\else\@ctrerr\fi}
 #+LATEX_HEADER_EXTRA: \fi
 #+LATEX_HEADER_EXTRA: \makeatother
-
-#+LATEX_HEADER_EXTRA: \makeatletter
-#+LATEX_HEADER_EXTRA: \newcommand\appendix@section[1]{%
-#+LATEX_HEADER_EXTRA: \refstepcounter{section}%
-#+LATEX_HEADER_EXTRA: \orig@section*{Приложение \russian@Alph\c@section. #1}%
-#+LATEX_HEADER_EXTRA: \addcontentsline{toc}{section}{Приложение \russian@Alph\c@section. #1}%
-#+LATEX_HEADER_EXTRA: }
-#+LATEX_HEADER_EXTRA: \let\orig@section\section
-#+LATEX_HEADER_EXTRA: \g@addto@macro\appendix{\let\section\appendix@section}
-#+LATEX_HEADER_EXTRA: \makeatother

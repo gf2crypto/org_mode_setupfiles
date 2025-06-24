@@ -1,0 +1,27 @@
+#+LATEX_CLASS: extarticle
+#+LATEX_CLASS_OPTIONS: [12pt]
+#+setupfile: ../sty/article.org
+#+setupfile: ../sty/gost/liststy.org
+#+setupfile: ../sty/gost/captions.org
+#+setupfile: ../sty/gost/appendix.org
+#+setupfile: ../sty/gost/page/article.org
+#+setupfile: ../sty/gost/titles/article.org
+#+setupfile: ../sty/gost/toc/article.org
+#+setupfile: ../sty/math/common.org
+#+setupfile: ../sty/math/user.org
+#+setupfile: ../sty/math/qref.org
+#+setupfile: ../sty/listings/common.org
+
+#+LANGUAGE: ru
+#+LATEX_HEADER: \uselanguage{Russian}
+#+LATEX_HEADER: \languagepath{Russian}
+#+OPTIONS: toc:t title:t author:t date:t tags:nil
+
+#+LATEX_HEADER: \onehalfspacing
+#+LATEX_HEADER: \setdisplayskipstretch{0.5} % \setdisplayskipstretch{-0.078}
+# Выставляем значения полей (ГОСТ 7.0.11-2011, 5.3.7)
+#+LATEX_HEADER_EXTRA: \geometry{a4paper, top=2cm, bottom=2cm, left=2.5cm, right=1.5cm, nofoot, nomarginpar}
+# Размер дополнительного верхнего поля
+#+LATEX_HEADER_EXTRA: \setlength{\topskip}{0pt}
+# Снимет warning, согласно https://tex.stackexchange.com/a/334346
+#+LATEX_HEADER_EXTRA: \setlength{\footskip}{12.3pt}
