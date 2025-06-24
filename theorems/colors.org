@@ -1,0 +1,1 @@
+#+setupfile: ../sty/theorems/article/colors.org
