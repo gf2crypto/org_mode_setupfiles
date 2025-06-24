@@ -1,7 +1,3 @@
-#+LATEX_HEADER: \usepackage{mathtools}
-#+LATEX_HEADER: \usepackage{amstext}
-#+LATEX_HEADER: \usepackage{amssymb}
-#+LATEX_HEADER: \usepackage{amsfonts}
 # Красивые дроби
 #+LATEX_HEADER: \usepackage{xfrac}
 #+LATEX_HEADER_EXTRA: \usepackage[

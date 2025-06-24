@@ -1,6 +1,6 @@
 #+LATEX_COMPILER: xelatex
-#+LATEX_HEADER: \usepackage{fontspec}
-#+LATEX_HEADER: \setmainfont{Cyrillic Modern}[Ligatures=TeX]
+#+LATEX_HEADER: % \usepackage{fontspec}
 #+LATEX_HEADER: \usepackage{mathspec}
+#+LATEX_HEADER: \setmainfont{Cyrillic Modern}[Ligatures=TeX]
 #+LATEX_HEADER: \setmathfont{Cyrillic Modern Math}
 #+LATEX_HEADER: \setmathfont[version=bold]{Cyrillic Modern Math}

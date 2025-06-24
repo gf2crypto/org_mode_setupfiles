@@ -13,8 +13,14 @@
 # Дополнительные символы
 #+LATEX_HEADER: \usepackage{textcomp}
 
+# Математика
+#+LATEX_HEADER: \usepackage{mathtools}
+#+LATEX_HEADER: \usepackage{amstext}
+#+LATEX_HEADER: \usepackage{amssymb}
+#+LATEX_HEADER: \usepackage{amsfonts}
+
 # Цвет
-#+LATEX_HEADER: \usepackage[dvipsnames, table, hyperref]{xcolor}
+#+LATEX_HEADER: \usepackage[dvipsnames, table]{xcolor}
 
 # Переносы
 #+LATEX_HEADER: \usepackage{hyphenat}

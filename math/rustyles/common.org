@@ -42,3 +42,13 @@
 #+LATEX_HEADER: \renewcommand{\omega}{\ensuremath{\upomega}}
 # Break math symbol and repeat it in next line
 #+LATEX_HEADER: \usepackage{rmathbr}
+
+#+LATEX_HEADER: \makeatletter
+#+LATEX_HEADER: \@ifpackageloaded{unicode-math}{%
+#+LATEX_HEADER:  % ---- unicode-math is loaded ----
+#+LATEX_HEADER:    \renewcommand{\vectorsymstyle}[1]{\ensuremath{\symbfup{#1}}}
+#+LATEX_HEADER:    \renewcommand{\matrixsymstyle}[1]{\ensuremath{\symbfup{#1}}}
+#+LATEX_HEADER: }{%
+#+LATEX_HEADER:   % ---- unicode-math is not used ----
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \makeatother

@@ -1,6 +1,21 @@
 # Matrices
-#+LATEX_HEADER: \newcommand{\matrixstyle}[1]{\ensuremath{\boldsymbol{#1}}}
+
+#+LATEX_HEADER: \makeatletter
+#+LATEX_HEADER: \@ifpackageloaded{unicode-math}{%
+#+LATEX_HEADER:  % ---- unicode-math is loaded ----
+#+LATEX_HEADER:    \newcommand{\matrixstyle}[1]{\ensuremath{\symbfit{#1}}}
+#+LATEX_HEADER:    \newcommand{\matrixsymstyle}[1]{\ensuremath{\symbfit{#1}}}
+#+LATEX_HEADER: }{%
+#+LATEX_HEADER:   % ---- unicode-math is not used ----
+#+LATEX_HEADER:    \newcommand{\matrixstyle}[1]{\ensuremath{\boldsymbol{#1}}}
+#+LATEX_HEADER:    \newcommand{\matrixsymstyle}[1]{\ensuremath{\boldsymbol{#1}}}
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \makeatother
+
+
 #+LATEX_HEADER: \newcommand{\matr}[1][M]{\matrixstyle{#1}}
+#+LATEX_HEADER: \WithSuffix\newcommand\matr*[1][\Gamma]{\matrixsymstyle{#1}}
+
 #+LATEX_HEADER: \newcommand{\aatr}{\matr[A]}
 #+LATEX_HEADER: \newcommand{\batr}{\matr[B]}
 #+LATEX_HEADER: \newcommand{\catr}{\matr[C]}
@@ -26,17 +41,17 @@
 #+LATEX_HEADER: \newcommand{\xatr}{\matr[X]}
 #+LATEX_HEADER: \newcommand{\yatr}{\matr[Y]}
 #+LATEX_HEADER: \newcommand{\zatr}{\matr[Z]}
-#+LATEX_HEADER: \newcommand{\ggatr}{\matr[\Gamma]}
-#+LATEX_HEADER: \newcommand{\ddatr}{\matr[\Delta]}
-#+LATEX_HEADER: \newcommand{\thatr}{\matr[\Theta]}
-#+LATEX_HEADER: \newcommand{\llatr}{\matr[\Lambda]}
-#+LATEX_HEADER: \newcommand{\xxatr}{\matr[\Xi]}
-#+LATEX_HEADER: \newcommand{\ppatr}{\matr[\Pi]}
-#+LATEX_HEADER: \newcommand{\ssatr}{\matr[\Sigma]}
-#+LATEX_HEADER: \newcommand{\uuatr}{\matr[\Upsilon]}
-#+LATEX_HEADER: \newcommand{\phatr}{\matr[\Phi]}
-#+LATEX_HEADER: \newcommand{\psatr}{\matr[\Psi]}
-#+LATEX_HEADER: \newcommand{\ooatr}{\matr[\Omega]}
+#+LATEX_HEADER: \newcommand{\ggatr}{\matr*[\Gamma]}
+#+LATEX_HEADER: \newcommand{\ddatr}{\matr*[\Delta]}
+#+LATEX_HEADER: \newcommand{\thatr}{\matr*[\Theta]}
+#+LATEX_HEADER: \newcommand{\llatr}{\matr*[\Lambda]}
+#+LATEX_HEADER: \newcommand{\xxatr}{\matr*[\Xi]}
+#+LATEX_HEADER: \newcommand{\ppatr}{\matr*[\Pi]}
+#+LATEX_HEADER: \newcommand{\ssatr}{\matr*[\Sigma]}
+#+LATEX_HEADER: \newcommand{\uuatr}{\matr*[\Upsilon]}
+#+LATEX_HEADER: \newcommand{\phatr}{\matr*[\Phi]}
+#+LATEX_HEADER: \newcommand{\psatr}{\matr*[\Psi]}
+#+LATEX_HEADER: \newcommand{\ooatr}{\matr*[\Omega]}
 
 #+LATEX_HEADER: \newcommand{\gpub}{\ensuremath{{\gatr}_{\mathrm{pub}}}}
 #+LATEX_HEADER: \newcommand{\hpub}{\ensuremath{{\hatr}_{\mathrm{pub}}}}

@@ -1,6 +1,20 @@
 # Vectors
-#+LATEX_HEADER: \newcommand{\vectorstyle}[1]{\ensuremath{\boldsymbol{#1}}}
+#+LATEX_HEADER: \makeatletter
+#+LATEX_HEADER: \@ifpackageloaded{unicode-math}{%
+#+LATEX_HEADER:  % ---- unicode-math is loaded ----
+#+LATEX_HEADER:    \newcommand{\vectorstyle}[1]{\ensuremath{\symbfit{#1}}}
+#+LATEX_HEADER:    \newcommand{\vectorsymstyle}[1]{\ensuremath{\symbfit{#1}}}
+#+LATEX_HEADER: }{%
+#+LATEX_HEADER:   % ---- unicode-math is not used ----
+#+LATEX_HEADER:    \newcommand{\vectorstyle}[1]{\ensuremath{\boldsymbol{#1}}}
+#+LATEX_HEADER:    \newcommand{\vectorsymstyle}[1]{\ensuremath{\boldsymbol{#1}}}
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \makeatother
+
+
 #+LATEX_HEADER: \newcommand{\vect}[1][v]{\vectorstyle{#1}}
+#+LATEX_HEADER: \WithSuffix\newcommand\vect*[1][0]{\vectorsymstyle{#1}}
+
 #+LATEX_HEADER: \newcommand{\wect}{\vect[w]}
 #+LATEX_HEADER: \newcommand{\xect}{\vect[x]}
 #+LATEX_HEADER: \newcommand{\yect}{\vect[y]}
@@ -27,26 +41,26 @@
 #+LATEX_HEADER: \newcommand{\sect}{\vect[s]}
 #+LATEX_HEADER: \newcommand{\uect}{\vect[u]}
 #+LATEX_HEADER: \newcommand{\zect}{\vect[z]}
-#+LATEX_HEADER: \newcommand{\aaect}{\vect[\alpha]}
-#+LATEX_HEADER: \newcommand{\bbect}{\vect[\beta]}
-#+LATEX_HEADER: \newcommand{\ggect}{\vect[\gamma]}
-#+LATEX_HEADER: \newcommand{\ddect}{\vect[\delta]}
-#+LATEX_HEADER: \newcommand{\eeect}{\vect[\varepsilon]}
-#+LATEX_HEADER: \newcommand{\zzect}{\vect[\zeta]}
-#+LATEX_HEADER: \newcommand{\etect}{\vect[\eta]}
-#+LATEX_HEADER: \newcommand{\thect}{\vect[\theta]}
-#+LATEX_HEADER: \newcommand{\iiect}{\vect[\iota]}
-#+LATEX_HEADER: \newcommand{\kkect}{\vect[\kappa]}
-#+LATEX_HEADER: \newcommand{\llect}{\vect[\lambda]}
-#+LATEX_HEADER: \newcommand{\mmect}{\vect[\mu]}
-#+LATEX_HEADER: \newcommand{\nnect}{\vect[\nu]}
-#+LATEX_HEADER: \newcommand{\xxect}{\vect[\xi]}
-#+LATEX_HEADER: \newcommand{\ppect}{\vect[\pi]}
-#+LATEX_HEADER: \newcommand{\rrect}{\vect[\rho]}
-#+LATEX_HEADER: \newcommand{\ssect}{\vect[\sigma]}
-#+LATEX_HEADER: \newcommand{\ttect}{\vect[\tau]}
-#+LATEX_HEADER: \newcommand{\uuect}{\vect[\upsilon]}
-#+LATEX_HEADER: \newcommand{\phect}{\vect[\varphi]}
-#+LATEX_HEADER: \newcommand{\ccect}{\vect[\chi]}
-#+LATEX_HEADER: \newcommand{\psect}{\vect[\psi]}
-#+LATEX_HEADER: \newcommand{\ooect}{\vect[\omega]}
+#+LATEX_HEADER: \newcommand{\aaect}{\vect*[\alpha]}
+#+LATEX_HEADER: \newcommand{\bbect}{\vect*[\beta]}
+#+LATEX_HEADER: \newcommand{\ggect}{\vect*[\gamma]}
+#+LATEX_HEADER: \newcommand{\ddect}{\vect*[\delta]}
+#+LATEX_HEADER: \newcommand{\eeect}{\vect*[\varepsilon]}
+#+LATEX_HEADER: \newcommand{\zzect}{\vect*[\zeta]}
+#+LATEX_HEADER: \newcommand{\etect}{\vect*[\eta]}
+#+LATEX_HEADER: \newcommand{\thect}{\vect*[\theta]}
+#+LATEX_HEADER: \newcommand{\iiect}{\vect*[\iota]}
+#+LATEX_HEADER: \newcommand{\kkect}{\vect*[\kappa]}
+#+LATEX_HEADER: \newcommand{\llect}{\vect*[\lambda]}
+#+LATEX_HEADER: \newcommand{\mmect}{\vect*[\mu]}
+#+LATEX_HEADER: \newcommand{\nnect}{\vect*[\nu]}
+#+LATEX_HEADER: \newcommand{\xxect}{\vect*[\xi]}
+#+LATEX_HEADER: \newcommand{\ppect}{\vect*[\pi]}
+#+LATEX_HEADER: \newcommand{\rrect}{\vect*[\rho]}
+#+LATEX_HEADER: \newcommand{\ssect}{\vect*[\sigma]}
+#+LATEX_HEADER: \newcommand{\ttect}{\vect*[\tau]}
+#+LATEX_HEADER: \newcommand{\uuect}{\vect*[\upsilon]}
+#+LATEX_HEADER: \newcommand{\phect}{\vect*[\varphi]}
+#+LATEX_HEADER: \newcommand{\ccect}{\vect*[\chi]}
+#+LATEX_HEADER: \newcommand{\psect}{\vect*[\psi]}
+#+LATEX_HEADER: \newcommand{\ooect}{\vect*[\omega]}
