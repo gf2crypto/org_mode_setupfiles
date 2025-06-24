@@ -1,0 +1,7 @@
+#+LATEX_COMPILER: xelatex
+#+LATEX_HEADER: \usepackage{fontspec}
+#+LATEX_HEADER: \usepackage{termes-otf}
+#+LATEX_HEADER: \setmainfont{TeX Gyre Termes}
+#+LATEX_HEADER: \usepackage{unicode-math}
+#+LATEX_HEADER: \setmathfont{TeX Gyre Termes Math}
+#+LATEX_HEADER: \setmathfont{TeX Gyre Termes Math}[version=bold,math-style=ISO,FakeBold = 3]
