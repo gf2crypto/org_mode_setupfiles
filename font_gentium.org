@@ -1,2 +1,0 @@
-#+LATEX_HEADER: \usepackage{gentium}
-#+LATEX_HEADER: \usepackage[libertine,bigdelims,vvarbb,scaled=1.05]{newtxmath}

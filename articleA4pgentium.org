@@ -1,2 +1,0 @@
-#+SETUPFILE: ./articleA4p.org
-#+SETUPFILE: ./font_gentium.org

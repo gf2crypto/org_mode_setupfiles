@@ -1,1 +1,0 @@
-#+LATEX_HEADER: \usepackage[libertine,bigdelims,vvarbb,scaled=1.03]{newtxmath}

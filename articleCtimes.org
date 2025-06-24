@@ -1,2 +1,0 @@
-#+SETUPFILE: ./articleC.org
-#+SETUPFILE: ./font_times.org

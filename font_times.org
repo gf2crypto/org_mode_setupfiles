@@ -1,3 +1,0 @@
-#+LATEX_HEADER: \usepackage{tempora}
-#+SETUPFILE: ./font_math_txmath.org
-#+LATEX_HEADER: \usepackage[cal=euler,frak=euler, scr=mathpi]{mathalfa}

@@ -1,2 +1,0 @@
-#+setupfile: ./notesCA4e.org
-#+setupfile: ./font_times.org
