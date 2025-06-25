@@ -40,11 +40,14 @@
 #+LATEX_HEADER: %  \right\}%
 #+LATEX_HEADER: % }
 #+LATEX_HEADER: \newcommand{\sequence}[1]{\left( #1 \right)}
-#+LATEX_HEADER: \NewDocumentCommand{\set}{m m m}{%
-#+LATEX_HEADER:   \begingroup
-#+LATEX_HEADER:     #1%
-#+LATEX_HEADER:     \IfValueT{#2}{\, DSDSDSDSDS\,#2}%
-#+LATEX_HEADER:     \IfValueT{#3}{\\ IIIII II#3}%
+#+LATEX_HEADER: \NewDocumentCommand{\set}{m g g}{%
+#+LATEX_HEADER:     \IfNoValueTF{#2}
+#+LATEX_HEADER:       {\ensuremath{ \left\{ #1 \right\}}}%
+#+LATEX_HEADER:     {
+#+LATEX_HEADER:     \IfNoValueTF{#3}%
+#+LATEX_HEADER:       {\ensuremath{\left\{#1\;\middle\vert\;#2\right\}}}
+#+LATEX_HEADER:       {\begin{array}[t]{@{}l@{}l@{}}\left\{#1\vphantom{#2#3}\;\middle\vert\;& #2\right.\\ &\left.\vphantom{#1#2}#3\right\}\end{array}}%
+#+LATEX_HEADER:     }
 #+LATEX_HEADER: }
 #+LATEX_HEADER: % \WithSuffix\newcommand\condset*[4][]{\begin{multlined}#1\left\{#2\,\left|\, \vphantom{#2#4}#3\right.\right.\\ \left.\vphantom{#2#3}#4\right\}\end{multlined}}
 
