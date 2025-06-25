@@ -1,20 +1,13 @@
 # Matrices
 
-#+LATEX_HEADER: \makeatletter
-#+LATEX_HEADER: \@ifpackageloaded{unicode-math}{%
-#+LATEX_HEADER:  % ---- unicode-math is loaded ----
 #+LATEX_HEADER:    \newcommand{\matrixstyle}[1]{\ensuremath{\symbfit{#1}}}
 #+LATEX_HEADER:    \newcommand{\matrixsymstyle}[1]{\ensuremath{\symbfit{#1}}}
-#+LATEX_HEADER: }{%
-#+LATEX_HEADER:   % ---- unicode-math is not used ----
-#+LATEX_HEADER:    \newcommand{\matrixstyle}[1]{\ensuremath{\boldsymbol{#1}}}
-#+LATEX_HEADER:    \newcommand{\matrixsymstyle}[1]{\ensuremath{\boldsymbol{#1}}}
-#+LATEX_HEADER: }
-#+LATEX_HEADER: \makeatother
 
-
-#+LATEX_HEADER: \newcommand{\matr}[1][M]{\matrixstyle{#1}}
-#+LATEX_HEADER: \WithSuffix\newcommand\matr*[1][\Gamma]{\matrixsymstyle{#1}}
+#+LATEX_HEADER: \NewDocumentCommand{\matr}{s O{M}}{%
+#+LATEX_HEADER:     \IfBooleanTF{#1}
+#+LATEX_HEADER:     { \matrixstyle{#2} }
+#+LATEX_HEADER:     { \matrixsymstyle{#2} }
+#+LATEX_HEADER: }%
 
 #+LATEX_HEADER: \newcommand{\aatr}{\matr[A]}
 #+LATEX_HEADER: \newcommand{\batr}{\matr[B]}

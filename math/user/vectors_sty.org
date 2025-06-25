@@ -1,19 +1,13 @@
 # Vectors
-#+LATEX_HEADER: \makeatletter
-#+LATEX_HEADER: \@ifpackageloaded{unicode-math}{%
-#+LATEX_HEADER:  % ---- unicode-math is loaded ----
 #+LATEX_HEADER:    \newcommand{\vectorstyle}[1]{\ensuremath{\symbfit{#1}}}
+
 #+LATEX_HEADER:    \newcommand{\vectorsymstyle}[1]{\ensuremath{\symbfit{#1}}}
-#+LATEX_HEADER: }{%
-#+LATEX_HEADER:   % ---- unicode-math is not used ----
-#+LATEX_HEADER:    \newcommand{\vectorstyle}[1]{\ensuremath{\boldsymbol{#1}}}
-#+LATEX_HEADER:    \newcommand{\vectorsymstyle}[1]{\ensuremath{\boldsymbol{#1}}}
-#+LATEX_HEADER: }
-#+LATEX_HEADER: \makeatother
 
-
-#+LATEX_HEADER: \newcommand{\vect}[1][v]{\vectorstyle{#1}}
-#+LATEX_HEADER: \WithSuffix\newcommand\vect*[1][0]{\vectorsymstyle{#1}}
+#+LATEX_HEADER: \NewDocumentCommand{\vect}{s O{v}}{%
+#+LATEX_HEADER:     \IfBooleanTF{#1}
+#+LATEX_HEADER:     { \vectorstyle{#2} }
+#+LATEX_HEADER:     { \vectorsymstyle{#2} }
+#+LATEX_HEADER: }%
 
 #+LATEX_HEADER: \newcommand{\wect}{\vect[w]}
 #+LATEX_HEADER: \newcommand{\xect}{\vect[x]}

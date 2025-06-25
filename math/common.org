@@ -15,3 +15,13 @@
 #+LATEX_HEADER_EXTRA: \sisetup{inter-unit-product = \ensuremath{{}\cdot{}}}
 # масштабирование формулы
 #+LATEX_HEADER: \newcommand\scalemath[2]{\scalebox{#1}{\mbox{\ensuremath{\displaystyle #2}}}}
+
+#+LATEX_HEADER: \makeatletter
+#+LATEX_HEADER: \@ifpackageloaded{unicode-math}{%
+#+LATEX_HEADER:  % ---- unicode-math is loaded ----
+#+LATEX_HEADER: }{%
+#+LATEX_HEADER:   % ---- unicode-math is not used ----
+#+LATEX_HEADER:    \newcommand{\symbfit}[1]{\ensuremath{\boldsymbol{#1}}}
+#+LATEX_HEADER:    \newcommand{\symbfup}[1]{\ensuremath{\boldsymbol{#1}}}
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \makeatother

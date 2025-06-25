@@ -12,7 +12,7 @@
 #+LATEX_HEADER: \newcommand{\gfq}{\gf[q]}
 #+LATEX_HEADER: \newcommand{\gfqm}{\gf[q^m]}
 #+LATEX_HEADER: \newcommand{\gfqn}{\gf[q^n]}
-#+LATEX_HEADER: \WithSuffix\newcommand\gf*[1][2]{\algstructstyle{GF}(#1)}
-#+LATEX_HEADER: \WithSuffix\newcommand\gfq*{\gf*[q]}
-#+LATEX_HEADER: \WithSuffix\newcommand\gfqm*{\gf*[q^m]}
-#+LATEX_HEADER: \WithSuffix\newcommand\gfqn*{\gf*[q^n]}
+#+LATEX_HEADER: %\WithSuffix\newcommand\gf*[1][2]{\algstructstyle{GF}(#1)}
+#+LATEX_HEADER: % \WithSuffix\newcommand\gfq*{\gf*[q]}
+#+LATEX_HEADER: % \WithSuffix\newcommand\gfqm*{\gf*[q^m]}
+#+LATEX_HEADER: % \WithSuffix\newcommand\gfqn*{\gf*[q^n]}
